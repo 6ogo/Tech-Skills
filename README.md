@@ -1,25 +1,37 @@
-# Tech Hub Skills for Claude Code
+# Tech Hub Skills
 
-110+ production-ready AI agent skills for Claude Code. Enterprise-grade with security, governance, and compliance built-in.
+110+ production-ready AI agent skills for **Claude Code** and **GitHub Copilot**. Enterprise-grade with security, governance, and compliance built-in.
 
 ## Quick Install
 
-### npm / npx (Recommended)
+### For Claude Code
+
 ```bash
-# Install to current project
+# npm/npx (Recommended)
 npx tech-hub-skills install
 
-# Install globally for all projects
-npx tech-hub-skills install --global
-
-# Enterprise mode setup
-npx tech-hub-skills init --enterprise
+# or Python
+pip install tech-hub-skills && tech-hub-skills install
 ```
 
-### pip
+### For GitHub Copilot (VSCode)
+
 ```bash
-pip install tech-hub-skills
-tech-hub-skills install
+# npm/npx
+npx tech-hub-skills install --copilot
+
+# or Python
+pip install tech-hub-skills && tech-hub-skills install --copilot
+```
+
+This creates `.github/copilot-instructions.md` with all expert skills.
+See [GITHUB_COPILOT.md](GITHUB_COPILOT.md) for usage guide.
+
+### Global Install (Claude Code only)
+
+```bash
+# Install globally for all projects
+npx tech-hub-skills install --global
 ```
 
 ### Manual Installation
@@ -58,10 +70,11 @@ cp -r tech-hub-skills/.claude your-project/
 
 See [.claude/README.md](.claude/README.md) for detailed role documentation.
 
-## Usage in Claude Code
+## Usage
 
-1. Open your project in Claude Code
-2. Use `@` mentions to invoke skills:
+### Claude Code
+
+Use `@` mentions to invoke specific expert roles:
 
 ```bash
 # Start with the orchestrator
@@ -72,6 +85,22 @@ See [.claude/README.md](.claude/README.md) for detailed role documentation.
 @security-architect "Review this code for PII"
 @data-engineer "Design a lakehouse architecture"
 ```
+
+### GitHub Copilot
+
+Copilot automatically applies expert knowledge. Reference roles in comments:
+
+```python
+# Using AI Engineer approach for RAG pipeline
+def build_rag():
+    # Copilot suggests best practices
+
+# Apply Security Architect principles
+def process_data(user_input):
+    # Copilot adds input validation, PII scanning
+```
+
+See [GITHUB_COPILOT.md](GITHUB_COPILOT.md) for complete guide.
 
 ## Updating
 

@@ -55,6 +55,10 @@ htmlcov/
 # Build artifacts
 *.whl
 *.tar.gz
+*.tgz
+.claude/dist/
+.claude/build/
+.claude/*.egg-info/
 
 # OS files
 .DS_Store
@@ -65,3 +69,4 @@ Thumbs.db
 *.bak
 .cache/
 PUBLISHING.md
+READY_TO_PUBLISH.md
