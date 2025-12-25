@@ -1,7 +1,7 @@
 {
   "name": "tech-hub-skills",
   "version": "1.0.0",
-  "description": "110+ production-ready AI agent skills for Claude Code",
+  "description": "110+ production-ready AI agent skills for Claude Code and GitHub Copilot",
   "main": "bin/cli.js",
   "bin": {
     "tech-hub-skills": "./bin/cli.js"
@@ -12,13 +12,16 @@
   "keywords": [
     "claude",
     "claude-code",
+    "github-copilot",
+    "copilot",
     "ai-agents",
     "skills",
     "llm",
     "ai-engineer",
     "data-engineer",
     "security",
-    "enterprise"
+    "enterprise",
+    "vscode"
   ],
   "author": "6ogo",
   "license": "MIT",
@@ -27,8 +30,8 @@
     "url": "https://github.com/6ogo/tech-hub-skills.git"
   },
   "files": [
-    "skills/**/*.md",
-    "roles/**/",
+    "tech_hub_skills/skills/**/*.md",
+    "tech_hub_skills/roles/**/*.md",
     "bin/**/*.js",
     "README.md",
     "LICENSE"

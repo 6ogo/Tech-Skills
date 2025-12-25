@@ -1,27 +1,29 @@
 #!/usr/bin/env python3
-"""Tech Hub Skills CLI - Install AI agent skills for Claude Code."""
+"""Tech Hub Skills CLI - Install AI agent skills for Claude Code and GitHub Copilot."""
 
 import argparse
 import shutil
 import sys
 from pathlib import Path
+from .copilot_integration import install_copilot_instructions, get_available_roles
 
 __version__ = "1.0.0"
 
 BANNER = """
+
 ╔═══════════════════════════════════════════════════════════╗
-║         TECH HUB SKILLS - AI Agent Skills for Claude       ║
-║                  110+ Production-Ready Skills               ║
+║         TECH HUB SKILLS - AI Agent Skills for Claude      ║
+║                  110+ Production-Ready Skills             ║
 ╚═══════════════════════════════════════════════════════════╝
 """
 
 
 def get_package_dir() -> Path:
     """Get the directory containing the skills."""
-    return Path(__file__).parent.parent
+    return Path(__file__).parent
 
 
-def install(global_install: bool = False, force: bool = False) -> None:
+def install(global_install: bool = False, force: bool = False, copilot: bool = False) -> None:
     """Install skills to project or global directory."""
     print(BANNER)
 
@@ -61,6 +63,17 @@ def install(global_install: bool = False, force: bool = False) -> None:
             shutil.copytree(roles_src, roles_dest)
             print("  ✓ Roles copied")
 
+    # Install GitHub Copilot instructions if requested
+    if copilot:
+        print("\n🤖 Installing GitHub Copilot integration...")
+        project_dir = Path.cwd()
+        install_copilot_instructions(
+            project_dir=project_dir,
+            skills_dir=skills_src,
+            roles_dir=roles_src,
+            force=force
+        )
+
     # Count installed
     skill_count = len(list(skills_dest.glob("*.md"))) if skills_dest.exists() else 0
 
@@ -69,13 +82,25 @@ def install(global_install: bool = False, force: bool = False) -> None:
     print(f"   Skills: {skill_count} role files")
     print(f"   Roles: 16+ specialized agents")
 
+    if copilot:
+        print(f"   Copilot: .github/copilot-instructions.md")
+
     print("\n📝 Next Steps:")
+    if copilot:
+        print("   GitHub Copilot:")
+        print("   1. Open VSCode with GitHub Copilot enabled")
+        print("   2. Copilot will automatically use the instructions")
+        print("   3. Try: // Using AI Engineer approach for RAG pipeline")
+        print("")
+    print("   Claude Code:")
     print("   1. Open Claude Code in your project")
     print("   2. Use @orchestrator to start")
     print("   3. Or invoke: @ai-engineer, @security-architect, etc.")
 
     print("\n💡 Example:")
-    print('   @orchestrator "Build a customer churn prediction model"')
+    if copilot:
+        print('   Copilot: // Apply Security Architect best practices')
+    print('   Claude: @orchestrator "Build a customer churn prediction model"')
 
 
 def init(enterprise: bool = False) -> None:
@@ -128,14 +153,15 @@ def list_skills() -> None:
 def main() -> None:
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
-        description="Tech Hub Skills - AI Agent Skills for Claude Code",
+        description="Tech Hub Skills - AI Agent Skills for Claude Code & GitHub Copilot",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  tech-hub-skills install              Install to current project
-  tech-hub-skills install --global     Install globally
-  tech-hub-skills init --enterprise    Enterprise mode setup
-  tech-hub-skills list                 List all roles
+  tech-hub-skills install                  Install to current project (Claude Code)
+  tech-hub-skills install --copilot        Install with GitHub Copilot integration
+  tech-hub-skills install --global         Install globally
+  tech-hub-skills init --enterprise        Enterprise mode setup
+  tech-hub-skills list                     List all roles
         """
     )
 
@@ -160,6 +186,11 @@ Examples:
         action="store_true",
         help="Force overwrite existing installation"
     )
+    install_parser.add_argument(
+        "--copilot", "-c",
+        action="store_true",
+        help="Also install GitHub Copilot instructions (.github/copilot-instructions.md)"
+    )
 
     # Init command
     init_parser = subparsers.add_parser("init", help="Initialize project")
@@ -175,7 +206,11 @@ Examples:
     args = parser.parse_args()
 
     if args.command == "install":
-        install(global_install=args.global_install, force=args.force)
+        install(
+            global_install=args.global_install,
+            force=args.force,
+            copilot=args.copilot
+        )
     elif args.command == "init":
         init(enterprise=args.enterprise)
     elif args.command == "list":

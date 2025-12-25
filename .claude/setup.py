@@ -16,7 +16,7 @@ long_description = readme_path.read_text(encoding="utf-8") if readme_path.exists
 setup(
     name="tech-hub-skills",
     version="1.0.0",
-    description="110+ production-ready AI agent skills for Claude Code",
+    description="110+ production-ready AI agent skills for Claude Code and GitHub Copilot",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="6ogo",
@@ -24,7 +24,7 @@ setup(
     license="MIT",
     packages=find_packages(include=["tech_hub_skills", "tech_hub_skills.*"]),
     package_data={
-        "": ["skills/*.md", "roles/**/*.md"],
+        "tech_hub_skills": ["skills/*.md", "roles/**/*.md"],
     },
     include_package_data=True,
     python_requires=">=3.9",
@@ -48,6 +48,8 @@ setup(
     keywords=[
         "claude",
         "claude-code",
+        "github-copilot",
+        "copilot",
         "ai-agents",
         "skills",
         "llm",
@@ -55,5 +57,6 @@ setup(
         "data-engineer",
         "security",
         "enterprise",
+        "vscode",
     ],
 )

@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { installCopilotInstructions } = require('./copilot');
 
 const SKILLS_DIR = path.join(__dirname, '..');
 const VERSION = require('../package.json').version;
@@ -60,11 +61,11 @@ function install(options = {}) {
     ? path.join(require('os').homedir(), '.claude')
     : path.join(process.cwd(), '.claude');
 
-  print(`\nInstalling Tech Hub Skills to: ${targetDir}`, 'cyan');
+  print(`\n📦 Installing Tech Hub Skills to: ${targetDir}`, 'cyan');
 
   // Copy skills and roles
-  const skillsSrc = path.join(SKILLS_DIR, 'skills');
-  const rolesSrc = path.join(SKILLS_DIR, 'roles');
+  const skillsSrc = path.join(SKILLS_DIR, 'tech_hub_skills', 'skills');
+  const rolesSrc = path.join(SKILLS_DIR, 'tech_hub_skills', 'roles');
   const skillsDest = path.join(targetDir, 'skills');
   const rolesDest = path.join(targetDir, 'roles');
 
@@ -78,6 +79,15 @@ function install(options = {}) {
     copyDir(rolesSrc, rolesDest);
   }
 
+  // Install GitHub Copilot instructions if requested (project-level only)
+  if (options.copilot && !isGlobal) {
+    print('\n🤖 Installing GitHub Copilot integration...', 'cyan');
+    installCopilotInstructions({ force: options.force });
+  } else if (options.copilot && isGlobal) {
+    print('\n⚠️  Copilot integration is only available for project-level installs', 'yellow');
+    print('    (Copilot instructions must be in project .github/ directory)', 'yellow');
+  }
+
   // Count installed files
   const skillCount = fs.existsSync(skillsDest)
     ? fs.readdirSync(skillsDest).filter(f => f.endsWith('.md')).length
@@ -87,13 +97,28 @@ function install(options = {}) {
   print(`  Location: ${targetDir}`, 'cyan');
   print(`  Skills: ${skillCount} role files installed`, 'cyan');
   print(`  Roles: 16+ specialized agents`, 'cyan');
+  if (options.copilot && !isGlobal) {
+    print(`  Copilot: .github/copilot-instructions.md`, 'cyan');
+  }
 
   print(`\n${colors.bright}Next Steps:${colors.reset}`);
+  if (options.copilot && !isGlobal) {
+    print('  GitHub Copilot:');
+    print('  1. Open VSCode with GitHub Copilot enabled');
+    print('  2. Copilot will automatically use the instructions');
+    print('  3. Try: // Using AI Engineer approach for RAG pipeline');
+    print('');
+  }
+  print('  Claude Code:');
   print('  1. Open Claude Code in your project');
   print('  2. Use @orchestrator to start');
   print('  3. Or invoke specific roles: @ai-engineer, @security-architect, etc.');
+
   print(`\n${colors.bright}Example:${colors.reset}`);
-  print('  @orchestrator "Build a customer churn prediction model"');
+  if (options.copilot && !isGlobal) {
+    print('  Copilot: // Apply Security Architect best practices');
+  }
+  print('  Claude: @orchestrator "Build a customer churn prediction model"');
 }
 
 function init(options = {}) {
@@ -152,21 +177,31 @@ ${colors.bright}Usage:${colors.reset}
   npx tech-hub-skills <command> [options]
 
 ${colors.bright}Commands:${colors.reset}
-  install           Install skills to current project
-  install --global  Install skills globally (~/.claude)
-  init              Initialize project with guided setup
-  init --enterprise Enterprise mode with security + governance
-  list              List all available roles and skills
-  help              Show this help message
+  install              Install skills to current project (Claude Code)
+  install --copilot    Install with GitHub Copilot integration
+  install --global     Install skills globally (~/.claude)
+  install --force      Force overwrite existing installation
+  init                 Initialize project with guided setup
+  init --enterprise    Enterprise mode with security + governance
+  list                 List all available roles and skills
+  help                 Show this help message
+
+${colors.bright}Options:${colors.reset}
+  --copilot, -c        Add GitHub Copilot instructions (.github/copilot-instructions.md)
+  --global, -g         Install globally to ~/.claude (not available with --copilot)
+  --force, -f          Overwrite existing files
+  --enterprise, -E     Enterprise mode (for init command)
 
 ${colors.bright}Examples:${colors.reset}
   npx tech-hub-skills install
+  npx tech-hub-skills install --copilot
+  npx tech-hub-skills install --global
   npx tech-hub-skills init --enterprise
   npx tech-hub-skills list
 
 ${colors.bright}After Installation:${colors.reset}
-  Open Claude Code and use:
-  @orchestrator "Your project description"
+  Claude Code:    @orchestrator "Your project description"
+  GitHub Copilot: // Using AI Engineer approach for RAG pipeline
   `);
 }
 
@@ -175,7 +210,9 @@ const args = process.argv.slice(2);
 const command = args[0];
 const options = {
   global: args.includes('--global') || args.includes('-g'),
-  enterprise: args.includes('--enterprise') || args.includes('-E')
+  enterprise: args.includes('--enterprise') || args.includes('-E'),
+  copilot: args.includes('--copilot') || args.includes('-c'),
+  force: args.includes('--force') || args.includes('-f')
 };
 
 switch (command) {

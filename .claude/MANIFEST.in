@@ -2,8 +2,8 @@
 # Ensures all necessary files are included in the pip package
 
 # Include all skill and role markdown files
-recursive-include skills *.md
-recursive-include roles *.md
+recursive-include tech_hub_skills/skills *.md
+recursive-include tech_hub_skills/roles *.md
 
 # Include README and license
 include README.md
