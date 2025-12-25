@@ -20,7 +20,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="6ogo",
-    url="https://github.com/6ogo/tech-hub-skills",
+    url="https://github.com/6ogo/Tech-Skills",
     license="MIT",
     packages=find_packages(include=["tech_hub_skills", "tech_hub_skills.*"]),
     package_data={

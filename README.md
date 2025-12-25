@@ -38,7 +38,7 @@ npx tech-hub-skills install --global
 
 ```bash
 # Clone and copy .claude folder to your project
-git clone https://github.com/6ogo/tech-hub-skills.git
+git clone https://github.com/6ogo/Tech-Skills.git
 cp -r tech-hub-skills/.claude your-project/
 ```
 

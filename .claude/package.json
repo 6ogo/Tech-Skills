@@ -1,6 +1,6 @@
 {
   "name": "tech-hub-skills",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "110+ production-ready AI agent skills for Claude Code and GitHub Copilot",
   "main": "bin/cli.js",
   "bin": {
@@ -27,7 +27,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/6ogo/tech-hub-skills.git"
+    "url": "https://github.com/6ogo/Tech-Skills.git"
   },
   "files": [
     "tech_hub_skills/skills/**/*.md",
@@ -39,8 +39,8 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "homepage": "https://github.com/6ogo/tech-hub-skills#readme",
+  "homepage": "https://github.com/6ogo/Tech-Skills#readme",
   "bugs": {
-    "url": "https://github.com/6ogo/tech-hub-skills/issues"
+    "url": "https://github.com/6ogo/Tech-Skills/issues"
   }
 }

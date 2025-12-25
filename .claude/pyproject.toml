@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tech-hub-skills"
-version = "1.0.0"
+version = "1.1.1"
 description = "110+ production-ready AI agent skills for Claude Code and GitHub Copilot"
 readme = "README.md"
 license = {text = "MIT"}
@@ -38,8 +38,8 @@ requires-python = ">=3.9"
 tech-hub-skills = "tech_hub_skills.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/6ogo/tech-hub-skills"
-Repository = "https://github.com/6ogo/tech-hub-skills"
+Homepage = "https://github.com/6ogo/Tech-Skills"
+Repository = "https://github.com/6ogo/Tech-Skills"
 
 [tool.setuptools.packages.find]
 where = ["."]

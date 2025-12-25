@@ -37,6 +37,6 @@ ${colors.bright}Quick Start:${colors.reset}
   ${colors.yellow}@orchestrator "Build a customer churn prediction model"${colors.reset}
 
 ${colors.bright}Documentation:${colors.reset}
-  https://github.com/6ogo/tech-hub-skills
+  https://github.com/6ogo/Tech-Skills
 
 `);
