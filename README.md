@@ -45,28 +45,39 @@ cp -r tech-hub-skills/.claude your-project/
 ## What's Included
 
 - **26 Role Skills**: AI Engineer, Data Engineer, Security Architect, DevOps, and more
-- **110+ Detailed Implementations**: Step-by-step guides for each skill
+- **180+ Detailed Implementations**: Step-by-step guides for each skill
 - **Enterprise Mode**: Built-in security, governance, and compliance
 - **Cross-Platform**: Works on Windows, macOS, Linux
 
 ## Available Roles
 
-| Role | Skills | Focus |
-|------|--------|-------|
-| **AI Engineer** | 8 | LLMs, RAG, Agents, Guardrails, Embeddings |
-| **Data Engineer** | 9 | Lakehouse, ETL/ELT, Streaming, Quality |
-| **ML Engineer** | 9 | MLOps, Training, Serving, Monitoring |
-| **Data Scientist** | 8 | EDA, Modeling, Analytics, Experimentation |
-| **Security Architect** | 7 | PII, Threat Modeling, IAM, Secrets |
-| **System Design** | 8 | Architecture, Scalability, HA/DR, APIs |
-| **Platform Engineer** | 6 | IDP, Self-Service, SLOs |
-| **Data Governance** | 6 | Catalog, Lineage, Quality, Compliance |
-| **DevOps** | 9 | CI/CD, Containers, IaC, GitOps |
-| **MLOps** | 9 | Experiments, Registry, Deployment |
-| **FinOps** | 8 | Cost Visibility, Optimization |
-| **Azure** | 12 | All Azure services |
-| **Code Review** | 5 | PR Automation, Quality Gates |
-| **Product Designer** | 6 | Requirements, Research, UX |
+| Role                   | Skills | Focus                                       |
+| ---------------------- | ------ | ------------------------------------------- |
+| **AI Engineer**        | 8      | LLMs, RAG, Agents, Guardrails, Embeddings   |
+| **Data Engineer**      | 9      | Lakehouse, ETL/ELT, Streaming, Quality      |
+| **ML Engineer**        | 9      | MLOps, Training, Serving, Monitoring        |
+| **Data Scientist**     | 8      | EDA, Modeling, Analytics, Experimentation   |
+| **Frontend Developer** | 7      | React/Vue/Angular, TypeScript, A11y         |
+| **Backend Developer**  | 7      | REST, GraphQL, Microservices, Caching       |
+| **Security Architect** | 7      | PII, Threat Modeling, IAM, Secrets          |
+| **System Design**      | 8      | Architecture, Scalability, HA/DR, APIs      |
+| **Network Engineer**   | 7      | Topology, VPN/VPC, Load Balancers, CDN      |
+| **Platform Engineer**  | 6      | IDP, Self-Service, SLOs                     |
+| **SRE**                | 7      | Incident Response, Chaos Engineering, SLOs  |
+| **Database Admin**     | 7      | Query Optimization, Replication, Migrations |
+| **Data Governance**    | 6      | Catalog, Lineage, Quality, Compliance       |
+| **DevOps**             | 9      | CI/CD, Containers, IaC, GitOps              |
+| **Docker**             | 5      | Dockerfile, Security, Optimization          |
+| **MLOps**              | 9      | Experiments, Registry, Deployment           |
+| **FinOps**             | 8      | Cost Visibility, Optimization               |
+| **Azure**              | 12     | All Azure services                          |
+| **AWS**                | 12     | EC2, Lambda, S3, RDS, VPC, EKS              |
+| **GCP**                | 12     | Compute, BigQuery, GKE, Pub/Sub             |
+| **Code Review**        | 5      | PR Automation, Quality Gates                |
+| **Compliance Officer** | 7      | SOC 2, GDPR, HIPAA, PCI-DSS                 |
+| **QA Engineer**        | 7      | Test Strategy, Automation, Performance      |
+| **Technical Writer**   | 6      | API Docs, ADRs, Runbooks                    |
+| **Product Designer**   | 6      | Requirements, Research, UX                  |
 
 See [.claude/README.md](.claude/README.md) for detailed role documentation.
 
@@ -105,6 +116,7 @@ See [GITHUB_COPILOT.md](GITHUB_COPILOT.md) for complete guide.
 ## Updating
 
 ### Method 1 (Clone/ZIP)
+
 ```bash
 # Pull latest changes
 cd path/to/tech-hub-skills
@@ -132,21 +144,25 @@ After installation, use skills with `@` mentions:
 ## Examples
 
 **AI/ML Project**
+
 ```bash
 @orchestrator "Build a customer churn prediction model with GDPR compliance"
 ```
 
 **RAG Application**
+
 ```bash
 @ai-engineer "Create a RAG pipeline for internal docs"
 ```
 
 **Security Review**
+
 ```bash
 @security-architect "Audit this codebase for security vulnerabilities"
 ```
 
 **Enterprise Platform**
+
 ```bash
 @project-starter --enterprise "Build a customer data platform"
 ```

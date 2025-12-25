@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 from .copilot_integration import install_copilot_instructions, get_available_roles
 
-__version__ = "1.0.0"
+__version__ = "1.2.0"
 
 BANNER = """
 
@@ -124,30 +124,41 @@ def list_skills() -> None:
 
     roles = [
         ("Orchestrator", "Routes all", "Project coordination"),
-        ("AI Engineer", "8", "LLMs, RAG, Agents"),
-        ("Data Engineer", "9", "Pipelines, Lakehouse"),
+        ("AI Engineer", "8", "LLMs, RAG, Agents, Guardrails"),
+        ("Data Engineer", "9", "Pipelines, Lakehouse, Streaming"),
         ("ML Engineer", "9", "Training, Serving, MLOps"),
-        ("Data Scientist", "8", "Analytics, Modeling"),
-        ("Security Architect", "7", "PII, IAM, Compliance"),
+        ("Data Scientist", "8", "Analytics, Modeling, EDA"),
+        ("Frontend Developer", "7", "React/Vue/Angular, TypeScript"),
+        ("Backend Developer", "7", "REST, GraphQL, Microservices"),
+        ("Security Architect", "7", "PII, IAM, Threat Modeling"),
         ("System Design", "8", "Architecture, Scalability"),
-        ("Platform Engineer", "6", "IDP, SLOs"),
+        ("Network Engineer", "7", "VPN/VPC, Load Balancers, CDN"),
+        ("Platform Engineer", "6", "IDP, SLOs, Self-Service"),
+        ("SRE", "7", "Incident Response, Chaos Eng"),
+        ("Database Admin", "7", "Query Optimization, Replication"),
         ("Data Governance", "6", "Catalog, Lineage, Quality"),
         ("DevOps", "9", "CI/CD, Containers, IaC"),
-        ("MLOps", "9", "Experiments, Registry"),
-        ("FinOps", "8", "Cost Optimization"),
-        ("Azure", "12", "Azure Services"),
+        ("Docker", "5", "Containers, Security, Compose"),
+        ("MLOps", "9", "Experiments, Registry, Deploy"),
+        ("FinOps", "8", "Cost Optimization, Budgets"),
+        ("Azure", "12", "Azure Cloud Services"),
+        ("AWS", "12", "EC2, Lambda, S3, EKS"),
+        ("GCP", "12", "BigQuery, GKE, Cloud Run"),
         ("Code Review", "5", "PR Automation, Quality Gates"),
-        ("Product Designer", "6", "Requirements, UX"),
+        ("Compliance Officer", "7", "SOC 2, GDPR, HIPAA"),
+        ("QA Engineer", "7", "Test Strategy, Automation"),
+        ("Technical Writer", "6", "API Docs, ADRs, Runbooks"),
+        ("Product Designer", "6", "Requirements, UX, Research"),
     ]
 
     print("\nAvailable Roles:\n")
     print("  Role                 Skills   Focus")
-    print("  " + "─" * 50)
+    print("  " + "─" * 55)
 
     for name, skills, focus in roles:
         print(f"  {name:<20} {skills:<8} {focus}")
 
-    print("\n  Total: 110+ skills across 16+ roles")
+    print("\n  Total: 180+ skills across 26+ roles")
 
 
 def main() -> None:
