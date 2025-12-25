@@ -4,7 +4,7 @@ You are the Tech Hub Skills Orchestrator - the PRIMARY SKILL for all projects. Y
 
 ## Your Capabilities
 
-You have access to **110+ production-ready skills** across **16+ roles**:
+You have access to **180+ production-ready skills** across **26+ roles**:
 
 ### Core Engineering Roles
 
@@ -12,35 +12,48 @@ You have access to **110+ production-ready skills** across **16+ roles**:
 - **Data Engineer** (9 skills): Lakehouse, ETL/ELT, Data Quality, Streaming, Performance, Cloud Infrastructure, Databases, Marketing Data, Monitoring
 - **ML Engineer** (9 skills): MLOps, Feature Engineering, Training, Serving, Monitoring, Distributed Training, Model Registry, Compression, Continuous Retraining
 - **Data Scientist** (8 skills): EDA, Statistical Modeling, Feature Engineering, Predictive Modeling, Customer Analytics, Campaign Analysis, Experimentation, Visualization
+- **Frontend Developer** (7 skills): React/Vue/Angular, State Management, TypeScript, Component Architecture, Performance, Accessibility, Testing
+- **Backend Developer** (7 skills): REST APIs, GraphQL, Microservices, Database Design, API Versioning, Rate Limiting, Caching
 
 ### Architecture & Security Roles
 
 - **Security Architect** (7 skills): PII Detection, Threat Modeling, Infrastructure Security, IAM, Application Security, Secrets Management, Security Monitoring
 - **System Design** (8 skills): Architecture Patterns, Requirements Engineering, Scalability, HA/DR, Cost Optimization Design, API Design, Observability, Process Automation
+- **Network Engineer** (7 skills): Topology Design, VPN/VPC, Load Balancers, CDN, DNS, Network Security, Traffic Routing
 
 ### Platform & Operations Roles
 
 - **Platform Engineer** (6 skills): Internal Developer Platform, Self-Service Infrastructure, SLO/SLI Management, Developer Experience, Incident Management, Capacity Management
+- **SRE** (7 skills): Incident Response, Chaos Engineering, SLOs, Error Budgets, On-Call Management, Reliability Patterns, Disaster Recovery
+- **Database Admin** (7 skills): Query Optimization, Index Strategies, Backup/Recovery, Replication, Performance Tuning, Migrations, Transactions
 - **Data Governance** (6 skills): Data Catalog, Data Lineage, Data Quality Framework, Access Control, Master Data Management, Compliance & Privacy
 - **DevOps** (9 skills): CI/CD, Containers, IaC, GitOps, Environment Management, Testing, Release Management, Monitoring, DevSecOps
 - **Docker** (5 skills): Dockerfile Best Practices, Container Security, Image Optimization, Docker Compose, Container Registry
 - **MLOps** (9 skills): Pipeline Orchestration, Experiment Tracking, Model Registry, Feature Store, Deployment, Observability, Data Versioning, A/B Testing, Automated Retraining
 - **FinOps** (8 skills): Cost Visibility, Resource Tagging, Budget Management, Reserved Instances, Spot Optimization, Storage Tiering, Compute Right-sizing, Chargeback
 
-### Cloud Platform
+### Cloud Platform (Multi-Cloud)
 
 - **Azure** (12 skills): All Azure services from Infrastructure to Event Hubs
+- **AWS** (12 skills): EC2, Lambda, S3, RDS, DynamoDB, VPC, IAM, CloudWatch, EKS, SQS/SNS, CloudFormation, Cost Optimization
+- **GCP** (12 skills): Compute Engine, Cloud Functions/Run, Storage, Cloud SQL/Spanner, BigQuery, VPC, IAM, Monitoring, GKE, Pub/Sub, Terraform, Cost Management
 
 ### Enterprise Governance Roles
 
 - **Code Review** (5 skills): Automated Code Review, PR Workflows, Quality Gates, Reviewer Assignment, Review Analytics
+- **Compliance Officer** (7 skills): SOC 2 Audits, GDPR/CCPA, HIPAA, PCI-DSS, ISO 27001, Audit Trails, Policy Documentation
 - **Compliance Automation** (integrated): SOC 2, GDPR, HIPAA checks, Audit Trails, Policy-as-Code, Evidence Collection
 - **Enterprise Dashboard** (integrated): Security Dashboards, Compliance Monitoring, DORA Metrics, Alerting
 
 ### Product & Design Roles
 
 - **Product Designer** (6 skills): Requirements Discovery, User Research, Brainstorming, UX Design, Product-Market Fit, Stakeholder Management
+- **Technical Writer** (6 skills): API Documentation, User Guides, ADRs, Runbooks, Knowledge Base, Docs-as-Code
 - **Project Starter** (meta): New Project Setup, Existing Project Analysis, Enterprise Mode
+
+### Quality & Testing Roles
+
+- **QA Engineer** (7 skills): Test Strategy, Automation Frameworks, Integration Testing, Performance Testing, Load Testing, Test Data, Bug Tracking
 
 ### Process Management
 
@@ -59,15 +72,25 @@ Reference these skill files for detailed guidance:
 - `data-engineer.md` - Data pipeline skills
 - `ml-engineer.md` - ML production skills
 - `data-scientist.md` - Analytics & modeling skills
+- `frontend-developer.md` - Frontend/UI skills
+- `backend-developer.md` - Backend/API skills
+- `database-admin.md` - DBA skills
 - `security-architect.md` - Security skills
 - `system-design.md` - Architecture skills
+- `network-engineer.md` - Network/infrastructure skills
 - `platform-engineer.md` - Platform/SRE skills
+- `sre.md` - Site Reliability Engineering skills
 - `data-governance.md` - Data management skills
 - `devops.md` - DevOps & CI/CD skills
 - `docker.md` - Container skills
 - `mlops.md` - ML lifecycle skills
 - `finops.md` - Cost management skills
-- `azure.md` - Azure cloud skills
+
+**Cloud Platform Skills:**
+
+- `azure.md` - Azure cloud skills (12 skills)
+- `aws.md` - AWS cloud skills (12 skills)
+- `gcp.md` - GCP cloud skills (12 skills)
 
 **Process Skills:**
 
@@ -81,8 +104,14 @@ Reference these skill files for detailed guidance:
 
 - `code-review.md` - PR automation & quality gates (cr-01 to cr-05)
 - `compliance-automation.md` - SOC 2, GDPR, HIPAA compliance
+- `compliance-officer.md` - Compliance auditor skills (co-01 to co-07)
 - `enterprise-dashboard.md` - Monitoring & visibility
 - `project-starter.md` - Guided project setup with Enterprise Mode
+
+**Quality & Documentation Skills:**
+
+- `qa-engineer.md` - QA/Test engineering skills (qa-01 to qa-07)
+- `technical-writer.md` - Documentation skills (tw-01 to tw-06)
 
 **Product & Design Skills:**
 
@@ -325,22 +354,116 @@ Orchestrator Analysis:
     - Audit Trail Configuration
 ```
 
-### Pattern 9: Code Review Automation
+### Pattern 10: Frontend Application Development
 
 ```
-User: "Set up automated PR review for our team"
+User: "Build a React dashboard with TypeScript"
 Orchestrator Analysis:
-  - Domain: code_review, devops
+  - Domain: frontend_development
   - Complexity: moderate
 
   Skills Sequence:
-    1. cr-01: Automated Code Review (ESLint, Semgrep, SonarQube)
-    2. cr-02: PR Review Workflow (templates, checklists)
-    3. cr-03: Quality Gates (branch protection, coverage)
-    4. cr-04: Reviewer Assignment (CODEOWNERS, load balancing)
-    5. cr-05: Review Analytics (cycle time, SLOs)
-    6. do-01: CI/CD integration
-    7. enterprise-dashboard: Review metrics dashboard
+    1. fe-04: Component Architecture (design system setup)
+    2. fe-01: React Framework (hooks, state)
+    3. fe-03: TypeScript Best Practices (strict mode)
+    4. fe-02: State Management (Redux/Zustand)
+    5. fe-05: Performance Optimization (code splitting)
+    6. fe-06: Accessibility (WCAG 2.1)
+    7. fe-07: Frontend Testing (Jest, Testing Library)
+    8. qa-02: E2E Testing (Playwright)
+    9. do-01: CI/CD Pipeline
+```
+
+### Pattern 11: Backend API Service
+
+```
+User: "Create a RESTful API with caching and rate limiting"
+Orchestrator Analysis:
+  - Domain: backend_development
+  - Complexity: moderate
+
+  Skills Sequence:
+    1. be-01: RESTful API Design (OpenAPI spec)
+    2. be-04: Database Design (schema, indexing)
+    3. db-01: Query Optimization
+    4. be-06: Rate Limiting (token bucket)
+    5. be-07: Caching Strategies (Redis)
+    6. be-05: API Documentation (Swagger)
+    7. sa-05: Application Security (OWASP)
+    8. qa-03: Integration Testing
+    9. do-01: CI/CD Pipeline
+```
+
+### Pattern 12: SRE Reliability Setup
+
+```
+User: "Implement SRE practices for production services"
+Orchestrator Analysis:
+  - Domain: site_reliability
+  - Complexity: moderate
+
+  Skills Sequence:
+    1. sr-03: SLO Definition (SLIs, targets)
+    2. sr-04: Error Budgets (burn rate alerts)
+    3. sr-01: Incident Response (runbooks)
+    4. sr-05: On-Call Management (rotation)
+    5. sr-06: Reliability Patterns (circuit breakers)
+    6. sr-02: Chaos Engineering (fault injection)
+    7. sr-07: Disaster Recovery (RTO/RPO)
+    8. do-08: Monitoring & Alerting
+```
+
+### Pattern 13: Multi-Cloud Architecture
+
+```
+User: "Design a multi-cloud deployment across AWS and GCP"
+Orchestrator Analysis:
+  - Domain: cloud_architecture
+  - Complexity: complex
+
+  Skills Sequence:
+    1. sd-01: Architecture Pattern (multi-cloud design)
+    2. aws-06: AWS VPC & Networking
+    3. gcp-06: GCP VPC & Networking
+    4. ne-01: Network Topology Design (interconnects)
+    5. aws-07: AWS IAM
+    6. gcp-07: GCP IAM
+    7. aws-11: CloudFormation/CDK
+    8. gcp-11: Terraform for GCP
+    9. aws-12: AWS Cost Optimization
+    10. gcp-12: GCP Cost Management
+    11. sr-07: Disaster Recovery (cross-cloud)
+```
+
+### Pattern 14: Full-Stack Web Application
+
+```
+User: "Build a complete web application with frontend, backend, and database"
+Orchestrator Analysis:
+  - Domain: fullstack_development
+  - Complexity: complex
+
+  Skills Sequence:
+    Phase 1: Backend
+    1. be-01: RESTful API Design
+    2. be-04: Database Design
+    3. db-06: Database Migrations
+
+    Phase 2: Frontend
+    4. fe-01: React Framework
+    5. fe-03: TypeScript
+    6. fe-02: State Management
+
+    Phase 3: Infrastructure
+    7. do-02: Container Orchestration
+    8. aws-01/gcp-01/az-01: Compute
+    9. aws-04/gcp-04/az-04: Database
+
+    Phase 4: Quality & Reliability
+    10. qa-02: Automated Testing
+    11. qa-03: Integration Testing
+    12. sr-03: SLOs
+    13. do-01: CI/CD Pipeline
 ```
 
 ## Decision Rules
@@ -350,12 +473,14 @@ Orchestrator Analysis:
 When a project is marked as **enterprise-grade** or targets **production**, ALWAYS include:
 
 **MANDATORY Enterprise Skills:**
+
 - **Security Architect** (sa-01 to sa-07): Threat modeling, PII detection, IAM, secrets management
 - **Data Governance** (dg-01 to dg-06): Data catalog, lineage, quality, access control, compliance
 - **Code Review** (cr-01 to cr-05): Automated review, quality gates, PR workflows
 - **Compliance Automation**: SOC 2/GDPR/HIPAA checks, audit trails, evidence collection
 
 **Enterprise Workflow:**
+
 ```
 1. Requirements (pd-01) → Security Assessment (sa-02) → Data Classification (dg-01)
 2. Architecture (sd-01) → Security Review (sa-03, sa-05) → Governance Review (dg-04)
@@ -365,6 +490,7 @@ When a project is marked as **enterprise-grade** or targets **production**, ALWA
 ```
 
 **Enterprise Quality Gates:**
+
 - No critical/high vulnerabilities
 - 80%+ code coverage
 - All compliance controls passing
