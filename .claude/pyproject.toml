@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tech-hub-skills"
+version = "1.0.0"
+description = "110+ production-ready AI agent skills for Claude Code"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "6ogo"}
+]
+keywords = [
+    "claude",
+    "claude-code",
+    "ai-agents",
+    "skills",
+    "llm",
+    "enterprise"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.9"
+
+[project.scripts]
+tech-hub-skills = "tech_hub_skills.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/6ogo/tech-hub-skills"
+Repository = "https://github.com/6ogo/tech-hub-skills"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tech_hub_skills*"]
+
+[tool.setuptools.package-data]
+"*" = ["skills/*.md", "roles/**/*.md"]

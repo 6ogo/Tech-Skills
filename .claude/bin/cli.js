@@ -1,0 +1,204 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+const SKILLS_DIR = path.join(__dirname, '..');
+const VERSION = require('../package.json').version;
+
+const colors = {
+  reset: '\x1b[0m',
+  bright: '\x1b[1m',
+  cyan: '\x1b[36m',
+  green: '\x1b[32m',
+  yellow: '\x1b[33m',
+  red: '\x1b[31m',
+  magenta: '\x1b[35m'
+};
+
+function print(msg, color = 'reset') {
+  console.log(`${colors[color]}${msg}${colors.reset}`);
+}
+
+function printBanner() {
+  console.log(`
+${colors.cyan}╔═══════════════════════════════════════════════════════════╗
+║         TECH HUB SKILLS - AI Agent Skills for Claude       ║
+║                  110+ Production-Ready Skills               ║
+╚═══════════════════════════════════════════════════════════╝${colors.reset}
+  `);
+}
+
+function copyDir(src, dest) {
+  if (!fs.existsSync(dest)) {
+    fs.mkdirSync(dest, { recursive: true });
+  }
+
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+
+    // Skip bin, node_modules, package.json
+    if (['bin', 'node_modules', 'package.json', 'package-lock.json'].includes(entry.name)) {
+      continue;
+    }
+
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
+
+function install(options = {}) {
+  const isGlobal = options.global;
+  const targetDir = isGlobal
+    ? path.join(require('os').homedir(), '.claude')
+    : path.join(process.cwd(), '.claude');
+
+  print(`\nInstalling Tech Hub Skills to: ${targetDir}`, 'cyan');
+
+  // Copy skills and roles
+  const skillsSrc = path.join(SKILLS_DIR, 'skills');
+  const rolesSrc = path.join(SKILLS_DIR, 'roles');
+  const skillsDest = path.join(targetDir, 'skills');
+  const rolesDest = path.join(targetDir, 'roles');
+
+  if (fs.existsSync(skillsSrc)) {
+    print('  Copying skills...', 'yellow');
+    copyDir(skillsSrc, skillsDest);
+  }
+
+  if (fs.existsSync(rolesSrc)) {
+    print('  Copying roles...', 'yellow');
+    copyDir(rolesSrc, rolesDest);
+  }
+
+  // Count installed files
+  const skillCount = fs.existsSync(skillsDest)
+    ? fs.readdirSync(skillsDest).filter(f => f.endsWith('.md')).length
+    : 0;
+
+  print(`\n✓ Installation complete!`, 'green');
+  print(`  Location: ${targetDir}`, 'cyan');
+  print(`  Skills: ${skillCount} role files installed`, 'cyan');
+  print(`  Roles: 16+ specialized agents`, 'cyan');
+
+  print(`\n${colors.bright}Next Steps:${colors.reset}`);
+  print('  1. Open Claude Code in your project');
+  print('  2. Use @orchestrator to start');
+  print('  3. Or invoke specific roles: @ai-engineer, @security-architect, etc.');
+  print(`\n${colors.bright}Example:${colors.reset}`);
+  print('  @orchestrator "Build a customer churn prediction model"');
+}
+
+function init(options = {}) {
+  printBanner();
+
+  if (options.enterprise) {
+    print('\n🏢 ENTERPRISE MODE', 'magenta');
+    print('   Mandatory: Security Architect + Data Governance', 'yellow');
+    print('\n   Use in Claude Code:', 'cyan');
+    print('   @project-starter --enterprise "Your project description"');
+  } else {
+    print('\n📦 Standard Mode', 'cyan');
+    print('\n   Use in Claude Code:', 'cyan');
+    print('   @project-starter "Your project description"');
+  }
+}
+
+function list() {
+  printBanner();
+
+  const roles = [
+    { name: 'Orchestrator', skills: 'Routes all', focus: 'Project coordination' },
+    { name: 'AI Engineer', skills: '8', focus: 'LLMs, RAG, Agents' },
+    { name: 'Data Engineer', skills: '9', focus: 'Pipelines, Lakehouse' },
+    { name: 'ML Engineer', skills: '9', focus: 'Training, Serving, MLOps' },
+    { name: 'Data Scientist', skills: '8', focus: 'Analytics, Modeling' },
+    { name: 'Security Architect', skills: '7', focus: 'PII, IAM, Compliance' },
+    { name: 'System Design', skills: '8', focus: 'Architecture, Scalability' },
+    { name: 'Platform Engineer', skills: '6', focus: 'IDP, SLOs' },
+    { name: 'Data Governance', skills: '6', focus: 'Catalog, Lineage, Quality' },
+    { name: 'DevOps', skills: '9', focus: 'CI/CD, Containers, IaC' },
+    { name: 'MLOps', skills: '9', focus: 'Experiments, Registry' },
+    { name: 'FinOps', skills: '8', focus: 'Cost Optimization' },
+    { name: 'Azure', skills: '12', focus: 'Azure Services' },
+    { name: 'Code Review', skills: '5', focus: 'PR Automation, Quality Gates' },
+    { name: 'Product Designer', skills: '6', focus: 'Requirements, UX' },
+  ];
+
+  print('\nAvailable Roles:\n', 'bright');
+  console.log('  Role                 Skills   Focus');
+  console.log('  ────────────────────────────────────────────────');
+
+  for (const role of roles) {
+    const name = role.name.padEnd(20);
+    const skills = role.skills.toString().padEnd(8);
+    console.log(`  ${name} ${skills} ${role.focus}`);
+  }
+
+  print('\n  Total: 110+ skills across 16+ roles', 'cyan');
+}
+
+function showHelp() {
+  printBanner();
+  console.log(`
+${colors.bright}Usage:${colors.reset}
+  npx tech-hub-skills <command> [options]
+
+${colors.bright}Commands:${colors.reset}
+  install           Install skills to current project
+  install --global  Install skills globally (~/.claude)
+  init              Initialize project with guided setup
+  init --enterprise Enterprise mode with security + governance
+  list              List all available roles and skills
+  help              Show this help message
+
+${colors.bright}Examples:${colors.reset}
+  npx tech-hub-skills install
+  npx tech-hub-skills init --enterprise
+  npx tech-hub-skills list
+
+${colors.bright}After Installation:${colors.reset}
+  Open Claude Code and use:
+  @orchestrator "Your project description"
+  `);
+}
+
+// Parse arguments
+const args = process.argv.slice(2);
+const command = args[0];
+const options = {
+  global: args.includes('--global') || args.includes('-g'),
+  enterprise: args.includes('--enterprise') || args.includes('-E')
+};
+
+switch (command) {
+  case 'install':
+    printBanner();
+    install(options);
+    break;
+  case 'init':
+    init(options);
+    break;
+  case 'list':
+    list();
+    break;
+  case 'help':
+  case '--help':
+  case '-h':
+    showHelp();
+    break;
+  case 'version':
+  case '--version':
+  case '-v':
+    console.log(`tech-hub-skills v${VERSION}`);
+    break;
+  default:
+    showHelp();
+}
