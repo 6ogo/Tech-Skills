@@ -1,0 +1,51 @@
+# .npmignore - Controls what gets published to npm registry
+# Files listed here will NOT be included in the npm package
+
+# Python-specific files (not needed for npm)
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+tech_hub_skills/
+setup.py
+pyproject.toml
+MANIFEST.in
+
+# Development files
+.git/
+.gitignore
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Testing
+test/
+tests/
+*.test.js
+.coverage
+.pytest_cache/
+
+# Documentation source (keep compiled docs)
+docs/source/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Temporary files
+*.tmp
+*.bak
+.cache/
+
+# Keep these in the package (override defaults):
+!README.md
+!LICENSE
+!bin/
+!skills/
+!roles/

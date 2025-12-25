@@ -43,4 +43,4 @@ where = ["."]
 include = ["tech_hub_skills*"]
 
 [tool.setuptools.package-data]
-"*" = ["skills/*.md", "roles/**/*.md"]
+tech_hub_skills = ["../skills/*.md", "../roles/**/*.md"]

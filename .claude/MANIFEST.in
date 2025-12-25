@@ -1,0 +1,27 @@
+# MANIFEST.in - Python package distribution manifest
+# Ensures all necessary files are included in the pip package
+
+# Include all skill and role markdown files
+recursive-include skills *.md
+recursive-include roles *.md
+
+# Include README and license
+include README.md
+include LICENSE
+
+# Include package data
+include pyproject.toml
+
+# Exclude development and build files
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude .git*
+global-exclude .vscode
+
+# Exclude npm-related files from Python package
+exclude package.json
+exclude package-lock.json
+recursive-exclude bin *
+recursive-exclude node_modules *

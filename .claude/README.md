@@ -1,37 +1,12 @@
-# Tech Hub Skills for Claude Code
+# Tech Hub Skills - Complete Role Documentation
 
-110+ production-ready AI agent skills for Claude Code. Enterprise-grade with security, governance, and compliance built-in.
+This document provides detailed information about all available roles and their skills.
 
-## Quick Install
+For installation instructions, see [../README.md](../README.md).
 
-### npm / npx (Recommended)
-```bash
-# Install to current project
-npx tech-hub-skills install
+## Quick Reference
 
-# Install globally for all projects
-npx tech-hub-skills install --global
-
-# Enterprise mode setup
-npx tech-hub-skills init --enterprise
-```
-
-### pip
-```bash
-pip install tech-hub-skills
-tech-hub install
-```
-
-### Manual
-```bash
-# Clone and copy .claude folder to your project
-git clone https://github.com/6ogo/tech-hub-skills.git
-cp -r tech-hub-skills/.claude your-project/
-```
-
-## Usage in Claude Code
-
-After installation, use skills with `@` mentions:
+Use skills in Claude Code with `@` mentions:
 
 ```bash
 # Start with the orchestrator (routes to all skills)
@@ -56,13 +31,13 @@ After installation, use skills with `@` mentions:
 | **ML Engineer** | 9 | MLOps, Training, Serving, Monitoring |
 | **Data Scientist** | 8 | EDA, Modeling, Analytics, Experimentation |
 
-### Architecture & Security (15 skills)
+### Architecture & Security Roles (15 skills)
 | Role | Skills | Focus |
 |------|--------|-------|
 | **Security Architect** | 7 | PII, Threat Modeling, IAM, Secrets |
 | **System Design** | 8 | Architecture, Scalability, HA/DR, APIs |
 
-### Platform & Operations (45 skills)
+### Platform & Operations Roles (45 skills)
 | Role | Skills | Focus |
 |------|--------|-------|
 | **Platform Engineer** | 6 | IDP, Self-Service, SLOs |
@@ -72,19 +47,19 @@ After installation, use skills with `@` mentions:
 | **FinOps** | 8 | Cost Visibility, Optimization |
 | **Docker** | 5 | Containers, Security, Optimization |
 
-### Enterprise Governance (10+ skills)
-| Role | Skills | Focus |
+### Enterprise Governance Roles (10+ skills)
+| Role | Skills | FocRoles us |
 |------|--------|-------|
 | **Code Review** | 5 | PR Automation, Quality Gates, Analytics |
 | **Compliance** | Integrated | SOC 2, GDPR, HIPAA, Audit Trails |
 | **Dashboard** | Integrated | Security, Compliance, DORA Metrics |
 
-### Product & Design (6 skills)
+### Product & Design Roles (6 skills)
 | Role | Skills | Focus |
 |------|--------|-------|
 | **Product Designer** | 6 | Requirements, Research, UX, Brainstorming |
 
-### Cloud Platform (12 skills)
+### Cloud Platform Roles (12 skills)
 | Role | Skills | Focus |
 |------|--------|-------|
 | **Azure** | 12 | All Azure services |
@@ -217,12 +192,58 @@ from langgraph.graph import StateGraph
 skills = load_skills(".claude/skills/")
 ```
 
+## Integration Options
+
+### Claude Code (Primary)
+Skills are designed for Claude Code's `@` mention system.
+
+### CrewAI
+```python
+from crewai import Agent, Task, Crew
+
+orchestrator = Agent(
+    role="Tech Hub Orchestrator",
+    goal="Coordinate skills for optimal project execution",
+    backstory=open(".claude/skills/orchestrator.md").read()
+)
+```
+
+### LangGraph
+```python
+from langgraph.graph import StateGraph
+
+# Load skills as node definitions
+skills = load_skills(".claude/skills/")
+```
+
+## Repository Structure
+
+```
+.claude/
+├── skills/                 # Role skill files (invoke with @role-name)
+│   ├── orchestrator.md     # Main orchestrator - routes to all skills
+│   ├── ai-engineer.md
+│   ├── data-engineer.md
+│   ├── security-architect.md
+│   └── ...
+├── roles/                  # Detailed skill implementations
+│   ├── ai-engineer/
+│   │   └── skills/
+│   │       ├── 01-prompt-engineering/README.md
+│   │       ├── 02-rag-pipeline/README.md
+│   │       └── ...
+│   └── ...
+└── README.md               # This file
+```
+
 ## Contributing
 
 1. Fork the repository
-2. Add skills to `.claude/roles/{role}/skills/{skill-id}/`
-3. Update `.claude/skills/{role}.md`
+2. Add skills to `roles/{role}/skills/{skill-id}/`
+3. Update `skills/{role}.md`
 4. Submit PR
+
+For publishing instructions (maintainers only), see [../PUBLISHING.md](../PUBLISHING.md).
 
 ## License
 
