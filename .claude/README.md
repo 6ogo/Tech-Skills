@@ -109,33 +109,32 @@ Use skills in Claude Code with `@` mentions:
 
 ## Skill ID Reference
 
-| Role | Prefix | Skills |
-| Role | Prefix | Skills |
-|------|--------|--------|
-| AI Engineer | `ai-` | ai-01 to ai-08 |
-| Data Engineer | `de-` | de-01 to de-09 |
-| ML Engineer | `ml-` | ml-01 to ml-09 |
-| Data Scientist | `ds-` | ds-01 to ds-08 |
-| Frontend Developer | `fe-` | fe-01 to fe-07 |
-| Backend Developer | `be-` | be-01 to be-07 |
-| Security Architect | `sa-` | sa-01 to sa-07 |
-| System Design | `sd-` | sd-01 to sd-08 |
-| Network Engineer | `ne-` | ne-01 to ne-07 |
-| Platform Engineer | `pe-` | pe-01 to pe-06 |
-| SRE | `sr-` | sr-01 to sr-07 |
-| Database Admin | `db-` | db-01 to db-07 |
-| Data Governance | `dg-` | dg-01 to dg-06 |
-| DevOps | `do-` | do-01 to do-09 |
-| MLOps | `mo-` | mo-01 to mo-09 |
-| FinOps | `fo-` | fo-01 to fo-08 |
-| Azure | `az-` | az-01 to az-12 |
-| AWS | `aws-` | aws-01 to aws-12 |
-| GCP | `gcp-` | gcp-01 to gcp-12 |
-| Code Review | `cr-` | cr-01 to cr-05 |
-| Compliance Officer | `co-` | co-01 to co-07 |
-| Product Designer | `pd-` | pd-01 to pd-06 |
-| QA Engineer | `qa-` | qa-01 to qa-07 |
-| Technical Writer | `tw-` | tw-01 to tw-06 |
+| Role               | Prefix | Skills           |
+| ------------------ | ------ | ---------------- |
+| AI Engineer        | `ai-`  | ai-01 to ai-08   |
+| Data Engineer      | `de-`  | de-01 to de-09   |
+| ML Engineer        | `ml-`  | ml-01 to ml-09   |
+| Data Scientist     | `ds-`  | ds-01 to ds-08   |
+| Frontend Developer | `fe-`  | fe-01 to fe-07   |
+| Backend Developer  | `be-`  | be-01 to be-07   |
+| Security Architect | `sa-`  | sa-01 to sa-07   |
+| System Design      | `sd-`  | sd-01 to sd-08   |
+| Network Engineer   | `ne-`  | ne-01 to ne-07   |
+| Platform Engineer  | `pe-`  | pe-01 to pe-06   |
+| SRE                | `sr-`  | sr-01 to sr-07   |
+| Database Admin     | `db-`  | db-01 to db-07   |
+| Data Governance    | `dg-`  | dg-01 to dg-06   |
+| DevOps             | `do-`  | do-01 to do-09   |
+| MLOps              | `mo-`  | mo-01 to mo-09   |
+| FinOps             | `fo-`  | fo-01 to fo-08   |
+| Azure              | `az-`  | az-01 to az-12   |
+| AWS                | `aws-` | aws-01 to aws-12 |
+| GCP                | `gcp-` | gcp-01 to gcp-12 |
+| Code Review        | `cr-`  | cr-01 to cr-05   |
+| Compliance Officer | `co-`  | co-01 to co-07   |
+| Product Designer   | `pd-`  | pd-01 to pd-06   |
+| QA Engineer        | `qa-`  | qa-01 to qa-07   |
+| Technical Writer   | `tw-`  | tw-01 to tw-06   |
 
 ## Enterprise Mode
 
