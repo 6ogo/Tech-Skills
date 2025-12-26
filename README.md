@@ -14,11 +14,8 @@ Enterprise-grade with security, governance, and compliance built-in.
 ### For Claude Code
 
 ```bash
-# npm/npx (Recommended)
+# npm/npx
 npx tech-hub-skills install
-
-# or Python
-pip install tech-hub-skills && tech-hub-skills install
 ```
 
 ### For GitHub Copilot (VSCode)
@@ -26,11 +23,7 @@ pip install tech-hub-skills && tech-hub-skills install
 ```bash
 # npm/npx
 npx tech-hub-skills install --copilot
-
-# or Python
-pip install tech-hub-skills && tech-hub-skills install --copilot
 ```
-
 
 This creates `.github/copilot-instructions.md` with all expert skills.
 See [GITHUB_COPILOT.md](https://github.com/6ogo/Tech-Skills/blob/main/GITHUB_COPILOT.md) for usage guide.
