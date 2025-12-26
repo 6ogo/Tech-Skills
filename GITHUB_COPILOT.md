@@ -68,7 +68,7 @@ Both tools work together:
 
 | Feature | GitHub Copilot | Claude Code |
 |---------|----------------|-------------|
-| **Usage** | Inline suggestions | `@mention` roles |
+| **Usage** | Inline suggestions | `/mention` roles |
 | **Mode** | Automatic | Interactive |
 | **Best For** | Writing code | Complex tasks, architecture |
 
@@ -80,7 +80,7 @@ npx tech-hub-skills install --copilot
 
 # 2. Use Copilot while coding (automatic)
 # 3. Use Claude Code for complex tasks
-@orchestrator "Design a data lakehouse architecture"
+/orchestrator "Design a data lakehouse architecture"
 ```
 
 ## Troubleshooting

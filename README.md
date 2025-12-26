@@ -5,7 +5,9 @@
 [![npm total downloads](https://img.shields.io/npm/dt/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
 [![License](https://img.shields.io/npm/l/tech-hub-skills.svg)](https://github.com/6ogo/Tech-Skills/blob/main/LICENSE)
 
-110+ production-ready AI agent skills for **Claude Code** and **GitHub Copilot**. Enterprise-grade with security, governance, and compliance built-in.
+180+ production-ready AI agent skills for **Claude Code** and **GitHub Copilot**.
+
+Enterprise-grade with security, governance, and compliance built-in.
 
 ## Quick Install
 
@@ -29,8 +31,9 @@ npx tech-hub-skills install --copilot
 pip install tech-hub-skills && tech-hub-skills install --copilot
 ```
 
+
 This creates `.github/copilot-instructions.md` with all expert skills.
-See [GITHUB_COPILOT.md](GITHUB_COPILOT.md) for usage guide.
+See [GITHUB_COPILOT.md](https://github.com/6ogo/Tech-Skills/blob/main/GITHUB_COPILOT.md) for usage guide.
 
 ### Global Install (Claude Code only)
 
@@ -84,22 +87,22 @@ cp -r tech-hub-skills/.claude your-project/
 | **Technical Writer**   | 6      | API Docs, ADRs, Runbooks                    |
 | **Product Designer**   | 6      | Requirements, Research, UX                  |
 
-See [.claude/README.md](.claude/README.md) for detailed role documentation.
+See [.claude/README.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/README.md) for detailed role documentation.
 
 ## Usage
 
 ### Claude Code
 
-Use `@` mentions to invoke specific expert roles:
+Use `/` mentions to invoke specific expert roles:
 
 ```bash
 # Start with the orchestrator
-@orchestrator "Build a customer churn prediction model"
+/orchestrator "Build a customer churn prediction model"
 
 # Or use specific roles
-@ai-engineer "Create a RAG pipeline"
-@security-architect "Review this code for PII"
-@data-engineer "Design a lakehouse architecture"
+/ai-engineer "Create a RAG pipeline"
+/security-architect "Review this code for PII"
+/data-engineer "Design a lakehouse architecture"
 ```
 
 ### GitHub Copilot
@@ -116,7 +119,7 @@ def process_data(user_input):
     # Copilot adds input validation, PII scanning
 ```
 
-See [GITHUB_COPILOT.md](GITHUB_COPILOT.md) for complete guide.
+See [GITHUB_COPILOT.md](https://github.com/6ogo/Tech-Skills/blob/main/GITHUB_COPILOT.md) for complete guide.
 
 ## Updating
 
@@ -131,19 +134,19 @@ git pull
 cp -r .claude your-project/
 ```
 
-After installation, use skills with `@` mentions:
+After installation, use skills with `/` mentions:
 
 ```bash
 # Start with the orchestrator (routes to all skills)
-@orchestrator "Build a customer churn prediction model"
+/orchestrator "Build a customer churn prediction model"
 
 # Or invoke specific roles
-@ai-engineer "Create a RAG pipeline"
-@security-architect "Review this code for PII"
-@data-engineer "Design a lakehouse architecture"
+/ai-engineer "Create a RAG pipeline"
+/security-architect "Review this code for PII"
+/data-engineer "Design a lakehouse architecture"
 
 # Enterprise mode (mandatory security + governance)
-@project-starter --enterprise "Build a customer data platform"
+/project-starter --enterprise "Build a customer data platform"
 ```
 
 ## Examples
@@ -151,31 +154,31 @@ After installation, use skills with `@` mentions:
 **AI/ML Project**
 
 ```bash
-@orchestrator "Build a customer churn prediction model with GDPR compliance"
+/orchestrator "Build a customer churn prediction model with GDPR compliance"
 ```
 
 **RAG Application**
 
 ```bash
-@ai-engineer "Create a RAG pipeline for internal docs"
+/ai-engineer "Create a RAG pipeline for internal docs"
 ```
 
 **Security Review**
 
 ```bash
-@security-architect "Audit this codebase for security vulnerabilities"
+/security-architect "Audit this codebase for security vulnerabilities"
 ```
 
 **Enterprise Platform**
 
 ```bash
-@project-starter --enterprise "Build a customer data platform"
+/project-starter --enterprise "Build a customer data platform"
 ```
 
 ## Documentation
 
-- **All Roles**: See [.claude/README.md](.claude/README.md) for complete role documentation
-- **Publishing**: See [PUBLISHING.md](PUBLISHING.md) for maintainer instructions
+- **All Roles**: See [.claude/README.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/README.md) for complete role documentation
+- **Publishing**: See [PUBLISHING.md](https://github.com/6ogo/Tech-Skills/blob/main/PUBLISHING.md) for maintainer instructions
 
 ## Contributing
 
