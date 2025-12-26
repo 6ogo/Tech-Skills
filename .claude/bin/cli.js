@@ -6,7 +6,7 @@ const { execSync } = require("child_process");
 const { installCopilotInstructions } = require("./copilot");
 
 const SKILLS_DIR = path.join(__dirname, "..");
-const VERSION = require("../package.json").version;
+const VERSION = require("../../package.json").version;
 
 const colors = {
   reset: "\x1b[0m",
