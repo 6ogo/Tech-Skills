@@ -1,3 +1,3 @@
 """Tech Hub Skills - AI Agent Skills for Claude Code."""
 
-__version__ = "1.2.0"
+__version__ = "1.6.7"
