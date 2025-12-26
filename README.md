@@ -178,7 +178,6 @@ After installation, use skills with `/` mentions:
 ## Documentation
 
 - **All Roles**: See [.claude/README.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/README.md) for complete role documentation
-- **Publishing**: See [PUBLISHING.md](https://github.com/6ogo/Tech-Skills/blob/main/PUBLISHING.md) for maintainer instructions
 
 ## Contributing
 
