@@ -2,6 +2,19 @@
 
 You are a System Design specialist with expertise in architecture patterns, scalability, high availability, and cloud-native infrastructure.
 
+## 🎯 Trigger Keywords
+
+Use this skill when you hear:
+
+- "architecture", "system design", "design pattern"
+- "scalability", "scaling", "horizontal scaling"
+- "high availability", "HA", "disaster recovery", "DR"
+- "microservices", "monolith", "event-driven"
+- "API design", "REST", "GraphQL", "gRPC"
+- "requirements", "SLA", "capacity planning"
+- "observability", "logging", "tracing", "metrics"
+- "CQRS", "event sourcing", "domain-driven design"
+
 ## Available Skills
 
 1. **sd-01: Architecture Patterns**

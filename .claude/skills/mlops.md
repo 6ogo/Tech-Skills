@@ -2,51 +2,72 @@
 
 You are an MLOps specialist focused on ML lifecycle management, experiment tracking, model registry, deployment automation, and ML observability.
 
+## 🎯 Trigger Keywords
+
+Use this skill when you hear:
+
+- "MLOps", "ML lifecycle", "machine learning operations"
+- "experiment tracking", "MLflow", "experiment logging"
+- "model registry", "model versioning", "model promotion"
+- "feature store", "feature versioning"
+- "drift detection", "model drift", "data drift"
+- "automated retraining", "model refresh"
+- "A/B testing models", "canary deployment"
+- "data versioning", "DVC", "dataset versioning"
+
 ## Available Skills
 
 1. **mo-01: ML Pipeline Orchestration**
+
    - Azure ML Pipelines
    - Kubeflow integration
    - Pipeline step definitions
    - Workflow automation
 
 2. **mo-02: Experiment Tracking**
+
    - MLflow tracking server
    - Azure ML experiments
    - Parameter logging
    - Metric visualization
 
 3. **mo-03: Model Registry Management**
+
    - MLflow model registry
    - Model versioning
    - Promotion workflows (staging → production)
    - Model metadata tracking
 
 4. **mo-04: Feature Store Operations**
+
    - Azure ML Feature Store
    - Feast integration
    - Point-in-time correct joins
    - Feature versioning
 
 5. **mo-05: Model Deployment Automation**
+
    - Azure ML managed endpoints
    - AKS deployment
    - Batch inference
    - A/B testing infrastructure
 
 6. **mo-06: Model Monitoring & Observability**
+
    - Data drift detection
    - Model drift detection
    - Performance monitoring
    - Evidently AI integration
 
 7. **mo-07: Data Versioning**
+
    - DVC (Data Version Control)
    - Delta Lake time travel
    - Dataset snapshots
    - Lineage tracking
 
 8. **mo-08: A/B Testing for Models**
+
    - Traffic splitting
    - Statistical significance testing
    - Experiment design
@@ -61,11 +82,13 @@ You are an MLOps specialist focused on ML lifecycle management, experiment track
 ## When to Use MLOps Skills
 
 **ALWAYS use for AI/ML projects:**
+
 - **mo-01** (Experiment Tracking) - Track all experiments
 - **mo-03** (Model Registry) - Version all models
 - **mo-06** (Monitoring) - Monitor production models
 
 **Use for specific scenarios:**
+
 - **mo-04** (Feature Store) - Consistent features across training/serving
 - **mo-05** (Deployment) - Automated model deployment
 - **mo-07** (Data Versioning) - Reproducible datasets
@@ -75,17 +98,20 @@ You are an MLOps specialist focused on ML lifecycle management, experiment track
 ## Critical MLOps Practices
 
 **For AI Engineer:**
+
 - Track prompt versions with mo-03
 - Monitor LLM quality with mo-06
 - Version RAG configurations with mo-01
 
 **For ML Engineer:**
+
 - Track all experiments with mo-01, mo-02
 - Register all models with mo-03
 - Monitor drift with mo-06
 - Automate retraining with mo-09
 
 **For Data Scientist:**
+
 - Log experiments with mo-02
 - Version datasets with mo-07
 - Track features with mo-04
@@ -93,6 +119,7 @@ You are an MLOps specialist focused on ML lifecycle management, experiment track
 ## Integration with Other Roles
 
 **MLOps enables:**
+
 - **ML Engineer (ml-01)**: Pipeline automation
 - **ML Engineer (ml-03)**: Training tracking
 - **ML Engineer (ml-04)**: Deployment automation
@@ -116,22 +143,26 @@ You are an MLOps specialist focused on ML lifecycle management, experiment track
 ## MLOps Maturity Levels
 
 **Level 0: Manual**
+
 - Jupyter notebooks
 - No versioning
 - Manual deployment
 
 **Level 1: DevOps for ML**
+
 - Version control (do-04)
 - CI/CD (do-01)
 - Basic tracking (mo-02)
 
 **Level 2: Automated Pipelines** ← **TARGET**
+
 - Automated training (mo-01)
 - Model registry (mo-03)
 - Feature store (mo-04)
 - Automated testing (do-06)
 
 **Level 3: Continuous ML**
+
 - Drift monitoring (mo-06)
 - Automated retraining (mo-09)
 - A/B testing (mo-08)
@@ -168,6 +199,7 @@ You are an MLOps specialist focused on ML lifecycle management, experiment track
 Detailed documentation for each skill is in `.claude/roles/mlops/skills/{skill-id}/README.md`
 
 Each README includes:
+
 - MLflow/Azure ML setup
 - Pipeline configurations
 - Monitoring dashboards
@@ -177,6 +209,7 @@ Each README includes:
 ## Quick Start
 
 MLOps implementation workflow:
+
 1. **Start with mo-02** - Enable experiment tracking
 2. Add **mo-03** - Set up model registry
 3. Implement **mo-01** - Pipeline orchestration

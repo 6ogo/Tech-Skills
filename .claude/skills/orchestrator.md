@@ -118,6 +118,176 @@ Reference these skill files for detailed guidance:
 - `product-designer.md` - Requirements, research, UX (pd-01 to pd-06)
 - `optimization-advisor.md` - Process improvement & automation
 
+## 🌳 Decision Trees
+
+Use these quick decision guides to select the right skills:
+
+### What are you building?
+
+```
+START → What's your primary goal?
+│
+├── 🤖 AI/LLM Application
+│   ├── Chatbot/Conversational? → ai-01, ai-03, ai-04, ai-07
+│   ├── RAG/Knowledge Base? → ai-02, ai-05, sa-01, de-02
+│   ├── Content Generation? → ai-01, ai-04, ai-08
+│   └── AI Agent? → ai-03, ai-04, ai-07, mo-01
+│
+├── 📊 Data/Analytics
+│   ├── Data Pipeline? → de-01, de-02, de-03, fo-01
+│   ├── Analytics Dashboard? → ds-01, ds-08, fe-01
+│   ├── Real-time Streaming? → de-04, de-05
+│   └── Data Governance? → dg-01, dg-02, dg-03, dg-06
+│
+├── 🧠 Machine Learning
+│   ├── Train Model? → ml-01, ml-02, ml-03, mo-01
+│   ├── Deploy Model? → ml-04, docker-01, do-01, mo-06
+│   ├── MLOps Platform? → mo-01, mo-03, mo-06, mo-09
+│   └── Feature Store? → mo-04, ml-02
+│
+├── 🌐 Web Application
+│   ├── Frontend SPA? → fe-01, fe-02, fe-03, fe-04
+│   ├── REST API? → be-01, be-04, be-06, be-07
+│   ├── GraphQL API? → be-02, be-04
+│   ├── Full-Stack? → fe-01, be-01, db-01, do-01
+│   └── Microservices? → be-03, do-02, sr-06
+│
+├── ☁️ Cloud Infrastructure
+│   ├── Azure? → az-01 to az-12, do-03
+│   ├── AWS? → aws-01 to aws-12, do-03
+│   ├── GCP? → gcp-01 to gcp-12, do-03
+│   └── Multi-Cloud? → ne-01, sd-01, do-03
+│
+├── 🔒 Security/Compliance
+│   ├── PII/Sensitive Data? → sa-01, sa-04, dg-04
+│   ├── SOC 2/GDPR/HIPAA? → co-01 to co-07, compliance-automation
+│   ├── Threat Modeling? → sa-02, sa-03, sa-05
+│   └── Enterprise Security? → sa-01 to sa-07, enterprise-dashboard
+│
+└── 🚀 DevOps/Platform
+    ├── CI/CD Pipeline? → do-01, do-06, do-09
+    ├── Kubernetes? → do-02, docker-01, docker-02
+    ├── Infrastructure as Code? → do-03, do-04
+    ├── Developer Platform? → pe-01, pe-02, pe-03
+    └── SRE/Reliability? → sr-01 to sr-07
+```
+
+### Does your project involve...?
+
+| Condition             | MANDATORY Skills                      | Reason                         |
+| --------------------- | ------------------------------------- | ------------------------------ |
+| PII or personal data  | **sa-01** (PII Detection)             | Compliance & privacy           |
+| Customer/user data    | **sa-01** + **dg-04**                 | GDPR/CCPA requirements         |
+| Production deployment | **do-01** + **do-08**                 | CI/CD + Monitoring             |
+| Cloud resources       | **fo-01**                             | Cost visibility                |
+| AI/ML workloads       | **fo-07** + **mo-06**                 | Cost optimization + monitoring |
+| Containers            | **docker-01** + **docker-02**         | Build + security               |
+| Enterprise grade      | **cr-01** + **compliance-automation** | Quality + compliance           |
+
+## 🔗 Skill Chaining Tables
+
+Common workflows with skill sequences:
+
+### AI/ML Skill Chains
+
+| Goal                 | Skill Chain                                                                       | Est. Savings |
+| -------------------- | --------------------------------------------------------------------------------- | ------------ |
+| RAG Chatbot          | `sd-01` → `sa-01` → `ai-02` → `ai-04` → `ai-07` → `docker-01` → `do-01` → `fo-01` | 70-90%       |
+| ML Model Deployment  | `ml-02` → `ml-03` → `mo-03` → `docker-01` → `do-01` → `ml-04` → `mo-06` → `fo-07` | 60-80%       |
+| AI Agent System      | `sd-01` → `ai-03` → `ai-04` → `ai-07` → `mo-01` → `do-08` → `fo-07`               | 70-90%       |
+| Customer Churn Model | `sa-01` → `de-02` → `ds-01` → `ml-02` → `ml-03` → `mo-03` → `ml-04` → `mo-06`     | 60-80%       |
+
+### Data Engineering Skill Chains
+
+| Goal                | Skill Chain                                               |
+| ------------------- | --------------------------------------------------------- |
+| Lakehouse Setup     | `de-01` → `dg-01` → `de-03` → `dg-02` → `fo-06` → `do-08` |
+| ETL Pipeline        | `de-02` → `de-03` → `de-05` → `do-01` → `do-08` → `fo-01` |
+| Real-time Streaming | `de-04` → `de-01` → `de-03` → `do-08` → `fo-01`           |
+| Data Governance     | `dg-01` → `dg-02` → `dg-03` → `dg-04` → `sa-01` → `dg-06` |
+
+### Web Development Skill Chains
+
+| Goal             | Skill Chain                                                                   |
+| ---------------- | ----------------------------------------------------------------------------- |
+| React Dashboard  | `fe-04` → `fe-01` → `fe-03` → `fe-02` → `fe-05` → `fe-06` → `qa-02` → `do-01` |
+| REST API Service | `be-01` → `be-04` → `db-01` → `be-06` → `be-07` → `sa-05` → `do-01` → `do-08` |
+| Full-Stack App   | `sd-01` → `be-01` → `fe-01` → `db-01` → `qa-02` → `do-02` → `do-01` → `sr-03` |
+| Microservices    | `sd-01` → `be-03` → `do-02` → `ne-02` → `sr-06` → `do-04` → `do-08`           |
+
+### DevOps/Platform Skill Chains
+
+| Goal                | Skill Chain                                                         |
+| ------------------- | ------------------------------------------------------------------- |
+| CI/CD Setup         | `do-01` → `do-06` → `do-09` → `do-07` → `do-08` → `fo-01`           |
+| Kubernetes Platform | `do-02` → `docker-01` → `docker-02` → `do-03` → `do-04` → `pe-03`   |
+| Developer Platform  | `pe-01` → `pe-02` → `do-02` → `do-04` → `pe-03` → `cr-01` → `fo-08` |
+| SRE Implementation  | `sr-03` → `sr-04` → `sr-01` → `do-08` → `sr-06` → `sr-02` → `sr-07` |
+
+### Security & Compliance Skill Chains
+
+| Goal                | Skill Chain                                                                    |
+| ------------------- | ------------------------------------------------------------------------------ |
+| Enterprise Security | `sa-02` → `sa-01` → `sa-03` → `sa-04` → `sa-05` → `sa-06` → `sa-07`            |
+| SOC 2 Compliance    | `compliance-automation` → `co-01` → `co-06` → `enterprise-dashboard` → `tw-05` |
+| GDPR Implementation | `sa-01` → `dg-04` → `dg-06` → `co-02` → `compliance-automation`                |
+
+## ⛔ Mandatory Cross-Role Collaborations
+
+**NEVER skip these collaborations:**
+
+### Security Collaborations (CRITICAL)
+
+```
+❌ ANTI-PATTERN: Process PII without sa-01
+✅ REQUIRED: ANY role handling personal data → MUST use sa-01 first
+
+❌ ANTI-PATTERN: Deploy to production without sa-05
+✅ REQUIRED: Backend/Frontend → Security Architect (sa-05) for OWASP
+
+❌ ANTI-PATTERN: Store secrets in code
+✅ REQUIRED: ALL roles → sa-06 (Secrets Management)
+```
+
+### Cost Collaborations (CRITICAL)
+
+```
+❌ ANTI-PATTERN: Deploy cloud resources without cost tracking
+✅ REQUIRED: ANY cloud deployment → fo-01 (Cost Visibility)
+
+❌ ANTI-PATTERN: Run LLM workloads without optimization
+✅ REQUIRED: AI Engineer → fo-07 (AI/ML Cost Optimization)
+
+❌ ANTI-PATTERN: Train models without spot instances
+✅ REQUIRED: ML Engineer → fo-05 (Spot Instance Optimization)
+```
+
+### DevOps Collaborations (CRITICAL)
+
+```
+❌ ANTI-PATTERN: Manual deployments to production
+✅ REQUIRED: ALL production deployments → do-01 (CI/CD)
+
+❌ ANTI-PATTERN: Deploy without monitoring
+✅ REQUIRED: ALL production → do-08 (Monitoring & Alerting)
+
+❌ ANTI-PATTERN: Deploy containers without security scan
+✅ REQUIRED: Docker → docker-02 + do-09 (DevSecOps)
+```
+
+### Data Collaborations (CRITICAL)
+
+```
+❌ ANTI-PATTERN: Use data without cataloging
+✅ REQUIRED: Data projects → dg-01 (Data Catalog)
+
+❌ ANTI-PATTERN: Skip data quality validation
+✅ REQUIRED: Data pipelines → de-03 (Data Quality)
+
+❌ ANTI-PATTERN: No data lineage tracking
+✅ REQUIRED: Data governance → dg-02 (Data Lineage)
+```
+
 ## How to Use This Skill
 
 ### Analyze Project Requirements

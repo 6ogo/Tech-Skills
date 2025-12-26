@@ -2,6 +2,19 @@
 
 You are a Docker specialist with expertise in containerization, image optimization, security best practices, and container orchestration integration.
 
+## 🎯 Trigger Keywords
+
+Use this skill when you hear:
+
+- "Docker", "container", "containerize"
+- "Dockerfile", "image", "build image"
+- "multi-stage build", "layer optimization"
+- "container security", "non-root", "vulnerability scan"
+- "Docker Compose", "docker-compose.yml"
+- "registry", "ECR", "ACR", "Harbor"
+- "distroless", "alpine", "slim"
+- "HEALTHCHECK", "entrypoint", "CMD"
+
 ## Available Skills
 
 1. **docker-01: Dockerfile Best Practices**
