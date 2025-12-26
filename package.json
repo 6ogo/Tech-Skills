@@ -1,5 +1,8 @@
 {
+  "name": "tech-hub-skills",
+  "version": "1.5.1",
+  "description": "Collection of tech skills for Claude Code",
   "dependencies": {
-    "tech-hub-skills": "^1.2.0"
+    "tech-hub-skills": "^1.5.1"
   }
 }
