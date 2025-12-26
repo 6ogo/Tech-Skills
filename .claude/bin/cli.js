@@ -1,24 +1,24 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-const { installCopilotInstructions } = require('./copilot');
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+const { installCopilotInstructions } = require("./copilot");
 
-const SKILLS_DIR = path.join(__dirname, '..');
-const VERSION = require('../package.json').version;
+const SKILLS_DIR = path.join(__dirname, "..");
+const VERSION = require("../package.json").version;
 
 const colors = {
-  reset: '\x1b[0m',
-  bright: '\x1b[1m',
-  cyan: '\x1b[36m',
-  green: '\x1b[32m',
-  yellow: '\x1b[33m',
-  red: '\x1b[31m',
-  magenta: '\x1b[35m'
+  reset: "\x1b[0m",
+  bright: "\x1b[1m",
+  cyan: "\x1b[36m",
+  green: "\x1b[32m",
+  yellow: "\x1b[33m",
+  red: "\x1b[31m",
+  magenta: "\x1b[35m",
 };
 
-function print(msg, color = 'reset') {
+function print(msg, color = "reset") {
   console.log(`${colors[color]}${msg}${colors.reset}`);
 }
 
@@ -43,7 +43,11 @@ function copyDir(src, dest) {
     const destPath = path.join(dest, entry.name);
 
     // Skip bin, node_modules, package.json
-    if (['bin', 'node_modules', 'package.json', 'package-lock.json'].includes(entry.name)) {
+    if (
+      ["bin", "node_modules", "package.json", "package-lock.json"].includes(
+        entry.name
+      )
+    ) {
       continue;
     }
 
@@ -58,66 +62,79 @@ function copyDir(src, dest) {
 function install(options = {}) {
   const isGlobal = options.global;
   const targetDir = isGlobal
-    ? path.join(require('os').homedir(), '.claude')
-    : path.join(process.cwd(), '.claude');
+    ? path.join(require("os").homedir(), ".claude")
+    : path.join(process.cwd(), ".claude");
 
-  print(`\n📦 Installing Tech Hub Skills to: ${targetDir}`, 'cyan');
+  print(`\n📦 Installing Tech Hub Skills to: ${targetDir}`, "cyan");
 
   // Copy skills and roles
-  const skillsSrc = path.join(SKILLS_DIR, 'tech_hub_skills', 'skills');
-  const rolesSrc = path.join(SKILLS_DIR, 'tech_hub_skills', 'roles');
-  const skillsDest = path.join(targetDir, 'skills');
-  const rolesDest = path.join(targetDir, 'roles');
+  const skillsSrc = path.join(SKILLS_DIR, "tech_hub_skills", "skills");
+  const rolesSrc = path.join(SKILLS_DIR, "tech_hub_skills", "roles");
+  const skillsDest = path.join(targetDir, "skills");
+  const rolesDest = path.join(targetDir, "roles");
+  const commandsDest = path.join(targetDir, "commands");
 
   if (fs.existsSync(skillsSrc)) {
-    print('  Copying skills...', 'yellow');
+    print("  Copying skills...", "yellow");
     copyDir(skillsSrc, skillsDest);
+
+    print("  Copying commands...", "yellow");
+    copyDir(skillsSrc, commandsDest);
   }
 
   if (fs.existsSync(rolesSrc)) {
-    print('  Copying roles...', 'yellow');
+    print("  Copying roles...", "yellow");
     copyDir(rolesSrc, rolesDest);
   }
 
   // Install GitHub Copilot instructions if requested (project-level only)
   if (options.copilot && !isGlobal) {
-    print('\n🤖 Installing GitHub Copilot integration...', 'cyan');
+    print("\n🤖 Installing GitHub Copilot integration...", "cyan");
     installCopilotInstructions({ force: options.force });
   } else if (options.copilot && isGlobal) {
-    print('\n⚠️  Copilot integration is only available for project-level installs', 'yellow');
-    print('    (Copilot instructions must be in project .github/ directory)', 'yellow');
+    print(
+      "\n⚠️  Copilot integration is only available for project-level installs",
+      "yellow"
+    );
+    print(
+      "    (Copilot instructions must be in project .github/ directory)",
+      "yellow"
+    );
   }
 
   // Count installed files
   const skillCount = fs.existsSync(skillsDest)
-    ? fs.readdirSync(skillsDest).filter(f => f.endsWith('.md')).length
+    ? fs.readdirSync(skillsDest).filter((f) => f.endsWith(".md")).length
     : 0;
 
-  print(`\n✓ Installation complete!`, 'green');
-  print(`  Location: ${targetDir}`, 'cyan');
-  print(`  Skills: ${skillCount} role files installed`, 'cyan');
-  print(`  Roles: 16+ specialized agents`, 'cyan');
+  print(`\n✓ Installation complete!`, "green");
+  print(`  Location: ${targetDir}`, "cyan");
+  print(`  Skills: ${skillCount} role files installed`, "cyan");
+  print(`  Roles: 16+ specialized agents`, "cyan");
   if (options.copilot && !isGlobal) {
-    print(`  Copilot: .github/copilot-instructions.md`, 'cyan');
+    print(`  Copilot: .github/copilot-instructions.md`, "cyan");
   }
 
   print(`\n${colors.bright}Next Steps:${colors.reset}`);
   if (options.copilot && !isGlobal) {
-    print('  GitHub Copilot:');
-    print('  1. Open VSCode with GitHub Copilot enabled');
-    print('  2. Copilot will automatically use the instructions');
-    print('  3. Try: // Using AI Engineer approach for RAG pipeline');
-    print('');
+    print("  GitHub Copilot:");
+    print("  1. Open VSCode with GitHub Copilot enabled");
+    print("  2. Copilot will automatically use the instructions");
+    print("  3. Try: // Using AI Engineer approach for RAG pipeline");
+    print("");
   }
-  print('  Claude Code:');
-  print('  1. Open Claude Code in your project');
-  print('  2. Use @orchestrator to start');
-  print('  3. Or invoke specific roles: @ai-engineer, @security-architect, etc.');
+  print("  Claude Code:");
+  print("  1. Open Claude Code in your project");
+  print("  2. Use /orchestrator or @orchestrator to start");
+  print(
+    "  3. Or invoke specific roles: /ai-engineer, /security-architect, etc."
+  );
 
   print(`\n${colors.bright}Example:${colors.reset}`);
   if (options.copilot && !isGlobal) {
-    print('  Copilot: // Apply Security Architect best practices');
+    print("  Copilot: // Apply Security Architect best practices");
   }
+  print('  Claude: /orchestrator "Build a customer churn prediction model"');
   print('  Claude: @orchestrator "Build a customer churn prediction model"');
 }
 
@@ -125,13 +142,13 @@ function init(options = {}) {
   printBanner();
 
   if (options.enterprise) {
-    print('\n🏢 ENTERPRISE MODE', 'magenta');
-    print('   Mandatory: Security Architect + Data Governance', 'yellow');
-    print('\n   Use in Claude Code:', 'cyan');
+    print("\n🏢 ENTERPRISE MODE", "magenta");
+    print("   Mandatory: Security Architect + Data Governance", "yellow");
+    print("\n   Use in Claude Code:", "cyan");
     print('   @project-starter --enterprise "Your project description"');
   } else {
-    print('\n📦 Standard Mode', 'cyan');
-    print('\n   Use in Claude Code:', 'cyan');
+    print("\n📦 Standard Mode", "cyan");
+    print("\n   Use in Claude Code:", "cyan");
     print('   @project-starter "Your project description"');
   }
 }
@@ -140,26 +157,34 @@ function list() {
   printBanner();
 
   const roles = [
-    { name: 'Orchestrator', skills: 'Routes all', focus: 'Project coordination' },
-    { name: 'AI Engineer', skills: '8', focus: 'LLMs, RAG, Agents' },
-    { name: 'Data Engineer', skills: '9', focus: 'Pipelines, Lakehouse' },
-    { name: 'ML Engineer', skills: '9', focus: 'Training, Serving, MLOps' },
-    { name: 'Data Scientist', skills: '8', focus: 'Analytics, Modeling' },
-    { name: 'Security Architect', skills: '7', focus: 'PII, IAM, Compliance' },
-    { name: 'System Design', skills: '8', focus: 'Architecture, Scalability' },
-    { name: 'Platform Engineer', skills: '6', focus: 'IDP, SLOs' },
-    { name: 'Data Governance', skills: '6', focus: 'Catalog, Lineage, Quality' },
-    { name: 'DevOps', skills: '9', focus: 'CI/CD, Containers, IaC' },
-    { name: 'MLOps', skills: '9', focus: 'Experiments, Registry' },
-    { name: 'FinOps', skills: '8', focus: 'Cost Optimization' },
-    { name: 'Azure', skills: '12', focus: 'Azure Services' },
-    { name: 'Code Review', skills: '5', focus: 'PR Automation, Quality Gates' },
-    { name: 'Product Designer', skills: '6', focus: 'Requirements, UX' },
+    {
+      name: "Orchestrator",
+      skills: "Routes all",
+      focus: "Project coordination",
+    },
+    { name: "AI Engineer", skills: "8", focus: "LLMs, RAG, Agents" },
+    { name: "Data Engineer", skills: "9", focus: "Pipelines, Lakehouse" },
+    { name: "ML Engineer", skills: "9", focus: "Training, Serving, MLOps" },
+    { name: "Data Scientist", skills: "8", focus: "Analytics, Modeling" },
+    { name: "Security Architect", skills: "7", focus: "PII, IAM, Compliance" },
+    { name: "System Design", skills: "8", focus: "Architecture, Scalability" },
+    { name: "Platform Engineer", skills: "6", focus: "IDP, SLOs" },
+    {
+      name: "Data Governance",
+      skills: "6",
+      focus: "Catalog, Lineage, Quality",
+    },
+    { name: "DevOps", skills: "9", focus: "CI/CD, Containers, IaC" },
+    { name: "MLOps", skills: "9", focus: "Experiments, Registry" },
+    { name: "FinOps", skills: "8", focus: "Cost Optimization" },
+    { name: "Azure", skills: "12", focus: "Azure Services" },
+    { name: "Code Review", skills: "5", focus: "PR Automation, Quality Gates" },
+    { name: "Product Designer", skills: "6", focus: "Requirements, UX" },
   ];
 
-  print('\nAvailable Roles:\n', 'bright');
-  console.log('  Role                 Skills   Focus');
-  console.log('  ────────────────────────────────────────────────');
+  print("\nAvailable Roles:\n", "bright");
+  console.log("  Role                 Skills   Focus");
+  console.log("  ────────────────────────────────────────────────");
 
   for (const role of roles) {
     const name = role.name.padEnd(20);
@@ -167,7 +192,7 @@ function list() {
     console.log(`  ${name} ${skills} ${role.focus}`);
   }
 
-  print('\n  Total: 110+ skills across 16+ roles', 'cyan');
+  print("\n  Total: 110+ skills across 16+ roles", "cyan");
 }
 
 function showHelp() {
@@ -209,31 +234,31 @@ ${colors.bright}After Installation:${colors.reset}
 const args = process.argv.slice(2);
 const command = args[0];
 const options = {
-  global: args.includes('--global') || args.includes('-g'),
-  enterprise: args.includes('--enterprise') || args.includes('-E'),
-  copilot: args.includes('--copilot') || args.includes('-c'),
-  force: args.includes('--force') || args.includes('-f')
+  global: args.includes("--global") || args.includes("-g"),
+  enterprise: args.includes("--enterprise") || args.includes("-E"),
+  copilot: args.includes("--copilot") || args.includes("-c"),
+  force: args.includes("--force") || args.includes("-f"),
 };
 
 switch (command) {
-  case 'install':
+  case "install":
     printBanner();
     install(options);
     break;
-  case 'init':
+  case "init":
     init(options);
     break;
-  case 'list':
+  case "list":
     list();
     break;
-  case 'help':
-  case '--help':
-  case '-h':
+  case "help":
+  case "--help":
+  case "-h":
     showHelp();
     break;
-  case 'version':
-  case '--version':
-  case '-v':
+  case "version":
+  case "--version":
+  case "-v":
     console.log(`tech-hub-skills v${VERSION}`);
     break;
   default:

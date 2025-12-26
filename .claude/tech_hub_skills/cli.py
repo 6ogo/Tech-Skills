@@ -52,6 +52,15 @@ def install(global_install: bool = False, force: bool = False, copilot: bool = F
             shutil.copytree(skills_src, skills_dest)
             print("  ✓ Skills copied")
 
+    # Copy skills to commands for slash commands in Claude Code
+    commands_dest = target_dir / "commands"
+    if skills_src.exists():
+        if commands_dest.exists() and force:
+            shutil.rmtree(commands_dest)
+        if not commands_dest.exists() or force:
+            shutil.copytree(skills_src, commands_dest)
+            print("  ✓ Commands copied")
+
     # Copy roles
     roles_dest = target_dir / "roles"
     if roles_src.exists():
@@ -94,12 +103,13 @@ def install(global_install: bool = False, force: bool = False, copilot: bool = F
         print("")
     print("   Claude Code:")
     print("   1. Open Claude Code in your project")
-    print("   2. Use @orchestrator to start")
-    print("   3. Or invoke: @ai-engineer, @security-architect, etc.")
+    print("   2. Use /orchestrator or @orchestrator to start")
+    print("   3. Or invoke: /ai-engineer, @security-architect, etc.")
 
     print("\n💡 Example:")
     if copilot:
         print('   Copilot: // Apply Security Architect best practices')
+    print('   Claude: /orchestrator "Build a customer churn prediction model"')
     print('   Claude: @orchestrator "Build a customer churn prediction model"')
 
 
