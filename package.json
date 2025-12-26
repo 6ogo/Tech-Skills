@@ -1,7 +1,15 @@
 {
   "name": "tech-hub-skills",
-  "version": "1.6.6",
+  "version": "1.6.7",
   "description": "Collection of tech skills for Claude Code",
+  "bin": {
+    "tech-hub-skills": "./.claude/bin/cli.js"
+  },
+  "scripts": {
+    "install": "node .claude/bin/cli.js install",
+    "list": "node .claude/bin/cli.js list",
+    "postinstall": "node .claude/bin/postinstall.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/6ogo/Tech-Skills.git"
@@ -9,8 +17,5 @@
   "homepage": "https://github.com/6ogo/Tech-Skills#readme",
   "bugs": {
     "url": "https://github.com/6ogo/Tech-Skills/issues"
-  },
-  "dependencies": {
-    "tech-hub-skills": "^1.6.6"
   }
 }

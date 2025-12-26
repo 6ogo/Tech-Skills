@@ -60,10 +60,21 @@ function copyDir(src, dest) {
 }
 
 function install(options = {}) {
-  const isGlobal = options.global;
+  const isGlobal = options.global || process.env.npm_config_global === "true";
+  const projectRoot = process.env.INIT_CWD || process.cwd();
+
   const targetDir = isGlobal
     ? path.join(require("os").homedir(), ".claude")
-    : path.join(process.cwd(), ".claude");
+    : path.join(projectRoot, ".claude");
+
+  // Prevent self-copying if running from the source repo
+  if (path.resolve(SKILLS_DIR) === path.resolve(targetDir)) {
+    print(
+      "\nℹ️  Running from source directory, skipping installation to avoid self-overwrite.",
+      "yellow"
+    );
+    return;
+  }
 
   print(`\n📦 Installing Tech Hub Skills to: ${targetDir}`, "cyan");
 
@@ -255,7 +266,10 @@ ${colors.bright}After Installation:${colors.reset}
 const args = process.argv.slice(2);
 const command = args[0];
 const options = {
-  global: args.includes("--global") || args.includes("-g"),
+  global:
+    args.includes("--global") ||
+    args.includes("-g") ||
+    process.env.npm_config_global === "true",
   enterprise: args.includes("--enterprise") || args.includes("-E"),
   copilot: args.includes("--copilot") || args.includes("-c"),
   force: args.includes("--force") || args.includes("-f"),
