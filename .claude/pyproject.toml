@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tech-hub-skills"
-version = "1.6.7"
+version = "1.6.8"
 description = "180+ production-ready AI agent skills for Claude Code and GitHub Copilot"
 readme = "README.md"
 license = {text = "MIT"}

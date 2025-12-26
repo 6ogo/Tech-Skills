@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-/**
- * Post-install script for tech-hub-skills npm package
- * Shows installation success message but doesn't auto-install to avoid unwanted side effects
- */
+const path = require("path");
+const fs = require("fs");
+const { execSync } = require("child_process");
 
 const colors = {
   reset: "\x1b[0m",
