@@ -2,6 +2,14 @@
   "name": "tech-hub-skills",
   "version": "1.5.1",
   "description": "Collection of tech skills for Claude Code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/6ogo/Tech-Skills.git"
+  },
+  "homepage": "https://github.com/6ogo/Tech-Skills#readme",
+  "bugs": {
+    "url": "https://github.com/6ogo/Tech-Skills/issues"
+  },
   "dependencies": {
     "tech-hub-skills": "^1.5.1"
   }

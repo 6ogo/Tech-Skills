@@ -1,5 +1,10 @@
 # Tech Hub Skills
 
+[![npm version](https://img.shields.io/npm/v/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
+[![npm downloads](https://img.shields.io/npm/dm/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
+[![npm total downloads](https://img.shields.io/npm/dt/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
+[![License](https://img.shields.io/npm/l/tech-hub-skills.svg)](https://github.com/6ogo/Tech-Skills/blob/main/LICENSE)
+
 110+ production-ready AI agent skills for **Claude Code** and **GitHub Copilot**. Enterprise-grade with security, governance, and compliance built-in.
 
 ## Quick Install
