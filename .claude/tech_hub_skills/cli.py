@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 from .copilot_integration import install_copilot_instructions, get_available_roles
 
-__version__ = "1.5.1"
+__version__ = "1.6.0"
 
 BANNER = """
 
