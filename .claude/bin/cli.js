@@ -67,24 +67,45 @@ function install(options = {}) {
 
   print(`\n📦 Installing Tech Hub Skills to: ${targetDir}`, "cyan");
 
-  // Copy skills and roles
-  const skillsSrc = path.join(SKILLS_DIR, "tech_hub_skills", "skills");
-  const rolesSrc = path.join(SKILLS_DIR, "tech_hub_skills", "roles");
+  // Try multiple source paths (support both package layouts)
+  const possibleSkillsSrc = [
+    path.join(SKILLS_DIR, "skills"),
+    path.join(SKILLS_DIR, "tech_hub_skills", "skills"),
+  ];
+  const possibleRolesSrc = [
+    path.join(SKILLS_DIR, "roles"),
+    path.join(SKILLS_DIR, "tech_hub_skills", "roles"),
+  ];
+  const possibleCommandsSrc = [
+    path.join(SKILLS_DIR, "commands"),
+    path.join(SKILLS_DIR, "tech_hub_skills", "skills"), // fallback to skills
+  ];
+
   const skillsDest = path.join(targetDir, "skills");
   const rolesDest = path.join(targetDir, "roles");
   const commandsDest = path.join(targetDir, "commands");
 
-  if (fs.existsSync(skillsSrc)) {
+  // Find and copy skills
+  const skillsSrc = possibleSkillsSrc.find((p) => fs.existsSync(p));
+  if (skillsSrc) {
     print("  Copying skills...", "yellow");
     copyDir(skillsSrc, skillsDest);
-
-    print("  Copying commands...", "yellow");
-    copyDir(skillsSrc, commandsDest);
+  } else {
+    print("  ⚠️  Skills directory not found", "red");
   }
 
-  if (fs.existsSync(rolesSrc)) {
+  // Find and copy roles
+  const rolesSrc = possibleRolesSrc.find((p) => fs.existsSync(p));
+  if (rolesSrc) {
     print("  Copying roles...", "yellow");
     copyDir(rolesSrc, rolesDest);
+  }
+
+  // Find and copy commands
+  const commandsSrc = possibleCommandsSrc.find((p) => fs.existsSync(p));
+  if (commandsSrc) {
+    print("  Copying commands...", "yellow");
+    copyDir(commandsSrc, commandsDest);
   }
 
   // Install GitHub Copilot instructions if requested (project-level only)

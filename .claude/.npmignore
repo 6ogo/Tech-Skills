@@ -9,10 +9,13 @@ __pycache__/
 dist/
 build/
 .eggs/
-tech_hub_skills/
 setup.py
 pyproject.toml
 MANIFEST.in
+
+# Python source files only (keep markdown)
+tech_hub_skills/*.py
+tech_hub_skills/**/*.py
 
 # Development files
 .git/
