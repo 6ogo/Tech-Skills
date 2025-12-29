@@ -5,9 +5,10 @@
 [![npm total downloads](https://img.shields.io/npm/dt/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
 [![License](https://img.shields.io/npm/l/tech-hub-skills.svg)](https://github.com/6ogo/Tech-Skills/blob/main/LICENSE)
 
-180+ production-ready AI agent skills for **Claude Code** and **GitHub Copilot**.
 
-Enterprise-grade with security, governance, and compliance built-in.
+**Over 30 expert roles and 200+ production-ready AI agent skills for Claude Code and GitHub Copilot.**
+
+Enterprise-grade: security, governance, and compliance built-in.
 
 ## Quick Install
 
@@ -43,17 +44,19 @@ git clone https://github.com/6ogo/Tech-Skills.git
 cp -r tech-hub-skills/.claude your-project/
 ```
 
+
 ## What's Included
 
-- **26 Role Skills**: AI Engineer, Data Engineer, Security Architect, DevOps, and more
-- **180+ Detailed Implementations**: Step-by-step guides for each skill
-- **Enterprise Mode**: Built-in security, governance, and compliance
-- **Cross-Platform**: Works on Windows, macOS, Linux
+- **30+ Expert Roles**: AI Engineer, Data Engineer, Security Architect, DevOps, SRE, QA, Product Designer, Technical Writer, and more
+- **200+ Detailed Skills**: Step-by-step, production-ready implementations for each role
+- **Enterprise Mode**: Security, governance, and compliance by default
+- **Cross-Platform**: Windows, macOS, Linux
 
-## Available Roles
+
+## Available Roles (2025)
 
 | Role                   | Skills | Focus                                       |
-| ---------------------- | ------ | ------------------------------------------- |
+|------------------------|--------|---------------------------------------------|
 | **AI Engineer**        | 8      | LLMs, RAG, Agents, Guardrails, Embeddings   |
 | **Data Engineer**      | 9      | Lakehouse, ETL/ELT, Streaming, Quality      |
 | **ML Engineer**        | 9      | MLOps, Training, Serving, Monitoring        |
@@ -79,6 +82,10 @@ cp -r tech-hub-skills/.claude your-project/
 | **QA Engineer**        | 7      | Test Strategy, Automation, Performance      |
 | **Technical Writer**   | 6      | API Docs, ADRs, Runbooks                    |
 | **Product Designer**   | 6      | Requirements, Research, UX                  |
+| **Project Starter**    | 3      | Guided project setup, enterprise onboarding |
+| **Process Automation** | 4      | Changelog, Kanban, Versioning, Docs         |
+| **Optimization Advisor**| 3     | Cost, performance, architecture             |
+| **Enterprise Dashboard**| 2     | Reporting, metrics, visualization           |
 
 See [.claude/README.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/README.md) for detailed role documentation.
 
