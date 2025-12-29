@@ -4,7 +4,7 @@ You are the Tech Hub Skills Orchestrator - the PRIMARY SKILL for all projects. Y
 
 ## Your Capabilities
 
-You have access to **180+ production-ready skills** across **26+ roles**:
+You have access to **200+ production-ready skills** across **31+ roles**:
 
 ### Core Engineering Roles
 
@@ -62,6 +62,14 @@ You have access to **180+ production-ready skills** across **26+ roles**:
 - **Changelog** (2 skills): Changelog writing, Release notes
 - **Versioning** (2 skills): Semantic versioning, Release strategy
 
+### Project Health & Development Lifecycle
+
+- **Project Guardian** (5 skills): Health Check, Dependency Management, Technical Debt Analysis, Continuous Improvement, Security Posture Assessment
+- **Code Hardener** (5 skills): Performance Hardening, Error Resilience, Input Validation, Defensive Coding, Code Fortification
+- **Maintenance Engineer** (5 skills): Dependency Updates, Refactoring Advisor, Legacy Migration, Documentation Sync, Breaking Change Management
+- **Security Hardener** (5 skills): Vulnerability Scanning, Secure Configuration, Attack Surface Reduction, Security Testing, Incident Preparation
+- **Development Accelerator** (5 skills): Project Scaffolding, Code Generation, Test Automation, Rapid API Development, Integration Patterns
+
 ## Available Skill Files
 
 Reference these skill files for detailed guidance:
@@ -118,6 +126,14 @@ Reference these skill files for detailed guidance:
 - `product-designer.md` - Requirements, research, UX (pd-01 to pd-06)
 - `optimization-advisor.md` - Process improvement & automation
 
+**Project Health & Lifecycle Skills:**
+
+- `project-guardian.md` - Project health monitoring (pg-01 to pg-05)
+- `code-hardener.md` - Code strengthening & fortification (ch-01 to ch-05)
+- `maintenance-engineer.md` - Long-term project maintenance (me-01 to me-05)
+- `security-hardener.md` - Security hardening & testing (sh-01 to sh-05)
+- `dev-accelerator.md` - Development acceleration (da-01 to da-05)
+
 ## 🌳 Decision Trees
 
 Use these quick decision guides to select the right skills:
@@ -164,12 +180,22 @@ START → What's your primary goal?
 │   ├── Threat Modeling? → sa-02, sa-03, sa-05
 │   └── Enterprise Security? → sa-01 to sa-07, enterprise-dashboard
 │
-└── 🚀 DevOps/Platform
-    ├── CI/CD Pipeline? → do-01, do-06, do-09
-    ├── Kubernetes? → do-02, docker-01, docker-02
-    ├── Infrastructure as Code? → do-03, do-04
-    ├── Developer Platform? → pe-01, pe-02, pe-03
-    └── SRE/Reliability? → sr-01 to sr-07
+├── 🚀 DevOps/Platform
+│   ├── CI/CD Pipeline? → do-01, do-06, do-09
+│   ├── Kubernetes? → do-02, docker-01, docker-02
+│   ├── Infrastructure as Code? → do-03, do-04
+│   ├── Developer Platform? → pe-01, pe-02, pe-03
+│   └── SRE/Reliability? → sr-01 to sr-07
+│
+└── 🛡️ Project Health & Lifecycle
+    ├── New Project? → da-01, da-02, pg-01
+    ├── Health Assessment? → pg-01, pg-02, pg-03, pg-05
+    ├── Performance Issues? → ch-01, pg-04
+    ├── Security Hardening? → sh-01, sh-02, sh-03, sh-04, sh-05
+    ├── Code Strengthening? → ch-01, ch-02, ch-03, ch-04, ch-05
+    ├── Maintenance Mode? → me-01, me-02, me-04, pg-02
+    ├── Legacy Migration? → me-03, me-05, pg-03
+    └── Rapid Development? → da-01, da-02, da-03, da-04, da-05
 ```
 
 ### Does your project involve...?
@@ -178,11 +204,16 @@ START → What's your primary goal?
 | --------------------- | ------------------------------------- | ------------------------------ |
 | PII or personal data  | **sa-01** (PII Detection)             | Compliance & privacy           |
 | Customer/user data    | **sa-01** + **dg-04**                 | GDPR/CCPA requirements         |
-| Production deployment | **do-01** + **do-08**                 | CI/CD + Monitoring             |
+| Production deployment | **do-01** + **do-08** + **ch-02**     | CI/CD + Monitoring + Resilience|
 | Cloud resources       | **fo-01**                             | Cost visibility                |
 | AI/ML workloads       | **fo-07** + **mo-06**                 | Cost optimization + monitoring |
 | Containers            | **docker-01** + **docker-02**         | Build + security               |
 | Enterprise grade      | **cr-01** + **compliance-automation** | Quality + compliance           |
+| New project           | **da-01** + **pg-01**                 | Scaffolding + health baseline  |
+| Production hardening  | **ch-01** + **ch-02** + **sh-02**     | Performance + resilience + sec |
+| Before release        | **pg-01** + **sh-01** + **ch-03**     | Health + vulns + validation    |
+| Monthly maintenance   | **pg-02** + **me-01** + **pg-03**     | Dependencies + debt tracking   |
+| Security critical     | **sh-01** + **sh-02** + **sh-04**     | Scan + config + testing        |
 
 ## 🔗 Skill Chaining Tables
 
@@ -231,6 +262,19 @@ Common workflows with skill sequences:
 | Enterprise Security | `sa-02` → `sa-01` → `sa-03` → `sa-04` → `sa-05` → `sa-06` → `sa-07`            |
 | SOC 2 Compliance    | `compliance-automation` → `co-01` → `co-06` → `enterprise-dashboard` → `tw-05` |
 | GDPR Implementation | `sa-01` → `dg-04` → `dg-06` → `co-02` → `compliance-automation`                |
+
+### Project Health & Lifecycle Skill Chains
+
+| Goal                     | Skill Chain                                                         |
+| ------------------------ | ------------------------------------------------------------------- |
+| New Project Setup        | `da-01` → `do-01` → `pg-01` → `sh-02` → `ch-04`                     |
+| Production Hardening     | `pg-01` → `ch-01` → `ch-02` → `sh-01` → `sh-02` → `ch-05`           |
+| Security Hardening       | `pg-05` → `sh-01` → `sh-02` → `sh-03` → `sh-04` → `sh-05`           |
+| Monthly Maintenance      | `pg-01` → `pg-02` → `me-01` → `pg-03` → `me-02` → `me-04`           |
+| Legacy Migration         | `pg-01` → `pg-03` → `me-03` → `ch-02` → `da-03` → `me-05`           |
+| Feature Development      | `da-01` → `da-02` → `da-03` → `da-04` → `ch-03` → `ch-04` → `pg-01` |
+| Dependency Hardening     | `pg-02` → `me-01` → `sh-01` → `sh-02`                               |
+| Code Quality Improvement | `pg-03` → `me-02` → `ch-01` → `ch-04` → `da-03`                     |
 
 ## ⛔ Mandatory Cross-Role Collaborations
 
