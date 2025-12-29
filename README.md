@@ -5,10 +5,9 @@
 [![npm total downloads](https://img.shields.io/npm/dt/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
 [![License](https://img.shields.io/npm/l/tech-hub-skills.svg)](https://github.com/6ogo/Tech-Skills/blob/main/LICENSE)
 
+200+ production-ready AI agent skills for **Claude Code** and **GitHub Copilot**.
 
-**Over 30 expert roles and 200+ production-ready AI agent skills for Claude Code and GitHub Copilot.**
-
-Enterprise-grade: security, governance, and compliance built-in.
+Enterprise-grade with security, governance, compliance, and **project lifecycle management** built-in.
 
 ## Quick Install
 
@@ -47,11 +46,11 @@ cp -r tech-hub-skills/.claude your-project/
 
 ## What's Included
 
-- **30+ Expert Roles**: AI Engineer, Data Engineer, Security Architect, DevOps, SRE, QA, Product Designer, Technical Writer, and more
-- **200+ Detailed Skills**: Step-by-step, production-ready implementations for each role
-- **Enterprise Mode**: Security, governance, and compliance by default
-- **Cross-Platform**: Windows, macOS, Linux
-
+- **31 Role Skills**: AI Engineer, Data Engineer, Security Architect, DevOps, and more
+- **200+ Detailed Implementations**: Step-by-step guides for each skill
+- **Project Lifecycle Agents**: Health monitoring, hardening, maintenance, security, acceleration
+- **Enterprise Mode**: Built-in security, governance, and compliance
+- **Cross-Platform**: Works on Windows, macOS, Linux
 
 ## Available Roles (2025)
 
@@ -82,10 +81,16 @@ cp -r tech-hub-skills/.claude your-project/
 | **QA Engineer**        | 7      | Test Strategy, Automation, Performance      |
 | **Technical Writer**   | 6      | API Docs, ADRs, Runbooks                    |
 | **Product Designer**   | 6      | Requirements, Research, UX                  |
-| **Project Starter**    | 3      | Guided project setup, enterprise onboarding |
-| **Process Automation** | 4      | Changelog, Kanban, Versioning, Docs         |
-| **Optimization Advisor**| 3     | Cost, performance, architecture             |
-| **Enterprise Dashboard**| 2     | Reporting, metrics, visualization           |
+
+### Project Lifecycle Agents (NEW in 1.7)
+
+| Agent                      | Skills | Focus                                       |
+| -------------------------- | ------ | ------------------------------------------- |
+| **Project Guardian**       | 5      | Health Check, Dependencies, Tech Debt       |
+| **Code Hardener**          | 5      | Performance, Resilience, Validation         |
+| **Maintenance Engineer**   | 5      | Updates, Refactoring, Migration             |
+| **Security Hardener**      | 5      | Vuln Scanning, Config, Attack Surface       |
+| **Development Accelerator**| 5      | Scaffolding, Code Gen, Testing, APIs        |
 
 See [.claude/README.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/README.md) for detailed role documentation.
 
@@ -103,6 +108,13 @@ Use `/` mentions to invoke specific expert roles:
 /ai-engineer "Create a RAG pipeline"
 /security-architect "Review this code for PII"
 /data-engineer "Design a lakehouse architecture"
+
+# Project lifecycle agents (NEW in 1.7)
+/project-guardian "Run health check on this project"
+/code-hardener "Harden this code for production"
+/security-hardener "Scan for vulnerabilities and harden security"
+/maintenance-engineer "Plan maintenance for this project"
+/dev-accelerator "Scaffold a new TypeScript API project"
 ```
 
 ### GitHub Copilot
@@ -173,6 +185,25 @@ After installation, use skills with `/` mentions:
 
 ```bash
 /project-starter --enterprise "Build a customer data platform"
+```
+
+**Project Health Check** (NEW in 1.7)
+
+```bash
+/project-guardian "Run full health assessment with improvement roadmap"
+```
+
+**Production Hardening** (NEW in 1.7)
+
+```bash
+/code-hardener "Harden this service for production deployment"
+/security-hardener "Comprehensive security hardening"
+```
+
+**Rapid Development** (NEW in 1.7)
+
+```bash
+/dev-accelerator "Create REST API with CRUD for users, orders, products"
 ```
 
 ## Documentation
