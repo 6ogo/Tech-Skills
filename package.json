@@ -1,7 +1,7 @@
 {
   "name": "tech-hub-skills",
-  "version": "1.6.9",
-  "description": "180+ production-ready AI agent skills for Claude Code and GitHub Copilot",
+  "version": "1.7.0",
+  "description": "200+ production-ready AI agent skills for Claude Code and GitHub Copilot with project lifecycle management",
   "main": ".claude/bin/cli.js",
   "bin": {
     "tech-hub-skills": "./.claude/bin/cli.js"
@@ -23,7 +23,12 @@
     "data-engineer",
     "security",
     "enterprise",
-    "vscode"
+    "vscode",
+    "project-health",
+    "code-hardening",
+    "security-hardening",
+    "maintenance",
+    "developer-productivity"
   ],
   "author": "6ogo",
   "license": "MIT",
