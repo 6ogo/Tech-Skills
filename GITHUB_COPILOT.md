@@ -1,6 +1,6 @@
 # GitHub Copilot Integration
 
-Tech Hub Skills works with **GitHub Copilot** in VSCode, providing Copilot with 110+ production-ready AI agent skills.
+Tech Hub Skills works with **GitHub Copilot** in VSCode, providing Copilot with 200+ production-ready AI agent skills.
 
 ## Quick Start
 
@@ -27,7 +27,15 @@ GitHub Copilot reads workspace instructions from `.github/copilot-instructions.m
 - **Security Architect** - PII, IAM, Compliance
 - **DevOps** - CI/CD, Containers, IaC
 - **System Design** - Architecture, Scalability
-- Plus 10 more specialized roles
+- Plus 20+ more specialized roles
+
+### Project Lifecycle Agents (NEW in 1.7)
+
+- **Project Guardian** - Health monitoring, dependency management, tech debt
+- **Code Hardener** - Performance, resilience, validation, defensive coding
+- **Security Hardener** - Vulnerability scanning, secure config, attack surface
+- **Maintenance Engineer** - Updates, refactoring, migrations, documentation
+- **Development Accelerator** - Scaffolding, code generation, test automation
 
 ## Usage Examples
 

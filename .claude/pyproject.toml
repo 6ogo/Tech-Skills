@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tech-hub-skills"
-version = "1.6.9"
-description = "180+ production-ready AI agent skills for Claude Code and GitHub Copilot"
+version = "1.7.0"
+description = "200+ production-ready AI agent skills for Claude Code and GitHub Copilot with project lifecycle management"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
@@ -20,7 +20,12 @@ keywords = [
     "skills",
     "llm",
     "enterprise",
-    "vscode"
+    "vscode",
+    "project-health",
+    "code-hardening",
+    "security-hardening",
+    "maintenance",
+    "developer-productivity"
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
