@@ -12,7 +12,40 @@ function generateCopilotInstructions() {
   return `# GitHub Copilot Instructions - Tech Hub Skills
 
 ## Overview
-This workspace uses Tech Hub Skills - 110+ production-ready AI agent skills for software engineering.
+This workspace uses Tech Hub Skills - 200+ production-ready AI agent skills organized in a **hierarchical multi-agent system**.
+
+## 🤖 Agent System Architecture
+
+You have access to a team of expert agents organized in a hierarchy:
+
+### Orchestrator Agent (Master Coordinator)
+The primary entry point that analyzes requests and routes to appropriate Lead Agents.
+
+### Lead Agents (5 Domain Experts)
+| Lead | Domain | Specialists |
+|------|--------|-------------|
+| **AI/ML Lead** | AI, ML, Data Science | AI Engineer, ML Engineer, Data Scientist, MLOps |
+| **Platform Lead** | Infrastructure, DevOps | DevOps, SRE, Platform Eng, Network, Docker, AWS/Azure/GCP, FinOps |
+| **Security Lead** | Security, Compliance | Security Architect, Compliance Officer, Security Hardener |
+| **Data Lead** | Data Engineering | Data Engineer, Data Governance, Database Admin |
+| **Product Lead** | Product Development | Product Designer, Frontend/Backend Dev, QA, Tech Writer |
+
+### How to Invoke Agents
+- **Natural language**: "Build a RAG chatbot" → routes to AI/ML Lead
+- **Direct mention**: @ai-ml-lead, @security-lead, @data-lead, etc.
+- **Skill reference**: "Use ai-02 (RAG Pipeline)" → routes to AI Engineer
+
+### Mandatory Collaboration Rules
+These are ALWAYS enforced:
+1. **Security Lead** for ALL PII/personal data (calls sa-01 first)
+2. **Security Lead** for ALL production deployments
+3. **FinOps** for ALL cloud resources (cost tracking)
+4. **QA Engineer** for ALL code changes (testing)
+
+### Automation Levels
+- ✅ **Auto-execute**: Read-only analysis, documentation, new files
+- ⚠️ **Confirm**: Modify code, create resources
+- 🛑 **Approval**: Production deploy, delete, security changes
 
 ## Available Expert Roles
 

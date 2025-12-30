@@ -1,6 +1,6 @@
 {
   "name": "tech-hub-skills",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "200+ production-ready AI agent skills for Claude Code and GitHub Copilot with project lifecycle management",
   "main": ".claude/bin/cli.js",
   "bin": {
@@ -40,9 +40,14 @@
     ".claude/skills/**/*.md",
     ".claude/roles/**/*.md",
     ".claude/commands/**/*.md",
+    ".claude/agents/**/*.md",
     ".claude/tech_hub_skills/**/*.md",
     ".claude/bin/**/*.js",
+    ".claude/settings.json",
+    ".claude/AGENTS.md",
+    ".claude/QUICKSTART.md",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE",
     "!.claude/dist/**",
     "!.claude/node_modules/**"
