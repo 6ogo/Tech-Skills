@@ -6,16 +6,21 @@ Quick reference mapping agents to their skills for proper execution.
 
 ### AI Engineer Agent
 
-| Skill | Name                | When to Use                                     |
-| ----- | ------------------- | ----------------------------------------------- |
-| ai-01 | Prompt Engineering  | Optimizing prompts, caching, cost reduction     |
-| ai-02 | RAG Pipeline        | Building retrieval-augmented generation systems |
-| ai-03 | Agent Orchestration | Multi-agent systems, tool calling               |
-| ai-04 | Guardrails & Safety | Content moderation, injection prevention        |
-| ai-05 | Vector Embeddings   | Embedding pipelines, similarity search          |
-| ai-06 | LLM Evaluation      | Benchmarking, quality scoring                   |
-| ai-07 | Production LLM API  | Multi-provider clients, async processing        |
-| ai-08 | Marketing AI        | Email generation, SEO, lead scoring             |
+| Skill     | Name                | When to Use                                     |
+| --------- | ------------------- | ----------------------------------------------- |
+| ai-01     | Prompt Engineering  | Optimizing prompts, caching, cost reduction     |
+| ai-02     | RAG Pipeline        | Building retrieval-augmented generation systems |
+| ai-03     | Agent Orchestration | Multi-agent systems, tool calling               |
+| ai-04     | Guardrails & Safety | Content moderation, injection prevention        |
+| ai-05     | Vector Embeddings   | Embedding pipelines, similarity search          |
+| ai-06     | LLM Evaluation      | Benchmarking, quality scoring                   |
+| ai-07     | Production LLM API  | Multi-provider clients, async processing        |
+| ai-08     | Marketing AI        | Email generation, SEO, lead scoring             |
+| **ai-09** | **Fine-Tuning**     | LoRA, QLoRA, PEFT, custom models                |
+| **ai-10** | **Multimodal AI**   | Vision, audio, video, document understanding    |
+| **ai-11** | **AI Agents 2.0**   | MCP integration, planning, advanced memory      |
+| **ai-12** | **Local LLMs**      | Ollama, vLLM, on-prem deployment                |
+| **ai-13** | **Synthetic Data**  | Training data generation                        |
 
 ### ML Engineer Agent
 
@@ -108,15 +113,19 @@ Each has 12 skills covering: Compute, Serverless, Storage, Database, Analytics, 
 
 ### Security Architect Agent
 
-| Skill | Name                    | When to Use                  |
-| ----- | ----------------------- | ---------------------------- |
-| sa-01 | PII Detection           | Personal data identification |
-| sa-02 | Threat Modeling         | STRIDE analysis              |
-| sa-03 | Infrastructure Security | IaC security policies        |
-| sa-04 | IAM Design              | RBAC, least privilege        |
-| sa-05 | Application Security    | OWASP, secure coding         |
-| sa-06 | Secrets Management      | Vault, Key Vault             |
-| sa-07 | Security Monitoring     | SIEM, alerting               |
+| Skill     | Name                      | When to Use                       |
+| --------- | ------------------------- | --------------------------------- |
+| sa-01     | PII Detection             | Personal data identification      |
+| sa-02     | Threat Modeling           | STRIDE analysis                   |
+| sa-03     | Infrastructure Security   | IaC security policies             |
+| sa-04     | IAM Design                | RBAC, least privilege             |
+| sa-05     | Application Security      | OWASP, secure coding              |
+| sa-06     | Secrets Management        | Vault, Key Vault                  |
+| sa-07     | Security Monitoring       | SIEM, alerting                    |
+| **sa-08** | **API Security**          | OAuth2, OIDC, JWT, API gateways   |
+| **sa-09** | **Supply Chain Security** | SBOM, Sigstore, SLSA              |
+| **sa-10** | **Zero Trust**            | Never trust, always verify        |
+| **sa-11** | **CSPM**                  | Cloud security posture management |
 
 ### Compliance Officer Agent
 
@@ -255,3 +264,39 @@ Each has 12 skills covering: Compute, Serverless, Storage, Database, Analytics, 
 | fo-06 | Storage Tiering         | Cost-effective storage  |
 | fo-07 | AI/ML Cost Optimization | Model cost reduction    |
 | fo-08 | Chargeback              | Team billing            |
+
+---
+
+## Infrastructure Domain
+
+### MCP Manager Agent (NEW)
+
+| Skill  | Name                 | When to Use                   |
+| ------ | -------------------- | ----------------------------- |
+| mcp-01 | MCP Server Registry  | Available servers and configs |
+| mcp-02 | Dynamic Activation   | Activate servers on-demand    |
+| mcp-03 | Context Optimization | Minimize token usage          |
+| mcp-04 | Lifecycle Management | Activate/deactivate protocol  |
+| mcp-05 | Server Catalog       | Available MCP servers         |
+
+### Context Optimization (System-Wide)
+
+| Skill  | Name                   | When to Use                  |
+| ------ | ---------------------- | ---------------------------- |
+| ctx-01 | Lazy Loading           | File/code reading efficiency |
+| ctx-02 | Database Optimization  | Minimal SQL queries          |
+| ctx-03 | API Optimization       | Paginate, filter, cache      |
+| ctx-04 | MCP Efficiency         | Server activation patterns   |
+| ctx-05 | Caching Strategies     | Reduce repeated fetches      |
+| ctx-06 | Progressive Disclosure | Load incrementally           |
+
+---
+
+## Data Engineering Advanced
+
+| Skill | Name           | When to Use                     |
+| ----- | -------------- | ------------------------------- |
+| de-10 | Reverse ETL    | Warehouse → operational systems |
+| de-11 | Data Contracts | Schema enforcement, SLAs        |
+| de-12 | Semantic Layer | Consistent metrics definitions  |
+| de-13 | Data Mesh      | Domain ownership, federation    |

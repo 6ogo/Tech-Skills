@@ -14,13 +14,13 @@ This directory contains the **hierarchical multi-agent system** for Tech Hub Ski
         │                    │                    │
         ▼                    ▼                    ▼
 ┌───────────────┐   ┌───────────────┐   ┌───────────────┐
-│ 🤖 AI/ML Lead │   │ ⚙️ Platform   │   │ 🔒 Security   │
+│ 🤖 AI/ML Lead │    │ ⚙️ Platform   │   │ 🔒 Security   │
 │               │   │    Lead       │   │    Lead       │
 └───────┬───────┘   └───────┬───────┘   └───────┬───────┘
         │                   │                   │
         ▼                   ▼                   ▼
 ┌───────────────┐   ┌───────────────┐   ┌───────────────┐
-│ 📊 Data Lead  │   │ 📦 Product    │   │               │
+│ 📊 Data Lead  │   │ 📦 Product    │    │               │
 │               │   │    Lead       │   │ (Specialists) │
 └───────┬───────┘   └───────────────┘   └───────────────┘
         │
@@ -79,11 +79,25 @@ agents/
 
 ## 📚 Key Documentation
 
-| File                                                                                                 | Purpose                               |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| [EXECUTION.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/EXECUTION.md)             | How agents coordinate and communicate |
-| [SKILL-REFERENCE.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/SKILL-REFERENCE.md) | Complete skill lookup for all agents  |
-| [agent-schema.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/agent-schema.md)       | Template defining agent structure     |
+| File                                                                                                 | Purpose                                     |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| [SKILL-REGISTRY.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/SKILL-REGISTRY.md)   | ⭐ Lightweight skill index for lazy loading |
+| [ROLE-REGISTRY.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/ROLE-REGISTRY.md)     | ⭐ Lightweight role index for lazy loading  |
+| [EXECUTION.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/EXECUTION.md)             | How agents coordinate and communicate       |
+| [SKILL-REFERENCE.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/SKILL-REFERENCE.md) | Complete skill lookup (all ~175 skills)     |
+
+## ⚡ Context-Efficient Loading
+
+**Agents NEVER load all skills at once.** They use lazy loading:
+
+```yaml
+1. Scan SKILL-REGISTRY.md for keywords (~200 tokens)
+2. Identify needed skill IDs (e.g., ai-02, sa-01)
+3. Load ONLY those skill files when executing
+4. Unload after task complete
+
+Result: 95%+ token savings while maintaining expert knowledge
+```
 
 ## Lead Agents (5)
 

@@ -20,6 +20,35 @@ version: "1.0"
 5. **Synthesize** results from all involved agents
 6. **Communicate** final results and recommendations to user
 
+## ⚡ Context-Efficient Loading (CRITICAL)
+
+**NEVER load all skills/roles at once. Use lazy loading:**
+
+```yaml
+registries_to_use:
+  - SKILL-REGISTRY.md # Lightweight skill index
+  - ROLE-REGISTRY.md # Lightweight role index
+
+loading_protocol:
+  step_1: "Scan registries for keywords in user request"
+  step_2: "Identify ONLY needed skill IDs and roles"
+  step_3: "Load ONLY those specific skill files"
+  step_4: "Execute the task"
+  step_5: "Unload skill files (don't retain in context)"
+
+example:
+  request: "Build RAG chatbot"
+  keywords_found: ["RAG", "chatbot"]
+  skills_identified: [ai-02, ai-04, sa-01]
+  files_to_load:
+    - ai-engineer.md (just ai-02, ai-04 sections)
+    - security-architect.md (just sa-01 section)
+  tokens_used: ~500
+  tokens_saved: ~30,000 (vs loading everything)
+```
+
+**This saves 95%+ context tokens while maintaining expert-level knowledge.**
+
 ## Lead Agent Registry
 
 | Lead Agent        | Domain                       | Specialists Managed                                                        |
