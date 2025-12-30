@@ -5,9 +5,11 @@
 [![npm total downloads](https://img.shields.io/npm/dt/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
 [![License](https://img.shields.io/npm/l/tech-hub-skills.svg)](https://github.com/6ogo/Tech-Skills/blob/main/LICENSE)
 
-200+ production-ready AI agent skills for **Claude Code** and **GitHub Copilot**.
+**200+ production-ready AI agent skills** for **Claude Code** and **GitHub Copilot**.
 
-Enterprise-grade with security, governance, compliance, and **project lifecycle management** built-in.
+Features a **hierarchical multi-agent system** with smart orchestration, lazy-loading for token efficiency, and MCP server management.
+
+Enterprise-grade with security, governance, compliance, and project lifecycle management built-in.
 
 ## Quick Install
 
@@ -43,10 +45,19 @@ git clone https://github.com/6ogo/Tech-Skills.git
 cp -r tech-hub-skills/.claude your-project/
 ```
 
-
 ## What's Included
 
-- **31 Role Skills**: AI Engineer, Data Engineer, Security Architect, DevOps, and more
+### Multi-Agent System (NEW in 1.8)
+
+- **Orchestrator Agent** - Analyzes requests and routes to expert leads
+- **5 Lead Agents** - AI/ML, Platform, Security, Data, Product
+- **25 Specialist Agents** - One per role with deep expertise
+- **Lazy-Loading** - 95% token savings via skill/role registries
+- **MCP Management** - Dynamic server activation/deactivation
+
+### Skills & Roles
+
+- **175+ Skills**: AI, Data, Security, DevOps, Cloud, and more
 - **200+ Detailed Implementations**: Step-by-step guides for each skill
 - **Project Lifecycle Agents**: Health monitoring, hardening, maintenance, security, acceleration
 - **Enterprise Mode**: Built-in security, governance, and compliance
@@ -55,7 +66,7 @@ cp -r tech-hub-skills/.claude your-project/
 ## Available Roles (2025)
 
 | Role                   | Skills | Focus                                       |
-|------------------------|--------|---------------------------------------------|
+| ---------------------- | ------ | ------------------------------------------- |
 | **AI Engineer**        | 8      | LLMs, RAG, Agents, Guardrails, Embeddings   |
 | **Data Engineer**      | 9      | Lakehouse, ETL/ELT, Streaming, Quality      |
 | **ML Engineer**        | 9      | MLOps, Training, Serving, Monitoring        |
@@ -82,23 +93,51 @@ cp -r tech-hub-skills/.claude your-project/
 | **Technical Writer**   | 6      | API Docs, ADRs, Runbooks                    |
 | **Product Designer**   | 6      | Requirements, Research, UX                  |
 
-### Project Lifecycle Agents (NEW in 1.7)
+### Project Lifecycle Agents
 
-| Agent                      | Skills | Focus                                       |
-| -------------------------- | ------ | ------------------------------------------- |
-| **Project Guardian**       | 5      | Health Check, Dependencies, Tech Debt       |
-| **Code Hardener**          | 5      | Performance, Resilience, Validation         |
-| **Maintenance Engineer**   | 5      | Updates, Refactoring, Migration             |
-| **Security Hardener**      | 5      | Vuln Scanning, Config, Attack Surface       |
-| **Development Accelerator**| 5      | Scaffolding, Code Gen, Testing, APIs        |
+| Agent                       | Skills | Focus                                 |
+| --------------------------- | ------ | ------------------------------------- |
+| **Project Guardian**        | 5      | Health Check, Dependencies, Tech Debt |
+| **Code Hardener**           | 5      | Performance, Resilience, Validation   |
+| **Maintenance Engineer**    | 5      | Updates, Refactoring, Migration       |
+| **Security Hardener**       | 5      | Vuln Scanning, Config, Attack Surface |
+| **Development Accelerator** | 5      | Scaffolding, Code Gen, Testing, APIs  |
 
-See [.claude/README.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/README.md) for detailed role documentation.
+### New in v1.8.1 - Advanced Skills
+
+| Category                 | Skills           | Description                                                     |
+| ------------------------ | ---------------- | --------------------------------------------------------------- |
+| **AI Advanced**          | ai-09 to ai-13   | Fine-tuning, Multimodal, Agents 2.0, Local LLMs, Synthetic Data |
+| **Security Advanced**    | sa-08 to sa-11   | API Security, Supply Chain, Zero Trust, CSPM                    |
+| **Data Advanced**        | de-10 to de-13   | Reverse ETL, Data Contracts, Semantic Layer, Data Mesh          |
+| **MCP Management**       | mcp-01 to mcp-05 | Server lifecycle, activation, context optimization              |
+| **Context Optimization** | ctx-01 to ctx-06 | Lazy loading, caching, progressive disclosure                   |
+
+See [.claude/AGENTS.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/AGENTS.md) for the agent system documentation.
 
 ## Usage
 
-### Claude Code
+### Claude Code - Agent Commands (NEW in 1.8)
 
-Use `/` mentions to invoke specific expert roles:
+Route directly to expert Lead Agents:
+
+```bash
+# Route to Lead Agents (recommended)
+/ai "Build a RAG chatbot with fine-tuned embeddings"
+/platform "Deploy to Kubernetes with CI/CD"
+/security "Scan for PII and security vulnerabilities"
+/data "Design a lakehouse with data contracts"
+/product "Create REST API with full test coverage"
+
+# MCP Server Management (NEW in 1.8.1)
+/mcp activate github
+/mcp status
+/mcp deactivate all
+```
+
+### Claude Code - Role Commands
+
+Invoke specific expert roles:
 
 ```bash
 # Start with the orchestrator
@@ -109,12 +148,10 @@ Use `/` mentions to invoke specific expert roles:
 /security-architect "Review this code for PII"
 /data-engineer "Design a lakehouse architecture"
 
-# Project lifecycle agents (NEW in 1.7)
+# Project lifecycle agents
 /project-guardian "Run health check on this project"
 /code-hardener "Harden this code for production"
-/security-hardener "Scan for vulnerabilities and harden security"
-/maintenance-engineer "Plan maintenance for this project"
-/dev-accelerator "Scaffold a new TypeScript API project"
+/security-hardener "Scan for vulnerabilities"
 ```
 
 ### GitHub Copilot
@@ -208,7 +245,9 @@ After installation, use skills with `/` mentions:
 
 ## Documentation
 
-- **All Roles**: See [.claude/README.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/README.md) for complete role documentation
+- **Agent System**: See [.claude/AGENTS.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/AGENTS.md) for multi-agent architecture
+- **All Skills**: See [.claude/skills/README.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/skills/README.md) for complete skill documentation
+- **Changelog**: See [CHANGELOG.md](https://github.com/6ogo/Tech-Skills/blob/main/CHANGELOG.md) for version history
 
 ## Contributing
 
