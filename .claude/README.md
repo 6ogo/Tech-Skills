@@ -5,6 +5,26 @@
 [![npm version](https://badge.fury.io/js/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## 🚀 v2.0: Agentic Architecture
+
+**93% token reduction** - Only ~5-6k tokens at session start vs ~70k previously.
+
+### Key Files
+
+| File                      | Purpose                              | Tokens    |
+| ------------------------- | ------------------------------------ | --------- |
+| `agentic-orchestrator.md` | ANALYZE→SELECT→LOAD→EXECUTE workflow | ~2k       |
+| `skills-index.md`         | Compact index of all 200+ skills     | ~3-4k     |
+| `skills/*.md`             | Slim skill files (loaded on-demand)  | ~500 each |
+| `templates/`              | Externalized code examples           | On-demand |
+
+### How It Works
+
+1. **ANALYZE** - Identify domain, compliance needs, complexity
+2. **SELECT** - Match keywords to skills from index
+3. **LOAD** - Read full skill files only when executing
+4. **EXECUTE** - Apply guidance, reference templates
+
 ## Installation
 
 ```bash

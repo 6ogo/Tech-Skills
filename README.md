@@ -43,7 +43,6 @@ git clone https://github.com/6ogo/Tech-Skills.git
 cp -r tech-hub-skills/.claude your-project/
 ```
 
-
 ## What's Included
 
 - **31 Role Skills**: AI Engineer, Data Engineer, Security Architect, DevOps, and more
@@ -52,10 +51,56 @@ cp -r tech-hub-skills/.claude your-project/
 - **Enterprise Mode**: Built-in security, governance, and compliance
 - **Cross-Platform**: Works on Windows, macOS, Linux
 
+## 🚀 v2.0: Agentic Architecture (NEW)
+
+**93% token reduction** with on-demand skill loading.
+
+### Why This Update?
+
+Previous versions loaded all skill files at session start (~70k tokens), consuming significant context window. The new agentic architecture:
+
+- **Loads only ~5-6k tokens at startup** (orchestrator + skills index)
+- **Loads skill details on-demand** when executing
+- **Externalizes code templates** to separate files
+
+### Architecture
+
+```
+Session Start (~5-6k tokens)
+├── agentic-orchestrator.md    # Core ANALYZE→SELECT→LOAD→EXECUTE workflow
+└── skills-index.md            # Compact index of all 200+ skills
+
+On-Demand (when skill invoked)
+├── skills/{role}.md           # Skill guidance & best practices
+├── templates/{role}/          # Code examples, configs, scripts
+└── roles/{role}/skills/       # Deep documentation
+```
+
+### How It Works
+
+1. **ANALYZE** - Orchestrator identifies domain, compliance needs, complexity
+2. **SELECT** - Matches keywords to skills from the compact index
+3. **LOAD** - Reads full skill files only when executing
+4. **EXECUTE** - Applies skill guidance, references templates
+
+### Directory Structure
+
+```
+.claude/
+├── agentic-orchestrator.md   # Agentic workflow (~2k tokens)
+├── skills-index.md           # All skills index (~3-4k tokens)
+├── skills/                   # Slim skill files (~500 each)
+├── templates/                # Externalized code examples
+│   ├── compliance/
+│   ├── dashboard/
+│   └── ...
+└── roles/                    # Detailed skill documentation
+```
+
 ## Available Roles (2025)
 
 | Role                   | Skills | Focus                                       |
-|------------------------|--------|---------------------------------------------|
+| ---------------------- | ------ | ------------------------------------------- |
 | **AI Engineer**        | 8      | LLMs, RAG, Agents, Guardrails, Embeddings   |
 | **Data Engineer**      | 9      | Lakehouse, ETL/ELT, Streaming, Quality      |
 | **ML Engineer**        | 9      | MLOps, Training, Serving, Monitoring        |
@@ -84,13 +129,13 @@ cp -r tech-hub-skills/.claude your-project/
 
 ### Project Lifecycle Agents (NEW in 1.7)
 
-| Agent                      | Skills | Focus                                       |
-| -------------------------- | ------ | ------------------------------------------- |
-| **Project Guardian**       | 5      | Health Check, Dependencies, Tech Debt       |
-| **Code Hardener**          | 5      | Performance, Resilience, Validation         |
-| **Maintenance Engineer**   | 5      | Updates, Refactoring, Migration             |
-| **Security Hardener**      | 5      | Vuln Scanning, Config, Attack Surface       |
-| **Development Accelerator**| 5      | Scaffolding, Code Gen, Testing, APIs        |
+| Agent                       | Skills | Focus                                 |
+| --------------------------- | ------ | ------------------------------------- |
+| **Project Guardian**        | 5      | Health Check, Dependencies, Tech Debt |
+| **Code Hardener**           | 5      | Performance, Resilience, Validation   |
+| **Maintenance Engineer**    | 5      | Updates, Refactoring, Migration       |
+| **Security Hardener**       | 5      | Vuln Scanning, Config, Attack Surface |
+| **Development Accelerator** | 5      | Scaffolding, Code Gen, Testing, APIs  |
 
 See [.claude/README.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/README.md) for detailed role documentation.
 
