@@ -5,6 +5,21 @@ All notable changes to Tech Hub Skills will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2026-01-02
+
+### Fixed
+
+- **Critical: Installation now copies agents and skill-docs directories**
+  - Fixed `cli.js` to copy `agents/` directory (76 agent definition files)
+  - Fixed `cli.js` to copy `skill-docs/` directory (42 documentation files)
+  - Fixed `cli.js` to copy configuration files (`settings.json`, `AGENTS.md`, `skills-index.md`, `README.md`)
+  - Previously these were declared in `package.json` files array but not actually copied during installation
+
+### Changed
+
+- Updated installation summary to show agents and skill-docs counts
+- Improved role count display (now shows "26+ specialized role directories")
+
 ## [2.1.0] - 2026-01-02
 
 ### Changed
@@ -274,6 +289,7 @@ npx tech-hub-skills install --copilot
 
 ---
 
+[2.1.1]: https://github.com/6ogo/Tech-Skills/releases/tag/v2.1.1
 [2.1.0]: https://github.com/6ogo/Tech-Skills/releases/tag/v2.1.0
 [2.0.0]: https://github.com/6ogo/Tech-Skills/releases/tag/v2.0.0
 [1.8.1]: https://github.com/6ogo/Tech-Skills/releases/tag/v1.8.1

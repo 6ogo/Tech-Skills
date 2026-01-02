@@ -91,10 +91,20 @@ function install(options = {}) {
     path.join(SKILLS_DIR, "commands"),
     path.join(SKILLS_DIR, "tech_hub_skills", "skills"), // fallback to skills
   ];
+  const possibleAgentsSrc = [
+    path.join(SKILLS_DIR, "agents"),
+    path.join(SKILLS_DIR, "tech_hub_skills", "agents"),
+  ];
+  const possibleSkillDocsSrc = [
+    path.join(SKILLS_DIR, "skill-docs"),
+    path.join(SKILLS_DIR, "tech_hub_skills", "skill-docs"),
+  ];
 
   const skillsDest = path.join(targetDir, "skills");
   const rolesDest = path.join(targetDir, "roles");
   const commandsDest = path.join(targetDir, "commands");
+  const agentsDest = path.join(targetDir, "agents");
+  const skillDocsDest = path.join(targetDir, "skill-docs");
 
   // Find and copy skills
   const skillsSrc = possibleSkillsSrc.find((p) => fs.existsSync(p));
@@ -119,6 +129,36 @@ function install(options = {}) {
     copyDir(commandsSrc, commandsDest);
   }
 
+  // Find and copy agents
+  const agentsSrc = possibleAgentsSrc.find((p) => fs.existsSync(p));
+  if (agentsSrc) {
+    print("  Copying agents...", "yellow");
+    copyDir(agentsSrc, agentsDest);
+  }
+
+  // Find and copy skill-docs
+  const skillDocsSrc = possibleSkillDocsSrc.find((p) => fs.existsSync(p));
+  if (skillDocsSrc) {
+    print("  Copying skill documentation...", "yellow");
+    copyDir(skillDocsSrc, skillDocsDest);
+  }
+
+  // Copy configuration files
+  const configFiles = [
+    { name: "settings.json", desc: "Agent settings" },
+    { name: "AGENTS.md", desc: "Agent documentation" },
+    { name: "skills-index.md", desc: "Skills index" },
+    { name: "README.md", desc: "Documentation" },
+  ];
+
+  for (const file of configFiles) {
+    const srcFile = path.join(SKILLS_DIR, file.name);
+    const destFile = path.join(targetDir, file.name);
+    if (fs.existsSync(srcFile)) {
+      fs.copyFileSync(srcFile, destFile);
+    }
+  }
+
   // Install GitHub Copilot instructions if requested (project-level only)
   if (options.copilot && !isGlobal) {
     print("\n🤖 Installing GitHub Copilot integration...", "cyan");
@@ -139,10 +179,32 @@ function install(options = {}) {
     ? fs.readdirSync(skillsDest).filter((f) => f.endsWith(".md")).length
     : 0;
 
+  const countMdFiles = (dir) => {
+    if (!fs.existsSync(dir)) return 0;
+    let count = 0;
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        count += countMdFiles(fullPath);
+      } else if (entry.name.endsWith(".md")) {
+        count++;
+      }
+    }
+    return count;
+  };
+
+  const agentCount = countMdFiles(agentsDest);
+  const skillDocCount = fs.existsSync(skillDocsDest)
+    ? fs.readdirSync(skillDocsDest).filter((f) => f.endsWith(".md")).length
+    : 0;
+
   print(`\n✓ Installation complete!`, "green");
   print(`  Location: ${targetDir}`, "cyan");
-  print(`  Skills: ${skillCount} role files installed`, "cyan");
-  print(`  Roles: 16+ specialized agents`, "cyan");
+  print(`  Skills: ${skillCount} skill files installed`, "cyan");
+  print(`  Roles: 26+ specialized role directories`, "cyan");
+  print(`  Agents: ${agentCount} agent definitions installed`, "cyan");
+  print(`  Skill Docs: ${skillDocCount} documentation files installed`, "cyan");
   if (options.copilot && !isGlobal) {
     print(`  Copilot: .github/copilot-instructions.md`, "cyan");
   }

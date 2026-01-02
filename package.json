@@ -1,6 +1,6 @@
 {
   "name": "tech-hub-skills",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "200+ production-ready AI agent skills for Claude Code and GitHub Copilot. Agentic architecture with 93% token reduction.",
   "main": ".claude/bin/cli.js",
   "bin": {
