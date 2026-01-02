@@ -1,7 +1,7 @@
 {
   "name": "Tech Hub Skills",
   "description": "200+ production-ready AI agent skills for software engineering",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "agent_system": {
     "enabled": true,
     "orchestrator": ".claude/agents/orchestrator-agent.md",

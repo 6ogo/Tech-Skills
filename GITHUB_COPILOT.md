@@ -15,27 +15,13 @@ tech-hub-skills install --copilot
 
 This creates `.github/copilot-instructions.md` that Copilot automatically reads.
 
-## How It Works
+## 🧠 Agent Architecture (v2.2.1)
 
-GitHub Copilot reads workspace instructions from `.github/copilot-instructions.md`. Once installed, Copilot applies expert knowledge automatically to all code suggestions.
+Copilot uses the same hierarchical agent system as Claude Code:
 
-### Expert Roles Available
-
-- **AI Engineer** - LLMs, RAG, Agents, Guardrails
-- **Data Engineer** - Lakehouse, ETL, Streaming
-- **ML Engineer** - Training, Serving, MLOps
-- **Security Architect** - PII, IAM, Compliance
-- **DevOps** - CI/CD, Containers, IaC
-- **System Design** - Architecture, Scalability
-- Plus 20+ more specialized roles
-
-### Project Lifecycle Agents
-
-- **Project Guardian** - Health monitoring, dependency management, tech debt
-- **Code Hardener** - Performance, resilience, validation, defensive coding
-- **Security Hardener** - Vulnerability scanning, secure config, attack surface
-- **Maintenance Engineer** - Updates, refactoring, migrations, documentation
-- **Development Accelerator** - Scaffolding, code generation, test automation
+1.  **Orchestrator Agent** - The entry point that brainstorms and plans.
+2.  **5 Lead Agents** - Domain experts (AI, Platform, Security, Data, Product).
+3.  **25 Specialist Agents** - Deep experts (e.g., AI Engineer, SRE, MLOps) loaded by Leads.
 
 ## Usage Examples
 
@@ -43,42 +29,25 @@ GitHub Copilot reads workspace instructions from `.github/copilot-instructions.m
 
 ```python
 # Using AI Engineer approach for RAG pipeline
-def build_rag_pipeline():
-    # Copilot suggests: vector stores, embeddings, chunking
+def build_rag_system():
+    # Copilot suggests: adaptive chunking, hybrid search, etc.
     pass
 
 # Apply Security Architect best practices
-def process_user_data(user_input):
-    # Copilot adds: validation, sanitization, PII scanning
+def handle_user_upload(file_data):
+    # Copilot adds: PII scan, malware check, sanitization
     pass
 ```
 
-### Combine Multiple Roles
+### Hierarchical Workflow (Combined with Claude Code)
 
-```typescript
-/* DevOps + FinOps: optimize CI/CD costs */
-const cicdConfig = {
-  // Copilot suggests cost-optimized configuration
-};
-```
+Both tools work together seamlessly:
 
-### Implicit Guidance
-
-Even without comments, Copilot applies:
-- Security best practices (no hardcoded secrets, input validation)
-- Proper error handling
-- Performance optimization
-- Quality standards
-
-## Copilot vs Claude Code
-
-Both tools work together:
-
-| Feature | GitHub Copilot | Claude Code |
-|---------|----------------|-------------|
-| **Usage** | Inline suggestions | `/mention` roles |
-| **Mode** | Automatic | Interactive |
-| **Best For** | Writing code | Complex tasks, architecture |
+| Feature      | GitHub Copilot            | Claude Code                     |
+| ------------ | ------------------------- | ------------------------------- |
+| **Usage**    | Inline suggestions        | `/mention` roles or `/commands` |
+| **Logic**    | Automatic (Context-based) | Interactive (Task-based)        |
+| **Best For** | Real-time coding          | Architecture, complex refactors |
 
 ### Combined Workflow
 
@@ -86,24 +55,28 @@ Both tools work together:
 # 1. Install for both
 npx tech-hub-skills install --copilot
 
-# 2. Use Copilot while coding (automatic)
-# 3. Use Claude Code for complex tasks
-/orchestrator "Design a data lakehouse architecture"
+# 2. Use Claude Code for the high-level plan
+/orchestrator "Design a multi-cloud lakehouse architecture"
+
+# 3. Use Copilot to implement the details (automatic expert guidance)
 ```
 
 ## Troubleshooting
 
 **Copilot not using instructions?**
+
 - Verify `.github/copilot-instructions.md` exists
 - Reload VSCode: `Cmd/Ctrl + Shift + P` → "Reload Window"
 - Check Copilot is enabled in VSCode status bar
 
 **Want to update?**
+
 ```bash
 npx tech-hub-skills install --copilot --force
 ```
 
 **Remove Copilot integration only:**
+
 ```bash
 rm .github/copilot-instructions.md
 ```

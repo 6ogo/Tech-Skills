@@ -5,6 +5,21 @@ All notable changes to Tech Hub Skills will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.1] - 2026-01-02
+
+### 🎯 Restored Lead Agent Visibility
+
+This patch restores the visibility of the **5 Lead Agents** in the Claude Code agent picker and improves their discoverability via slash commands. While especialistas remain internal to keep the picker clean, Leads are now directly accessible again.
+
+### Changed
+
+- **Lead Agent Discovery**: Moved 5 Lead Agents (`ai-ml-lead.md`, `data-lead.md`, etc.) from `internal/` to the root of `.claude/agents/`.
+- **Directory Structure**: Renamed the `internal/` specialist folder to `specialists/` for better clarity.
+- **Documentation Overhaul**: Updated `AGENTS.md`, `ROLE-REGISTRY.md`, and all `README.md` files to reflect the v2.2.x hierarchical architecture.
+- **GitHub Copilot**: Updated generated instructions to match the current **Brainstorm → Plan → Implement** workflow.
+
+---
+
 ## [2.2.0] - 2026-01-02
 
 ### 🧠 Intelligent Orchestrator with Brainstorm → Plan → Implement Workflow

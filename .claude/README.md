@@ -1,229 +1,76 @@
-# Tech Hub Skills
+# Tech Hub Skills - Agent Guidance
 
-**180+ production-ready AI agent skills for Claude Code and GitHub Copilot**
+**200+ production-ready AI agent skills organized in a hierarchical multi-agent system.**
 
-[![npm version](https://badge.fury.io/js/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## 🧠 v2.2: Hierarchical Agent Architecture
 
-## 🚀 v2.0: Agentic Architecture
+This workspace uses a high-efficiency **Brainstorm → Plan → Implement** workflow.
 
-**93% token reduction** - Only ~5-6k tokens at session start vs ~70k previously.
+### Architecture Components
 
-### Key Files
+| File                           | Purpose                                          |
+| ------------------------------ | ------------------------------------------------ |
+| `agents/orchestrator-agent.md` | Master coordinator and primary entry point       |
+| `agents/*-lead.md`             | Domain-specific Lead agents (AI, Platform, etc.) |
+| `agents/SKILL-REGISTRY.md`     | ⭐ Lightweight skill index for lazy loading      |
+| `agents/ROLE-REGISTRY.md`      | ⭐ Lightweight role index for lazy loading       |
+| `agents/EXECUTION.md`          | Agent coordination and communication protocol    |
+| `agents/specialists/`          | 25 Specialist agents loaded on-demand            |
 
-| File                      | Purpose                               | Tokens    |
-| ------------------------- | ------------------------------------- | --------- |
-| `skills/orchestrator.md`  | Single auto-loaded orchestrator skill | ~3k       |
-| `skills-index.md`         | Compact index of all 200+ skills      | ~3-4k     |
-| `skill-docs/*.md`         | Skill files (loaded on-demand)        | ~500 each |
-| `templates/`              | Externalized code examples            | On-demand |
+## 💡 Workflow Strategy
 
-### How It Works
+### 1. Brainstorm (Strategic Analysis)
 
-1. **ANALYZE** - Identify domain, compliance needs, complexity
-2. **SELECT** - Match keywords to skills from index
-3. **LOAD** - Read skill files from `skill-docs/` only when executing
-4. **EXECUTE** - Apply guidance, reference templates
+- Understand core requirements and constraints.
+- Identify potential risks (Security, Cost, Tech Debt).
+- Compare alternative technical approaches.
 
-## Installation
+### 2. Plan (Lazy Loading)
 
-```bash
-# Install the package
-npm install tech-hub-skills
+- Scan `SKILL-REGISTRY.md` for role/skill keywords.
+- Select only relevant specialists from `agents/specialists/`.
+- Create a milestone-based implementation plan.
 
-# Install skills to your project's .claude folder
-npx tech-hub-skills install
+### 3. Implement (Validated Execution)
 
-# Or install globally to ~/.claude
-npx tech-hub-skills install --global
+- Load skill files from `skill-docs/` only when executing.
+- Reference templates from `templates/` for code implementation.
+- Validate each step before proceeding to the next.
 
-# With GitHub Copilot integration
-npx tech-hub-skills install --copilot
-```
+## Available Slash Commands
 
-## Quick Start
+| Command         | Description                           | Target Agent       |
+| --------------- | ------------------------------------- | ------------------ |
+| `/orchestrator` | Analyze project and coordinate agents | Orchestrator Agent |
+| `/ai`           | AI, ML, and Data Science tasks        | AI/ML Lead         |
+| `/platform`     | DevOps, SRE, and Cloud Infrastructure | Platform Lead      |
+| `/security`     | Security audits and Compliance        | Security Lead      |
+| `/data`         | Data Engineering and Governance       | Data Lead          |
+| `/product`      | Product Dev, Frontend, and Backend    | Product Lead       |
 
-After installation, use the orchestrator in Claude Code:
+## Mandatory Rules (Lead Enforcement)
 
-```bash
-# The orchestrator is the single entry point - it loads skills on-demand
-/orchestrator "Build a customer churn prediction model"
+- **Security Lead**: MUST be involved if PII or production deployment is detected.
+- **FinOps**: MUST track costs for all cloud resource creation.
+- **QA Engineer**: MUST validate all code changes for testing coverage.
+- **Data Governance**: MUST be consulted for schema or storage changes.
 
-# Examples:
-/orchestrator "Create a RAG pipeline"
-/orchestrator "Review this code for PII"
-/orchestrator "Design a lakehouse architecture"
-
-# Enterprise mode (mandatory security + governance)
-/orchestrator --enterprise "Build a customer data platform"
-```
-
-The orchestrator will automatically:
-1. Analyze your request
-2. Select the appropriate skills
-3. Load only the needed skill files (saving context)
-4. Execute with full guidance
-
-## Available Roles & Skills
-
-### Core Engineering (48 skills)
-
-| Role                   | Skills | Focus                                     |
-| ---------------------- | ------ | ----------------------------------------- |
-| **AI Engineer**        | 8      | LLMs, RAG, Agents, Guardrails, Embeddings |
-| **Data Engineer**      | 9      | Lakehouse, ETL/ELT, Streaming, Quality    |
-| **ML Engineer**        | 9      | MLOps, Training, Serving, Monitoring      |
-| **Data Scientist**     | 8      | EDA, Modeling, Analytics, Experimentation |
-| **Frontend Developer** | 7      | React/Vue/Angular, TypeScript, A11y       |
-| **Backend Developer**  | 7      | REST, GraphQL, Microservices, Caching     |
-
-### Architecture & Security (22 skills)
-
-| Role                   | Skills | Focus                                  |
-| ---------------------- | ------ | -------------------------------------- |
-| **Security Architect** | 7      | PII, Threat Modeling, IAM, Secrets     |
-| **System Design**      | 8      | Architecture, Scalability, HA/DR, APIs |
-| **Network Engineer**   | 7      | Topology, VPN/VPC, Load Balancers, CDN |
-
-### Platform & Operations (59 skills)
-
-| Role                  | Skills | Focus                                 |
-| --------------------- | ------ | ------------------------------------- |
-| **Platform Engineer** | 6      | IDP, Self-Service, SLOs               |
-| **SRE**               | 7      | Incident Response, Chaos Engineering  |
-| **Database Admin**    | 7      | Query Optimization, Replication       |
-| **Data Governance**   | 6      | Catalog, Lineage, Quality, Compliance |
-| **DevOps**            | 9      | CI/CD, Containers, IaC, GitOps        |
-| **MLOps**             | 9      | Experiments, Registry, Deployment     |
-| **FinOps**            | 8      | Cost Visibility, Optimization         |
-| **Docker**            | 5      | Containers, Security, Optimization    |
-
-### Cloud Platforms (36 skills)
-
-| Role      | Skills | Focus                           |
-| --------- | ------ | ------------------------------- |
-| **Azure** | 12     | All Azure services              |
-| **AWS**   | 12     | EC2, Lambda, S3, RDS, VPC, EKS  |
-| **GCP**   | 12     | Compute, BigQuery, GKE, Pub/Sub |
-
-### Enterprise Governance (17 skills)
-
-| Role                      | Skills     | Focus                               |
-| ------------------------- | ---------- | ----------------------------------- |
-| **Code Review**           | 5          | PR Automation, Quality Gates        |
-| **Compliance Officer**    | 7          | SOC 2, GDPR, HIPAA, PCI-DSS         |
-| **Compliance Automation** | Integrated | Policy-as-Code, Evidence Collection |
-
-### Product, Design & Quality (19 skills)
-
-| Role                 | Skills | Focus                      |
-| -------------------- | ------ | -------------------------- |
-| **Product Designer** | 6      | Requirements, Research, UX |
-| **QA Engineer**      | 7      | Test Strategy, Automation  |
-| **Technical Writer** | 6      | API Docs, ADRs, Runbooks   |
-
-## CLI Commands
-
-```bash
-# Install skills to current project
-npx tech-hub-skills install
-
-# Install with GitHub Copilot integration
-npx tech-hub-skills install --copilot
-
-# Install globally
-npx tech-hub-skills install --global
-
-# Force overwrite existing installation
-npx tech-hub-skills install --force
-
-# Initialize with enterprise mode
-npx tech-hub-skills init --enterprise
-
-# List all available roles
-npx tech-hub-skills list
-
-# Show help
-npx tech-hub-skills help
-```
-
-## Directory Structure (After Installation)
+## Directory Structure
 
 ```
-your-project/
-└── .claude/
-    ├── skills/                 # Auto-loaded skills (minimal)
-    │   └── orchestrator.md     # Single entry point (~3k tokens)
-    ├── skill-docs/             # On-demand skill files
-    │   ├── ai-engineer.md
-    │   ├── data-engineer.md
-    │   ├── security-architect.md
-    │   └── ... (40 role files)
-    ├── skills-index.md         # Compact skill reference
-    ├── roles/                  # Detailed skill implementations
-    │   ├── ai-engineer/skills/
-    │   ├── security-architect/skills/
-    │   └── ...
-    ├── templates/              # Code templates
-    └── commands/               # CLI commands
-        └── orchestrator.md     # /orchestrator command
+.claude/
+├── agents/                   # Agent definition files
+│   ├── specialists/          # Internal specialists
+│   ├── SKILL-REGISTRY.md     # Skill index
+│   └── ROLE-REGISTRY.md      # Role index
+├── skills/                   # High-level skill summaries
+├── skill-docs/               # Detailed skill documentation (loaded on-demand)
+├── templates/                # Production-ready code templates
+├── commands/                 # Slash command configurations
+├── settings.json             # System-wide configuration (v2.2.1)
+└── AGENTS.md                 # Full architecture documentation
 ```
 
-## Enterprise Mode
+---
 
-For production applications, use Enterprise Mode:
-
-```bash
-/orchestrator --enterprise "Build a production API"
-```
-
-Enterprise Mode automatically includes:
-
-- Security Architect (sa-01 to sa-07)
-- Data Governance (dg-01 to dg-06)
-- Code Review (cr-01 to cr-05)
-- Compliance Automation
-
-### Enterprise Quality Gates
-
-- No critical/high vulnerabilities
-- 80%+ code coverage
-- All compliance controls passing
-- Security architect sign-off
-- Data governance sign-off
-
-## Examples
-
-### AI/ML Project
-
-```bash
-/orchestrator "Build a customer churn prediction model with GDPR compliance"
-```
-
-### RAG Application
-
-```bash
-/orchestrator "Create a RAG pipeline for internal docs"
-```
-
-### Security Review
-
-```bash
-/orchestrator "Audit this codebase for security vulnerabilities"
-```
-
-### Enterprise Platform
-
-```bash
-/orchestrator --enterprise "Build a customer data platform"
-```
-
-## Links
-
-- [GitHub Repository](https://github.com/6ogo/Tech-Skills)
-- [Issues](https://github.com/6ogo/Tech-Skills/issues)
-- [Full Documentation](https://github.com/6ogo/Tech-Skills/blob/main/README.md)
-
-## License
-
-MIT
+_Generated by Tech Hub Skills v2.2.1_
