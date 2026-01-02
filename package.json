@@ -1,7 +1,7 @@
 {
   "name": "tech-hub-skills",
-  "version": "1.7.0",
-  "description": "200+ production-ready AI agent skills for Claude Code and GitHub Copilot with project lifecycle management",
+  "version": "2.0.0",
+  "description": "200+ production-ready AI agent skills for Claude Code and GitHub Copilot. Agentic architecture with 93% token reduction.",
   "main": ".claude/bin/cli.js",
   "bin": {
     "tech-hub-skills": "./.claude/bin/cli.js"
@@ -28,7 +28,9 @@
     "code-hardening",
     "security-hardening",
     "maintenance",
-    "developer-productivity"
+    "developer-productivity",
+    "agentic",
+    "token-optimization"
   ],
   "author": "6ogo",
   "license": "MIT",
@@ -37,9 +39,13 @@
     "url": "https://github.com/6ogo/Tech-Skills.git"
   },
   "files": [
+    ".claude/agentic-orchestrator.md",
+    ".claude/skills-index.md",
+    ".claude/README.md",
     ".claude/skills/**/*.md",
     ".claude/roles/**/*.md",
     ".claude/commands/**/*.md",
+    ".claude/templates/**/*",
     ".claude/tech_hub_skills/**/*.md",
     ".claude/bin/**/*.js",
     "README.md",
@@ -55,3 +61,4 @@
     "url": "https://github.com/6ogo/Tech-Skills/issues"
   }
 }
+

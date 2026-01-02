@@ -11,18 +11,18 @@
 
 ### Key Files
 
-| File                      | Purpose                              | Tokens    |
-| ------------------------- | ------------------------------------ | --------- |
-| `agentic-orchestrator.md` | ANALYZE→SELECT→LOAD→EXECUTE workflow | ~2k       |
-| `skills-index.md`         | Compact index of all 200+ skills     | ~3-4k     |
-| `skills/*.md`             | Slim skill files (loaded on-demand)  | ~500 each |
-| `templates/`              | Externalized code examples           | On-demand |
+| File                      | Purpose                               | Tokens    |
+| ------------------------- | ------------------------------------- | --------- |
+| `skills/orchestrator.md`  | Single auto-loaded orchestrator skill | ~3k       |
+| `skills-index.md`         | Compact index of all 200+ skills      | ~3-4k     |
+| `skill-docs/*.md`         | Skill files (loaded on-demand)        | ~500 each |
+| `templates/`              | Externalized code examples            | On-demand |
 
 ### How It Works
 
 1. **ANALYZE** - Identify domain, compliance needs, complexity
 2. **SELECT** - Match keywords to skills from index
-3. **LOAD** - Read full skill files only when executing
+3. **LOAD** - Read skill files from `skill-docs/` only when executing
 4. **EXECUTE** - Apply guidance, reference templates
 
 ## Installation
@@ -43,20 +43,26 @@ npx tech-hub-skills install --copilot
 
 ## Quick Start
 
-After installation, use skills in Claude Code with `@` mentions:
+After installation, use the orchestrator in Claude Code:
 
 ```bash
-# Start with the orchestrator (routes to all skills)
-@orchestrator "Build a customer churn prediction model"
+# The orchestrator is the single entry point - it loads skills on-demand
+/orchestrator "Build a customer churn prediction model"
 
-# Or invoke specific roles
-@ai-engineer "Create a RAG pipeline"
-@security-architect "Review this code for PII"
-@data-engineer "Design a lakehouse architecture"
+# Examples:
+/orchestrator "Create a RAG pipeline"
+/orchestrator "Review this code for PII"
+/orchestrator "Design a lakehouse architecture"
 
 # Enterprise mode (mandatory security + governance)
-@project-starter --enterprise "Build a customer data platform"
+/orchestrator --enterprise "Build a customer data platform"
 ```
+
+The orchestrator will automatically:
+1. Analyze your request
+2. Select the appropriate skills
+3. Load only the needed skill files (saving context)
+4. Execute with full guidance
 
 ## Available Roles & Skills
 
@@ -146,17 +152,21 @@ npx tech-hub-skills help
 ```
 your-project/
 └── .claude/
-    ├── skills/                 # Role skill files
-    │   ├── orchestrator.md     # Main orchestrator
+    ├── skills/                 # Auto-loaded skills (minimal)
+    │   └── orchestrator.md     # Single entry point (~3k tokens)
+    ├── skill-docs/             # On-demand skill files
     │   ├── ai-engineer.md
     │   ├── data-engineer.md
     │   ├── security-architect.md
-    │   └── ...
+    │   └── ... (40 role files)
+    ├── skills-index.md         # Compact skill reference
     ├── roles/                  # Detailed skill implementations
     │   ├── ai-engineer/skills/
     │   ├── security-architect/skills/
     │   └── ...
-    └── commands/               # CLI commands for Claude Code
+    ├── templates/              # Code templates
+    └── commands/               # CLI commands
+        └── orchestrator.md     # /orchestrator command
 ```
 
 ## Enterprise Mode
@@ -164,7 +174,7 @@ your-project/
 For production applications, use Enterprise Mode:
 
 ```bash
-@project-starter --enterprise "Build a production API"
+/orchestrator --enterprise "Build a production API"
 ```
 
 Enterprise Mode automatically includes:
@@ -187,25 +197,25 @@ Enterprise Mode automatically includes:
 ### AI/ML Project
 
 ```bash
-@orchestrator "Build a customer churn prediction model with GDPR compliance"
+/orchestrator "Build a customer churn prediction model with GDPR compliance"
 ```
 
 ### RAG Application
 
 ```bash
-@ai-engineer ai-02 "Create a RAG pipeline for internal docs"
+/orchestrator "Create a RAG pipeline for internal docs"
 ```
 
 ### Security Review
 
 ```bash
-@security-architect "Audit this codebase for security vulnerabilities"
+/orchestrator "Audit this codebase for security vulnerabilities"
 ```
 
 ### Enterprise Platform
 
 ```bash
-@project-starter --enterprise "Build a customer data platform"
+/orchestrator --enterprise "Build a customer data platform"
 ```
 
 ## Links

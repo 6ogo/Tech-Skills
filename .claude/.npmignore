@@ -52,3 +52,7 @@ docs/source/
 !bin/
 !skills/
 !roles/
+!templates/
+!agentic-orchestrator.md
+!skills-index.md
+
