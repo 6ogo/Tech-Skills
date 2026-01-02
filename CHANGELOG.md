@@ -5,6 +5,97 @@ All notable changes to Tech Hub Skills will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-01-02
+
+### 🧠 Intelligent Orchestrator with Brainstorm → Plan → Implement Workflow
+
+This release introduces a completely redesigned **single Orchestrator agent** that thinks strategically before acting. Instead of showing 30+ agents, users now have one intelligent coordinator that dynamically selects the right skills for each project.
+
+### Changed
+
+#### Agent Architecture Redesign
+
+| Before                      | After                                                |
+| --------------------------- | ---------------------------------------------------- |
+| 31 agents visible in picker | **1 agent** → Orchestrator                           |
+| Immediate execution         | **3-phase workflow**: Brainstorm → Plan → Implement  |
+| All skills loaded           | **Lazy loading** from registries (95% token savings) |
+
+#### New Orchestrator Workflow
+
+**Phase 1: Brainstorm**
+
+- Deep understanding of the request
+- Identifies constraints, risks, and opportunities
+- Considers alternative approaches
+- Asks clarifying questions if needed
+
+**Phase 2: Plan**
+
+- Scans SKILL-REGISTRY.md and ROLE-REGISTRY.md
+- Selects ONLY the roles/skills needed (typically 3-7)
+- Defines clear milestones and deliverables
+- Presents plan for user approval
+
+**Phase 3: Implement**
+
+- Executes step by step, loading skills as needed
+- Validates each step before proceeding
+- Adapts plan if blockers arise
+- Synthesizes results and documents learnings
+
+### Structure
+
+```
+.claude/agents/
+├── orchestrator-agent.md  ← ONLY visible agent
+├── SKILL-REGISTRY.md      ← Lightweight skill index (~200 lines)
+├── ROLE-REGISTRY.md       ← Lightweight role index (~150 lines)
+└── internal/              ← 30 specialist agents (loaded on demand)
+    ├── ai-ml-lead.md
+    ├── security-lead.md
+    ├── ai-engineer-agent.md
+    └── ... (30 files)
+```
+
+### Added
+
+- **Brainstorming phase** with approach options comparison
+- **Implementation plan template** with milestones and dependencies
+- **Adaptive planning** when blockers arise
+- **Validation checkpoints** after each milestone
+- **Mandatory rules** for security, quality gates, and cost awareness
+
+### Removed
+
+- Specialist agents from Claude Code agent picker (moved to `internal/`)
+- Complex multi-agent invocation syntax
+- Redundant agent frontmatter (consolidated into Orchestrator)
+
+### Migration
+
+No action required. The Orchestrator automatically selects and uses the specialist agents internally.
+
+**Before:**
+
+```
+@ai-engineer-agent: Execute ai-02 (RAG Pipeline)
+@security-architect-agent: Execute sa-01 (PII Detection)
+```
+
+**After:**
+
+```
+@Orchestrator "Build a RAG chatbot"
+
+# Orchestrator automatically:
+# 1. Brainstorms requirements
+# 2. Creates plan with ai-02, ai-04, sa-01, etc.
+# 3. Implements step by step
+```
+
+---
+
 ## [2.1.1] - 2026-01-02
 
 ### Fixed
@@ -35,6 +126,7 @@ This major release completely redesigns the skill loading architecture to reduce
 ### The Problem (v1.x)
 
 Previous versions loaded all skill files at session start, consuming significant context window:
+
 - ~50 agent/skill files loaded upfront
 - ~70,000 tokens consumed before any work began
 - Limited context remaining for actual tasks
@@ -42,6 +134,7 @@ Previous versions loaded all skill files at session start, consuming significant
 ### The Solution (v2.0)
 
 New **on-demand loading architecture**:
+
 - Only orchestrator + skills index loaded at startup (~5-6k tokens)
 - Skills loaded dynamically when needed
 - Code templates externalized to separate files
@@ -63,12 +156,12 @@ New **on-demand loading architecture**:
 
 #### Massive File Reduction
 
-| Category | Before | After | Reduction |
-|----------|--------|-------|-----------|
-| Agent definitions | 25 files | 0 files | -100% |
-| Command files | 40+ files | 1 file | -97% |
-| Skill files | Inline | External | -88% avg |
-| **Total lines** | ~25,000 | ~2,500 | **-90%** |
+| Category          | Before    | After    | Reduction |
+| ----------------- | --------- | -------- | --------- |
+| Agent definitions | 25 files  | 0 files  | -100%     |
+| Command files     | 40+ files | 1 file   | -97%      |
+| Skill files       | Inline    | External | -88% avg  |
+| **Total lines**   | ~25,000   | ~2,500   | **-90%**  |
 
 #### Specific Files
 
@@ -99,6 +192,7 @@ On-Demand (when skill invoked)
 ```
 
 **Workflow:**
+
 1. **ANALYZE** - Orchestrator identifies domain, complexity, compliance needs
 2. **SELECT** - Matches keywords to skills from compact index
 3. **LOAD** - Reads full skill files only when executing
@@ -107,6 +201,7 @@ On-Demand (when skill invoked)
 ### Migration from v1.x
 
 No action required. The new architecture is backward compatible:
+
 - Same `/orchestrator` command works
 - All 200+ skills still available
 - Skills load transparently when needed
@@ -289,6 +384,7 @@ npx tech-hub-skills install --copilot
 
 ---
 
+[2.2.0]: https://github.com/6ogo/Tech-Skills/releases/tag/v2.2.0
 [2.1.1]: https://github.com/6ogo/Tech-Skills/releases/tag/v2.1.1
 [2.1.0]: https://github.com/6ogo/Tech-Skills/releases/tag/v2.1.0
 [2.0.0]: https://github.com/6ogo/Tech-Skills/releases/tag/v2.0.0
