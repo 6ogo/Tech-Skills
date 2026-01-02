@@ -48,7 +48,11 @@
     ".claude/templates/**/*",
     ".claude/tech_hub_skills/**/*.md",
     ".claude/bin/**/*.js",
+    ".claude/settings.json",
+    ".claude/AGENTS.md",
+    ".claude/QUICKSTART.md",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE",
     "!.claude/dist/**",
     "!.claude/node_modules/**"

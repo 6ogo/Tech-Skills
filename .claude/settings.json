@@ -1,0 +1,53 @@
+{
+  "name": "Tech Hub Skills",
+  "description": "200+ production-ready AI agent skills for software engineering",
+  "version": "2.0.0",
+  "agent_system": {
+    "enabled": true,
+    "orchestrator": ".claude/agents/orchestrator-agent.md",
+    "execution_protocol": ".claude/agents/EXECUTION.md",
+    "skill_reference": ".claude/agents/SKILL-REFERENCE.md"
+  },
+  "commands": {
+    "prefix": "/",
+    "available": [
+      {
+        "name": "orchestrator",
+        "description": "Analyze project and coordinate agents",
+        "file": ".claude/commands/orchestrator.md"
+      },
+      {
+        "name": "ai",
+        "description": "AI/ML tasks - routes to AI/ML Lead",
+        "agent": "@ai-ml-lead"
+      },
+      {
+        "name": "platform",
+        "description": "DevOps/infrastructure - routes to Platform Lead",
+        "agent": "@platform-lead"
+      },
+      {
+        "name": "security",
+        "description": "Security/compliance - routes to Security Lead",
+        "agent": "@security-lead"
+      },
+      {
+        "name": "data",
+        "description": "Data engineering - routes to Data Lead",
+        "agent": "@data-lead"
+      },
+      {
+        "name": "product",
+        "description": "Product development - routes to Product Lead",
+        "agent": "@product-lead"
+      }
+    ]
+  },
+  "skills_directory": ".claude/skills",
+  "roles_directory": ".claude/roles",
+  "agents_directory": ".claude/agents",
+  "documentation": {
+    "main": ".claude/README.md",
+    "agents": ".claude/AGENTS.md"
+  }
+}
