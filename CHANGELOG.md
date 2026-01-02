@@ -5,6 +5,107 @@ All notable changes to Tech Hub Skills will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2025-01-02
+
+### 🚀 BREAKING CHANGE: Agentic Architecture - 93% Token Reduction
+
+This major release completely redesigns the skill loading architecture to reduce session startup from **~70k tokens to ~5-6k tokens** (93% reduction) while maintaining access to all 200+ skills.
+
+### The Problem (v1.x)
+
+Previous versions loaded all skill files at session start, consuming significant context window:
+- ~50 agent/skill files loaded upfront
+- ~70,000 tokens consumed before any work began
+- Limited context remaining for actual tasks
+
+### The Solution (v2.0)
+
+New **on-demand loading architecture**:
+- Only orchestrator + skills index loaded at startup (~5-6k tokens)
+- Skills loaded dynamically when needed
+- Code templates externalized to separate files
+
+### Added
+
+#### Core Architecture Files
+
+- **skills/orchestrator.md** - Single entry point with ANALYZE→SELECT→LOAD→EXECUTE workflow
+- **skills-index.md** - Compact keyword-based index of all 200+ skills (~3-4k tokens)
+- **skill-docs/** - 40 role skill files loaded on-demand (~500 tokens each)
+
+#### Externalized Templates
+
+- **templates/compliance/** - checker.py, policies.yml, workflow.yml
+- **templates/dashboard/** - grafana.json, alerts.yml, generator.py
+
+### Changed
+
+#### Massive File Reduction
+
+| Category | Before | After | Reduction |
+|----------|--------|-------|-----------|
+| Agent definitions | 25 files | 0 files | -100% |
+| Command files | 40+ files | 1 file | -97% |
+| Skill files | Inline | External | -88% avg |
+| **Total lines** | ~25,000 | ~2,500 | **-90%** |
+
+#### Specific Files
+
+- `compliance-automation.md`: 748 → 80 lines (89% reduction)
+- `enterprise-dashboard.md`: 614 → 75 lines (88% reduction)
+- `orchestrator.md`: Consolidated from 600+ lines across multiple files
+
+### Removed
+
+- `.claude/agents/` - All 25 individual agent definitions
+- `.claude/agents/leads/` - 5 lead agent files
+- `.claude/agents/specialists/` - 24 specialist agent files
+- `.claude/commands/*.md` - 40+ heavyweight command files
+- `.claude/AGENTS.md` - Replaced by skills-index.md
+- `.claude/QUICKSTART.md` - Replaced by README.md
+- `.claude/settings.json` - No longer needed
+
+### How It Works
+
+```
+Session Start (~5-6k tokens)
+├── skills/orchestrator.md     # Core workflow
+└── skills-index.md            # Compact skill lookup
+
+On-Demand (when skill invoked)
+├── skill-docs/{role}.md       # Skill guidance
+└── templates/{category}/      # Code examples
+```
+
+**Workflow:**
+1. **ANALYZE** - Orchestrator identifies domain, complexity, compliance needs
+2. **SELECT** - Matches keywords to skills from compact index
+3. **LOAD** - Reads full skill files only when executing
+4. **EXECUTE** - Applies guidance, references templates
+
+### Migration from v1.x
+
+No action required. The new architecture is backward compatible:
+- Same `/orchestrator` command works
+- All 200+ skills still available
+- Skills load transparently when needed
+
+### Usage
+
+```bash
+# Install/update
+npx tech-hub-skills install
+
+# Use orchestrator (recommended)
+/orchestrator "Build a customer churn prediction model"
+
+# Direct role commands still work
+/ai-engineer "Create a RAG pipeline"
+/security-architect "Review for PII"
+```
+
+---
+
 ## [1.8.1] - 2024-12-30
 
 ### 🚀 Context-Efficient Loading & New Skills
@@ -167,6 +268,7 @@ npx tech-hub-skills install --copilot
 
 ---
 
+[2.0.0]: https://github.com/6ogo/Tech-Skills/releases/tag/v2.0.0
 [1.8.1]: https://github.com/6ogo/Tech-Skills/releases/tag/v1.8.1
 [1.8.0]: https://github.com/6ogo/Tech-Skills/releases/tag/v1.8.0
 [1.7.0]: https://github.com/6ogo/Tech-Skills/releases/tag/v1.7.0
