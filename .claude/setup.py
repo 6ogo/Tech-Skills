@@ -15,7 +15,7 @@ long_description = readme_path.read_text(encoding="utf-8") if readme_path.exists
 
 setup(
     name="tech-hub-skills",
-    version="2.0.0",
+    version="2.1.0",
     description="200+ production-ready AI agent skills for Claude Code and GitHub Copilot. Agentic architecture with 93% token reduction.",
     long_description=long_description,
     long_description_content_type="text/markdown",
