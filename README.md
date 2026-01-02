@@ -97,7 +97,7 @@ On-Demand (when skill invoked)
 └── roles/                    # Detailed skill documentation
 ```
 
-## Available Roles (2025)
+## Available Roles
 
 | Role                   | Skills | Focus                                       |
 | ---------------------- | ------ | ------------------------------------------- |
@@ -127,7 +127,7 @@ On-Demand (when skill invoked)
 | **Technical Writer**   | 6      | API Docs, ADRs, Runbooks                    |
 | **Product Designer**   | 6      | Requirements, Research, UX                  |
 
-### Project Lifecycle Agents (NEW in 1.7)
+### Project Lifecycle Agents
 
 | Agent                       | Skills | Focus                                 |
 | --------------------------- | ------ | ------------------------------------- |
@@ -154,7 +154,7 @@ Use `/` mentions to invoke specific expert roles:
 /security-architect "Review this code for PII"
 /data-engineer "Design a lakehouse architecture"
 
-# Project lifecycle agents (NEW in 1.7)
+# Project lifecycle agents
 /project-guardian "Run health check on this project"
 /code-hardener "Harden this code for production"
 /security-hardener "Scan for vulnerabilities and harden security"
@@ -232,20 +232,20 @@ After installation, use skills with `/` mentions:
 /project-starter --enterprise "Build a customer data platform"
 ```
 
-**Project Health Check** (NEW in 1.7)
+**Project Health Check**
 
 ```bash
 /project-guardian "Run full health assessment with improvement roadmap"
 ```
 
-**Production Hardening** (NEW in 1.7)
+**Production Hardening**
 
 ```bash
 /code-hardener "Harden this service for production deployment"
 /security-hardener "Comprehensive security hardening"
 ```
 
-**Rapid Development** (NEW in 1.7)
+**Rapid Development**
 
 ```bash
 /dev-accelerator "Create REST API with CRUD for users, orders, products"

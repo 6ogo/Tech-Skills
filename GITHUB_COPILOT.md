@@ -29,7 +29,7 @@ GitHub Copilot reads workspace instructions from `.github/copilot-instructions.m
 - **System Design** - Architecture, Scalability
 - Plus 20+ more specialized roles
 
-### Project Lifecycle Agents (NEW in 1.7)
+### Project Lifecycle Agents
 
 - **Project Guardian** - Health monitoring, dependency management, tech debt
 - **Code Hardener** - Performance, resilience, validation, defensive coding

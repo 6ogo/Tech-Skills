@@ -39,10 +39,10 @@
     "url": "https://github.com/6ogo/Tech-Skills.git"
   },
   "files": [
-    ".claude/agentic-orchestrator.md",
     ".claude/skills-index.md",
     ".claude/README.md",
     ".claude/skills/**/*.md",
+    ".claude/skill-docs/**/*.md",
     ".claude/roles/**/*.md",
     ".claude/commands/**/*.md",
     ".claude/templates/**/*",
