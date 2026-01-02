@@ -65,16 +65,17 @@ agents/
 ├── orchestrator-agent.md     # Master orchestrator
 ├── EXECUTION.md              # How agents work together ⭐
 ├── SKILL-REFERENCE.md        # Complete skill lookup table ⭐
-├── leads/
-│   ├── ai-ml-lead.md        # AI, ML, Data Science
-│   ├── platform-lead.md     # DevOps, SRE, Cloud
-│   ├── security-lead.md     # Security, Compliance
-│   ├── data-lead.md         # Data Engineering, Governance
-│   └── product-lead.md      # Product, Frontend, Backend, QA
-└── specialists/
+├── ROLE-REGISTRY.md          # Lightweight role index ⭐
+├── SKILL-REGISTRY.md         # Lightweight skill index ⭐
+├── ai-ml-lead.md             # AI, ML, Data Science Lead
+├── platform-lead.md          # DevOps, SRE, Cloud Lead
+├── security-lead.md          # Security, Compliance Lead
+├── data-lead.md              # Data Engineering, Governance Lead
+├── product-lead.md           # Product, Frontend, Backend, QA Lead
+└── specialists/              # 25 Specialist agents (loaded on demand)
     ├── ai-engineer-agent.md
     ├── ml-engineer-agent.md
-    ├── ... (24 total)
+    ├── ... (25 total)
 ```
 
 ## 📚 Key Documentation

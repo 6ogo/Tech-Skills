@@ -108,21 +108,19 @@ Product_keywords: requirements, UX, design → Product Designer
 
 ---
 
-## Role File Paths
-
-All role directories are in `.claude/roles/`:
+All roles and skills are in `.claude/agents/`:
 
 ```
-.claude/roles/
-├── ai-engineer/
-│   └── skills/          # Detailed skill implementations
-├── ml-engineer/
-├── data-scientist/
-├── data-engineer/
-├── security-architect/
-├── devops/
-├── sre/
-├── ... (24 total role directories)
+.claude/agents/
+├── ai-ml-lead.md        # AI/ML Lead
+├── platform-lead.md     # Platform Lead
+├── security-lead.md     # Security Lead
+├── data-lead.md         # Data Lead
+├── product-lead.md      # Product Lead
+└── specialists/         # 25 Specialist Agents
+    ├── ai-engineer-agent.md
+    ├── devops-engineer-agent.md
+    └── ...
 ```
 
 All skill summaries are in `.claude/skills/`:
