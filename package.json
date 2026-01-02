@@ -45,6 +45,7 @@
     ".claude/skill-docs/**/*.md",
     ".claude/roles/**/*.md",
     ".claude/commands/**/*.md",
+    ".claude/agents/**/*.md",
     ".claude/templates/**/*",
     ".claude/tech_hub_skills/**/*.md",
     ".claude/bin/**/*.js",
