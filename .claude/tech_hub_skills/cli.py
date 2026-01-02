@@ -7,13 +7,13 @@ import sys
 from pathlib import Path
 from .copilot_integration import install_copilot_instructions, get_available_roles
 
-__version__ = "1.6.9"
+__version__ = "2.0.0"
 
 BANNER = """
 
 ╔═══════════════════════════════════════════════════════════╗
 ║         TECH HUB SKILLS - AI Agent Skills for Claude      ║
-║                  110+ Production-Ready Skills             ║
+║     200+ Skills | Agentic Architecture | 93% Token Save   ║
 ╚═══════════════════════════════════════════════════════════╝
 """
 

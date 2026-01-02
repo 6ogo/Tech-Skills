@@ -1,0 +1,112 @@
+# Enterprise Alerting Rules
+# Prometheus/Grafana alerting configuration
+
+groups:
+  - name: security-alerts
+    rules:
+      - alert: CriticalVulnerabilityDetected
+        expr: vulnerabilities_critical > 0
+        for: 0m
+        labels:
+          severity: critical
+          team: security
+        annotations:
+          summary: "Critical vulnerability detected"
+          description: "{{ $value }} critical vulnerabilities found"
+
+      - alert: SecretsExposed
+        expr: exposed_secrets_count > 0
+        for: 0m
+        labels:
+          severity: critical
+          team: security
+        annotations:
+          summary: "Exposed secrets detected"
+          runbook: "https://wiki/runbooks/secrets-exposure"
+
+      - alert: UnusualAccessPattern
+        expr: access_anomaly_score > 0.9
+        for: 5m
+        labels:
+          severity: high
+          team: security
+        annotations:
+          summary: "Unusual access pattern detected"
+
+  - name: compliance-alerts
+    rules:
+      - alert: ComplianceControlFailed
+        expr: compliance_control_status == 0
+        for: 0m
+        labels:
+          severity: high
+          team: compliance
+        annotations:
+          summary: "Compliance control failed: {{ $labels.control }}"
+
+      - alert: AuditLogGap
+        expr: time() - audit_last_event_timestamp > 3600
+        for: 5m
+        labels:
+          severity: medium
+        annotations:
+          summary: "No audit events in the last hour"
+
+  - name: code-review-alerts
+    rules:
+      - alert: PRReviewSLOBreach
+        expr: pr_time_without_review_hours > 24
+        for: 0m
+        labels:
+          severity: medium
+          team: engineering
+        annotations:
+          summary: "PR #{{ $labels.pr_number }} waiting > 24h for review"
+
+      - alert: ReviewerOverloaded
+        expr: reviewer_active_prs > 7
+        for: 0m
+        labels:
+          severity: low
+        annotations:
+          summary: "Reviewer {{ $labels.reviewer }} has too many active reviews"
+
+  - name: data-governance-alerts
+    rules:
+      - alert: DataQualityDegraded
+        expr: data_quality_score < 0.8
+        for: 15m
+        labels:
+          severity: medium
+          team: data
+        annotations:
+          summary: "Data quality below threshold for {{ $labels.dataset }}"
+
+      - alert: PIIAccessAnomaly
+        expr: pii_access_anomaly_score > 0.8
+        for: 5m
+        labels:
+          severity: high
+          team: security
+        annotations:
+          summary: "Unusual PII access pattern detected"
+
+  - name: reliability-alerts
+    rules:
+      - alert: ErrorBudgetBurnRate
+        expr: error_budget_burn_rate > 2
+        for: 5m
+        labels:
+          severity: high
+          team: sre
+        annotations:
+          summary: "Error budget burning too fast"
+
+      - alert: SLOViolation
+        expr: slo_compliance < 0.99
+        for: 10m
+        labels:
+          severity: critical
+          team: sre
+        annotations:
+          summary: "SLO violation for {{ $labels.service }}"
