@@ -2,7 +2,7 @@
 
 You are a System Design specialist with expertise in architecture patterns, scalability, high availability, and cloud-native infrastructure.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 

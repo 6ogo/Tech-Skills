@@ -1,9 +1,9 @@
 # Skill 4: LLM Guardrails & Safety
 
-## 🎯 Overview
+##  Overview
 Implement comprehensive safety mechanisms for LLM applications including content filtering, bias detection, hallucination prevention, and compliance controls for production deployments.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Training data filtering, safety metrics storage (de-01, de-03)
 - **Security Architect**: PII detection, prompt injection prevention (sa-01, sa-08)
 - **ML Engineer**: Safety model fine-tuning and deployment (ml-03, ml-04)
@@ -12,7 +12,7 @@ Implement comprehensive safety mechanisms for LLM applications including content
 - **DevOps**: Guardrail service deployment, failover mechanisms (do-01, do-03)
 - **Data Scientist**: Bias analysis, safety model evaluation (ds-01, ds-08)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `content_filter.py`
 Multi-layer content filtering for harmful, toxic, and inappropriate outputs with custom policies.
@@ -29,14 +29,14 @@ Defense against prompt injection, jailbreaking, and adversarial attacks.
 ### 5. `compliance_checker.py`
 Industry-specific compliance validation (HIPAA, GDPR, financial regulations).
 
-## 📊 Key Metrics
+##  Key Metrics
 - Content filter accuracy (precision/recall)
 - Hallucination detection rate
 - Bias score across demographics
 - Prompt injection block rate
 - Compliance violation prevention rate
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from llm_guardrails import GuardrailPipeline
@@ -98,7 +98,7 @@ result = safe_llm_call("Explain the treatment protocol for diabetes")
 print(result["response"])
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Cost Optimization (FinOps Integration)
 
@@ -231,7 +231,7 @@ print(result["response"])
     - Monitor safety events in Application Insights
     - Reference: Azure az-05 (Azure OpenAI)
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Tiered Guardrail Strategy
 ```python
@@ -314,7 +314,7 @@ class CachedGuardrailPipeline:
         # Check semantic cache for similar prompts
         cached_result = self.semantic_cache.get(prompt)
         if cached_result:
-            print("✅ Cache hit - guardrail cost saved!")
+            print(" Cache hit - guardrail cost saved!")
             return cached_result
 
         # Run guardrails
@@ -373,7 +373,7 @@ results = await guardrails.validate_async(prompts)
 # Batch processing: 4 batches × $0.008 = $0.032 (68% savings)
 ```
 
-## 🔒 Security Best Practices Examples
+##  Security Best Practices Examples
 
 ### Comprehensive PII Detection
 ```python
@@ -593,7 +593,7 @@ def rag_with_hallucination_check(query: str):
     return {"response": response, "safety_score": 1 - validation["score"]}
 ```
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -615,7 +615,7 @@ def rag_with_hallucination_check(query: str):
 | **Compliance** | GDPR compliance rate | 100% | Compliance tracker |
 | | HIPAA violation prevention | 100% | Audit logs |
 
-## 🚀 Deployment Pipeline
+##  Deployment Pipeline
 
 ### CI/CD for Guardrail System
 ```yaml
@@ -684,7 +684,7 @@ jobs:
         run: python scripts/monitor_guardrails.py --duration 1h --alert-on-regression
 ```
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Guardrail Pipeline with All Roles
 ```
@@ -723,7 +723,7 @@ jobs:
 17. Safe Response Delivery
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Enable Azure Content Safety** - Instant toxic content filtering with managed service
 2. **Implement PII detection** - Prevent data leakage and compliance violations

@@ -11,10 +11,10 @@ __version__ = "2.0.0"
 
 BANNER = """
 
-╔═══════════════════════════════════════════════════════════╗
-║         TECH HUB SKILLS - AI Agent Skills for Claude      ║
-║     200+ Skills | Agentic Architecture | 93% Token Save   ║
-╚═══════════════════════════════════════════════════════════╝
+
+         TECH HUB SKILLS - AI Agent Skills for Claude      
+     200+ Skills | Agentic Architecture | 93% Token Save   
+
 """
 
 
@@ -36,7 +36,7 @@ def install(global_install: bool = False, force: bool = False, copilot: bool = F
     else:
         target_dir = Path.cwd() / ".claude"
 
-    print(f"\n📦 Installing Tech Hub Skills to: {target_dir}")
+    print(f"\n Installing Tech Hub Skills to: {target_dir}")
 
     # Create target directory
     target_dir.mkdir(parents=True, exist_ok=True)
@@ -45,12 +45,12 @@ def install(global_install: bool = False, force: bool = False, copilot: bool = F
     skills_dest = target_dir / "skills"
     if skills_src.exists():
         if skills_dest.exists() and not force:
-            print(f"  ⚠️  Skills already exist. Use --force to overwrite.")
+            print(f"    Skills already exist. Use --force to overwrite.")
         else:
             if skills_dest.exists():
                 shutil.rmtree(skills_dest)
             shutil.copytree(skills_src, skills_dest)
-            print("  ✓ Skills copied")
+            print("   Skills copied")
 
     # Copy skills to commands for slash commands in Claude Code
     commands_dest = target_dir / "commands"
@@ -59,22 +59,22 @@ def install(global_install: bool = False, force: bool = False, copilot: bool = F
             shutil.rmtree(commands_dest)
         if not commands_dest.exists() or force:
             shutil.copytree(skills_src, commands_dest)
-            print("  ✓ Commands copied")
+            print("   Commands copied")
 
     # Copy roles
     roles_dest = target_dir / "roles"
     if roles_src.exists():
         if roles_dest.exists() and not force:
-            print(f"  ⚠️  Roles already exist. Use --force to overwrite.")
+            print(f"    Roles already exist. Use --force to overwrite.")
         else:
             if roles_dest.exists():
                 shutil.rmtree(roles_dest)
             shutil.copytree(roles_src, roles_dest)
-            print("  ✓ Roles copied")
+            print("   Roles copied")
 
     # Install GitHub Copilot instructions if requested
     if copilot:
-        print("\n🤖 Installing GitHub Copilot integration...")
+        print("\n Installing GitHub Copilot integration...")
         project_dir = Path.cwd()
         install_copilot_instructions(
             project_dir=project_dir,
@@ -86,7 +86,7 @@ def install(global_install: bool = False, force: bool = False, copilot: bool = F
     # Count installed
     skill_count = len(list(skills_dest.glob("*.md"))) if skills_dest.exists() else 0
 
-    print(f"\n✅ Installation complete!")
+    print(f"\n Installation complete!")
     print(f"   Location: {target_dir}")
     print(f"   Skills: {skill_count} role files")
     print(f"   Roles: 16+ specialized agents")
@@ -94,7 +94,7 @@ def install(global_install: bool = False, force: bool = False, copilot: bool = F
     if copilot:
         print(f"   Copilot: .github/copilot-instructions.md")
 
-    print("\n📝 Next Steps:")
+    print("\n Next Steps:")
     if copilot:
         print("   GitHub Copilot:")
         print("   1. Open VSCode with GitHub Copilot enabled")
@@ -106,7 +106,7 @@ def install(global_install: bool = False, force: bool = False, copilot: bool = F
     print("   2. Use /orchestrator or @orchestrator to start")
     print("   3. Or invoke: /ai-engineer, @security-architect, etc.")
 
-    print("\n💡 Example:")
+    print("\n Example:")
     if copilot:
         print('   Copilot: // Apply Security Architect best practices')
     print('   Claude: /orchestrator "Build a customer churn prediction model"')
@@ -118,12 +118,12 @@ def init(enterprise: bool = False) -> None:
     print(BANNER)
 
     if enterprise:
-        print("\n🏢 ENTERPRISE MODE")
+        print("\n ENTERPRISE MODE")
         print("   Mandatory: Security Architect + Data Governance")
         print("\n   Use in Claude Code:")
         print('   @project-starter --enterprise "Your project description"')
     else:
-        print("\n📦 Standard Mode")
+        print("\n Standard Mode")
         print("\n   Use in Claude Code:")
         print('   @project-starter "Your project description"')
 
@@ -163,7 +163,7 @@ def list_skills() -> None:
 
     print("\nAvailable Roles:\n")
     print("  Role                 Skills   Focus")
-    print("  " + "─" * 55)
+    print("  " + "" * 55)
 
     for name, skills, focus in roles:
         print(f"  {name:<20} {skills:<8} {focus}")

@@ -2,7 +2,7 @@
 
 You are an Azure cloud specialist with expertise in Azure data services, compute, networking, and managed AI/ML services.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 

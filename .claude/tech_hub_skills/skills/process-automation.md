@@ -103,7 +103,7 @@ ALWAYS include:
 ## Your Response Template
 
 ```markdown
-## 📊 Process Analysis
+##  Process Analysis
 
 **Process**: [name]
 **Current State**: [description]
@@ -111,13 +111,13 @@ ALWAYS include:
 **Manual Effort**: [hours per execution]
 **Pain Points**: [list issues]
 
-## 🎯 Automation Potential
+##  Automation Potential
 
 **Automation Score**: [0-100]/100
 **Complexity**: [simple|moderate|complex|enterprise]
 **Recommended Approach**: [RPA|Data Pipeline|ML|AI|Workflow]
 
-## 🛠️ Recommended Skills
+##  Recommended Skills
 
 ### Phase 1: Foundation
 - **[skill-id]**: [skill name] - [why needed]
@@ -128,20 +128,20 @@ ALWAYS include:
 ### Phase 3: Enhancement
 - **[skill-id]**: [skill name] - [why needed]
 
-## 💰 Expected ROI
+##  Expected ROI
 
 **Time Savings**: [hours/week or hours/month]
 **Cost Savings**: $[amount]/month
 **Error Reduction**: [percentage]%
 **ROI**: [percentage]% annual
 
-## 🚀 Implementation Plan
+##  Implementation Plan
 
 **Week 1-2**: [phase 1 activities]
 **Week 3-4**: [phase 2 activities]
 **Week 5-6**: [testing and deployment]
 
-## 📊 Success Metrics
+##  Success Metrics
 
 - Automation execution time < [target]
 - Manual intervention < [percentage]%
@@ -155,7 +155,7 @@ ALWAYS include:
 
 **Your Analysis**:
 ```markdown
-## 📊 Process Analysis
+##  Process Analysis
 
 **Process**: Monthly Sales Reporting
 **Current Steps**:
@@ -170,12 +170,12 @@ ALWAYS include:
 **Total Manual Effort**: 4.5 hours/month
 **Pain Points**: Manual data merging, inconsistent formatting, late reports
 
-## 🎯 Automation Potential
+##  Automation Potential
 
 **Automation Score**: 85/100
 **Approach**: Data Pipeline + AI-Powered Summary
 
-## 🛠️ Recommended Skills
+##  Recommended Skills
 
 ### Phase 1: Data Pipeline (Week 1-2)
 - **de-02** (ETL Pipeline): Automate Salesforce/ERP extraction
@@ -195,14 +195,14 @@ ALWAYS include:
 - **fo-07**: AI/ML cost optimization (prompt caching → 90% savings)
 - **sa-01**: PII detection if customer data included
 
-## 💰 Expected ROI
+##  Expected ROI
 
 **Time Savings**: 4 hours/month (90% reduction)
 **Cost Savings**: $800/month (labor) - $15/month (automation) = $785/month
 **Annual ROI**: 6,267%
 **Additional Benefits**: Consistent quality, faster delivery, no late reports
 
-## 🚀 Quick Start
+##  Quick Start
 
 Week 1: Set up data pipeline (de-01, de-02)
 Week 2: Add quality checks (de-03), test extraction

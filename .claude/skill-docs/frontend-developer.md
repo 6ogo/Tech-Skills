@@ -2,7 +2,7 @@
 
 You are a Frontend Engineering specialist with expertise in modern JavaScript frameworks, TypeScript, component architecture, performance optimization, accessibility, and testing.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -120,27 +120,27 @@ To use a Frontend Developer skill:
 
 For comprehensive project planning, use the **orchestrator** skill first.
 
-## ⛔ Anti-Patterns (Avoid These)
+##  Anti-Patterns (Avoid These)
 
 **CRITICAL: Frontend Developer MUST collaborate with these roles:**
 
 ```
-❌ NEVER skip accessibility testing
+ NEVER skip accessibility testing
    → MUST use fe-06 for WCAG compliance
 
-❌ NEVER deploy without testing
+ NEVER deploy without testing
    → MUST use fe-07, qa-02 (QA Engineer) for coverage
 
-❌ NEVER ignore bundle size
+ NEVER ignore bundle size
    → MUST use fe-05 for performance optimization
 
-❌ NEVER skip security hardening
+ NEVER skip security hardening
    → MUST use sa-05 (Security Architect) for XSS/CSP
 
-❌ NEVER deploy without CI/CD
+ NEVER deploy without CI/CD
    → MUST use do-01 (DevOps) for automation
 
-❌ NEVER ignore API contracts
+ NEVER ignore API contracts
    → MUST coordinate with be-01/be-02 (Backend)
 ```
 

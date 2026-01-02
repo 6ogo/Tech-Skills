@@ -203,7 +203,7 @@ const agentConfigs = {
 function addFrontmatter(content, config) {
   // Check if frontmatter already exists
   if (content.trim().startsWith("---")) {
-    console.log(`  ⚠️  Already has frontmatter, skipping`);
+    console.log(`    Already has frontmatter, skipping`);
     return content;
   }
 
@@ -224,7 +224,7 @@ description: "${config.description}"
 
 function migrateAgents() {
   console.log(
-    "\n🔄 Migrating agents to flat structure with YAML frontmatter...\n"
+    "\n Migrating agents to flat structure with YAML frontmatter...\n"
   );
 
   let migrated = 0;
@@ -235,7 +235,7 @@ function migrateAgents() {
     const leadFiles = fs
       .readdirSync(LEADS_DIR)
       .filter((f) => f.endsWith(".md"));
-    console.log(`📁 Processing ${leadFiles.length} lead agents...`);
+    console.log(` Processing ${leadFiles.length} lead agents...`);
 
     for (const file of leadFiles) {
       const srcPath = path.join(LEADS_DIR, file);
@@ -243,7 +243,7 @@ function migrateAgents() {
       const config = agentConfigs[file];
 
       if (!config) {
-        console.log(`  ⚠️  No config for ${file}, skipping`);
+        console.log(`    No config for ${file}, skipping`);
         skipped++;
         continue;
       }
@@ -262,7 +262,7 @@ function migrateAgents() {
       .readdirSync(SPECIALISTS_DIR)
       .filter((f) => f.endsWith(".md"));
     console.log(
-      `\n📁 Processing ${specialistFiles.length} specialist agents...`
+      `\n Processing ${specialistFiles.length} specialist agents...`
     );
 
     for (const file of specialistFiles) {
@@ -271,7 +271,7 @@ function migrateAgents() {
       const config = agentConfigs[file];
 
       if (!config) {
-        console.log(`  ⚠️  No config for ${file}, skipping`);
+        console.log(`    No config for ${file}, skipping`);
         skipped++;
         continue;
       }
@@ -284,12 +284,12 @@ function migrateAgents() {
     }
   }
 
-  console.log(`\n✅ Migration complete!`);
+  console.log(`\n Migration complete!`);
   console.log(`   Migrated: ${migrated} agents`);
   console.log(`   Skipped: ${skipped} agents`);
-  console.log(`\n📍 Agents are now in: ${AGENTS_DIR}`);
+  console.log(`\n Agents are now in: ${AGENTS_DIR}`);
   console.log(
-    `\n💡 You can safely delete the leads/ and specialists/ subdirectories after verification.`
+    `\n You can safely delete the leads/ and specialists/ subdirectories after verification.`
   );
 }
 

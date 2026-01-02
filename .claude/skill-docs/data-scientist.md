@@ -2,7 +2,7 @@
 
 You are a Data Science specialist with expertise in statistical modeling, machine learning, experimentation, and data-driven insights.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -135,27 +135,27 @@ To use a Data Scientist skill:
 
 For comprehensive project planning, use the **orchestrator** skill first to analyze requirements and select optimal skill combinations.
 
-## ⛔ Anti-Patterns (Avoid These)
+##  Anti-Patterns (Avoid These)
 
 **CRITICAL: Data Scientist MUST collaborate with these roles:**
 
 ```
-❌ NEVER analyze PII without masking
+ NEVER analyze PII without masking
    → MUST use sa-01 (Security Architect) for privacy
 
-❌ NEVER skip experiment tracking
+ NEVER skip experiment tracking
    → MUST use mo-01 (MLOps) for reproducibility
 
-❌ NEVER deploy models without ML Engineer
+ NEVER deploy models without ML Engineer
    → MUST use ml-01, ml-04 (ML Engineer) for production
 
-❌ NEVER skip bias detection
+ NEVER skip bias detection
    → MUST check for demographic/selection bias
 
-❌ NEVER ignore data quality
+ NEVER ignore data quality
    → MUST use de-03 (Data Engineer) for validation
 
-❌ NEVER skip cost tracking
+ NEVER skip cost tracking
    → MUST use fo-01 (FinOps) for compute costs
 ```
 

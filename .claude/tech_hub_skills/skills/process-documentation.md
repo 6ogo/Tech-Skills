@@ -406,22 +406,22 @@ flowchart TD
 ```
 
 /
-├── Home.md
-├── Getting-Started/
-│ ├── Onboarding.md
-│ └── Prerequisites.md
-├── Architecture/
-│ ├── Overview.md
-│ ├── Components/
-│ └── ADRs/
-├── Operations/
-│ ├── Runbooks/
-│ └── Troubleshooting/
-├── Development/
-│ ├── Setup.md
-│ └── Guidelines.md
-└── API/
-└── Reference.md
+ Home.md
+ Getting-Started/
+  Onboarding.md
+  Prerequisites.md
+ Architecture/
+  Overview.md
+  Components/
+  ADRs/
+ Operations/
+  Runbooks/
+  Troubleshooting/
+ Development/
+  Setup.md
+  Guidelines.md
+ API/
+ Reference.md
 
 ````
 

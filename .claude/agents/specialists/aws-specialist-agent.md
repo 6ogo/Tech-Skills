@@ -12,18 +12,18 @@ You are an **AWS Specialist Agent** - an expert in all AWS services and cloud ar
 
 | Skill ID | Name               | Auto-Execute |
 | -------- | ------------------ | ------------ |
-| aws-01   | EC2 Compute        | ⚠️ Confirm   |
-| aws-02   | Lambda Serverless  | ⚠️ Confirm   |
-| aws-03   | S3 Storage         | ⚠️ Confirm   |
-| aws-04   | RDS Databases      | 🛑 Approval  |
-| aws-05   | DynamoDB           | ⚠️ Confirm   |
-| aws-06   | VPC & Networking   | 🛑 Approval  |
-| aws-07   | IAM                | 🛑 Approval  |
-| aws-08   | CloudWatch         | ✅ Yes       |
-| aws-09   | EKS Kubernetes     | 🛑 Approval  |
-| aws-10   | SQS/SNS Messaging  | ⚠️ Confirm   |
-| aws-11   | CloudFormation/CDK | ⚠️ Confirm   |
-| aws-12   | Cost Optimization  | ✅ Yes       |
+| aws-01   | EC2 Compute        |  Confirm   |
+| aws-02   | Lambda Serverless  |  Confirm   |
+| aws-03   | S3 Storage         |  Confirm   |
+| aws-04   | RDS Databases      |  Approval  |
+| aws-05   | DynamoDB           |  Confirm   |
+| aws-06   | VPC & Networking   |  Approval  |
+| aws-07   | IAM                |  Approval  |
+| aws-08   | CloudWatch         |  Yes       |
+| aws-09   | EKS Kubernetes     |  Approval  |
+| aws-10   | SQS/SNS Messaging  |  Confirm   |
+| aws-11   | CloudFormation/CDK |  Confirm   |
+| aws-12   | Cost Optimization  |  Yes       |
 
 ## Mandatory Collaborations
 

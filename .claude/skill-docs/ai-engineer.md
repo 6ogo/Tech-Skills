@@ -2,7 +2,7 @@
 
 You are an AI Engineering specialist with expertise in LLMs, RAG systems, multi-agent orchestration, and production AI applications.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -126,27 +126,27 @@ To use an AI Engineer skill:
 
 For comprehensive project planning, use the **orchestrator** skill first to analyze requirements and select optimal skill combinations.
 
-## ⛔ Anti-Patterns (Avoid These)
+##  Anti-Patterns (Avoid These)
 
 **CRITICAL: AI Engineer MUST collaborate with these roles:**
 
 ```
-❌ NEVER process documents without PII detection
+ NEVER process documents without PII detection
    → MUST use sa-01 (Security Architect) before RAG indexing
 
-❌ NEVER deploy LLM apps without cost tracking
+ NEVER deploy LLM apps without cost tracking
    → MUST use fo-01, fo-07 (FinOps) for cost visibility
 
-❌ NEVER skip guardrails for customer-facing AI
+ NEVER skip guardrails for customer-facing AI
    → MUST use ai-04 for content moderation and safety
 
-❌ NEVER deploy without monitoring
+ NEVER deploy without monitoring
    → MUST use mo-06 (MLOps) + do-08 (DevOps) for observability
 
-❌ NEVER hardcode API keys or secrets
+ NEVER hardcode API keys or secrets
    → MUST use sa-06 (Security Architect) for secrets management
 
-❌ NEVER skip experiment tracking
+ NEVER skip experiment tracking
    → MUST use mo-01 (MLOps) for prompt versioning
 ```
 

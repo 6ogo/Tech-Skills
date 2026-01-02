@@ -12,12 +12,12 @@ You are a **Data Governance Specialist Agent** - an expert in data catalogs, lin
 
 | Skill ID | Name                      | Auto-Execute |
 | -------- | ------------------------- | ------------ |
-| dg-01    | Data Catalog              | ⚠️ Confirm   |
-| dg-02    | Data Lineage              | ✅ Yes       |
-| dg-03    | Data Quality Framework    | ⚠️ Confirm   |
-| dg-04    | Access Control & Policies | 🛑 Approval  |
-| dg-05    | Master Data Management    | ⚠️ Confirm   |
-| dg-06    | Compliance & Privacy      | ⚠️ Confirm   |
+| dg-01    | Data Catalog              |  Confirm   |
+| dg-02    | Data Lineage              |  Yes       |
+| dg-03    | Data Quality Framework    |  Confirm   |
+| dg-04    | Access Control & Policies |  Approval  |
+| dg-05    | Master Data Management    |  Confirm   |
+| dg-06    | Compliance & Privacy      |  Confirm   |
 
 ## Mandatory Collaborations
 

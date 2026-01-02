@@ -2,7 +2,7 @@
 
 **Purpose**: Agents reference this compact index to understand all roles. Load FULL role docs ONLY when needed.
 
-## 🎯 How This Works
+## How This Works
 
 ```yaml
 1. Agent receives task
@@ -112,24 +112,24 @@ All roles and skills are in `.claude/agents/`:
 
 ```
 .claude/agents/
-├── ai-ml-lead.md        # AI/ML Lead
-├── platform-lead.md     # Platform Lead
-├── security-lead.md     # Security Lead
-├── data-lead.md         # Data Lead
-├── product-lead.md      # Product Lead
-└── specialists/         # 25 Specialist Agents
-    ├── ai-engineer-agent.md
-    ├── devops-engineer-agent.md
-    └── ...
+ ai-ml-lead.md        # AI/ML Lead
+ platform-lead.md     # Platform Lead
+ security-lead.md     # Security Lead
+ data-lead.md         # Data Lead
+ product-lead.md      # Product Lead
+ specialists/         # 25 Specialist Agents
+     ai-engineer-agent.md
+     devops-engineer-agent.md
+     ...
 ```
 
-All skill summaries are in `.claude/skills/`:
+Expert guidance is in `.claude/skill-docs/`:
 
 ```
-.claude/skills/
-├── ai-engineer.md       # AI Engineer skill summary
-├── devops.md           # DevOps skill summary
-├── ... (one per role)
+.claude/skill-docs/
+ ai-engineer.md       # Full expert guidance
+ devops.md           # Full expert guidance
+ ... (one per role)
 ```
 
 ---
@@ -151,8 +151,12 @@ when_task_arrives:
     example: "@ai-ml-lead, @security-lead"
 
   step_4:
-    action: "Lead loads ONLY needed skill file"
-    example: "read_file('.claude/skills/ai-engineer.md')"
+    action: "Lead loads EXPERT GUIDANCE"
+    example: "read_file('.claude/skill-docs/ai-engineer.md')"
+
+  step_5:
+    action: "Lead loads IMPLEMENTATION DETAILS"
+    example: "read_file('.claude/roles/ai-engineer/skills/02-rag-pipeline/README.md')"
 
   step_5:
     action: "Execute task with specialist"

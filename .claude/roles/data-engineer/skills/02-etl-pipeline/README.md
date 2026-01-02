@@ -1,9 +1,9 @@
 # Skill 2: ETL/ELT Pipeline Orchestration
 
-## 🎯 Overview
+##  Overview
 Build and orchestrate production-grade ETL/ELT pipelines with scheduling, monitoring, error handling, and dependency management for scalable data workflows.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Feeds lakehouse architecture layers (de-01, de-03)
 - **ML Engineer**: Provides training data pipelines (ml-01, ml-02)
 - **MLOps**: Data versioning and feature pipelines (mo-02, mo-06)
@@ -13,7 +13,7 @@ Build and orchestrate production-grade ETL/ELT pipelines with scheduling, monito
 - **FinOps**: Pipeline cost optimization and monitoring (fo-01, fo-06)
 - **DevOps**: CI/CD for pipeline deployment, IaC (do-01, do-04, do-08)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `orchestrator.py`
 Pipeline orchestration with DAG-based workflow management using Airflow/Prefect.
@@ -30,7 +30,7 @@ Change Data Capture (CDC) and incremental loading strategies.
 ### 5. `pipeline_monitor.py`
 Real-time pipeline monitoring, alerting, and SLA tracking.
 
-## 📊 Architecture
+##  Architecture
 
 ```
 Source Systems → Extract → Transform → Load → Target Systems
@@ -40,7 +40,7 @@ Source Systems → Extract → Transform → Load → Target Systems
                          Checks      (Full/Inc)
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from orchestrator import Pipeline, Task
@@ -91,7 +91,7 @@ def load(data):
 pipeline.run()
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Cost Optimization (FinOps Integration)
 
@@ -231,7 +231,7 @@ pipeline.run()
     - Enable VNet integration for security
     - Reference: Azure az-01
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Incremental Loading with CDC
 ```python
@@ -355,7 +355,7 @@ target_connector.load(
 )
 ```
 
-## 🔒 Security Best Practices Examples
+##  Security Best Practices Examples
 
 ### Secure Credential Management
 ```python
@@ -442,7 +442,7 @@ print(f"Transformations: {lineage.transformations}")
 print(f"Load timestamp: {lineage.loaded_at}")
 ```
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -461,7 +461,7 @@ print(f"Load timestamp: {lineage.loaded_at}")
 | **Security** | Encrypted connections | 100% | Security scans |
 | | Credential rotation compliance | 100% | Compliance dashboard |
 
-## 🚀 Deployment Pipeline
+##  Deployment Pipeline
 
 ### CI/CD for ETL Pipelines
 ```yaml
@@ -534,7 +534,7 @@ jobs:
         run: python scripts/generate_deployment_report.py
 ```
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Pipeline Workflow
 ```
@@ -551,22 +551,22 @@ jobs:
 6. Data Quality Checks (de-03)
    ↓
 7. Load to Lakehouse (de-01)
-   ├── Bronze Layer (raw)
-   ├── Silver Layer (cleaned)
-   └── Gold Layer (business-ready)
+    Bronze Layer (raw)
+    Silver Layer (cleaned)
+    Gold Layer (business-ready)
    ↓
 8. Trigger Downstream Pipelines
-   ├── Feature Store Update (ml-02)
-   ├── RAG Knowledge Base (ai-02)
-   ├── Analytics Refresh (ds-01)
-   └── Model Retraining (ml-01)
+    Feature Store Update (ml-02)
+    RAG Knowledge Base (ai-02)
+    Analytics Refresh (ds-01)
+    Model Retraining (ml-01)
    ↓
 9. Monitor & Alert (do-08)
    ↓
 10. Cost Tracking & Optimization (fo-01)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Implement incremental loading** - 60-80% cost reduction vs full loads
 2. **Add schema validation** - Catch data issues early

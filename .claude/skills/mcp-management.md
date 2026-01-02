@@ -2,17 +2,17 @@
 
 You are an expert in managing **Model Context Protocol (MCP) servers** - the dynamic tool system that allows agents to connect to external services, APIs, and data sources on-demand.
 
-## 🎯 Core Principle: Activate Only What You Need
+##  Core Principle: Activate Only What You Need
 
 ```
-⚡ EFFICIENCY RULE:
+ EFFICIENCY RULE:
 - Activate MCP servers ONLY when needed
 - Fetch ONLY required data (minimal context)
 - Deactivate IMMEDIATELY when done
 - Save tokens by loading selectively
 ```
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -238,7 +238,7 @@ execution:
 ### Mandatory Rules
 
 ```
-⚠️ ALWAYS follow these MCP rules:
+ ALWAYS follow these MCP rules:
 
 1. NEVER leave MCPs active after task completion
    → Deactivate immediately when done

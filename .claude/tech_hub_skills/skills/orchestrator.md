@@ -531,14 +531,14 @@ When a project is marked as **enterprise-grade** or targets **production**, ALWA
 When analyzing a request, provide:
 
 ```markdown
-## 🎯 Project Analysis
+##  Project Analysis
 
 **Domain**: [primary domain(s)]
 **Complexity**: [simple|moderate|complex|enterprise]
 **Compliance Requirements**: [list any PII, GDPR, SOC 2, etc.]
 **Estimated Monthly Cost**: $[amount] (before optimization)
 
-## 📋 Recommended Skills
+##  Recommended Skills
 
 ### Phase 1: Foundation (Week 1-2)
 
@@ -553,23 +553,23 @@ When analyzing a request, provide:
 
 - **[skill-id]**: [skill name] - [reason]
 
-## 💰 Cost Optimization Strategy
+##  Cost Optimization Strategy
 
 - **[optimization 1]**: [expected savings]
 - **[optimization 2]**: [expected savings]
 - **Total Expected Savings**: [percentage]%
 
-## 🔒 Security & Compliance
+##  Security & Compliance
 
 - **[security measure 1]**: Using [skill-id]
 - **[security measure 2]**: Using [skill-id]
 
-## 📊 Success Metrics
+##  Success Metrics
 
 - [metric 1]: [target]
 - [metric 2]: [target]
 
-## 🚀 Implementation
+##  Implementation
 
 [Provide specific guidance based on selected skills, referencing the documentation in the repo]
 ```

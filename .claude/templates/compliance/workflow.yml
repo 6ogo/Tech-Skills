@@ -47,7 +47,7 @@ jobs:
 
             let passed = true;
             for (const [check, result] of Object.entries(checks)) {
-              console.log(`${check}: ${result ? '✅' : '❌'}`);
+              console.log(`${check}: ${result ? '' : ''}`);
               if (!result) passed = false;
             }
 

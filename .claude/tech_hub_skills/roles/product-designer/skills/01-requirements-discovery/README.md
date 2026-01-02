@@ -217,37 +217,37 @@ metrics_framework:
 ### Discovery Canvas
 
 ```
-┌────────────────────────────────────────────────────────────────┐
-│                    PRODUCT DISCOVERY CANVAS                    │
-├────────────────────────────────────────────────────────────────┤
-│ PROBLEM SPACE                    │ SOLUTION SPACE              │
-├──────────────────────────────────┼─────────────────────────────┤
-│ Target Users:                    │ Value Proposition:          │
-│ • [Segment 1]                    │ • [Core benefit]            │
-│ • [Segment 2]                    │ • [Differentiator]          │
-│                                  │                             │
-│ Pain Points:                     │ Key Features:               │
-│ • [Pain 1]                       │ • [Feature 1]               │
-│ • [Pain 2]                       │ • [Feature 2]               │
-│                                  │                             │
-│ Current Solutions:               │ Success Metrics:            │
-│ • [Solution 1]                   │ • [Metric 1]                │
-│ • [Solution 2]                   │ • [Metric 2]                │
-│                                  │                             │
-│ Jobs to be Done:                 │ MVP Scope:                  │
-│ • [Job 1]                        │ • [Must have 1]             │
-│ • [Job 2]                        │ • [Must have 2]             │
-├──────────────────────────────────┴─────────────────────────────┤
-│ VALIDATION                                                     │
-├────────────────────────────────────────────────────────────────┤
-│ Assumptions to Test:             │ Risks:                      │
-│ • [Assumption 1]                 │ • [Risk 1]                  │
-│ • [Assumption 2]                 │ • [Risk 2]                  │
-│                                  │                             │
-│ Experiments:                     │ Go/No-Go Criteria:          │
-│ • [Experiment 1]                 │ • [Criteria 1]              │
-│ • [Experiment 2]                 │ • [Criteria 2]              │
-└────────────────────────────────────────────────────────────────┘
+
+                    PRODUCT DISCOVERY CANVAS                    
+
+ PROBLEM SPACE                     SOLUTION SPACE              
+
+ Target Users:                     Value Proposition:          
+ • [Segment 1]                     • [Core benefit]            
+ • [Segment 2]                     • [Differentiator]          
+                                                               
+ Pain Points:                      Key Features:               
+ • [Pain 1]                        • [Feature 1]               
+ • [Pain 2]                        • [Feature 2]               
+                                                               
+ Current Solutions:                Success Metrics:            
+ • [Solution 1]                    • [Metric 1]                
+ • [Solution 2]                    • [Metric 2]                
+                                                               
+ Jobs to be Done:                  MVP Scope:                  
+ • [Job 1]                         • [Must have 1]             
+ • [Job 2]                         • [Must have 2]             
+
+ VALIDATION                                                     
+
+ Assumptions to Test:              Risks:                      
+ • [Assumption 1]                  • [Risk 1]                  
+ • [Assumption 2]                  • [Risk 2]                  
+                                                               
+ Experiments:                      Go/No-Go Criteria:          
+ • [Experiment 1]                  • [Criteria 1]              
+ • [Experiment 2]                  • [Criteria 2]              
+
 ```
 
 ### Feature Specification Template

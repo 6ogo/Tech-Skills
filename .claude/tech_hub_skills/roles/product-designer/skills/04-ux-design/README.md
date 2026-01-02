@@ -57,13 +57,13 @@ information_architecture:
 
   hierarchy_template: |
     Level 0: [Product/App Name]
-    ├── Level 1: [Primary Section]
-    │   ├── Level 2: [Subsection]
-    │   │   ├── Level 3: [Page/Feature]
-    │   │   └── Level 3: [Page/Feature]
-    │   └── Level 2: [Subsection]
-    ├── Level 1: [Primary Section]
-    └── Level 1: [Primary Section]
+     Level 1: [Primary Section]
+        Level 2: [Subsection]
+           Level 3: [Page/Feature]
+           Level 3: [Page/Feature]
+        Level 2: [Subsection]
+     Level 1: [Primary Section]
+     Level 1: [Primary Section]
 ```
 
 ### 2. Wireframing
@@ -125,25 +125,25 @@ user_flows:
       parallelogram: "Input/output"
 
   flow_template: |
-    ┌─────────┐     ┌─────────┐     ◇──────────◇
-    │  Start  │────▶│  Page A │────▶│ Decision │
-    │  Point  │     │         │     │          │
-    └─────────┘     └─────────┘     └────┬─────┘
-                                         │
-                         ┌───────────────┴───────────────┐
-                         │                               │
-                         ▼                               ▼
-                    ┌─────────┐                    ┌─────────┐
-                    │ Path A  │                    │ Path B  │
-                    │         │                    │         │
-                    └────┬────┘                    └────┬────┘
-                         │                               │
-                         └───────────┬───────────────────┘
-                                     ▼
-                               ┌─────────┐
-                               │   End   │
-                               │  Point  │
-                               └─────────┘
+              
+      Start    Page A  Decision 
+      Point                               
+              
+                                         
+                         
+                                                        
+                                                        
+                                        
+                     Path A                       Path B  
+                                                          
+                                        
+                                                        
+                         
+                                     
+                               
+                                  End   
+                                 Point  
+                               
 
   happy_path: "Ideal user journey without errors"
   edge_cases:
@@ -253,22 +253,22 @@ design_system:
       - "Props/variants"
 
   figma_structure: |
-    📁 Design System
-    ├── 📄 Overview
-    ├── 📁 Foundations
-    │   ├── Colors
-    │   ├── Typography
-    │   ├── Spacing
-    │   └── Icons
-    ├── 📁 Components
-    │   ├── Buttons
-    │   ├── Inputs
-    │   ├── Cards
-    │   └── ...
-    └── 📁 Patterns
-        ├── Forms
-        ├── Navigation
-        └── Data Display
+     Design System
+      Overview
+      Foundations
+        Colors
+        Typography
+        Spacing
+        Icons
+      Components
+        Buttons
+        Inputs
+        Cards
+        ...
+      Patterns
+         Forms
+         Navigation
+         Data Display
 ```
 
 ### 6. Usability Heuristics (Nielsen's 10)

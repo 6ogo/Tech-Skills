@@ -1,30 +1,30 @@
-# 🤖 Tech Hub Skills - Agent System
+# Tech Hub Skills - Agent System
 
 This directory contains the **hierarchical multi-agent system** for Tech Hub Skills. Agents act as expert personas that coordinate work, delegate tasks, and execute skills.
 
 ## Architecture Overview
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    🎯 ORCHESTRATOR AGENT                    │
-│         Analyzes requests, routes to Lead Agents            │
-└────────────────────────────┬────────────────────────────────┘
-                             │
-        ┌────────────────────┼────────────────────┐
-        │                    │                    │
-        ▼                    ▼                    ▼
-┌───────────────┐   ┌───────────────┐   ┌───────────────┐
-│ 🤖 AI/ML Lead │    │ ⚙️ Platform   │   │ 🔒 Security   │
-│               │   │    Lead       │   │    Lead       │
-└───────┬───────┘   └───────┬───────┘   └───────┬───────┘
-        │                   │                   │
-        ▼                   ▼                   ▼
-┌───────────────┐   ┌───────────────┐   ┌───────────────┐
-│ 📊 Data Lead  │   │ 📦 Product    │    │               │
-│               │   │    Lead       │   │ (Specialists) │
-└───────┬───────┘   └───────────────┘   └───────────────┘
-        │
-        ▼
+
+                    ORCHESTRATOR AGENT                       
+         Analyzes requests, routes to Lead Agents            
+
+                             
+        
+                                                
+                                                
+      
+  AI/ML Lead        Platform          Security     
+                      Lead              Lead       
+      
+                                              
+                                              
+      
+  Data Lead         Product                        
+                      Lead           (Specialists) 
+      
+        
+        
   [24 Specialists]
 ```
 
@@ -61,33 +61,31 @@ Specialists use their skills (ai-01, de-02, etc.) to complete work.
 
 ```
 agents/
-├── agent-schema.md           # Template for all agents
-├── orchestrator-agent.md     # Master orchestrator
-├── EXECUTION.md              # How agents work together ⭐
-├── SKILL-REFERENCE.md        # Complete skill lookup table ⭐
-├── ROLE-REGISTRY.md          # Lightweight role index ⭐
-├── SKILL-REGISTRY.md         # Lightweight skill index ⭐
-├── ai-ml-lead.md             # AI, ML, Data Science Lead
-├── platform-lead.md          # DevOps, SRE, Cloud Lead
-├── security-lead.md          # Security, Compliance Lead
-├── data-lead.md              # Data Engineering, Governance Lead
-├── product-lead.md           # Product, Frontend, Backend, QA Lead
-└── specialists/              # 25 Specialist agents (loaded on demand)
-    ├── ai-engineer-agent.md
-    ├── ml-engineer-agent.md
-    ├── ... (25 total)
+ agent-schema.md           # Template for all agents
+ orchestrator-agent.md     # Master orchestrator
+ EXECUTION.md              # How agents work together
+ SKILL-REFERENCE.md        # Complete skill lookup table
+ ROLE-REGISTRY.md          # Lightweight role index
+ SKILL-REGISTRY.md         # Lightweight skill index
+ ai-ml-lead.md             # AI, ML, Data Science Lead
+ platform-lead.md          # DevOps, SRE, Cloud Lead
+ security-lead.md          # Security, Compliance Lead
+ data-lead.md              # Data Engineering, Governance Lead
+ product-lead.md           # Product, Frontend, Backend, QA Lead
+ specialists/              # 25 Specialist agents (loaded on demand)
+     ai-engineer-agent.md
+     ml-engineer-agent.md
+     ... (25 total)
 ```
 
-## 📚 Key Documentation
+| File                                                                                                 | Purpose                                  |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| [SKILL-REGISTRY.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/SKILL-REGISTRY.md)   | Lightweight skill index for lazy loading |
+| [ROLE-REGISTRY.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/ROLE-REGISTRY.md)     | Lightweight role index for lazy loading  |
+| [EXECUTION.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/EXECUTION.md)             | How agents coordinate and communicate    |
+| [SKILL-REFERENCE.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/SKILL-REFERENCE.md) | Complete skill lookup (all ~175 skills)  |
 
-| File                                                                                                 | Purpose                                     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| [SKILL-REGISTRY.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/SKILL-REGISTRY.md)   | ⭐ Lightweight skill index for lazy loading |
-| [ROLE-REGISTRY.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/ROLE-REGISTRY.md)     | ⭐ Lightweight role index for lazy loading  |
-| [EXECUTION.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/EXECUTION.md)             | How agents coordinate and communicate       |
-| [SKILL-REFERENCE.md](file:///Users/g/Documents/GitHub/Tech-Skills/.claude/agents/SKILL-REFERENCE.md) | Complete skill lookup (all ~175 skills)     |
-
-## ⚡ Context-Efficient Loading
+## Context-Efficient Loading
 
 **Agents NEVER load all skills at once.** They use lazy loading:
 
@@ -114,11 +112,11 @@ Result: 95%+ token savings while maintaining expert knowledge
 
 Agents automatically decide when to proceed vs. ask for approval:
 
-| Action Type         | Behavior                                                           |
-| ------------------- | ------------------------------------------------------------------ |
-| ✅ **Auto-execute** | Read-only analysis, generate new files, documentation              |
-| ⚠️ **Confirm**      | Modify existing code, create resources, add dependencies           |
-| 🛑 **Approval**     | Production deploy, delete resources, security changes, credentials |
+| Action Type      | Behavior                                                           |
+| ---------------- | ------------------------------------------------------------------ |
+| **Auto-execute** | Read-only analysis, generate new files, documentation              |
+| **Confirm**      | Modify existing code, create resources, add dependencies           |
+| **Approval**     | Production deploy, delete resources, security changes, credentials |
 
 ## Quick Commands
 

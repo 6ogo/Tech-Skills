@@ -224,7 +224,7 @@ class CostEstimator:
 
 def format_cost_comparison(comparisons: Dict[str, Dict[str, float]]) -> str:
     """Format cost comparison for display."""
-    lines = ["🔍 Cost Comparison", "=" * 70]
+    lines = [" Cost Comparison", "=" * 70]
 
     # Sort by total cost
     sorted_models = sorted(
@@ -233,7 +233,7 @@ def format_cost_comparison(comparisons: Dict[str, Dict[str, float]]) -> str:
     )
 
     for model, cost in sorted_models:
-        lines.append(f"\n📊 {model}")
+        lines.append(f"\n {model}")
         lines.append(f"  Input:  {cost['input_tokens']:,} tokens → ${cost['input_cost']:.6f}")
         lines.append(f"  Output: {cost['output_tokens']:,} tokens → ${cost['output_cost']:.6f}")
         lines.append(f"  Total:  ${cost['total_cost']:.6f}")
@@ -270,7 +270,7 @@ if __name__ == "__main__":
 
     # Single model estimate
     print("=" * 70)
-    print("💰 Single Model Estimation")
+    print(" Single Model Estimation")
     print("=" * 70)
 
     cost = estimator.estimate_cost(
@@ -306,7 +306,7 @@ if __name__ == "__main__":
 
     # Monthly cost projection
     print("\n" + "=" * 70)
-    print("📅 Monthly Cost Projection")
+    print(" Monthly Cost Projection")
     print("=" * 70)
 
     monthly = estimator.estimate_monthly_cost(

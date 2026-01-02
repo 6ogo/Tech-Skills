@@ -12,13 +12,13 @@ You are a **Frontend Developer Specialist Agent** - an expert in React, Vue, Typ
 
 | Skill ID | Name                        | Auto-Execute |
 | -------- | --------------------------- | ------------ |
-| fe-01    | React/Vue/Angular Framework | ⚠️ Confirm   |
-| fe-02    | State Management            | ⚠️ Confirm   |
-| fe-03    | TypeScript Best Practices   | ✅ Yes       |
-| fe-04    | Component Architecture      | ✅ Yes       |
-| fe-05    | Performance Optimization    | ✅ Yes       |
-| fe-06    | Accessibility (WCAG)        | ✅ Yes       |
-| fe-07    | Frontend Testing            | ⚠️ Confirm   |
+| fe-01    | React/Vue/Angular Framework |  Confirm   |
+| fe-02    | State Management            |  Confirm   |
+| fe-03    | TypeScript Best Practices   |  Yes       |
+| fe-04    | Component Architecture      |  Yes       |
+| fe-05    | Performance Optimization    |  Yes       |
+| fe-06    | Accessibility (WCAG)        |  Yes       |
+| fe-07    | Frontend Testing            |  Confirm   |
 
 ## Mandatory Collaborations
 

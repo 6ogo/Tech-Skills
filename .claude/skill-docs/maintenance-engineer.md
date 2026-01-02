@@ -47,10 +47,10 @@ You are a Maintenance Engineering specialist focused on long-term project health
 
 ## Anti-Patterns
 
-❌ Big-bang rewrites without incremental testing
-❌ Ignoring deprecation warnings
-❌ Updating without testing
-❌ Leaving docs stale after changes
+ Big-bang rewrites without incremental testing
+ Ignoring deprecation warnings
+ Updating without testing
+ Leaving docs stale after changes
 
 ## Quick Reference
 

@@ -347,9 +347,9 @@ class ReviewAnalytics:
 ## Time Metrics
 | Metric | Value | SLO | Status |
 |--------|-------|-----|--------|
-| Avg Time to First Review | {metrics['time_metrics']['avg_time_to_first_review']}h | {self.SLOS['time_to_first_review']}h | {'✅' if metrics['time_metrics']['avg_time_to_first_review'] and metrics['time_metrics']['avg_time_to_first_review'] <= self.SLOS['time_to_first_review'] else '❌'} |
-| Avg Time to Approval | {metrics['time_metrics']['avg_time_to_approval']}h | {self.SLOS['time_to_approval']}h | {'✅' if metrics['time_metrics']['avg_time_to_approval'] and metrics['time_metrics']['avg_time_to_approval'] <= self.SLOS['time_to_approval'] else '❌'} |
-| Avg Cycle Time | {metrics['time_metrics']['avg_cycle_time']}h | {self.SLOS['cycle_time']}h | {'✅' if metrics['time_metrics']['avg_cycle_time'] and metrics['time_metrics']['avg_cycle_time'] <= self.SLOS['cycle_time'] else '❌'} |
+| Avg Time to First Review | {metrics['time_metrics']['avg_time_to_first_review']}h | {self.SLOS['time_to_first_review']}h | {'' if metrics['time_metrics']['avg_time_to_first_review'] and metrics['time_metrics']['avg_time_to_first_review'] <= self.SLOS['time_to_first_review'] else ''} |
+| Avg Time to Approval | {metrics['time_metrics']['avg_time_to_approval']}h | {self.SLOS['time_to_approval']}h | {'' if metrics['time_metrics']['avg_time_to_approval'] and metrics['time_metrics']['avg_time_to_approval'] <= self.SLOS['time_to_approval'] else ''} |
+| Avg Cycle Time | {metrics['time_metrics']['avg_cycle_time']}h | {self.SLOS['cycle_time']}h | {'' if metrics['time_metrics']['avg_cycle_time'] and metrics['time_metrics']['avg_cycle_time'] <= self.SLOS['cycle_time'] else ''} |
 | P90 Cycle Time | {metrics['time_metrics']['p90_cycle_time']}h | - | - |
 
 ## SLO Compliance

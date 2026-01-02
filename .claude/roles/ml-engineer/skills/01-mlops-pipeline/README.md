@@ -1,9 +1,9 @@
 # Skill 1: MLOps Pipeline Automation
 
-## 🎯 Overview
+##  Overview
 Build end-to-end MLOps pipelines with automated training, versioning, and deployment.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Consumes data from feature pipelines (de-01, de-02, de-03)
 - **AI Engineer**: Serves models for agent systems (ai-03, ai-07)
 - **Data Scientist**: Promotes experiments to production (ds-01, ds-02, ds-08)
@@ -13,7 +13,7 @@ Build end-to-end MLOps pipelines with automated training, versioning, and deploy
 - **DevOps**: CI/CD for ML pipelines, container orchestration (do-01, do-03, do-08)
 - **System Design**: Scalability and performance patterns (sd-03, sd-05, sd-07)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `ml_pipeline_orchestrator.py`
 End-to-end ML pipeline with Kedro/ZenML patterns.
@@ -30,14 +30,14 @@ CI/CD automation for ML workflows.
 ### 5. `mlops_config.yaml`
 Configuration templates for MLOps infrastructure.
 
-## 📊 Pipeline Stages
+##  Pipeline Stages
 
 ```
 Data Validation → Feature Engineering → Model Training →
 Evaluation → Registration → Deployment → Monitoring
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from ml_pipeline_orchestrator import MLPipeline
@@ -62,7 +62,7 @@ pipeline.promote_to_production(
 )
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### ML Training Cost Optimization (FinOps Integration)
 
@@ -217,7 +217,7 @@ pipeline.promote_to_production(
     - Batch predictions for throughput
     - Reference: ML Engineer best practices
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Training Cost Tracking
 ```python
@@ -356,7 +356,7 @@ sweep_job = command_job.sweep(
 cost_tracker.track_sweep_cost(sweep_job)
 ```
 
-## 🚀 CI/CD for ML Pipelines
+##  CI/CD for ML Pipelines
 
 ### Automated ML Pipeline
 ```yaml
@@ -499,7 +499,7 @@ module "ml_workspace" {
 }
 ```
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -519,7 +519,7 @@ module "ml_workspace" {
 | **Data Quality** | Feature freshness | <1 hour | Data quality checks |
 | | Training data completeness | >99% | Validation tests |
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End MLOps Pipeline
 ```
@@ -552,7 +552,7 @@ module "ml_workspace" {
 14. Automated Retraining (ml-01)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Use spot instances for training** - 60-90% compute cost savings
 2. **Enable auto-scaling for inference** - 30-50% serving cost reduction

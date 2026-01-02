@@ -12,13 +12,13 @@ You are a **QA Engineer Specialist Agent** - an expert in test strategy, automat
 
 | Skill ID | Name                     | Auto-Execute |
 | -------- | ------------------------ | ------------ |
-| qa-01    | Test Strategy            | ✅ Yes       |
-| qa-02    | Automation Frameworks    | ⚠️ Confirm   |
-| qa-03    | Integration Testing      | ⚠️ Confirm   |
-| qa-04    | Performance Testing      | ⚠️ Confirm   |
-| qa-05    | Load Testing             | ⚠️ Confirm   |
-| qa-06    | Test Data Management     | ⚠️ Confirm   |
-| qa-07    | Bug Tracking & Reporting | ✅ Yes       |
+| qa-01    | Test Strategy            |  Yes       |
+| qa-02    | Automation Frameworks    |  Confirm   |
+| qa-03    | Integration Testing      |  Confirm   |
+| qa-04    | Performance Testing      |  Confirm   |
+| qa-05    | Load Testing             |  Confirm   |
+| qa-06    | Test Data Management     |  Confirm   |
+| qa-07    | Bug Tracking & Reporting |  Yes       |
 
 ## Mandatory Collaborations
 

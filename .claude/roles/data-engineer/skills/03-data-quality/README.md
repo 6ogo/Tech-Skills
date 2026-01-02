@@ -1,9 +1,9 @@
 # Skill 3: Data Quality & Validation
 
-## 🎯 Overview
+##  Overview
 Implement comprehensive data quality frameworks with automated validation, monitoring, anomaly detection, and data profiling to ensure data reliability and trustworthiness.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Quality gates for lakehouse layers (de-01, de-02)
 - **ML Engineer**: Feature quality validation (ml-02, ml-03)
 - **MLOps**: Drift detection and data monitoring (mo-05, mo-06)
@@ -13,7 +13,7 @@ Implement comprehensive data quality frameworks with automated validation, monit
 - **FinOps**: Prevent costly data quality issues (fo-01)
 - **DevOps**: Automated quality testing in CI/CD (do-01, do-02)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `data_validator.py`
 Comprehensive data validation rules engine with 50+ built-in validators.
@@ -30,7 +30,7 @@ Real-time data quality dashboards and reporting.
 ### 5. `data_quality_rules.yaml`
 Declarative quality rules configuration.
 
-## 📊 Data Quality Dimensions
+##  Data Quality Dimensions
 
 ```
 Completeness → Are all required fields present?
@@ -41,7 +41,7 @@ Timeliness   → Is data fresh and up-to-date?
 Uniqueness   → Are there duplicates?
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from data_validator import DataValidator
@@ -80,9 +80,9 @@ validation_result = validator.validate(df, rules)
 
 # Check results
 if validation_result.passed:
-    print("✓ All quality checks passed!")
+    print(" All quality checks passed!")
 else:
-    print(f"✗ {validation_result.failed_count} checks failed")
+    print(f" {validation_result.failed_count} checks failed")
     for failure in validation_result.failures:
         print(f"  - {failure.rule}: {failure.message}")
         print(f"    Failed records: {failure.failed_count}")
@@ -97,7 +97,7 @@ print(f"Missing values: {profile.missing_percentage:.2f}%")
 print(f"Duplicate records: {profile.duplicate_count}")
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Data Quality Framework (Data Engineer Integration)
 
@@ -230,7 +230,7 @@ print(f"Duplicate records: {profile.duplicate_count}")
     - Automated root cause analysis
     - Reference: ML Engineer ml-01, MLOps mo-04
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Sampling Strategy for Large Datasets
 ```python
@@ -291,7 +291,7 @@ def validate_with_caching(table_name: str, rules: dict):
     cached_result = validation_cache.get(current_hash)
 
     if cached_result:
-        print(f"✓ Using cached validation result")
+        print(f" Using cached validation result")
         print(f"Cost saved: ${cached_result.cost_saved:.2f}")
         return cached_result
 
@@ -325,7 +325,7 @@ print(f"Savings from caching: ${report.caching_savings:.2f}")
 print(f"Savings from sampling: ${report.sampling_savings:.2f}")
 ```
 
-## 🔒 Security Integration Examples
+##  Security Integration Examples
 
 ### PII Detection in Quality Checks
 ```python
@@ -344,7 +344,7 @@ def validate_with_pii_check(df, table_name: str):
     pii_result = pii_detector.scan_dataframe(df)
 
     if pii_result.pii_found:
-        print(f"⚠️ PII detected in {table_name}:")
+        print(f" PII detected in {table_name}:")
         for finding in pii_result.findings:
             print(f"  - Column '{finding.column}': {finding.pii_type}")
             print(f"    Confidence: {finding.confidence:.2%}")
@@ -408,7 +408,7 @@ def validate_with_lineage(table_name: str, rules: dict):
     return result
 ```
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -427,7 +427,7 @@ def validate_with_lineage(table_name: str, rules: dict):
 | **Overall** | Composite quality score | >95% | Quality dashboard |
 | | Quality SLA compliance | >99% | Quality dashboard |
 
-## 🚀 Data Quality Pipeline
+##  Data Quality Pipeline
 
 ### Automated Quality Framework
 ```python
@@ -527,7 +527,7 @@ framework.validate_table("silver.events_clean", layer="silver")
 framework.validate_table("gold.daily_metrics", layer="gold")
 ```
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Quality Process
 ```
@@ -565,7 +565,7 @@ framework.validate_table("gold.daily_metrics", layer="gold")
    - SLA tuning
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Implement schema validation** - Catch breaking changes immediately
 2. **Add null checks on critical fields** - Prevent downstream failures

@@ -12,13 +12,13 @@ You are a **Backend Developer Specialist Agent** - an expert in REST APIs, Graph
 
 | Skill ID | Name                       | Auto-Execute |
 | -------- | -------------------------- | ------------ |
-| be-01    | REST API Design            | ⚠️ Confirm   |
-| be-02    | GraphQL Implementation     | ⚠️ Confirm   |
-| be-03    | Microservices Architecture | ⚠️ Confirm   |
-| be-04    | Database Design            | ⚠️ Confirm   |
-| be-05    | API Versioning             | ✅ Yes       |
-| be-06    | Rate Limiting              | ⚠️ Confirm   |
-| be-07    | Caching Strategies         | ⚠️ Confirm   |
+| be-01    | REST API Design            |  Confirm   |
+| be-02    | GraphQL Implementation     |  Confirm   |
+| be-03    | Microservices Architecture |  Confirm   |
+| be-04    | Database Design            |  Confirm   |
+| be-05    | API Versioning             |  Yes       |
+| be-06    | Rate Limiting              |  Confirm   |
+| be-07    | Caching Strategies         |  Confirm   |
 
 ## Mandatory Collaborations
 

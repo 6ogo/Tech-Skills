@@ -1,9 +1,9 @@
 # Skill 2: RAG Pipeline Builder
 
-## 🎯 Overview
+##  Overview
 Build production-grade Retrieval-Augmented Generation (RAG) systems with advanced chunking, vector search, and evaluation.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Ingests documents from Gold layer, manages vector embeddings (de-01, de-03)
 - **Security Architect**: PII masking before indexing, access control for knowledge base (sa-01, sa-02)
 - **ML Engineer**: Embedding model serving and optimization (ml-03, ml-04)
@@ -12,7 +12,7 @@ Build production-grade Retrieval-Augmented Generation (RAG) systems with advance
 - **DevOps**: Containerization, CI/CD for knowledge base updates (do-01, do-03, do-08)
 - **Data Scientist**: RAG evaluation metrics and experimentation (ds-01, ds-08)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `document_chunker.py`
 Advanced document chunking with semantic, recursive, and fixed-size strategies.
@@ -29,13 +29,13 @@ RAG evaluation metrics: faithfulness, answer relevance, context recall/precision
 ### 5. `rag_pipeline.sql`
 SQL queries for knowledge base auditing and usage analytics.
 
-## 📊 Key Metrics
+##  Key Metrics
 - Retrieval precision@k and recall@k
 - Answer faithfulness score
 - Context relevance score
 - Query latency (p50, p95, p99)
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from rag_pipeline import RAGPipeline
@@ -60,7 +60,7 @@ print(response.answer)
 print(f"Sources: {response.sources}")
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Cost Optimization (FinOps Integration)
 
@@ -193,7 +193,7 @@ print(f"Sources: {response.sources}")
     - Use provisioned throughput for predictable costs
     - Reference: Azure az-05, ai-01 (Prompt Engineering)
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Embedding Cost Tracking
 ```python
@@ -306,7 +306,7 @@ print(f"Warm tier: ${costs.warm_cost:.2f}")
 print(f"Cold tier: ${costs.cold_cost:.2f}")
 ```
 
-## 🔒 Security Best Practices Examples
+##  Security Best Practices Examples
 
 ### PII Detection Before Indexing
 ```python
@@ -321,14 +321,14 @@ def safe_index_document(document: str, metadata: dict):
     pii_findings = detector.analyze_text(document)
 
     if pii_findings:
-        print(f"⚠️ PII detected: {pii_findings}")
+        print(f" PII detected: {pii_findings}")
 
         # Option 1: Anonymize
         anonymized_doc = anonymizer.mask_text(document, pii_findings)
 
         # Option 2: Skip indexing
         if pii_findings.severity == "high":
-            print("❌ Skipping document due to sensitive PII")
+            print(" Skipping document due to sensitive PII")
             return None
 
         document = anonymized_doc
@@ -345,7 +345,7 @@ def safe_index_document(document: str, metadata: dict):
     })
 ```
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -364,7 +364,7 @@ def safe_index_document(document: str, metadata: dict):
 | **Security** | PII detection rate | 100% | Security logs |
 | | Access control violations | 0 | Azure Monitor |
 
-## 🚀 Deployment Pipeline
+##  Deployment Pipeline
 
 ### CI/CD for RAG Knowledge Base
 ```yaml
@@ -407,7 +407,7 @@ jobs:
         run: python scripts/monitor_rag.py --duration 1h
 ```
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End RAG Pipeline with All Roles
 ```
@@ -436,7 +436,7 @@ jobs:
 12. Detect Drift (mo-05)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Enable prompt caching** - 90% cost reduction on RAG responses
 2. **Implement PII detection** - Prevent compliance violations before indexing

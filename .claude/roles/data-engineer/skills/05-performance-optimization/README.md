@@ -1,9 +1,9 @@
 # Skill 5: Performance Optimization
 
-## 🎯 Overview
+##  Overview
 Master advanced performance tuning techniques for data pipelines, query optimization, partitioning strategies, caching, and cost-efficient compute to achieve 10x faster processing at lower costs.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Optimize lakehouse and pipelines (de-01, de-02, de-03, de-04)
 - **ML Engineer**: Faster feature engineering and training (ml-01, ml-02, ml-03)
 - **MLOps**: Optimize model serving latency (mo-04)
@@ -13,7 +13,7 @@ Master advanced performance tuning techniques for data pipelines, query optimiza
 - **DevOps**: Infrastructure optimization (do-04, do-08)
 - **System Design**: Scalability and caching patterns (sd-03, sd-04)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `query_optimizer.py`
 Automated query optimization and execution plan analysis.
@@ -30,7 +30,7 @@ End-to-end pipeline profiling and bottleneck detection.
 ### 5. `index_advisor.py`
 Index recommendation engine for query acceleration.
 
-## 📊 Performance Optimization Framework
+##  Performance Optimization Framework
 
 ```
 Identify → Measure → Optimize → Validate → Monitor
@@ -40,7 +40,7 @@ Detection  Queries   Cache      Results    Trends
            Storage   Indexes    A/B Test   Alert
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from query_optimizer import QueryOptimizer
@@ -102,7 +102,7 @@ cache.warm_cache([
 ])
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Query Optimization
 
@@ -265,7 +265,7 @@ cache.warm_cache([
     - Cost-benefit analysis
     - Reference: Azure az-02 (Databricks)
 
-## 💰 Cost-Performance Trade-offs
+##  Cost-Performance Trade-offs
 
 ### Optimize Query Performance and Cost
 ```python
@@ -425,7 +425,7 @@ print(f"  - Broadcast joins: {metrics.broadcast_joins}")
 print(f"  - Skew handled: {metrics.skew_optimizations}")
 ```
 
-## 📊 Performance Benchmarks
+##  Performance Benchmarks
 
 ### Common Optimization Impact
 
@@ -445,7 +445,7 @@ print(f"  - Skew handled: {metrics.skew_optimizations}")
 | Column pruning | 2-10x | 50-90% | Low |
 | Compression (Zstd) | 1-2x | 40-60% | Low |
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -465,7 +465,7 @@ print(f"  - Skew handled: {metrics.skew_optimizations}")
 | | Memory utilization | 70-85% | Azure Monitor |
 | | Spill to disk | <5% | Spark metrics |
 
-## 🔄 Performance Optimization Workflow
+##  Performance Optimization Workflow
 
 ### End-to-End Optimization Process
 ```
@@ -476,10 +476,10 @@ print(f"  - Skew handled: {metrics.skew_optimizations}")
 3. Analyze Execution Plans
    ↓
 4. Apply Optimizations
-   ├── Partitioning (de-01)
-   ├── Caching (sd-04)
-   ├── Indexing
-   └── Query rewriting
+    Partitioning (de-01)
+    Caching (sd-04)
+    Indexing
+    Query rewriting
    ↓
 5. Benchmark Results
    ↓
@@ -492,7 +492,7 @@ print(f"  - Skew handled: {metrics.skew_optimizations}")
 9. Continuous Optimization
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Enable Delta cache** - 3-10x faster for hot data
 2. **Optimize Delta tables (OPTIMIZE + Z-ORDER)** - 2-5x faster queries
@@ -505,7 +505,7 @@ print(f"  - Skew handled: {metrics.skew_optimizations}")
 9. **Column pruning** - Select only needed columns, 2-10x faster
 10. **Compress with Zstd** - 40-60% storage savings
 
-## 🔧 Performance Tuning Checklist
+##  Performance Tuning Checklist
 
 ### Before Optimization
 - [ ] Identify slow queries (>30s execution time)

@@ -2,7 +2,7 @@
 
 You are an MLOps specialist focused on ML lifecycle management, experiment tracking, model registry, deployment automation, and ML observability.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 

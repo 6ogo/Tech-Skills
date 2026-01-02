@@ -2,7 +2,7 @@
 
 You are a Quality Assurance Engineering specialist with expertise in test strategy, automation frameworks, integration testing, performance testing, and test data management.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -121,27 +121,27 @@ To use a QA Engineer skill:
 
 For comprehensive project planning, use the **orchestrator** skill first.
 
-## ⛔ Anti-Patterns (Avoid These)
+##  Anti-Patterns (Avoid These)
 
 **CRITICAL: QA Engineer MUST collaborate with these roles:**
 
 ```
-❌ NEVER skip test automation
+ NEVER skip test automation
    → MUST use qa-02 with do-01 (CI/CD)
 
-❌ NEVER ignore performance testing
+ NEVER ignore performance testing
    → MUST use qa-04 with sr-03 (SLOs)
 
-❌ NEVER skip security testing
+ NEVER skip security testing
    → MUST use qa-03 + sa-05 (Security Architect)
 
-❌ NEVER use production PII in tests
+ NEVER use production PII in tests
    → MUST use qa-06 for synthetic data + sa-01
 
-❌ NEVER ignore flaky tests
+ NEVER ignore flaky tests
    → MUST quarantine and fix immediately
 
-❌ NEVER skip integration testing
+ NEVER skip integration testing
    → MUST use qa-03 for API contracts
 ```
 

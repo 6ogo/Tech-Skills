@@ -1,9 +1,9 @@
 # Skill 1: Automated Exploratory Data Analysis (EDA)
 
-## 🎯 Overview
+##  Overview
 Automated EDA with statistical profiling, visualization, and insight generation.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Provides feedback on data quality issues (de-01, de-03)
 - **ML Engineer**: Identifies promising features for modeling (ml-01, ml-02)
 - **MLOps**: Experiment tracking for EDA findings (mo-01)
@@ -12,7 +12,7 @@ Automated EDA with statistical profiling, visualization, and insight generation.
 - **FinOps**: Cost-effective analytics compute (fo-06)
 - **DevOps**: Automated reporting pipelines (do-01)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `eda_generator.py`
 Automated EDA report generation with ydata-profiling.
@@ -29,14 +29,14 @@ Automated insight extraction and anomaly detection.
 ### 5. `eda_queries.sql`
 SQL templates for common analytical queries.
 
-## 📊 Key Outputs
+##  Key Outputs
 - Automated profiling reports (HTML)
 - Statistical summaries
 - Correlation matrices
 - Distribution plots
 - Anomaly detection alerts
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from eda_generator import EDAGenerator
@@ -59,7 +59,7 @@ insights = eda.extract_insights(df)
 print(insights)
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Data Quality & Security (Cross-Role Integration)
 
@@ -137,7 +137,7 @@ print(insights)
     - Create natural language data summaries
     - Reference: AI Engineer ai-01, ai-07
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Compute Cost Tracking
 ```python
@@ -165,7 +165,7 @@ print(f"Total EDA costs: ${report.total_cost:.2f}")
 print(f"Cost per analysis: ${report.avg_cost:.2f}")
 ```
 
-## 🔒 Security Best Practices
+##  Security Best Practices
 
 ### PII Masking in Reports
 ```python
@@ -197,7 +197,7 @@ def secure_eda(df: pd.DataFrame):
     return report, pii_columns
 ```
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End EDA Pipeline
 ```
@@ -220,7 +220,7 @@ def secure_eda(df: pd.DataFrame):
 9. Monitor Costs (fo-06)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Automate PII detection** - Prevent compliance violations in reports
 2. **Set up cost tracking** - Monitor analysis compute spending

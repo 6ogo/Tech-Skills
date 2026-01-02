@@ -5,9 +5,27 @@ All notable changes to Tech Hub Skills will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.3] - 2026-01-02
+
+### Changed
+
+- **Visual Style**: Removed all emojis from documentation for a more professional look.
+- **Version Bump**: Synced all files to v2.2.3.
+
+---
+
+## [2.2.2] - 2026-01-02
+
+### Fixes & Metadata
+
+- **README Fix**: Resolved issue where the README was not rendering correctly on NPM.
+- **Documentation Sync**: Synchronized all internal documentation versions to v2.2.2.
+
+---
+
 ## [2.2.1] - 2026-01-02
 
-### 🎯 Restored Lead Agent Visibility
+### Restored Lead Agent Visibility
 
 This patch restores the visibility of the **5 Lead Agents** in the Claude Code agent picker and improves their discoverability via slash commands. While especialistas remain internal to keep the picker clean, Leads are now directly accessible again.
 
@@ -22,7 +40,7 @@ This patch restores the visibility of the **5 Lead Agents** in the Claude Code a
 
 ## [2.2.0] - 2026-01-02
 
-### 🧠 Intelligent Orchestrator with Brainstorm → Plan → Implement Workflow
+### Intelligent Orchestrator with Brainstorm → Plan → Implement Workflow
 
 This release introduces a completely redesigned **single Orchestrator agent** that thinks strategically before acting. Instead of showing 30+ agents, users now have one intelligent coordinator that dynamically selects the right skills for each project.
 
@@ -63,14 +81,14 @@ This release introduces a completely redesigned **single Orchestrator agent** th
 
 ```
 .claude/agents/
-├── orchestrator-agent.md  ← ONLY visible agent
-├── SKILL-REGISTRY.md      ← Lightweight skill index (~200 lines)
-├── ROLE-REGISTRY.md       ← Lightweight role index (~150 lines)
-└── internal/              ← 30 specialist agents (loaded on demand)
-    ├── ai-ml-lead.md
-    ├── security-lead.md
-    ├── ai-engineer-agent.md
-    └── ... (30 files)
+ orchestrator-agent.md  ← ONLY visible agent
+ SKILL-REGISTRY.md      ← Lightweight skill index (~200 lines)
+ ROLE-REGISTRY.md       ← Lightweight role index (~150 lines)
+ internal/              ← 30 specialist agents (loaded on demand)
+     ai-ml-lead.md
+     security-lead.md
+     ai-engineer-agent.md
+     ... (30 files)
 ```
 
 ### Added
@@ -134,7 +152,7 @@ No action required. The Orchestrator automatically selects and uses the speciali
 
 ## [2.0.0] - 2025-01-02
 
-### 🚀 BREAKING CHANGE: Agentic Architecture - 93% Token Reduction
+### BREAKING CHANGE: Agentic Architecture - 93% Token Reduction
 
 This major release completely redesigns the skill loading architecture to reduce session startup from **~70k tokens to ~5-6k tokens** (93% reduction) while maintaining access to all 200+ skills.
 
@@ -198,12 +216,12 @@ New **on-demand loading architecture**:
 
 ```
 Session Start (~5-6k tokens)
-├── skills/orchestrator.md     # Core workflow
-└── skills-index.md            # Compact skill lookup
+ skills/orchestrator.md     # Core workflow
+ skills-index.md            # Compact skill lookup
 
 On-Demand (when skill invoked)
-├── skill-docs/{role}.md       # Skill guidance
-└── templates/{category}/      # Code examples
+ skill-docs/{role}.md       # Skill guidance
+ templates/{category}/      # Code examples
 ```
 
 **Workflow:**
@@ -239,7 +257,7 @@ npx tech-hub-skills install
 
 ## [1.8.1] - 2024-12-30
 
-### 🚀 Context-Efficient Loading & New Skills
+### Context-Efficient Loading & New Skills
 
 This release adds **MCP server management**, **lazy-loading registries**, and **24 new advanced skills** to make agents more efficient and expert-level.
 
@@ -310,7 +328,7 @@ This release adds **MCP server management**, **lazy-loading registries**, and **
 
 ## [1.8.0] - 2024-12-30
 
-### 🎯 Major Feature: Hierarchical Multi-Agent System
+### Major Feature: Hierarchical Multi-Agent System
 
 This release introduces a complete **multi-agent architecture** where expert agents collaborate to solve complex problems. The system works like a professional engineering team with clear roles, delegation, and expertise areas.
 
@@ -320,11 +338,11 @@ This release introduces a complete **multi-agent architecture** where expert age
 
 - **Orchestrator Agent** - Master coordinator that analyzes requests and routes to appropriate leads
 - **5 Lead Agents**:
-  - 🤖 AI/ML Lead - Coordinates AI Engineer, ML Engineer, Data Scientist, MLOps
-  - ⚙️ Platform Lead - Coordinates DevOps, SRE, Platform Engineer, Network, Docker, AWS/Azure/GCP, FinOps
-  - 🔒 Security Lead - Coordinates Security Architect, Compliance Officer, Security Hardener
-  - 📊 Data Lead - Coordinates Data Engineer, Data Governance, Database Admin
-  - 📦 Product Lead - Coordinates Product Designer, Frontend/Backend Dev, QA, Technical Writer
+  - AI/ML Lead - Coordinates AI Engineer, ML Engineer, Data Scientist, MLOps
+  - Platform Lead - Coordinates DevOps, SRE, Platform Engineer, Network, Docker, AWS/Azure/GCP, FinOps
+  - Security Lead - Coordinates Security Architect, Compliance Officer, Security Hardener
+  - Data Lead - Coordinates Data Engineer, Data Governance, Database Admin
+  - Product Lead - Coordinates Product Designer, Frontend/Backend Dev, QA, Technical Writer
 - **24 Specialist Agents** - One per role with skills, collaborations, and automation thresholds
 - **EXECUTION.md** - Agent coordination protocol with cross-agent communication
 - **SKILL-REFERENCE.md** - Complete skill lookup table (~150 skills)

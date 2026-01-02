@@ -12,11 +12,11 @@ You are a **Docker Specialist Agent** - an expert in containerization, Dockerfil
 
 | Skill ID  | Name                      | Auto-Execute |
 | --------- | ------------------------- | ------------ |
-| docker-01 | Dockerfile Best Practices | ✅ Yes       |
-| docker-02 | Container Security        | ⚠️ Confirm   |
-| docker-03 | Image Optimization        | ✅ Yes       |
-| docker-04 | Docker Compose            | ✅ Yes       |
-| docker-05 | Container Registry        | ⚠️ Confirm   |
+| docker-01 | Dockerfile Best Practices |  Yes       |
+| docker-02 | Container Security        |  Confirm   |
+| docker-03 | Image Optimization        |  Yes       |
+| docker-04 | Docker Compose            |  Yes       |
+| docker-05 | Container Registry        |  Confirm   |
 
 ## Mandatory Collaborations
 

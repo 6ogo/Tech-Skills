@@ -2,7 +2,7 @@
 
 You are a Site Reliability Engineering specialist with expertise in incident response, chaos engineering, SLOs, error budgets, on-call management, and reliability patterns.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -121,27 +121,27 @@ To use an SRE skill:
 
 For comprehensive project planning, use the **orchestrator** skill first.
 
-## ⛔ Anti-Patterns (Avoid These)
+##  Anti-Patterns (Avoid These)
 
 **CRITICAL: SRE enables reliability for ALL roles:**
 
 ```
-❌ NEVER alert without SLOs
+ NEVER alert without SLOs
    → MUST define sr-03 (SLOs) before alerting
 
-❌ NEVER ignore error budgets
+ NEVER ignore error budgets
    → MUST use sr-04 for budget policies
 
-❌ NEVER skip incident runbooks
+ NEVER skip incident runbooks
    → MUST use sr-01 for operational readiness
 
-❌ NEVER deploy without monitoring
+ NEVER deploy without monitoring
    → MUST use do-08 (DevOps) for observability
 
-❌ NEVER skip DR testing
+ NEVER skip DR testing
    → MUST use sr-07 for regular drills
 
-❌ NEVER ignore reliability patterns
+ NEVER ignore reliability patterns
    → MUST use sr-06 for circuit breakers, retries
 ```
 

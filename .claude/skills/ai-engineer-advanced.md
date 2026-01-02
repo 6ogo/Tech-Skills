@@ -2,7 +2,7 @@
 
 Extended skills for AI Engineer covering fine-tuning, multimodal, advanced agents, and local LLMs.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 - "fine-tune", "LoRA", "QLoRA", "PEFT", "custom model"
 - "multimodal", "vision", "image", "audio", "video"

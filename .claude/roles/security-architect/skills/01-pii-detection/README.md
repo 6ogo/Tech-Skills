@@ -1,9 +1,9 @@
 # Skill 1: PII Detection & Data Privacy
 
-## 🎯 Overview
+##  Overview
 Automated PII detection, masking, and GDPR compliance tools.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: PII masking in data pipelines (de-01, de-02, de-03)
 - **AI Engineer**: PII filtering before RAG indexing (ai-02, ai-03)
 - **ML Engineer**: Remove PII before model training (ml-01, ml-02)
@@ -12,7 +12,7 @@ Automated PII detection, masking, and GDPR compliance tools.
 - **FinOps**: Track compliance audit costs (fo-01)
 - **All Roles**: GDPR compliance and data protection
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `pii_detector.py`
 PII detection using Microsoft Presidio and custom patterns.
@@ -29,7 +29,7 @@ User consent tracking and right-to-erasure automation.
 ### 5. `pii_audit_queries.sql`
 SQL queries for PII inventory and audit logs.
 
-## 📊 PII Types Detected
+##  PII Types Detected
 - Email addresses
 - Phone numbers
 - Credit cards
@@ -39,7 +39,7 @@ SQL queries for PII inventory and audit logs.
 - Names
 - Dates of birth
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from pii_detector import PIIDetector
@@ -59,7 +59,7 @@ anonymized = anonymizer.mask_dataframe(
 )
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Integration with Data Pipelines (Data Engineer)
 
@@ -148,7 +148,7 @@ anonymized = anonymizer.mask_dataframe(
     - Maintain deletion audit logs
     - Reference: Security Architect sa-06
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Efficient PII Scanning
 ```python
@@ -180,7 +180,7 @@ print(f"PII scanning costs: ${report.total_cost:.2f}")
 print(f"Datasets scanned: {report.datasets_scanned}")
 ```
 
-## 🚀 Automated PII Protection Pipeline
+##  Automated PII Protection Pipeline
 
 ### CI/CD Integration
 ```yaml
@@ -272,7 +272,7 @@ def secure_data_pipeline(source_data: str, output_table: str):
     return pii_findings
 ```
 
-## 📊 Enhanced Metrics
+##  Enhanced Metrics
 
 | Metric | Target | Tool |
 |--------|--------|------|
@@ -283,7 +283,7 @@ def secure_data_pipeline(source_data: str, output_table: str):
 | **Compliance Audit Pass Rate** | 100% | Audit logs |
 | **Mean Time to Remediate** | <24 hours | Incident tracking |
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End PII Protection
 ```
@@ -300,16 +300,16 @@ def secure_data_pipeline(source_data: str, output_table: str):
 6. Compliance Audit Log (sa-06)
    ↓
 7. Downstream Processing (ML, Analytics)
-   ├── Model Training (ml-01) - PII-free
-   ├── RAG Indexing (ai-02) - PII-free
-   └── EDA Reports (ds-01) - Masked
+    Model Training (ml-01) - PII-free
+    RAG Indexing (ai-02) - PII-free
+    EDA Reports (ds-01) - Masked
    ↓
 8. Continuous Monitoring (do-08)
    ↓
 9. Cost Tracking (fo-01)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Integrate PII scanning in CI/CD** - Prevent PII commits
 2. **Automate Bronze layer scanning** - Detect PII at ingestion

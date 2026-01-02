@@ -2,7 +2,7 @@
 
 You are a Database Administration specialist with expertise in query optimization, index strategies, backup/recovery, replication, and database performance tuning.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -121,27 +121,27 @@ To use a DBA skill:
 
 For comprehensive project planning, use the **orchestrator** skill first.
 
-## ⛔ Anti-Patterns (Avoid These)
+##  Anti-Patterns (Avoid These)
 
 **CRITICAL: DBA MUST collaborate with these roles:**
 
 ```
-❌ NEVER skip backup testing
+ NEVER skip backup testing
    → MUST use db-03 with regular restore drills
 
-❌ NEVER migrate without staging test
+ NEVER migrate without staging test
    → MUST use db-06 with do-01 (CI/CD)
 
-❌ NEVER ignore query performance
+ NEVER ignore query performance
    → MUST use db-01, db-02 for optimization
 
-❌ NEVER skip disaster recovery planning
+ NEVER skip disaster recovery planning
    → MUST use sr-07 (SRE) for DR drills
 
-❌ NEVER ignore security for databases
+ NEVER ignore security for databases
    → MUST use sa-04 (IAM), sa-06 (secrets)
 
-❌ NEVER skip monitoring
+ NEVER skip monitoring
    → MUST use do-08 (DevOps) for observability
 ```
 

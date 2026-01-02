@@ -1,9 +1,9 @@
 # Skill 5: Vector Embeddings & Search
 
-## 🎯 Overview
+##  Overview
 Master vector embeddings, semantic search, and similarity matching for building intelligent search systems, recommendations, and clustering applications at scale.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Embedding data pipelines, vector storage optimization (de-01, de-03)
 - **Security Architect**: Secure embedding APIs, access control for vector indices (sa-02, sa-06)
 - **ML Engineer**: Embedding model fine-tuning and deployment (ml-03, ml-04)
@@ -12,7 +12,7 @@ Master vector embeddings, semantic search, and similarity matching for building 
 - **DevOps**: Vector DB deployment, index update automation (do-01, do-03)
 - **Data Scientist**: Dimensionality reduction, clustering analysis (ds-01, ds-08)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `embedding_generator.py`
 Multi-provider embedding generation (OpenAI, Cohere, Azure OpenAI, sentence-transformers).
@@ -29,14 +29,14 @@ Evaluate embedding quality with retrieval metrics, clustering scores, and simila
 ### 5. `vector_compression.py`
 Dimension reduction and quantization for cost-efficient vector storage.
 
-## 📊 Key Metrics
+##  Key Metrics
 - Retrieval precision@k and recall@k
 - Mean Reciprocal Rank (MRR)
 - Embedding generation latency
 - Vector DB query latency (p50, p95)
 - Storage cost per million vectors
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from embedding_generator import EmbeddingGenerator
@@ -86,7 +86,7 @@ for result in results:
     print(f"Score: {result.score:.3f} - {result.metadata['text']}")
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Cost Optimization (FinOps Integration)
 
@@ -219,7 +219,7 @@ for result in results:
     - Use provisioned throughput for predictable costs
     - Reference: Azure az-05 (Azure OpenAI)
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Batch Embedding with Cost Tracking
 ```python
@@ -254,7 +254,7 @@ def embed_documents_efficiently(documents: List[str], batch_size: int = 100):
 
     # Report costs
     report = cost_tracker.get_report()
-    print(f"📊 Embedding Cost Report:")
+    print(f" Embedding Cost Report:")
     print(f"  Documents embedded: {len(documents)}")
     print(f"  Total cost: ${report.total_cost:.4f}")
     print(f"  Cost per document: ${report.cost_per_doc:.6f}")
@@ -389,13 +389,13 @@ class CachedEmbeddingGenerator:
         # Check exact cache
         text_hash = hashlib.md5(text.encode()).hexdigest()
         if text_hash in self.exact_cache:
-            print("✅ Exact cache hit")
+            print(" Exact cache hit")
             return self.exact_cache[text_hash]
 
         # Check semantic cache for similar text
         cached_embedding = self.semantic_cache.get(text)
         if cached_embedding is not None:
-            print("✅ Semantic cache hit")
+            print(" Semantic cache hit")
             return cached_embedding
 
         # Generate new embedding
@@ -434,7 +434,7 @@ print(f"Cache hit rate: {stats['cache_hit_rate']:.2%}")
 print(f"Cost saved: ${stats['cost_saved']:.4f}")
 ```
 
-## 🔒 Security Best Practices Examples
+##  Security Best Practices Examples
 
 ### Secure Embedding API Access
 ```python
@@ -544,7 +544,7 @@ results = search.search_with_rbac(
 )
 ```
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -565,7 +565,7 @@ results = search.search_with_rbac(
 | **Security** | API rate limit violations | 0 | Azure Monitor |
 | | Unauthorized access attempts | 0 | Security logs |
 
-## 🚀 Deployment Pipeline
+##  Deployment Pipeline
 
 ### CI/CD for Vector Search System
 ```yaml
@@ -654,7 +654,7 @@ jobs:
         run: python scripts/rollback_index.py
 ```
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Vector Search Pipeline with All Roles
 ```
@@ -699,7 +699,7 @@ jobs:
 20. Embedding Drift Detection (mo-05)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Batch embed documents** - 85% cost reduction vs individual embedding calls
 2. **Implement embedding caching** - 70%+ cost savings on repeated content

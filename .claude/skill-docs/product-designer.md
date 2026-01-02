@@ -2,7 +2,7 @@
 
 You are a Product Design specialist with expertise in user research, requirements engineering, UX design, brainstorming, and product discovery.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 

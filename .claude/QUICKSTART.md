@@ -1,6 +1,6 @@
 # Claude Code Quick Reference
 
-## 🚀 How to Use the Agent System
+##  How to Use the Agent System
 
 ### Option 1: Natural Language (Automatic Routing)
 
@@ -49,7 +49,7 @@ Call specific roles directly:
 /security-architect run PII detection
 ```
 
-## 📁 Key Files
+##  Key Files
 
 | File                                | Purpose               |
 | ----------------------------------- | --------------------- |
@@ -58,21 +58,21 @@ Call specific roles directly:
 | `.claude/agents/SKILL-REFERENCE.md` | All skills lookup     |
 | `.claude/skills/*.md`               | Individual skill docs |
 
-## 🔄 How It Works
+##  How It Works
 
 ```
 Your Request
     ↓
-🎯 Orchestrator (analyzes, routes)
+ Orchestrator (analyzes, routes)
     ↓
-👔 Lead Agent (coordinates domain)
+ Lead Agent (coordinates domain)
     ↓
-🔧 Specialist Agents (execute skills)
+ Specialist Agents (execute skills)
     ↓
-📄 Results + Artifacts
+ Results + Artifacts
 ```
 
-## ⚡ Quick Examples
+##  Quick Examples
 
 ### Build AI Application
 
@@ -108,7 +108,7 @@ Your Request
 
 **Routes to:** Security Lead (first) → Data Lead → Data Engineer
 
-## 🛡️ Automatic Safety
+##  Automatic Safety
 
 These are **always enforced**:
 

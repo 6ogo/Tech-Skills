@@ -1,9 +1,9 @@
 # Skill 1: Lakehouse Architecture (Bronze-Silver-Gold)
 
-## 🎯 Overview
+##  Overview
 Implement medallion architecture (Bronze-Silver-Gold) for scalable, governed data lakehouse.
 
-## 🔗 Connections
+##  Connections
 - **All Roles**: Provides clean, structured data foundation for analytics and ML
 - **ML Engineer**: Feeds feature store with Gold layer (ml-02, ml-03)
 - **MLOps**: Data versioning and lineage tracking (mo-02, mo-06)
@@ -14,7 +14,7 @@ Implement medallion architecture (Bronze-Silver-Gold) for scalable, governed dat
 - **DevOps**: IaC for data infrastructure, CI/CD for pipelines (do-01, do-04, do-08)
 - **System Design**: Scalability and disaster recovery patterns (sd-03, sd-04, sd-06)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `bronze_ingestion.py`
 Raw data ingestion with schema validation and error handling.
@@ -31,7 +31,7 @@ Delta Lake optimization (vacuum, Z-ordering, compaction).
 ### 5. `medallion_queries.sql`
 SQL patterns for each layer of the medallion architecture.
 
-## 📊 Architecture
+##  Architecture
 
 ```
 Bronze (Raw) → Silver (Cleaned) → Gold (Business-Ready)
@@ -40,7 +40,7 @@ Bronze (Raw) → Silver (Cleaned) → Gold (Business-Ready)
  Full history  Schema enforced    Business logic
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from bronze_ingestion import BronzeLoader
@@ -60,7 +60,7 @@ gold = GoldAggregator()
 gold.aggregate(silver_table="silver.crm_leads_clean")
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Cost Optimization (FinOps Integration)
 
@@ -224,7 +224,7 @@ gold.aggregate(silver_table="silver.crm_leads_clean")
     - Monitor data quality for RAG
     - Reference: AI Engineer ai-02 (RAG Pipeline)
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Storage Lifecycle Management
 ```python
@@ -338,7 +338,7 @@ recommendations = analyzer.optimize_queries(
 )
 ```
 
-## 🏗️ Infrastructure as Code Examples
+##  Infrastructure as Code Examples
 
 ### Terraform for Lakehouse
 ```hcl
@@ -493,7 +493,7 @@ jobs:
         run: python scripts/generate_cost_report.py
 ```
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -511,7 +511,7 @@ jobs:
 | **Security** | PII detection coverage | 100% | Security scans |
 | | Access control violations | 0 | Audit logs |
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Data Flow
 ```
@@ -528,15 +528,15 @@ jobs:
 6. Gold Aggregation (de-01) → Feature Engineering (ml-02)
    ↓
 7. Serve to downstream (AI, ML, Analytics)
-   ├── Feature Store (ml-02)
-   ├── RAG Knowledge Base (ai-02)
-   ├── Analytics Dashboards (ds-01)
-   └── Model Training (ml-01)
+    Feature Store (ml-02)
+    RAG Knowledge Base (ai-02)
+    Analytics Dashboards (ds-01)
+    Model Training (ml-01)
    ↓
 8. Monitor (do-08, mo-04) → Optimize Costs (fo-01)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Enable storage lifecycle policies** - 40-60% storage cost reduction
 2. **Implement auto-scaling for Spark** - 30-50% compute cost savings

@@ -24,10 +24,10 @@ function print(msg, color = "reset") {
 
 function printBanner() {
   console.log(`
-${colors.cyan}╔═══════════════════════════════════════════════════════════╗
-║         TECH HUB SKILLS - AI Agent Skills for Claude       ║
-║                  110+ Production-Ready Skills               ║
-╚═══════════════════════════════════════════════════════════╝${colors.reset}
+${colors.cyan}
+         TECH HUB SKILLS - AI Agent Skills for Claude       
+                  110+ Production-Ready Skills               
+${colors.reset}
   `);
 }
 
@@ -70,13 +70,13 @@ function install(options = {}) {
   // Prevent self-copying if running from the source repo
   if (path.resolve(SKILLS_DIR) === path.resolve(targetDir)) {
     print(
-      "\nℹ️  Running from source directory, skipping installation to avoid self-overwrite.",
+      "\n  Running from source directory, skipping installation to avoid self-overwrite.",
       "yellow"
     );
     return;
   }
 
-  print(`\n📦 Installing Tech Hub Skills to: ${targetDir}`, "cyan");
+  print(`\n  Installing Tech Hub Skills to: ${targetDir}`, "cyan");
 
   // Try multiple source paths (support both package layouts)
   const possibleSkillsSrc = [
@@ -112,7 +112,7 @@ function install(options = {}) {
     print("  Copying skills...", "yellow");
     copyDir(skillsSrc, skillsDest);
   } else {
-    print("  ⚠️  Skills directory not found", "red");
+    print("  Skills directory not found", "red");
   }
 
   // Find and copy roles
@@ -161,11 +161,11 @@ function install(options = {}) {
 
   // Install GitHub Copilot instructions if requested (project-level only)
   if (options.copilot && !isGlobal) {
-    print("\n🤖 Installing GitHub Copilot integration...", "cyan");
+    print("\n  Installing GitHub Copilot integration...", "cyan");
     installCopilotInstructions({ force: options.force });
   } else if (options.copilot && isGlobal) {
     print(
-      "\n⚠️  Copilot integration is only available for project-level installs",
+      "\n  Copilot integration is only available for project-level installs",
       "yellow"
     );
     print(
@@ -199,7 +199,7 @@ function install(options = {}) {
     ? fs.readdirSync(skillDocsDest).filter((f) => f.endsWith(".md")).length
     : 0;
 
-  print(`\n✓ Installation complete!`, "green");
+  print(`\n  Installation complete!`, "green");
   print(`  Location: ${targetDir}`, "cyan");
   print(`  Skills: ${skillCount} skill files installed`, "cyan");
   print(`  Roles: 26+ specialized role directories`, "cyan");
@@ -236,12 +236,12 @@ function init(options = {}) {
   printBanner();
 
   if (options.enterprise) {
-    print("\n🏢 ENTERPRISE MODE", "magenta");
+    print("\n  ENTERPRISE MODE", "magenta");
     print("   Mandatory: Security Architect + Data Governance", "yellow");
     print("\n   Use in Claude Code:", "cyan");
     print('   @project-starter --enterprise "Your project description"');
   } else {
-    print("\n📦 Standard Mode", "cyan");
+    print("\n  Standard Mode", "cyan");
     print("\n   Use in Claude Code:", "cyan");
     print('   @project-starter "Your project description"');
   }
@@ -278,7 +278,7 @@ function list() {
 
   print("\nAvailable Roles:\n", "bright");
   console.log("  Role                 Skills   Focus");
-  console.log("  ────────────────────────────────────────────────");
+  console.log("  ");
 
   for (const role of roles) {
     const name = role.name.padEnd(20);

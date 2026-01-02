@@ -1,9 +1,9 @@
 # Skill 3: Model Training & Hyperparameter Tuning
 
-## 🎯 Overview
+##  Overview
 Implement scalable model training pipelines with automated hyperparameter optimization and experiment tracking.
 
-## 🔗 Connections
+##  Connections
 - **Data Scientist**: Productionizes experimental models (ds-01, ds-02, ds-08)
 - **ML Engineer**: Feeds from feature store, deploys to serving (ml-02, ml-04, ml-07)
 - **MLOps**: Experiment tracking and model versioning (mo-01, mo-03)
@@ -13,7 +13,7 @@ Implement scalable model training pipelines with automated hyperparameter optimi
 - **System Design**: Distributed training architecture (sd-03, sd-05)
 - **Data Engineer**: Consumes validated training data (de-03)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `model_trainer.py`
 Unified training interface for sklearn, XGBoost, LightGBM, PyTorch.
@@ -30,7 +30,7 @@ Model evaluation with business metrics and validation.
 ### 5. `training_config.yaml`
 Configuration templates for training pipelines.
 
-## 🏗️ Training Pipeline Architecture
+##  Training Pipeline Architecture
 
 ```
 Feature Store → Data Preparation → Model Training → Evaluation → Registry
@@ -40,7 +40,7 @@ Feature Store → Data Preparation → Model Training → Evaluation → Registr
                  Augmentation    Checkpointing     Validation  Promotion
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from model_trainer import ModelTrainer
@@ -102,7 +102,7 @@ optimizer = HPOptimizer(
 best_params = optimizer.optimize(X_train, y_train, X_val, y_val)
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Training Cost Optimization (FinOps Integration)
 
@@ -260,7 +260,7 @@ best_params = optimizer.optimize(X_train, y_train, X_val, y_val)
     - Save best model checkpoints
     - Reference: ML Engineer best practices
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Spot Instance Training with Checkpointing
 ```python
@@ -550,7 +550,7 @@ print(f"Accuracy: {experiments_df.loc[best_value, 'accuracy']:.4f}")
 print(f"Cost: ${experiments_df.loc[best_value, 'total_cost_usd']:.2f}")
 ```
 
-## 🚀 CI/CD for Model Training
+##  CI/CD for Model Training
 
 ### Automated Training Pipeline
 ```yaml
@@ -639,7 +639,7 @@ jobs:
             reports/
 ```
 
-## 📊 Metrics & Monitoring
+##  Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -661,7 +661,7 @@ jobs:
 | **Model Quality** | Validation score | >baseline | Experiment tracker |
 | | Test set performance | >0.85 | Model evaluator |
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Training Pipeline
 ```
@@ -690,7 +690,7 @@ jobs:
 12. Model Deployment (ml-04)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Switch to spot instances** - 60-90% training cost reduction
 2. **Use Bayesian optimization** - 80-90% fewer hyperparameter trials

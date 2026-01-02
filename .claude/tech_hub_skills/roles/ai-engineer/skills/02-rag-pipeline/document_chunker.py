@@ -309,7 +309,7 @@ if __name__ == "__main__":
     ]
 
     for strategy, description in strategies:
-        print(f"\n📄 Strategy: {description}")
+        print(f"\n Strategy: {description}")
         print("-" * 80)
 
         chunker = DocumentChunker(

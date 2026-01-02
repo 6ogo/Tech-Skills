@@ -177,22 +177,22 @@ mvp_framework:
       example: "Zapier + Typeform + Airtable"
 
   mvp_canvas: |
-    ┌─────────────────────────────────────────────────────────────┐
-    │                       MVP CANVAS                            │
-    ├──────────────────────────────┬──────────────────────────────┤
-    │ HYPOTHESIS                   │ SUCCESS METRICS              │
-    │ We believe [target users]    │ We'll know we're right if:   │
-    │ will [behavior]              │ • [Metric 1] > [Target]      │
-    │ because [reason]             │ • [Metric 2] > [Target]      │
-    ├──────────────────────────────┼──────────────────────────────┤
-    │ MUST HAVE                    │ MUST NOT HAVE                │
-    │ • [Feature 1]                │ • [Feature A]                │
-    │ • [Feature 2]                │ • [Feature B]                │
-    │ • [Feature 3]                │ • [Feature C]                │
-    ├──────────────────────────────┼──────────────────────────────┤
-    │ BUILD TIME                   │ LEARN BY                     │
-    │ [X weeks]                    │ [Date]                       │
-    └──────────────────────────────┴──────────────────────────────┘
+    
+                           MVP CANVAS                            
+    
+     HYPOTHESIS                    SUCCESS METRICS              
+     We believe [target users]     We'll know we're right if:   
+     will [behavior]               • [Metric 1] > [Target]      
+     because [reason]              • [Metric 2] > [Target]      
+    
+     MUST HAVE                     MUST NOT HAVE                
+     • [Feature 1]                 • [Feature A]                
+     • [Feature 2]                 • [Feature B]                
+     • [Feature 3]                 • [Feature C]                
+    
+     BUILD TIME                    LEARN BY                     
+     [X weeks]                     [Date]                       
+    
 ```
 
 ### 5. Go-to-Market Strategy
@@ -316,7 +316,7 @@ pricing_analysis:
 |--------|---------|--------|--------|
 | PMF Survey Score (Very Disappointed) | X% | >40% | 🟡 |
 | Weekly Active Users (WAU) | X | +X% MoM | 🟢 |
-| Activation Rate | X% | >50% | 🔴 |
+| Activation Rate | X% | >50% |  |
 | NPS Score | X | >50 | 🟡 |
 
 ### Retention Metrics

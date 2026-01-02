@@ -1,9 +1,9 @@
 # Skill 4: Real-Time Streaming Pipelines
 
-## 🎯 Overview
+##  Overview
 Build and operate production-grade real-time streaming data pipelines with event processing, stateful transformations, exactly-once semantics, and low-latency analytics.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Feeds real-time data to lakehouse (de-01, de-02, de-03)
 - **ML Engineer**: Real-time feature computation (ml-02, ml-04)
 - **MLOps**: Online model serving and monitoring (mo-04, mo-05)
@@ -14,7 +14,7 @@ Build and operate production-grade real-time streaming data pipelines with event
 - **DevOps**: Streaming infrastructure and monitoring (do-03, do-08)
 - **System Design**: Event-driven architecture patterns (sd-02, sd-05)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `stream_processor.py`
 Unified streaming processor supporting Kafka, Event Hubs, and Kinesis.
@@ -31,7 +31,7 @@ Real-time monitoring of lag, throughput, and data quality.
 ### 5. `stream_schemas.py`
 Schema registry integration and evolution management.
 
-## 📊 Architecture
+##  Architecture
 
 ```
 Event Sources → Stream Ingestion → Processing → Output Sinks
@@ -41,7 +41,7 @@ Event Sources → Stream Ingestion → Processing → Output Sinks
   CDC         Partitioning      Windowing        Analytics
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from stream_processor import StreamProcessor
@@ -102,7 +102,7 @@ monitor = StreamMonitor(query)
 monitor.track_metrics(["lag", "throughput", "latency"])
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Streaming Architecture (System Design Integration)
 
@@ -258,7 +258,7 @@ monitor.track_metrics(["lag", "throughput", "latency"])
     - Use optimized writes
     - Reference: Azure az-02 (Synapse/Databricks)
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Auto-Scaling Based on Lag
 ```python
@@ -405,7 +405,7 @@ print(f"Total: ${hot_cost + warm_cost + cold_cost:.2f}")
 print(f"vs. all hot: ${365 * 100 * 0.015:.2f}")
 ```
 
-## 🔒 Security Examples
+##  Security Examples
 
 ### Encrypt Streaming Data
 ```python
@@ -465,7 +465,7 @@ audit.log_stream_access(
 )
 ```
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -486,7 +486,7 @@ audit.log_stream_access(
 | **Security** | Encrypted events | 100% | Security scans |
 | | Access violations | 0 | Audit logs |
 
-## 🚀 Deployment Example
+##  Deployment Example
 
 ### Streaming Infrastructure as Code
 ```hcl
@@ -560,7 +560,7 @@ resource "databricks_job" "stream_processor" {
 }
 ```
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Streaming Pipeline
 ```
@@ -578,10 +578,10 @@ resource "databricks_job" "stream_processor" {
    - Enrichment
    ↓
 6. Multi-Sink Output
-   ├── Delta Lake (de-01) → Historical analysis
-   ├── Redis → Real-time serving (ml-04)
-   ├── Feature Store → ML features (ml-02)
-   └── Analytics → Dashboards (ds-01)
+    Delta Lake (de-01) → Historical analysis
+    Redis → Real-time serving (ml-04)
+    Feature Store → ML features (ml-02)
+    Analytics → Dashboards (ds-01)
    ↓
 7. Monitoring (do-08)
    - Lag tracking
@@ -594,7 +594,7 @@ resource "databricks_job" "stream_processor" {
    - Compression
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Enable Event Hub capture** - Automatic archival to blob storage
 2. **Implement auto-scaling** - 30-50% cost reduction

@@ -65,7 +65,7 @@ class PromptTemplate:
         with open(filepath, 'w') as f:
             json.dump(self.to_dict(), f, indent=2)
 
-        print(f"✅ Saved: {filepath}")
+        print(f" Saved: {filepath}")
 
     @classmethod
     def load(cls, name: str, version: Optional[str] = None, directory: str = "./prompts") -> "PromptTemplate":
@@ -228,7 +228,7 @@ if __name__ == "__main__":
     library = create_default_library()
 
     # List all templates
-    print("📚 Available Templates:")
+    print(" Available Templates:")
     for t in library.list():
         print(f"  - {t['name']} (v{t['version']})")
 
@@ -247,7 +247,7 @@ if __name__ == "__main__":
         product_details="A comprehensive course covering LLMs, RAG, and Multi-Agent Systems"
     )
 
-    print("📧 Generated Email:")
+    print(" Generated Email:")
     print(email)
 
     print("\n" + "="*60 + "\n")
@@ -271,4 +271,4 @@ Provide insights and recommendations.""",
     )
 
     library.add(custom_template)
-    print(f"✅ Added custom template: {custom_template.name}")
+    print(f" Added custom template: {custom_template.name}")

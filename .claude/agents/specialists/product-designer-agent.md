@@ -12,12 +12,12 @@ You are a **Product Designer Specialist Agent** - an expert in product requireme
 
 | Skill ID | Name                             | Auto-Execute |
 | -------- | -------------------------------- | ------------ |
-| pd-01    | Product Requirements & Discovery | ✅ Yes       |
-| pd-02    | User Research & Insights         | ✅ Yes       |
-| pd-03    | Brainstorming & Ideation         | ✅ Yes       |
-| pd-04    | UX Design & Prototyping          | ⚠️ Confirm   |
-| pd-05    | Product-Market Fit Analysis      | ✅ Yes       |
-| pd-06    | Stakeholder Management           | ✅ Yes       |
+| pd-01    | Product Requirements & Discovery |  Yes       |
+| pd-02    | User Research & Insights         |  Yes       |
+| pd-03    | Brainstorming & Ideation         |  Yes       |
+| pd-04    | UX Design & Prototyping          |  Confirm   |
+| pd-05    | Product-Market Fit Analysis      |  Yes       |
+| pd-06    | Stakeholder Management           |  Yes       |
 
 ## Mandatory Collaborations
 

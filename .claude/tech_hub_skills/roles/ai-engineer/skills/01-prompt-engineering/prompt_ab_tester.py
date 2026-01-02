@@ -157,7 +157,7 @@ class ABTest:
     def generate_report(self) -> str:
         """Generate a comprehensive A/B test report."""
         lines = [
-            f"📊 A/B Test Report: {self.name}",
+            f" A/B Test Report: {self.name}",
             "=" * 80,
             f"Total Results: {len(self.results)}",
             f"Variants Tested: {len(self.variants)}",
@@ -165,7 +165,7 @@ class ABTest:
         ]
 
         # Metrics for each variant
-        lines.append("📈 Variant Performance:")
+        lines.append(" Variant Performance:")
         for variant_id, variant in self.variants.items():
             metrics = self.calculate_metrics(variant_id)
             if metrics:
@@ -181,7 +181,7 @@ class ABTest:
             variant_ids = list(self.variants.keys())
             comparison = self.compare_variants(variant_ids[0], variant_ids[1])
 
-            lines.append("\n\n🔬 Statistical Comparison:")
+            lines.append("\n\n Statistical Comparison:")
             lines.append(f"  Metric: {comparison.get('metric', 'N/A')}")
             lines.append(f"  P-Value: {comparison.get('p_value', 0):.4f}")
             lines.append(f"  Cohen's d: {comparison.get('cohens_d', 0):.3f}")
@@ -217,7 +217,7 @@ class ABTest:
         with open(filepath, 'w') as f:
             json.dump(data, f, indent=2)
 
-        print(f"✅ Results exported to {filepath}")
+        print(f" Results exported to {filepath}")
 
 
 class ABTestRunner:
@@ -345,9 +345,9 @@ Be thorough and data-driven.""",
         # Compare variants
         print("\n" + "=" * 80)
         comparison = test_with_results.compare_variants("v1_concise", "v2_detailed", "quality_score")
-        print(f"\n🏆 Winner: {comparison['winner']}")
-        print(f"📊 Statistical Significance: {'Yes ✓' if comparison['significant'] else 'No ✗'}")
-        print(f"📈 Improvement: {comparison['improvement']:.1f}%")
+        print(f"\n Winner: {comparison['winner']}")
+        print(f" Statistical Significance: {'Yes ' if comparison['significant'] else 'No '}")
+        print(f" Improvement: {comparison['improvement']:.1f}%")
 
         # Export results
         test_with_results.export_results("ab_test_results.json")

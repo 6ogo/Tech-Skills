@@ -1,9 +1,9 @@
 # Skill 4: Model Serving & API Development
 
-## 🎯 Overview
+##  Overview
 Deploy production-ready ML models with high-performance REST/gRPC APIs, auto-scaling, and comprehensive monitoring.
 
-## 🔗 Connections
+##  Connections
 - **ML Engineer**: Serves trained models from registry (ml-03, ml-07)
 - **AI Engineer**: Powers agent systems and LLM applications (ai-03, ai-07)
 - **MLOps**: Model deployment and endpoint management (mo-03, mo-04)
@@ -13,7 +13,7 @@ Deploy production-ready ML models with high-performance REST/gRPC APIs, auto-sca
 - **System Design**: Scalable serving architecture (sd-03, sd-05, sd-06)
 - **Data Engineer**: Serves features for inference (de-02, ml-02)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `model_server.py`
 FastAPI/Flask production model serving with async support.
@@ -30,7 +30,7 @@ API gateway with rate limiting, authentication, and monitoring.
 ### 5. `deployment_config.yaml`
 Configuration templates for model deployment infrastructure.
 
-## 🏗️ Model Serving Architecture
+##  Model Serving Architecture
 
 ```
 API Gateway → Load Balancer → Model Servers → Feature Store
@@ -40,7 +40,7 @@ API Gateway → Load Balancer → Model Servers → Feature Store
   Logging      Auto-scale      Batching      Consistency
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from model_server import ModelServer, FastAPIApp
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     )
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Serving Cost Optimization (FinOps Integration)
 
@@ -270,7 +270,7 @@ if __name__ == "__main__":
     - Monitor API usage and costs
     - Reference: Azure az-05 (Application Services)
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Auto-Scaling Model Deployment
 ```python
@@ -679,7 +679,7 @@ results = server.benchmark(test_features)
 # - 50-80% cost reduction (same throughput with fewer instances)
 ```
 
-## 🚀 CI/CD for Model Serving
+##  CI/CD for Model Serving
 
 ### Automated Deployment Pipeline
 ```yaml
@@ -781,7 +781,7 @@ jobs:
         run: python scripts/deployment_report.py
 ```
 
-## 📊 Metrics & Monitoring
+##  Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -802,7 +802,7 @@ jobs:
 | **API Usage** | Requests per minute | Monitored | API Gateway |
 | | Rate limit violations | <1% | Gateway logs |
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Serving Pipeline
 ```
@@ -831,7 +831,7 @@ jobs:
 12. Drift Detection (mo-05)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Enable auto-scaling** - 40-60% serving cost reduction
 2. **Implement prediction caching** - 60-80% cost savings

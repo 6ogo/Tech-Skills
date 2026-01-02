@@ -1,9 +1,9 @@
 # Skill 5: Model Monitoring & Drift Detection
 
-## 🎯 Overview
+##  Overview
 Implement comprehensive model monitoring with data drift, concept drift, and performance degradation detection for production ML systems.
 
-## 🔗 Connections
+##  Connections
 - **MLOps**: Core monitoring and drift detection capabilities (mo-04, mo-05)
 - **ML Engineer**: Monitors deployed models and triggers retraining (ml-04, ml-09)
 - **Data Scientist**: Analyzes model degradation patterns (ds-08)
@@ -13,7 +13,7 @@ Implement comprehensive model monitoring with data drift, concept drift, and per
 - **Data Engineer**: Monitors data quality for features (de-03)
 - **System Design**: Scalable monitoring architecture (sd-08)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `drift_detector.py`
 Statistical drift detection for features and predictions.
@@ -30,7 +30,7 @@ Real-time monitoring dashboards with Grafana/Azure Monitor.
 ### 5. `alert_manager.py`
 Intelligent alerting system for model degradation.
 
-## 🏗️ Monitoring Architecture
+##  Monitoring Architecture
 
 ```
 Production Traffic → Logging → Analysis → Drift Detection → Alerting
@@ -40,7 +40,7 @@ Production Traffic → Logging → Analysis → Drift Detection → Alerting
                   Metadata     Technical  Baseline      Dashboards
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from drift_detector import DriftDetector, KSTest, PSICalculator
@@ -121,7 +121,7 @@ def check_drift():
     return drift_report
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Drift Detection & Monitoring (MLOps Integration)
 
@@ -278,7 +278,7 @@ def check_drift():
     - Monitor monitoring costs
     - Reference: Azure az-04, FinOps fo-05
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Intelligent Prediction Logging
 ```python
@@ -699,7 +699,7 @@ scheduler.add_job(daily_drift_check, 'cron', hour=2)  # Run at 2 AM daily
 scheduler.start()
 ```
 
-## 🚀 Monitoring Dashboards
+##  Monitoring Dashboards
 
 ### Grafana Dashboard Configuration
 ```python
@@ -812,7 +812,7 @@ dashboard = create_model_monitoring_dashboard("churn_predictor_v2")
 print(f"Dashboard created: {dashboard.url}")
 ```
 
-## 📊 Metrics & Monitoring
+##  Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -833,7 +833,7 @@ print(f"Dashboard created: {dashboard.url}")
 | | False alert rate | <5% | Alert tuning |
 | | Dashboard load time | <2s | Performance |
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Monitoring Pipeline
 ```
@@ -860,7 +860,7 @@ print(f"Dashboard created: {dashboard.url}")
 11. Cost Tracking (fo-07)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Enable prediction logging** - Visibility into production behavior
 2. **Set up drift detection** - Early warning for model degradation

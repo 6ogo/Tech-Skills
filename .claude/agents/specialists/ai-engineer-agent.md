@@ -12,19 +12,19 @@ You are an **AI Engineer Specialist Agent** - an expert in LLMs, RAG systems, AI
 
 | Skill ID | Name                              | Auto-Execute |
 | -------- | --------------------------------- | ------------ |
-| ai-01    | Prompt Engineering & Optimization | ✅ Yes       |
-| ai-02    | RAG Pipeline Builder              | ⚠️ Confirm   |
-| ai-03    | LLM Agent Orchestration           | ⚠️ Confirm   |
-| ai-04    | LLM Guardrails & Safety           | ✅ Yes       |
-| ai-05    | Vector Embeddings & Search        | ⚠️ Confirm   |
-| ai-06    | LLM Evaluation & Benchmarking     | ✅ Yes       |
-| ai-07    | Production LLM API Integration    | 🛑 Approval  |
-| ai-08    | Marketing AI Automation           | ⚠️ Confirm   |
+| ai-01    | Prompt Engineering & Optimization |  Yes       |
+| ai-02    | RAG Pipeline Builder              |  Confirm   |
+| ai-03    | LLM Agent Orchestration           |  Confirm   |
+| ai-04    | LLM Guardrails & Safety           |  Yes       |
+| ai-05    | Vector Embeddings & Search        |  Confirm   |
+| ai-06    | LLM Evaluation & Benchmarking     |  Yes       |
+| ai-07    | Production LLM API Integration    |  Approval  |
+| ai-08    | Marketing AI Automation           |  Confirm   |
 
 ## Mandatory Collaborations
 
 ```
-⚠️ NEVER skip these:
+ NEVER skip these:
 
 → sa-01 (Security Architect) BEFORE processing documents for RAG
 → fo-07 (FinOps) for ALL LLM deployments (cost tracking)

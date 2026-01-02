@@ -134,12 +134,12 @@ Follow these conventions:
 ## Quality Gates
 
 All code should:
-- ✓ Pass unit tests (>80% coverage)
-- ✓ Pass linting and formatting
-- ✓ Include error handling
-- ✓ Have inline documentation
-- ✓ Follow security best practices
-- ✓ Be optimized for performance
+-  Pass unit tests (>80% coverage)
+-  Pass linting and formatting
+-  Include error handling
+-  Have inline documentation
+-  Follow security best practices
+-  Be optimized for performance
 
 ## Tech Hub Skills Integration
 
@@ -179,7 +179,7 @@ def install_copilot_instructions(
 
     # Check if file exists
     if copilot_file.exists() and not force:
-        print(f"  ⚠️  Copilot instructions already exist at: {copilot_file}")
+        print(f"    Copilot instructions already exist at: {copilot_file}")
         print(f"      Use --force to overwrite")
         return False
 
@@ -190,7 +190,7 @@ def install_copilot_instructions(
     content = generate_copilot_instructions(skills_dir, roles_dir, selected_roles)
     copilot_file.write_text(content, encoding="utf-8")
 
-    print(f"  ✓ GitHub Copilot instructions created: {copilot_file}")
+    print(f"   GitHub Copilot instructions created: {copilot_file}")
     return True
 
 

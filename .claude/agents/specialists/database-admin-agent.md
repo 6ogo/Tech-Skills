@@ -12,13 +12,13 @@ You are a **Database Admin Specialist Agent** - an expert in query optimization,
 
 | Skill ID | Name                   | Auto-Execute |
 | -------- | ---------------------- | ------------ |
-| db-01    | Query Optimization     | ✅ Yes       |
-| db-02    | Index Strategies       | ⚠️ Confirm   |
-| db-03    | Backup & Recovery      | 🛑 Approval  |
-| db-04    | Replication Setup      | 🛑 Approval  |
-| db-05    | Performance Tuning     | ⚠️ Confirm   |
-| db-06    | Schema Migrations      | 🛑 Approval  |
-| db-07    | Transaction Management | ⚠️ Confirm   |
+| db-01    | Query Optimization     |  Yes       |
+| db-02    | Index Strategies       |  Confirm   |
+| db-03    | Backup & Recovery      |  Approval  |
+| db-04    | Replication Setup      |  Approval  |
+| db-05    | Performance Tuning     |  Confirm   |
+| db-06    | Schema Migrations      |  Approval  |
+| db-07    | Transaction Management |  Confirm   |
 
 ## Mandatory Collaborations
 

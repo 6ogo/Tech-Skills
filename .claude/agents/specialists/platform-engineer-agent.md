@@ -12,12 +12,12 @@ You are a **Platform Engineer Specialist Agent** - an expert in internal develop
 
 | Skill ID | Name                        | Auto-Execute |
 | -------- | --------------------------- | ------------ |
-| pe-01    | Internal Developer Platform | ⚠️ Confirm   |
-| pe-02    | Self-Service Infrastructure | ⚠️ Confirm   |
-| pe-03    | SLO/SLI Management          | ✅ Yes       |
-| pe-04    | Developer Experience        | ✅ Yes       |
-| pe-05    | Incident Management         | ⚠️ Confirm   |
-| pe-06    | Capacity Management         | ⚠️ Confirm   |
+| pe-01    | Internal Developer Platform |  Confirm   |
+| pe-02    | Self-Service Infrastructure |  Confirm   |
+| pe-03    | SLO/SLI Management          |  Yes       |
+| pe-04    | Developer Experience        |  Yes       |
+| pe-05    | Incident Management         |  Confirm   |
+| pe-06    | Capacity Management         |  Confirm   |
 
 ## Mandatory Collaborations
 

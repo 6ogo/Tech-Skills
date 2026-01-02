@@ -31,26 +31,26 @@ stakeholder_mapping:
       - "Who has relevant expertise?"
 
   power_interest_grid: |
-    ┌─────────────────────────────────────────────────────────────┐
-    │                    STAKEHOLDER MAP                          │
-    ├─────────────────────────────────────────────────────────────┤
-    │ HIGH                                                        │
-    │ POWER   ┌────────────────┬────────────────┐                │
-    │         │   KEEP         │   MANAGE       │                │
-    │         │   SATISFIED    │   CLOSELY      │                │
-    │         │                │   👤 Exec Sponsor│               │
-    │         │   👤 Legal     │   👤 Product Lead│               │
-    │         │                │                 │                │
-    │         ├────────────────┼────────────────┤                │
-    │         │   MONITOR      │   KEEP         │                │
-    │         │   (Minimal     │   INFORMED     │                │
-    │         │    effort)     │                │                │
-    │         │   👤 External  │   👤 Users     │                │
-    │ LOW     │                │   👤 Dev Team  │                │
-    │ POWER   └────────────────┴────────────────┘                │
-    │              LOW                    HIGH                    │
-    │                      INTEREST                               │
-    └─────────────────────────────────────────────────────────────┘
+    
+                        STAKEHOLDER MAP                          
+    
+     HIGH                                                        
+     POWER                   
+                KEEP            MANAGE                       
+                SATISFIED       CLOSELY                      
+                                 Exec Sponsor               
+                 Legal         Product Lead               
+                                                              
+                             
+                MONITOR         KEEP                         
+                (Minimal        INFORMED                     
+                 effort)                                     
+                 External      Users                     
+     LOW                         Dev Team                  
+     POWER                   
+                  LOW                    HIGH                    
+                          INTEREST                               
+    
 
   stakeholder_template: |
     ## Stakeholder: [Name/Role]
@@ -160,22 +160,22 @@ communication_plan:
     [One sentence summary]
 
     ### Progress This Period
-    ✅ [Completed item 1]
-    ✅ [Completed item 2]
+     [Completed item 1]
+     [Completed item 2]
 
     ### In Progress
-    🔄 [In progress item 1] - [Owner]
-    🔄 [In progress item 2] - [Owner]
+     [In progress item 1] - [Owner]
+     [In progress item 2] - [Owner]
 
     ### Blockers / Risks
-    ⚠️ [Blocker 1] - [Mitigation]
-    ⚠️ [Risk 1] - [Mitigation]
+     [Blocker 1] - [Mitigation]
+     [Risk 1] - [Mitigation]
 
     ### Upcoming
-    📅 [Next milestone] - [Date]
+     [Next milestone] - [Date]
 
     ### Decisions Needed
-    ❓ [Decision 1] - by [Date]
+     [Decision 1] - by [Date]
 ```
 
 ### 4. Decision Documentation (ADRs)
@@ -297,22 +297,22 @@ executive_presentations:
     - "Respect time limits strictly"
 
   slide_template: |
-    ┌─────────────────────────────────────────────────────────────┐
-    │ [TITLE: Action-oriented headline]                          │
-    ├─────────────────────────────────────────────────────────────┤
-    │                                                             │
-    │   • Key point 1 with supporting data                       │
-    │                                                             │
-    │   • Key point 2 with supporting data                       │
-    │                                                             │
-    │   • Key point 3 with supporting data                       │
-    │                                                             │
-    │                                                             │
-    │   [VISUAL: Chart, diagram, or image]                       │
-    │                                                             │
-    ├─────────────────────────────────────────────────────────────┤
-    │ Source: [Data source]                    Slide X of Y      │
-    └─────────────────────────────────────────────────────────────┘
+    
+     [TITLE: Action-oriented headline]                          
+    
+                                                                 
+       • Key point 1 with supporting data                       
+                                                                 
+       • Key point 2 with supporting data                       
+                                                                 
+       • Key point 3 with supporting data                       
+                                                                 
+                                                                 
+       [VISUAL: Chart, diagram, or image]                       
+                                                                 
+    
+     Source: [Data source]                    Slide X of Y      
+    
 
   one_pager_template: |
     # [Project Name] - Executive Summary

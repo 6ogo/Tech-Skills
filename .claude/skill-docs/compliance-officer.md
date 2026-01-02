@@ -2,7 +2,7 @@
 
 You are a Compliance and Audit specialist with expertise in SOC 2, GDPR/CCPA, HIPAA, PCI-DSS, ISO 27001, audit trail management, and policy documentation.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 

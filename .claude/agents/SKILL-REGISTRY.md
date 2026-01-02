@@ -2,7 +2,7 @@
 
 **Purpose**: Agents reference this compact index to find skills. Load FULL skill docs ONLY when executing.
 
-## 🎯 How Agents Use This
+## How Agents Use This
 
 ```yaml
 1. Agent receives task
@@ -121,13 +121,17 @@ step_2_identify_skills:
   example: "Task mentions 'RAG chatbot' → ai-02, ai-04, sa-01"
 
 step_3_load_on_demand:
-  action: "Load ONLY needed skill files"
-  command: "read_file('.claude/skills/ai-engineer.md')"
+  action: "Load EXPERT GUIDANCE for the role"
+  command: "read_file('.claude/skill-docs/ai-engineer.md')"
 
-step_4_execute:
+step_4_load_details:
+  action: "Load DETAILED skill implementation"
+  command: "read_file('.claude/roles/ai-engineer/skills/01-prompt-engineering/README.md')"
+
+step_5_execute:
   action: "Apply skill knowledge to task"
 
-step_5_unload:
+step_6_unload:
   action: "Don't retain full skill docs in memory"
   why: "Save context for next task"
 ```
@@ -135,38 +139,35 @@ step_5_unload:
 ### What NOT to do:
 
 ```yaml
-❌ WRONG: Load all skill files at start
+ WRONG: Load all skill files at start
    → Wastes 50,000+ tokens
 
-❌ WRONG: Keep skill files loaded after use
+ WRONG: Keep skill files loaded after use
    → Fills context unnecessarily
 
-❌ WRONG: Guess skill IDs without checking index
+ WRONG: Guess skill IDs without checking index
    → May miss relevant skills
 
-✅ RIGHT: Scan index → identify → load → execute → unload
+ RIGHT: Scan index → identify → load → execute → unload
 ```
 
 ---
 
-## File Paths
-
-All skills are in `.claude/skills/`:
+Expert guidance is in `.claude/skill-docs/`:
 
 ```
-.claude/skills/
-├── ai-engineer.md          # ai-01 to ai-08
-├── ai-engineer-advanced.md  # ai-09 to ai-13
-├── ml-engineer.md          # ml-01 to ml-09
-├── data-scientist.md       # ds-01 to ds-08
-├── data-engineer.md        # de-01 to de-09
-├── data-engineer-advanced.md # de-10 to de-13
-├── security-architect.md   # sa-01 to sa-07
-├── security-advanced.md    # sa-08 to sa-11
-├── devops.md              # do-01 to do-09
-├── mcp-management.md      # mcp-01 to mcp-05
-├── context-optimization.md # ctx-01 to ctx-06
-├── ... (all other skills)
+.claude/skill-docs/
+ ai-engineer.md          # Expert patterns for AI apps
+ ml-engineer.md          # Expert patterns for ML apps
+ ...
+```
+
+Detailed implementation READMEs are in `.claude/roles/[role]/skills/`:
+
+```
+.claude/roles/ai-engineer/skills/01-prompt-engineering/README.md
+.claude/roles/ai-engineer/skills/02-rag-pipeline/README.md
+...
 ```
 
 ---
@@ -204,16 +205,11 @@ orchestrator:
   3. Route to: @ai-ml-lead, @security-lead
 
 ai_ml_lead:
-  1. Load: ai-engineer.md (only ai-02, ai-04 sections)
-  2. Delegate to @ai-engineer-agent
-  3. Execute skills
-  4. Unload skill file
-
-security_lead:
-  1. Load: security-architect.md (only sa-01 section)
-  2. Delegate to @security-architect-agent
-  3. Execute PII detection
-  4. Unload skill file
+  1. Load: .claude/skill-docs/ai-engineer.md (Expert checklists)
+  2. Load: .claude/roles/ai-engineer/skills/02-rag-pipeline/README.md (Implementation details)
+  3. Delegate to @ai-engineer-agent
+  4. Execute skills
+  5. Unload files
 
 result:
   - Context used: ~1,500 tokens (vs 50,000+ if all loaded)

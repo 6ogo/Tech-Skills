@@ -92,30 +92,30 @@ Ready-to-use template for documenting processes for AI analysis.
 This skill is designed to work seamlessly with AI assistants. Simply write your process in natural language, and the AI will suggest automation solutions.
 
 ```
-┌─────────────────────┐
-│  Write Process Doc  │  ← Use PROCESS_TEMPLATE.md
-│  (Natural Language) │
-└──────────┬──────────┘
-           ▼
-┌─────────────────────┐
-│   Process Parser    │  ← Extracts structured data
-│   (Automatic)       │
-└──────────┬──────────┘
-           ▼
-┌─────────────────────┐
-│  AI Prompt Generator│  ← Creates optimized prompts
-│                     │
-└──────────┬──────────┘
-           ▼
-┌─────────────────────┐
-│  GitHub Copilot /   │  ← Analyzes and suggests
-│  Claude / ChatGPT   │
-└──────────┬──────────┘
-           ▼
-┌─────────────────────┐
-│  Automation Plan +  │  ← Ready to implement!
-│  Code Snippets      │
-└─────────────────────┘
+
+  Write Process Doc    ← Use PROCESS_TEMPLATE.md
+  (Natural Language) 
+
+           
+
+   Process Parser      ← Extracts structured data
+   (Automatic)       
+
+           
+
+  AI Prompt Generator  ← Creates optimized prompts
+                     
+
+           
+
+  GitHub Copilot /     ← Analyzes and suggests
+  Claude / ChatGPT   
+
+           
+
+  Automation Plan +    ← Ready to implement!
+  Code Snippets      
+
 ```
 
 ### Quick Start: VS Code + GitHub Copilot

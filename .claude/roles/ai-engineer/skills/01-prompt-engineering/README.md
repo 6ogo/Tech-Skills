@@ -1,9 +1,9 @@
 # Skill 1: Prompt Engineering & Optimization
 
-## 🎯 Overview
+##  Overview
 Master the art and science of crafting, versioning, and optimizing prompts for production LLM applications.
 
-## 🔗 Connections
+##  Connections
 - **ML Engineer**: Model evaluation and performance metrics (ml-01)
 - **MLOps**: Prompt versioning and experiment tracking (mo-01, mo-03)
 - **Data Scientist**: A/B testing and statistical analysis of prompt variations (ds-08)
@@ -12,7 +12,7 @@ Master the art and science of crafting, versioning, and optimizing prompts for p
 - **DevOps**: CI/CD for prompt templates, version control (do-01, do-05)
 - **Security Architect**: Prompt injection prevention, content safety (sa-08)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `prompt_template_manager.py`
 Version-controlled prompt template system with variable injection and inheritance.
@@ -26,13 +26,13 @@ A/B testing framework for comparing prompt variations with statistical significa
 ### 4. `prompt_quality_scorer.py`
 Automated quality scoring for relevance, coherence, and factuality.
 
-## 📊 Key Metrics
+##  Key Metrics
 - Token efficiency (output quality per token)
 - Cost per query
 - Response latency
 - Quality scores (0-100)
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from prompt_template_manager import PromptTemplate
@@ -49,7 +49,7 @@ cost = estimate_cost(prompt, model="gpt-4", provider="openai")
 print(f"Estimated cost: ${cost:.4f}")
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Cost Optimization (FinOps Integration)
 1. **Enable Prompt Caching** - Save up to 90% on costs by caching system prompts and context
@@ -118,7 +118,7 @@ print(f"Estimated cost: ${cost:.4f}")
     - Use provisioned throughput for high-volume applications
     - Reference: Azure az-05 (Azure OpenAI Service)
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Prompt Caching Implementation (90% Cost Savings)
 ```python
@@ -182,7 +182,7 @@ tracker.set_budget_alert(
 )
 ```
 
-## 🚀 CI/CD for Prompt Templates
+##  CI/CD for Prompt Templates
 
 ### Git-Based Prompt Versioning
 ```yaml
@@ -214,7 +214,7 @@ jobs:
         run: python scripts/monitor_quality.py --duration 1h
 ```
 
-## 📊 Enhanced Metrics
+##  Enhanced Metrics
 
 | Metric | Description | Target | Monitoring Tool |
 |--------|-------------|--------|-----------------|
@@ -225,7 +225,7 @@ jobs:
 | **Quality Score** | Automated quality rating | >85/100 | MLOps monitoring |
 | **A/B Test Win Rate** | % of new prompts that beat baseline | >60% | MLflow experiments |
 
-## 🔄 Integration with Other Skills
+##  Integration with Other Skills
 
 ### End-to-End Workflow
 ```
@@ -244,7 +244,7 @@ jobs:
 7. Optimize Caching (fo-07)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 1. **Enable caching today** - Immediate 70-90% cost reduction for conversational apps
 2. **Set up cost tracking** - Know where your LLM budget is going
 3. **Version prompts in Git** - Enable rollbacks and A/B testing

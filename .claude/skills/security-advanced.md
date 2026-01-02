@@ -2,7 +2,7 @@
 
 Extended security skills covering supply chain, API security, zero trust, and cloud security posture.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 - "SBOM", "software bill of materials", "supply chain"
 - "API security", "OAuth", "OIDC", "JWT"

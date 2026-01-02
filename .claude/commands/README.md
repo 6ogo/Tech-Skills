@@ -48,19 +48,19 @@ Execute with loaded guidance
 
 ```
 .claude/
-├── skills/
-│   └── orchestrator.md          ← Single auto-loaded skill
-├── commands/
-│   ├── orchestrator.md          ← This command
-│   └── README.md                ← This file
-├── skills-index.md              ← Compact skill reference
-├── skill-docs/                  ← On-demand skill files (40 files)
-│   ├── ai-engineer.md
-│   ├── data-engineer.md
-│   ├── security-architect.md
-│   └── ... (all role skills)
-├── templates/                   ← Code templates
-└── roles/                       ← Deep documentation
+ skills/
+    orchestrator.md          ← Single auto-loaded skill
+ commands/
+    orchestrator.md          ← This command
+    README.md                ← This file
+ skills-index.md              ← Compact skill reference
+ skill-docs/                  ← On-demand skill files (40 files)
+    ai-engineer.md
+    data-engineer.md
+    security-architect.md
+    ... (all role skills)
+ templates/                   ← Code templates
+ roles/                       ← Deep documentation
 ```
 
 ## Why This Architecture?

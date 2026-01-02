@@ -307,20 +307,20 @@ fdv_framework:
 
 ```
                      HIGH IMPACT
-                         │
-    ┌────────────────────┼────────────────────┐
-    │                    │                    │
-    │   BIG BETS         │   QUICK WINS       │
-    │   (Plan carefully) │   (Do first!)      │
-    │                    │                    │
-HIGH├────────────────────┼────────────────────┤ LOW
-EFFORT                   │                    EFFORT
-    │                    │                    │
-    │   MONEY PIT        │   FILL-INS         │
-    │   (Avoid)          │   (Do if time)     │
-    │                    │                    │
-    └────────────────────┼────────────────────┘
-                         │
+                         
+    
+                                            
+       BIG BETS            QUICK WINS       
+       (Plan carefully)    (Do first!)      
+                                            
+HIGH LOW
+EFFORT                                       EFFORT
+                                            
+       MONEY PIT           FILL-INS         
+       (Avoid)             (Do if time)     
+                                            
+    
+                         
                      LOW IMPACT
 ```
 

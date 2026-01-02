@@ -38,7 +38,7 @@ async function runInstall() {
     }
 
     console.log(`
-${colors.green}✓ Tech Hub Skills auto-installation complete!${colors.reset}
+${colors.green} Tech Hub Skills auto-installation complete!${colors.reset}
 
 ${colors.bright}Next Steps:${colors.reset}
   - In Claude Code: Type ${colors.yellow}/orchestrator${colors.reset} or ${colors.yellow}@orchestrator${colors.reset}
@@ -46,7 +46,7 @@ ${colors.bright}Next Steps:${colors.reset}
 `);
   } catch (error) {
     console.log(`
-${colors.yellow}⚠️  Auto-installation partially skipped or failed.${colors.reset}
+${colors.yellow}  Auto-installation partially skipped or failed.${colors.reset}
 This is normal if you are developing the package itself or have strict permissions.
 
 To manually install skills, run:

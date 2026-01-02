@@ -245,18 +245,18 @@ class EDAGenerator:
 
         # Data size insight
         profile = self.generate_profile(df)
-        insights.append(f"📊 Dataset contains {profile.n_rows:,} rows and {profile.n_columns} columns")
+        insights.append(f" Dataset contains {profile.n_rows:,} rows and {profile.n_columns} columns")
 
         # Missing data insights
         if profile.missing_percentage > 10:
-            insights.append(f"⚠️ High missing data: {profile.missing_percentage:.1f}% of cells are missing")
+            insights.append(f" High missing data: {profile.missing_percentage:.1f}% of cells are missing")
         elif profile.missing_percentage > 0:
-            insights.append(f"ℹ️ Missing data: {profile.missing_percentage:.1f}% of cells are missing")
+            insights.append(f"ℹ Missing data: {profile.missing_percentage:.1f}% of cells are missing")
 
         # Duplicate insights
         if profile.duplicate_rows > 0:
             dup_pct = profile.duplicate_rows / profile.n_rows * 100
-            insights.append(f"🔄 Found {profile.duplicate_rows:,} duplicate rows ({dup_pct:.1f}%)")
+            insights.append(f" Found {profile.duplicate_rows:,} duplicate rows ({dup_pct:.1f}%)")
 
         # Numeric columns insights
         numeric_stats = self.analyze_numeric_columns(df)
@@ -264,30 +264,30 @@ class EDAGenerator:
             # Check for skewed distributions
             highly_skewed = numeric_stats[abs(numeric_stats['Skewness']) > 2]
             if not highly_skewed.empty:
-                insights.append(f"📈 {len(highly_skewed)} highly skewed numeric columns detected")
+                insights.append(f" {len(highly_skewed)} highly skewed numeric columns detected")
 
             # Check for columns with many zeros
             zero_heavy = numeric_stats[numeric_stats['Zeros_Pct'] > 50]
             if not zero_heavy.empty:
-                insights.append(f"0️⃣ {len(zero_heavy)} columns have >50% zeros")
+                insights.append(f"0⃣ {len(zero_heavy)} columns have >50% zeros")
 
         # Outlier insights
         outliers = self.detect_outliers(df)
         if outliers:
             total_outliers = sum(o['count'] for o in outliers.values())
-            insights.append(f"🎯 Detected {total_outliers:,} outliers across {len(outliers)} columns")
+            insights.append(f" Detected {total_outliers:,} outliers across {len(outliers)} columns")
 
         # Correlation insights
         high_corr = self.calculate_correlations(df, threshold=0.8)
         if not high_corr.empty:
-            insights.append(f"🔗 Found {len(high_corr)} high correlations (>0.8)")
+            insights.append(f" Found {len(high_corr)} high correlations (>0.8)")
 
         # Categorical insights
         cat_cols = df.select_dtypes(include=['object', 'category']).columns
         if len(cat_cols) > 0:
             high_cardinality = [col for col in cat_cols if df[col].nunique() > 50]
             if high_cardinality:
-                insights.append(f"🏷️ {len(high_cardinality)} categorical columns with high cardinality (>50 unique values)")
+                insights.append(f" {len(high_cardinality)} categorical columns with high cardinality (>50 unique values)")
 
         return insights
 
@@ -382,7 +382,7 @@ class EDAGenerator:
             Path(output_file).parent.mkdir(parents=True, exist_ok=True)
             with open(output_file, 'w') as f:
                 f.write(report_text)
-            print(f"✅ Report saved to {output_file}")
+            print(f" Report saved to {output_file}")
 
         return report_text
 
@@ -437,10 +437,10 @@ if __name__ == "__main__":
     print("=" * 80)
 
     # Show numeric statistics
-    print("\n📊 Numeric Columns:")
+    print("\n Numeric Columns:")
     print(eda.analyze_numeric_columns(sample_data))
 
     # Show correlations
-    print("\n🔗 Correlations:")
+    print("\n Correlations:")
     corr = eda.calculate_correlations(sample_data, threshold=0.5)
     print(corr if not corr.empty else "No high correlations found")

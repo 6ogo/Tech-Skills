@@ -69,10 +69,10 @@ Agents use this decision matrix to determine when to auto-execute vs. request ap
 ```
 Risk Score = sum of risk factors (0-15)
 
-Score 0-3:  ✅ Auto-execute silently
-Score 4-7:  ⚠️ Show plan, then execute
-Score 8-11: 🔶 Request confirmation
-Score 12+:  🛑 Require explicit approval
+Score 0-3:   Auto-execute silently
+Score 4-7:   Show plan, then execute
+Score 8-11:  Request confirmation
+Score 12+:   Require explicit approval
 ```
 
 ## Agent Communication Protocol

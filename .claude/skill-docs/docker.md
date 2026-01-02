@@ -2,7 +2,7 @@
 
 You are a Docker specialist with expertise in containerization, image optimization, security best practices, and container orchestration integration.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -112,22 +112,22 @@ CMD ["python", "-m", "src.main"]
 ### Security Checklist
 
 ```dockerfile
-# ✅ Use specific version tags
+#  Use specific version tags
 FROM python:3.11-slim@sha256:abc123...
 
-# ✅ Run as non-root
+#  Run as non-root
 USER 1000
 
-# ✅ Drop capabilities
+#  Drop capabilities
 # In docker run: --cap-drop=ALL
 
-# ✅ Read-only filesystem
+#  Read-only filesystem
 # In docker run: --read-only
 
-# ✅ No new privileges
+#  No new privileges
 # In docker run: --security-opt=no-new-privileges
 
-# ✅ Scan for vulnerabilities
+#  Scan for vulnerabilities
 # trivy image myapp:latest
 ```
 

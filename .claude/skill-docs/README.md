@@ -2,7 +2,7 @@
 
 This directory contains the detailed skill documentation for all **Specialist Agents**. These files are loaded **on-demand** by Lead Agents or the Orchestrator to maintain context efficiency.
 
-## 🎯 Architecture: On-Demand Loading
+## Architecture: On-Demand Loading
 
 To save up to 95% in token costs, only high-level registries are loaded at startup. Detailed guidance from this directory is read ONLY when a specific role is activated.
 
@@ -13,7 +13,7 @@ To save up to 95% in token costs, only high-level registries are loaded at start
 3.  The agent now has full expert guidance for SRE tasks.
 4.  Guidance is summarized and unloaded after the milestone is complete.
 
-## 📚 Specialist Role Files
+## Specialist Role Files
 
 ### Core Engineering
 
@@ -58,7 +58,7 @@ To save up to 95% in token costs, only high-level registries are loaded at start
 - `qa-engineer.md`: Test strategy, Automation, Performance
 - `technical-writer.md`: API Docs, ADRs, Runbooks
 
-## 🚀 Usage by Agents
+## Usage by Agents
 
 Agents should reference these files using the `Read` tool as follows:
 `Read: .claude/skill-docs/{role}.md`
@@ -71,4 +71,4 @@ Example for a Security Audit:
 
 ---
 
-_Part of Tech Hub Skills v2.2.1_
+_Part of Tech Hub Skills v2.2.2_

@@ -116,12 +116,12 @@ class BronzeLoader:
                 "bronze_path": bronze_table_path
             }
 
-            logger.info(f"✅ Successfully ingested {record_count} records to {table_name}")
+            logger.info(f" Successfully ingested {record_count} records to {table_name}")
 
             return metrics
 
         except Exception as e:
-            logger.error(f"❌ Ingestion failed: {str(e)}")
+            logger.error(f" Ingestion failed: {str(e)}")
 
             return {
                 "status": "failed",
@@ -255,7 +255,7 @@ class BronzeLoader:
 
         writer.save(bronze_table_path)
 
-        logger.info(f"✅ Created bronze table: {table_name}")
+        logger.info(f" Created bronze table: {table_name}")
 
 
 # Example CRM schema
@@ -326,11 +326,11 @@ if __name__ == "__main__":
         schema=CRM_LEADS_SCHEMA
     )
 
-    print("\n📊 Ingestion Metrics:")
+    print("\n Ingestion Metrics:")
     print(json.dumps(metrics, indent=2))
 
     # Query bronze table
-    print("\n📋 Bronze Table Sample:")
+    print("\n Bronze Table Sample:")
     bronze_df = bronze.spark.read.format("delta").load("./lakehouse/bronze/crm_leads")
     bronze_df.show(truncate=False)
 

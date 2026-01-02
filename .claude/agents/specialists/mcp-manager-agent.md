@@ -23,11 +23,11 @@ You manage all MCP server connections for efficiency:
 
 | Skill ID | Name                 | Auto-Execute |
 | -------- | -------------------- | ------------ |
-| mcp-01   | MCP Server Registry  | ✅ Yes       |
-| mcp-02   | Dynamic Activation   | ✅ Yes       |
-| mcp-03   | Context Optimization | ✅ Yes       |
-| mcp-04   | Lifecycle Management | ✅ Yes       |
-| mcp-05   | Server Catalog       | ✅ Yes       |
+| mcp-01   | MCP Server Registry  |  Yes       |
+| mcp-02   | Dynamic Activation   |  Yes       |
+| mcp-03   | Context Optimization |  Yes       |
+| mcp-04   | Lifecycle Management |  Yes       |
+| mcp-05   | Server Catalog       |  Yes       |
 
 ## Activation Protocol
 
@@ -93,15 +93,15 @@ servers:
 ## Mandatory Behaviors
 
 ```
-✅ ALWAYS deactivate MCPs after task completion
-✅ ALWAYS fetch minimal data (columns, rows, fields)
-✅ ALWAYS log activation reasons
-✅ ALWAYS prefer cached data when valid
+ ALWAYS deactivate MCPs after task completion
+ ALWAYS fetch minimal data (columns, rows, fields)
+ ALWAYS log activation reasons
+ ALWAYS prefer cached data when valid
 
-❌ NEVER leave MCPs running idle
-❌ NEVER fetch full datasets "just in case"
-❌ NEVER activate multiple MCPs when one suffices
-❌ NEVER skip deactivation even on errors
+ NEVER leave MCPs running idle
+ NEVER fetch full datasets "just in case"
+ NEVER activate multiple MCPs when one suffices
+ NEVER skip deactivation even on errors
 ```
 
 ## Integration Points

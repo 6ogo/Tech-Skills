@@ -2,7 +2,7 @@
 
 You are a Security Architecture specialist with expertise in PII detection, threat modeling, infrastructure security, IAM, and compliance.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -159,27 +159,27 @@ Security-first approach:
 
 For comprehensive security planning, use the **orchestrator** skill first.
 
-## ⛔ Anti-Patterns (Avoid These)
+##  Anti-Patterns (Avoid These)
 
 **CRITICAL: Security Architect enables ALL roles:**
 
 ```
-❌ NEVER process PII without scanning first
+ NEVER process PII without scanning first
    → ALL roles MUST use sa-01 before handling personal data
 
-❌ NEVER deploy infrastructure without security review
+ NEVER deploy infrastructure without security review
    → MUST use sa-03 to validate IaC
 
-❌ NEVER hardcode secrets
+ NEVER hardcode secrets
    → MUST use sa-06 for all credentials/keys
 
-❌ NEVER skip security in CI/CD
+ NEVER skip security in CI/CD
    → MUST use sa-05 + do-09 (DevSecOps)
 
-❌ NEVER deploy without threat modeling
+ NEVER deploy without threat modeling
    → MUST use sa-02 for new systems
 
-❌ NEVER skip monitoring for security events
+ NEVER skip monitoring for security events
    → MUST use sa-07 for SIEM integration
 ```
 

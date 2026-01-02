@@ -34,7 +34,7 @@ Route to the Security Lead Agent for security, compliance, and governance tasks.
 | Compliance Officer | co-01 to co-07 (SOC 2, GDPR, HIPAA, PCI-DSS, ISO 27001, audit, policies)     |
 | Security Hardener  | sh-01 to sh-05 (vulnerabilities, config, attack surface, testing, incidents) |
 
-## ⚠️ Security Lead is MANDATORY For:
+##  Security Lead is MANDATORY For:
 
 - **ALL** personal/customer data processing
 - **ALL** production deployments

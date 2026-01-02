@@ -2,7 +2,7 @@
 
 Expert techniques for minimizing token usage while maximizing effectiveness.
 
-## 🎯 Core Principle
+##  Core Principle
 
 ```
 FETCH ONLY WHAT YOU NEED
@@ -10,7 +10,7 @@ ACTIVATE ONLY WHEN NEEDED
 DEACTIVATE IMMEDIATELY WHEN DONE
 ```
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 - "save tokens", "reduce context", "optimize"
 - "too much data", "context limit", "token budget"
@@ -24,10 +24,10 @@ DEACTIVATE IMMEDIATELY WHEN DONE
 ### File Reading
 
 ```yaml
-# ❌ WRONG: Load entire file
+#  WRONG: Load entire file
 read_file("/src/app.py")  # 2000 tokens
 
-# ✅ RIGHT: Load outline first
+#  RIGHT: Load outline first
 view_file_outline("/src/app.py")  # 50 tokens
 # Then only load relevant section
 read_file("/src/app.py", lines=45-60)  # 100 tokens
@@ -38,10 +38,10 @@ read_file("/src/app.py", lines=45-60)  # 100 tokens
 ### Code Navigation
 
 ```yaml
-# ❌ WRONG: Read all files matching pattern
+#  WRONG: Read all files matching pattern
 find_and_read("*.py")  # 50,000 tokens
 
-# ✅ RIGHT: Search for specific symbol
+#  RIGHT: Search for specific symbol
 grep_search("def process_user")  # 200 tokens
 view_code_item("/src/users.py", "process_user")  # 100 tokens
 
@@ -51,10 +51,10 @@ view_code_item("/src/users.py", "process_user")  # 100 tokens
 ### Directory Exploration
 
 ```yaml
-# ❌ WRONG: Recursive list all files
+#  WRONG: Recursive list all files
 list_all_recursive("/project")  # 5,000 tokens
 
-# ✅ RIGHT: Start shallow, go deeper only if needed
+#  RIGHT: Start shallow, go deeper only if needed
 list_dir("/project")  # 100 tokens
 # Identify relevant subdirectory
 list_dir("/project/src")  # 50 tokens
@@ -69,10 +69,10 @@ list_dir("/project/src")  # 50 tokens
 ### Column Selection
 
 ```sql
--- ❌ WRONG: Select all columns
+--  WRONG: Select all columns
 SELECT * FROM users LIMIT 100;  -- 5,000 tokens
 
--- ✅ RIGHT: Select only needed columns
+--  RIGHT: Select only needed columns
 SELECT id, name, email FROM users LIMIT 100;  -- 500 tokens
 
 -- SAVINGS: 90%
@@ -81,7 +81,7 @@ SELECT id, name, email FROM users LIMIT 100;  -- 500 tokens
 ### Exploration Queries
 
 ```sql
--- ✅ Always start with structure
+--  Always start with structure
 DESCRIBE users;  -- Schema first
 SELECT COUNT(*) FROM users;  -- Size check
 SELECT * FROM users LIMIT 5;  -- Sample
@@ -92,10 +92,10 @@ SELECT * FROM users LIMIT 5;  -- Sample
 ### Aggregation Over Raw Data
 
 ```sql
--- ❌ WRONG: Fetch all rows to count in code
+--  WRONG: Fetch all rows to count in code
 SELECT * FROM orders;  -- 100,000 tokens
 
--- ✅ RIGHT: Let database aggregate
+--  RIGHT: Let database aggregate
 SELECT status, COUNT(*) FROM orders GROUP BY status;  -- 50 tokens
 
 -- SAVINGS: 99.9%
@@ -108,10 +108,10 @@ SELECT status, COUNT(*) FROM orders GROUP BY status;  -- 50 tokens
 ### Pagination
 
 ```yaml
-# ❌ WRONG: Fetch all at once
+#  WRONG: Fetch all at once
 GET /api/users  # 10,000 items = 50,000 tokens
 
-# ✅ RIGHT: Paginate
+#  RIGHT: Paginate
 GET /api/users?page=1&per_page=10  # 500 tokens
 # Only fetch more pages if needed
 ```
@@ -119,11 +119,11 @@ GET /api/users?page=1&per_page=10  # 500 tokens
 ### Field Selection
 
 ```yaml
-# ❌ WRONG: Full response
+#  WRONG: Full response
 GET /api/users/123
 # Returns: all 50 fields = 2,000 tokens
 
-# ✅ RIGHT: Sparse fields
+#  RIGHT: Sparse fields
 GET /api/users/123?fields=id,name,email
 # Returns: 3 fields = 100 tokens
 
@@ -150,10 +150,10 @@ query {
 ### Activation Strategy
 
 ```yaml
-# ❌ WRONG: Activate everything upfront
+#  WRONG: Activate everything upfront
 activate: [github, filesystem, postgres, slack, fetch]
 
-# ✅ RIGHT: Activate on-demand
+#  RIGHT: Activate on-demand
 1. Identify task requirements
 2. Activate ONLY needed server
 3. Complete task
@@ -163,10 +163,10 @@ activate: [github, filesystem, postgres, slack, fetch]
 ### Minimal Fetch from GitHub
 
 ```yaml
-# ❌ WRONG: Fetch full repo
+#  WRONG: Fetch full repo
 github.get_repo_contents(owner, repo, "")  # Entire repo
 
-# ✅ RIGHT: Targeted fetch
+#  RIGHT: Targeted fetch
 github.search_code("function_name repo:owner/repo")  # Specific
 github.get_file_contents(owner, repo, "src/specific_file.py")  # One file
 ```

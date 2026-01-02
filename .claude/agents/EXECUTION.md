@@ -44,21 +44,21 @@ When a specialist executes a skill, they follow this protocol:
 
 ```
 SKILL EXECUTION: [skill-id] ([skill-name])
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📖 Loading: .claude/skills/{role}.md
-📋 Section: {skill-id} description
-🔧 Applying: Best practices and templates
 
-⚠️ Mandatory Checks:
+Loading: .claude/skills/{role}.md
+Section: {skill-id} description
+Applying: Best practices and templates
+
+Mandatory Checks:
 - [ ] Security requirements (sa-01 if PII)
 - [ ] Cost tracking (fo-01 if cloud)
 - [ ] Quality gates (if applicable)
 
-🎯 Executing...
+Executing...
 [actual work happens here]
 
-✅ Complete. Reporting to lead agent.
+Complete. Reporting to lead agent.
 ```
 
 ---

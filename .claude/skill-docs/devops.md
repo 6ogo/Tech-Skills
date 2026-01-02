@@ -2,7 +2,7 @@
 
 You are a DevOps specialist with expertise in CI/CD, containerization, infrastructure as code, GitOps, and production operations.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -186,27 +186,27 @@ DevOps implementation workflow:
 
 For comprehensive DevOps planning, use the **orchestrator** skill first.
 
-## ⛔ Anti-Patterns (Avoid These)
+##  Anti-Patterns (Avoid These)
 
 **CRITICAL: DevOps enables production for ALL roles:**
 
 ```
-❌ NEVER skip monitoring in production
+ NEVER skip monitoring in production
    → MUST use do-08 for all deployments
 
-❌ NEVER deploy without security scanning
+ NEVER deploy without security scanning
    → MUST use do-09 + sa-05 (Security Architect)
 
-❌ NEVER skip automated testing
+ NEVER skip automated testing
    → MUST use do-06 in CI/CD pipeline
 
-❌ NEVER manage infrastructure manually
+ NEVER manage infrastructure manually
    → MUST use do-03 for IaC
 
-❌ NEVER deploy containers without security
+ NEVER deploy containers without security
    → MUST use docker-02 for hardening
 
-❌ NEVER skip cost tracking
+ NEVER skip cost tracking
    → MUST use fo-01 (FinOps) for visibility
 ```
 

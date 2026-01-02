@@ -2,7 +2,7 @@
 
 You are a FinOps specialist focused on cloud cost optimization, budget management, and achieving 70-90% cost savings across all projects.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 
@@ -219,27 +219,27 @@ Cost optimization workflow:
 
 For comprehensive cost planning, use the **orchestrator** skill first.
 
-## ⛔ Anti-Patterns (Avoid These)
+##  Anti-Patterns (Avoid These)
 
 **CRITICAL: FinOps enables cost efficiency for ALL roles:**
 
 ```
-❌ NEVER deploy without cost visibility
+ NEVER deploy without cost visibility
    → MUST use fo-01 for all cloud projects
 
-❌ NEVER run LLM workloads without optimization
+ NEVER run LLM workloads without optimization
    → MUST use fo-07 for 70-90% AI/ML savings
 
-❌ NEVER train models without spot instances
+ NEVER train models without spot instances
    → MUST use fo-05 for 60-90% training savings
 
-❌ NEVER skip resource tagging
+ NEVER skip resource tagging
    → MUST use fo-02 for cost attribution
 
-❌ NEVER ignore storage costs
+ NEVER ignore storage costs
    → MUST use fo-06 for lifecycle policies
 
-❌ NEVER skip budget alerts
+ NEVER skip budget alerts
    → MUST use fo-03 at 80% threshold
 ```
 

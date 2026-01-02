@@ -15,7 +15,7 @@ tech-hub-skills install --copilot
 
 This creates `.github/copilot-instructions.md` that Copilot automatically reads.
 
-## 🧠 Agent Architecture (v2.2.1)
+## Agent Architecture (v2.2.2)
 
 Copilot uses the same hierarchical agent system as Claude Code:
 

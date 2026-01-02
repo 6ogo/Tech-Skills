@@ -1,9 +1,9 @@
 # Skill 6: LLM Evaluation & Benchmarking
 
-## 🎯 Overview
+##  Overview
 Build comprehensive evaluation frameworks for LLM applications including automated testing, benchmark suites, A/B testing, and continuous quality monitoring for production systems.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Test dataset curation, evaluation metrics storage (de-01, de-03)
 - **Security Architect**: Adversarial testing, safety evaluation (sa-08)
 - **ML Engineer**: Model comparison, performance benchmarking (ml-03, ml-05)
@@ -12,7 +12,7 @@ Build comprehensive evaluation frameworks for LLM applications including automat
 - **DevOps**: Automated testing in CI/CD, regression detection (do-01, do-06)
 - **Data Scientist**: Statistical analysis, experiment design (ds-01, ds-08)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `llm_evaluator.py`
 Comprehensive evaluation framework with multiple metrics (accuracy, coherence, relevance, safety).
@@ -29,14 +29,14 @@ Automated regression testing to catch quality degradation before production depl
 ### 5. `eval_dataset_builder.py`
 Create and manage evaluation datasets with versioning and golden reference answers.
 
-## 📊 Key Metrics
+##  Key Metrics
 - Task accuracy and F1 score
 - Response coherence and fluency
 - Factual accuracy and hallucination rate
 - Safety and bias scores
 - Cost per evaluation
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from llm_evaluator import LLMEvaluator, EvaluationMetrics
@@ -85,7 +85,7 @@ for name, score in benchmark_results.items():
     print(f"  {name}: {score:.2%}")
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Cost Optimization (FinOps Integration)
 
@@ -218,7 +218,7 @@ for name, score in benchmark_results.items():
     - Monitor compute costs in Azure Cost Management
     - Reference: Azure az-09 (Cost Management)
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Tiered Evaluation Strategy
 ```python
@@ -383,11 +383,11 @@ class CachedEvaluator:
         # Check cache
         cached_result = self.cache.get(cache_key)
         if cached_result:
-            print("✅ Cache hit - evaluation cost saved!")
+            print(" Cache hit - evaluation cost saved!")
             return cached_result
 
         # Run evaluation
-        print("🔄 Cache miss - running evaluation...")
+        print(" Cache miss - running evaluation...")
         result = self.evaluator.evaluate(
             model=model,
             test_data=test_data,
@@ -442,7 +442,7 @@ results3 = evaluator.evaluate(
 # Cost: Only safety metric evaluation ($1.50 vs $5.00)
 ```
 
-## 🔒 Security Best Practices Examples
+##  Security Best Practices Examples
 
 ### Adversarial Testing Suite
 ```python
@@ -502,9 +502,9 @@ security_scores = security_eval.evaluate_security(
     model="claude-3-5-sonnet-20241022"
 )
 
-print("\n🔒 Security Evaluation Results:")
+print("\n Security Evaluation Results:")
 for metric, score in security_scores.items():
-    status = "✅ PASS" if score > 0.95 else "⚠️ REVIEW"
+    status = " PASS" if score > 0.95 else " REVIEW"
     print(f"  {metric}: {score:.2%} {status}")
 
 # Fail deployment if security scores are too low
@@ -588,7 +588,7 @@ class ComprehensiveSafetyEval:
         # Compliance
         report += "\n## Compliance\n"
         for standard, passed in results["compliance_scores"].items():
-            status = "✅ PASS" if passed else "❌ FAIL"
+            status = " PASS" if passed else " FAIL"
             report += f"- {standard}: {status}\n"
 
         return report
@@ -608,7 +608,7 @@ with open("safety_evaluation_report.md", "w") as f:
     f.write(report)
 ```
 
-## 📊 Enhanced Metrics & Monitoring
+##  Enhanced Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -631,7 +631,7 @@ with open("safety_evaluation_report.md", "w") as f:
 | **Performance** | Evaluation runtime (1K samples) | <30min | Time tracker |
 | | Throughput (samples/sec) | >5 | Benchmark runner |
 
-## 🚀 Deployment Pipeline
+##  Deployment Pipeline
 
 ### CI/CD with Automated Evaluation
 ```yaml
@@ -720,7 +720,7 @@ jobs:
         run: python scripts/monitor_production.py --duration 2h
 ```
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Evaluation Pipeline with All Roles
 ```
@@ -765,7 +765,7 @@ jobs:
 20. Continuous Evaluation in Production (mo-04)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Implement smoke tests** - Catch major regressions quickly with 50-sample tests
 2. **Use statistical sampling** - 75% cost reduction with valid confidence intervals

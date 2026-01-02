@@ -1,9 +1,9 @@
 # Skill 2: Feature Engineering & Feature Store
 
-## 🎯 Overview
+##  Overview
 Build scalable feature engineering pipelines with centralized feature stores for consistency across training and serving.
 
-## 🔗 Connections
+##  Connections
 - **Data Engineer**: Consumes data pipelines for feature creation (de-01, de-02, de-03)
 - **Data Scientist**: Provides features for experimentation (ds-01, ds-02, ds-05)
 - **MLOps**: Feature versioning and lineage tracking (mo-02, mo-06)
@@ -13,7 +13,7 @@ Build scalable feature engineering pipelines with centralized feature stores for
 - **Security Architect**: Ensures feature-level access controls (sa-02, sa-06)
 - **System Design**: Scalable feature serving architecture (sd-03, sd-05)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `feature_store_manager.py`
 Centralized feature store with versioning and lineage.
@@ -30,7 +30,7 @@ Low-latency feature serving for real-time inference.
 ### 5. `feature_store_config.yaml`
 Configuration templates for feature store infrastructure.
 
-## 🏗️ Feature Store Architecture
+##  Feature Store Architecture
 
 ```
 Raw Data → Feature Engineering → Feature Store → Training/Serving
@@ -40,7 +40,7 @@ Raw Data → Feature Engineering → Feature Store → Training/Serving
          Testing                 Reusability    Consistency
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from feature_store_manager import FeatureStore
@@ -88,7 +88,7 @@ online_features = store.get_online_features(
 )
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Feature Engineering Cost Optimization (FinOps Integration)
 
@@ -245,7 +245,7 @@ online_features = store.get_online_features(
     - Enable feature search and discovery
     - Reference: MLOps mo-02, Data Engineer best practices
 
-## 💰 Cost Optimization Examples
+##  Cost Optimization Examples
 
 ### Incremental Feature Computation
 ```python
@@ -528,7 +528,7 @@ def optimize_spark_feature_computation():
 cost_tracker.track_spark_job(optimize_spark_feature_computation)
 ```
 
-## 🚀 CI/CD for Feature Pipelines
+##  CI/CD for Feature Pipelines
 
 ### Automated Feature Pipeline
 ```yaml
@@ -592,7 +592,7 @@ jobs:
         run: python scripts/feature_cost_report.py
 ```
 
-## 📊 Metrics & Monitoring
+##  Metrics & Monitoring
 
 | Metric Category | Metric | Target | Tool |
 |-----------------|--------|--------|------|
@@ -612,7 +612,7 @@ jobs:
 | **Pipeline Reliability** | Feature pipeline success | >99% | Airflow/ADF |
 | | Training-serving skew | <1% | Consistency tests |
 
-## 🔄 Integration Workflow
+##  Integration Workflow
 
 ### End-to-End Feature Pipeline
 ```
@@ -641,7 +641,7 @@ jobs:
 12. Real-time Feature Serving (ml-04)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Implement incremental feature computation** - 80-95% compute cost reduction
 2. **Enable feature caching with Redis** - 10x faster online serving

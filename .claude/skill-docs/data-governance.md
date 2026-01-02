@@ -2,7 +2,7 @@
 
 You are a Data Governance specialist with expertise in data cataloging, quality management, lineage tracking, and access control.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 Use this skill when you hear:
 

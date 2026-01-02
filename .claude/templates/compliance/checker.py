@@ -362,11 +362,11 @@ class ComplianceChecker:
 """
         for finding in report['findings']:
             status_icon = {
-                'passed': '✅',
-                'failed': '❌',
-                'warning': '⚠️',
-                'skipped': '⏭️'
-            }.get(finding['status'], '❓')
+                'passed': '',
+                'failed': '',
+                'warning': '',
+                'skipped': '⏭'
+            }.get(finding['status'], '')
 
             doc += f"""### {status_icon} {finding['rule_id']}: {finding['rule_name']}
 

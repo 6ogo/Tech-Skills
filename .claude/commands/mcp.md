@@ -28,10 +28,10 @@ Route to the MCP Manager Agent for server management and context optimization.
 ## Core Principle
 
 ```
-⚡ ACTIVATE ONLY WHAT YOU NEED
-📉 FETCH MINIMAL DATA
-🛑 DEACTIVATE IMMEDIATELY WHEN DONE
-💰 SAVE TOKENS AND COSTS
+ ACTIVATE ONLY WHAT YOU NEED
+ FETCH MINIMAL DATA
+ DEACTIVATE IMMEDIATELY WHEN DONE
+ SAVE TOKENS AND COSTS
 ```
 
 ## Available MCP Servers

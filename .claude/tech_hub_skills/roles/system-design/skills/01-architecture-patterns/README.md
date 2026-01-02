@@ -1,9 +1,9 @@
 # Skill 1: Architecture Pattern Selection & Design
 
-## 🎯 Overview
+##  Overview
 Tools for selecting, documenting, and implementing architectural patterns with trade-off analysis.
 
-## 🔗 Connections
+##  Connections
 - **All Roles**: Provides architectural guidance for implementations
 - **Security Architect**: Security pattern integration (sa-02, sa-06, sa-08)
 - **Data Engineer**: Data architecture patterns (de-01, de-02)
@@ -12,7 +12,7 @@ Tools for selecting, documenting, and implementing architectural patterns with t
 - **AI Engineer**: AI application architecture (ai-02, ai-03)
 - **FinOps**: Cost-optimized architecture design (fo-05, fo-06)
 
-## 🛠️ Tools Included
+##  Tools Included
 
 ### 1. `pattern_selector.py`
 Decision framework for choosing architectural patterns.
@@ -29,7 +29,7 @@ CAP theorem and architectural trade-off analysis.
 ### 5. `architecture_templates.md`
 Templates for common patterns (microservices, event-driven, layered, etc.).
 
-## 📊 Supported Patterns
+##  Supported Patterns
 - Microservices
 - Event-Driven Architecture (EDA)
 - Layered Architecture
@@ -37,7 +37,7 @@ Templates for common patterns (microservices, event-driven, layered, etc.).
 - Serverless
 - Data Mesh
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 from pattern_selector import ArchitectureSelector
@@ -62,7 +62,7 @@ adr.create_decision_record(
 )
 ```
 
-## 📚 Best Practices
+##  Best Practices
 
 ### Cost-Optimized Architecture (FinOps Integration)
 
@@ -144,7 +144,7 @@ adr.create_decision_record(
     - Prompt template management
     - Reference: AI Engineer ai-01, ai-02, ai-03
 
-## 🏗️ Architecture Decision Records (ADRs)
+##  Architecture Decision Records (ADRs)
 
 ### Cost-Optimized Microservices
 ```markdown
@@ -219,7 +219,7 @@ Implement zero trust architecture with:
 - DevOps do-07 (Secrets Management)
 ```
 
-## 🔄 Architecture Pattern Library
+##  Architecture Pattern Library
 
 ### Pattern: Event-Driven Microservices
 ```python
@@ -288,7 +288,7 @@ class CQRSArchitecture:
         return self.read_db.search(query)
 ```
 
-## 📊 Architecture Metrics
+##  Architecture Metrics
 
 | Metric | Target | Tool |
 |--------|--------|------|
@@ -300,7 +300,7 @@ class CQRSArchitecture:
 | **Architecture Cost Efficiency** | >60% savings vs baseline | FinOps dashboard |
 | **Security Posture Score** | >90/100 | Security assessment |
 
-## 🔄 Integration Patterns
+##  Integration Patterns
 
 ### Cross-Role Architecture Workflow
 ```
@@ -327,7 +327,7 @@ class CQRSArchitecture:
 11. Monitoring & Optimization (do-08, fo-01)
 ```
 
-## 🎯 Quick Wins
+##  Quick Wins
 
 1. **Document architecture decisions** - Enable informed evolution
 2. **Implement ADRs** - Track rationale and consequences

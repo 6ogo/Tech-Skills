@@ -2,7 +2,7 @@
 
 Extended skills for modern data stack including dbt, data contracts, reverse ETL, and data mesh.
 
-## 🎯 Trigger Keywords
+##  Trigger Keywords
 
 - "dbt", "data transformation", "analytics engineering"
 - "data contracts", "schema enforcement", "SLAs"

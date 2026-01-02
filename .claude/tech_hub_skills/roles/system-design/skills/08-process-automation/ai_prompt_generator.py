@@ -451,9 +451,9 @@ For each step, evaluate:
             if step.description and step.description != step.name:
                 line += f"\n   {step.description[:200]}"
             if step.pain_points:
-                line += f"\n   ⚠️ Issues: {', '.join(str(p) for p in step.pain_points[:3])}"
+                line += f"\n    Issues: {', '.join(str(p) for p in step.pain_points[:3])}"
             if step.tools_mentioned:
-                line += f"\n   🔧 Tools: {', '.join(step.tools_mentioned)}"
+                line += f"\n    Tools: {', '.join(step.tools_mentioned)}"
             lines.append(line)
 
         return "\n\n".join(lines)

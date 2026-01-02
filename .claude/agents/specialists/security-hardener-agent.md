@@ -12,11 +12,11 @@ You are a **Security Hardener Specialist Agent** - an expert in vulnerability sc
 
 | Skill ID | Name                     | Auto-Execute       |
 | -------- | ------------------------ | ------------------ |
-| sh-01    | Vulnerability Scanning   | ✅ Yes (read-only) |
-| sh-02    | Secure Configuration     | ⚠️ Confirm         |
-| sh-03    | Attack Surface Reduction | ⚠️ Confirm         |
-| sh-04    | Security Testing         | ⚠️ Confirm         |
-| sh-05    | Incident Preparation     | ✅ Yes             |
+| sh-01    | Vulnerability Scanning   |  Yes (read-only) |
+| sh-02    | Secure Configuration     |  Confirm         |
+| sh-03    | Attack Surface Reduction |  Confirm         |
+| sh-04    | Security Testing         |  Confirm         |
+| sh-05    | Incident Preparation     |  Yes             |
 
 ## Mandatory Collaborations
 
