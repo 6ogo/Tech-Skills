@@ -1,0 +1,132 @@
+{
+  "dashboard": {
+    "title": "Enterprise Overview",
+    "uid": "enterprise-overview",
+    "tags": ["enterprise", "overview"],
+    "timezone": "browser",
+    "refresh": "5m",
+    "rows": [
+      {
+        "title": "Executive Summary",
+        "panels": [
+          {
+            "title": "Overall Health Score",
+            "type": "gauge",
+            "datasource": "prometheus",
+            "targets": [
+              {
+                "expr": "(security_score + compliance_score + quality_score) / 3"
+              }
+            ],
+            "fieldConfig": {
+              "defaults": {
+                "thresholds": {
+                  "steps": [
+                    {"color": "red", "value": null},
+                    {"color": "yellow", "value": 70},
+                    {"color": "green", "value": 90}
+                  ]
+                },
+                "min": 0,
+                "max": 100
+              }
+            }
+          },
+          {
+            "title": "Active Incidents",
+            "type": "stat",
+            "datasource": "prometheus",
+            "targets": [
+              {"expr": "sum(active_incidents)"}
+            ],
+            "fieldConfig": {
+              "defaults": {
+                "thresholds": {
+                  "steps": [
+                    {"color": "green", "value": null},
+                    {"color": "yellow", "value": 1},
+                    {"color": "red", "value": 5}
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "title": "Compliance Status",
+            "type": "stat",
+            "datasource": "prometheus",
+            "targets": [
+              {"expr": "compliance_passing_controls / compliance_total_controls * 100"}
+            ]
+          },
+          {
+            "title": "Open PRs Awaiting Review",
+            "type": "stat",
+            "datasource": "github",
+            "targets": [
+              {"query": "count(open_prs where status = 'awaiting_review')"}
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Security",
+        "panels": [
+          {
+            "title": "Vulnerabilities by Severity",
+            "type": "barchart",
+            "datasource": "security-scanner",
+            "targets": [
+              {"expr": "vulnerabilities_count by (severity)"}
+            ]
+          },
+          {
+            "title": "Security Events Timeline",
+            "type": "timeseries",
+            "datasource": "prometheus",
+            "targets": [
+              {"expr": "rate(security_events_total[5m])", "legendFormat": "Events/min"}
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Delivery Metrics (DORA)",
+        "panels": [
+          {
+            "title": "Deployment Frequency",
+            "type": "stat",
+            "datasource": "prometheus",
+            "targets": [
+              {"expr": "sum(increase(deployments_total[7d]))"}
+            ]
+          },
+          {
+            "title": "Lead Time for Changes",
+            "type": "gauge",
+            "datasource": "prometheus",
+            "targets": [
+              {"expr": "avg(lead_time_hours)"}
+            ]
+          },
+          {
+            "title": "Change Failure Rate",
+            "type": "stat",
+            "datasource": "prometheus",
+            "targets": [
+              {"expr": "failed_deployments / total_deployments * 100"}
+            ]
+          },
+          {
+            "title": "MTTR",
+            "type": "stat",
+            "datasource": "prometheus",
+            "targets": [
+              {"expr": "avg(incident_recovery_time_minutes)"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

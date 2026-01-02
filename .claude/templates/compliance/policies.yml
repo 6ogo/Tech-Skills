@@ -1,0 +1,109 @@
+# Compliance Policy Configuration
+# SOC 2 Type II Controls
+
+version: 1
+framework: soc2
+
+policies:
+  # CC6.1 - Logical and Physical Access Controls
+  access-control:
+    enabled: true
+    rules:
+      - id: AC-001
+        name: "No hardcoded credentials"
+        check: secrets-scan
+        severity: critical
+        remediation: "Use secrets manager (Azure Key Vault, AWS Secrets Manager)"
+
+      - id: AC-002
+        name: "Enforce MFA"
+        check: iam-policy
+        severity: high
+        remediation: "Configure MFA for all user accounts"
+
+      - id: AC-003
+        name: "Principle of least privilege"
+        check: rbac-review
+        severity: high
+        remediation: "Review and minimize role permissions"
+
+  # CC6.7 - Encryption in Transit and at Rest
+  encryption:
+    enabled: true
+    rules:
+      - id: EN-001
+        name: "TLS 1.2+ required"
+        check: tls-version
+        severity: critical
+        remediation: "Upgrade to TLS 1.2 or higher"
+
+      - id: EN-002
+        name: "Data at rest encryption"
+        check: storage-encryption
+        severity: high
+        remediation: "Enable encryption for all storage resources"
+
+  # CC7.2 - Monitoring and Logging
+  monitoring:
+    enabled: true
+    rules:
+      - id: MO-001
+        name: "Audit logging enabled"
+        check: audit-logs
+        severity: high
+        remediation: "Enable audit logging for all services"
+
+      - id: MO-002
+        name: "Log retention >= 1 year"
+        check: log-retention
+        severity: medium
+        remediation: "Configure log retention to 365 days minimum"
+
+  # CC8.1 - Change Management
+  change-management:
+    enabled: true
+    rules:
+      - id: CM-001
+        name: "All changes via PR"
+        check: branch-protection
+        severity: high
+        remediation: "Enable branch protection with required reviews"
+
+      - id: CM-002
+        name: "Approved before deploy"
+        check: deployment-approvals
+        severity: high
+        remediation: "Configure environment protection rules"
+
+# GDPR Controls
+gdpr:
+  enabled: true
+  rules:
+    - id: GDPR-001
+      name: "PII data handling"
+      check: pii-scan
+      severity: high
+
+    - id: GDPR-002
+      name: "Data retention policy"
+      check: retention-config
+      severity: medium
+
+    - id: GDPR-003
+      name: "Consent management"
+      check: consent-code
+      severity: high
+
+# License Compliance
+license:
+  prohibited:
+    - GPL
+    - AGPL
+    - SSPL
+    - BUSL
+  allowed:
+    - MIT
+    - Apache-2.0
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - ISC

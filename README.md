@@ -63,7 +63,53 @@ cp -r tech-hub-skills/.claude your-project/
 - **Enterprise Mode**: Built-in security, governance, and compliance
 - **Cross-Platform**: Works on Windows, macOS, Linux
 
-## Available Roles (2025)
+## 🚀 v2.0: Agentic Architecture (NEW)
+
+**93% token reduction** with on-demand skill loading.
+
+### Why This Update?
+
+Previous versions loaded all skill files at session start (~70k tokens), consuming significant context window. The new agentic architecture:
+
+- **Loads only ~5-6k tokens at startup** (orchestrator + skills index)
+- **Loads skill details on-demand** when executing
+- **Externalizes code templates** to separate files
+
+### Architecture
+
+```
+Session Start (~5-6k tokens)
+├── agentic-orchestrator.md    # Core ANALYZE→SELECT→LOAD→EXECUTE workflow
+└── skills-index.md            # Compact index of all 200+ skills
+
+On-Demand (when skill invoked)
+├── skills/{role}.md           # Skill guidance & best practices
+├── templates/{role}/          # Code examples, configs, scripts
+└── roles/{role}/skills/       # Deep documentation
+```
+
+### How It Works
+
+1. **ANALYZE** - Orchestrator identifies domain, compliance needs, complexity
+2. **SELECT** - Matches keywords to skills from the compact index
+3. **LOAD** - Reads full skill files only when executing
+4. **EXECUTE** - Applies skill guidance, references templates
+
+### Directory Structure
+
+```
+.claude/
+├── agentic-orchestrator.md   # Agentic workflow (~2k tokens)
+├── skills-index.md           # All skills index (~3-4k tokens)
+├── skills/                   # Slim skill files (~500 each)
+├── templates/                # Externalized code examples
+│   ├── compliance/
+│   ├── dashboard/
+│   └── ...
+└── roles/                    # Detailed skill documentation
+```
+
+## Available Roles
 
 | Role                   | Skills | Focus                                       |
 | ---------------------- | ------ | ------------------------------------------- |
@@ -224,20 +270,20 @@ After installation, use skills with `/` mentions:
 /project-starter --enterprise "Build a customer data platform"
 ```
 
-**Project Health Check** (NEW in 1.7)
+**Project Health Check**
 
 ```bash
 /project-guardian "Run full health assessment with improvement roadmap"
 ```
 
-**Production Hardening** (NEW in 1.7)
+**Production Hardening**
 
 ```bash
 /code-hardener "Harden this service for production deployment"
 /security-hardener "Comprehensive security hardening"
 ```
 
-**Rapid Development** (NEW in 1.7)
+**Rapid Development**
 
 ```bash
 /dev-accelerator "Create REST API with CRUD for users, orders, products"
