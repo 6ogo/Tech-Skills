@@ -41,8 +41,10 @@
 | QA           | @product-lead  | `qa-engineer.md`                                | qa-01 to qa-07         |
 | Tech Writer  | @product-lead  | `technical-writer.md`                           | tw-01 to tw-06         |
 | FinOps       | @platform-lead | `finops.md`                                     | fo-01 to fo-08         |
-| MCP          | @orchestrator  | `mcp-management.md`                             | mcp-01 to mcp-05       |
-| Context      | @orchestrator  | `context-optimization.md`                       | ctx-01 to ctx-06       |
+| Meeting Prep | @product-lead  | `meeting-strategy.md`                           | pm-meet-01 to 05       |
+
+| MCP | @orchestrator | `mcp-management.md` | mcp-01 to mcp-05 |
+| Context | @orchestrator | `context-optimization.md` | ctx-01 to ctx-06 |
 
 ---
 
@@ -95,6 +97,15 @@ Terraform, IaC, Bicep: → do-03
 GitOps, ArgoCD: → do-04
 monitoring, alerting: → do-08
 security scan, DevSecOps: → do-09
+```
+
+### Strategy Keywords
+
+```yaml
+meeting, sprint review, demo: → pm-meet-01, pm-meet-02
+speaking points, feedback, talk: → pm-meet-04
+action items, minutes, follow-up: → pm-meet-05
+security roadmap, compliance status: → pm-meet-03
 ```
 
 ### Platform Keywords

@@ -6,8 +6,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## AI & Machine Learning
 
-| ID    | Skill              | Triggers                                           | File                  |
-| ----- | ------------------ | -------------------------------------------------- | --------------------- |
+| ID    | Skill              | Triggers                                           | File                      |
+| ----- | ------------------ | -------------------------------------------------- | ------------------------- |
 | ai-01 | LLM Prompting      | prompt, LLM, GPT, chain-of-thought, few-shot       | skill-docs/ai-engineer.md |
 | ai-02 | RAG Pipeline       | RAG, retrieval, embeddings, vector, knowledge-base | skill-docs/ai-engineer.md |
 | ai-03 | AI Agents          | agent, tool-use, function-calling, autonomous      | skill-docs/ai-engineer.md |
@@ -19,8 +19,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Data Engineering
 
-| ID    | Skill                     | Triggers                                      | File                    |
-| ----- | ------------------------- | --------------------------------------------- | ----------------------- |
+| ID    | Skill                     | Triggers                                      | File                        |
+| ----- | ------------------------- | --------------------------------------------- | --------------------------- |
 | de-01 | Lakehouse Architecture    | medallion, bronze, silver, gold, delta-lake   | skill-docs/data-engineer.md |
 | de-02 | ETL/ELT Pipeline          | ETL, ELT, pipeline, ingestion, airflow        | skill-docs/data-engineer.md |
 | de-03 | Data Quality              | validation, great-expectations, quality-gates | skill-docs/data-engineer.md |
@@ -33,8 +33,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## ML Engineering
 
-| ID    | Skill                 | Triggers                                   | File                  |
-| ----- | --------------------- | ------------------------------------------ | --------------------- |
+| ID    | Skill                 | Triggers                                   | File                      |
+| ----- | --------------------- | ------------------------------------------ | ------------------------- |
 | ml-01 | MLOps Pipeline        | mlops, training-pipeline, experiment       | skill-docs/ml-engineer.md |
 | ml-02 | Feature Engineering   | features, feature-store, transformations   | skill-docs/ml-engineer.md |
 | ml-03 | Model Training        | training, hyperparameter, distributed      | skill-docs/ml-engineer.md |
@@ -47,8 +47,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Data Science
 
-| ID    | Skill                     | Triggers                                 | File                     |
-| ----- | ------------------------- | ---------------------------------------- | ------------------------ |
+| ID    | Skill                     | Triggers                                 | File                         |
+| ----- | ------------------------- | ---------------------------------------- | ---------------------------- |
 | ds-01 | Exploratory Data Analysis | EDA, analysis, visualization, profiling  | skill-docs/data-scientist.md |
 | ds-02 | Statistical Modeling      | statistics, regression, hypothesis       | skill-docs/data-scientist.md |
 | ds-03 | Feature Engineering       | features, transformations, encoding      | skill-docs/data-scientist.md |
@@ -60,8 +60,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Frontend Development
 
-| ID    | Skill                  | Triggers                                | File                         |
-| ----- | ---------------------- | --------------------------------------- | ---------------------------- |
+| ID    | Skill                  | Triggers                                | File                             |
+| ----- | ---------------------- | --------------------------------------- | -------------------------------- |
 | fe-01 | React/Vue/Angular      | react, vue, angular, frontend-framework | skill-docs/frontend-developer.md |
 | fe-02 | State Management       | redux, zustand, state, store            | skill-docs/frontend-developer.md |
 | fe-03 | TypeScript             | typescript, types, interfaces           | skill-docs/frontend-developer.md |
@@ -72,8 +72,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Backend Development
 
-| ID    | Skill           | Triggers                                 | File                        |
-| ----- | --------------- | ---------------------------------------- | --------------------------- |
+| ID    | Skill           | Triggers                                 | File                            |
+| ----- | --------------- | ---------------------------------------- | ------------------------------- |
 | be-01 | RESTful API     | REST, API, endpoints, OpenAPI            | skill-docs/backend-developer.md |
 | be-02 | GraphQL         | graphql, schema, resolver                | skill-docs/backend-developer.md |
 | be-03 | Microservices   | microservices, service-mesh, distributed | skill-docs/backend-developer.md |
@@ -84,8 +84,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Security Architecture
 
-| ID    | Skill                   | Triggers                               | File                         |
-| ----- | ----------------------- | -------------------------------------- | ---------------------------- |
+| ID    | Skill                   | Triggers                               | File                             |
+| ----- | ----------------------- | -------------------------------------- | -------------------------------- |
 | sa-01 | PII Detection           | PII, personal-data, sensitive, privacy | skill-docs/security-architect.md |
 | sa-02 | Threat Modeling         | threat, STRIDE, attack-surface         | skill-docs/security-architect.md |
 | sa-03 | Infrastructure Security | network-security, firewall, WAF        | skill-docs/security-architect.md |
@@ -96,8 +96,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## DevOps
 
-| ID    | Skill                   | Triggers                                    | File             |
-| ----- | ----------------------- | ------------------------------------------- | ---------------- |
+| ID    | Skill                   | Triggers                                    | File                 |
+| ----- | ----------------------- | ------------------------------------------- | -------------------- |
 | do-01 | CI/CD Pipeline          | CI/CD, pipeline, GitHub-Actions, deployment | skill-docs/devops.md |
 | do-02 | Container Orchestration | kubernetes, K8s, orchestration              | skill-docs/devops.md |
 | do-03 | Infrastructure as Code  | terraform, bicep, IaC, CloudFormation       | skill-docs/devops.md |
@@ -110,8 +110,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Docker
 
-| ID        | Skill                     | Triggers                            | File             |
-| --------- | ------------------------- | ----------------------------------- | ---------------- |
+| ID        | Skill                     | Triggers                            | File                 |
+| --------- | ------------------------- | ----------------------------------- | -------------------- |
 | docker-01 | Dockerfile Best Practices | dockerfile, multi-stage, layers     | skill-docs/docker.md |
 | docker-02 | Container Security        | container-scan, non-root, security  | skill-docs/docker.md |
 | docker-03 | Image Optimization        | image-size, alpine, optimization    | skill-docs/docker.md |
@@ -120,8 +120,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## MLOps
 
-| ID    | Skill                  | Triggers                         | File            |
-| ----- | ---------------------- | -------------------------------- | --------------- |
+| ID    | Skill                  | Triggers                         | File                |
+| ----- | ---------------------- | -------------------------------- | ------------------- |
 | mo-01 | Pipeline Orchestration | kubeflow, MLflow, orchestration  | skill-docs/mlops.md |
 | mo-02 | Experiment Tracking    | experiments, tracking, runs      | skill-docs/mlops.md |
 | mo-03 | Model Registry         | model-registry, versioning       | skill-docs/mlops.md |
@@ -134,8 +134,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## FinOps
 
-| ID    | Skill                | Triggers                           | File             |
-| ----- | -------------------- | ---------------------------------- | ---------------- |
+| ID    | Skill                | Triggers                           | File                 |
+| ----- | -------------------- | ---------------------------------- | -------------------- |
 | fo-01 | Cost Visibility      | cost, billing, spending, budget    | skill-docs/finops.md |
 | fo-02 | Resource Tagging     | tags, cost-allocation, chargeback  | skill-docs/finops.md |
 | fo-03 | Budget Management    | budget, alerts, thresholds         | skill-docs/finops.md |
@@ -147,8 +147,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Platform Engineering
 
-| ID    | Skill                       | Triggers                           | File                        |
-| ----- | --------------------------- | ---------------------------------- | --------------------------- |
+| ID    | Skill                       | Triggers                           | File                            |
+| ----- | --------------------------- | ---------------------------------- | ------------------------------- |
 | pe-01 | Internal Developer Platform | IDP, platform, self-service        | skill-docs/platform-engineer.md |
 | pe-02 | Self-Service Infrastructure | self-service, portal, provisioning | skill-docs/platform-engineer.md |
 | pe-03 | SLO/SLI Management          | SLO, SLI, reliability-targets      | skill-docs/platform-engineer.md |
@@ -158,8 +158,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## SRE
 
-| ID    | Skill                | Triggers                           | File          |
-| ----- | -------------------- | ---------------------------------- | ------------- |
+| ID    | Skill                | Triggers                           | File              |
+| ----- | -------------------- | ---------------------------------- | ----------------- |
 | sr-01 | Incident Response    | incident, postmortem, runbook      | skill-docs/sre.md |
 | sr-02 | Chaos Engineering    | chaos, fault-injection, resilience | skill-docs/sre.md |
 | sr-03 | SLOs                 | SLO, availability, reliability     | skill-docs/sre.md |
@@ -170,8 +170,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Database Administration
 
-| ID    | Skill              | Triggers                              | File                     |
-| ----- | ------------------ | ------------------------------------- | ------------------------ |
+| ID    | Skill              | Triggers                              | File                         |
+| ----- | ------------------ | ------------------------------------- | ---------------------------- |
 | db-01 | Query Optimization | query, slow-query, optimization       | skill-docs/database-admin.md |
 | db-02 | Index Strategies   | index, B-tree, covering-index         | skill-docs/database-admin.md |
 | db-03 | Backup/Recovery    | backup, restore, point-in-time        | skill-docs/database-admin.md |
@@ -182,8 +182,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Data Governance
 
-| ID    | Skill                  | Triggers                             | File                      |
-| ----- | ---------------------- | ------------------------------------ | ------------------------- |
+| ID    | Skill                  | Triggers                             | File                          |
+| ----- | ---------------------- | ------------------------------------ | ----------------------------- |
 | dg-01 | Data Catalog           | catalog, purview, discovery          | skill-docs/data-governance.md |
 | dg-02 | Data Lineage           | lineage, provenance, tracking        | skill-docs/data-governance.md |
 | dg-03 | Data Quality Framework | quality-rules, profiling             | skill-docs/data-governance.md |
@@ -195,8 +195,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ### Azure
 
-| ID    | Skill           | Triggers                     | File            |
-| ----- | --------------- | ---------------------------- | --------------- |
+| ID    | Skill           | Triggers                     | File                |
+| ----- | --------------- | ---------------------------- | ------------------- |
 | az-01 | Compute         | VM, App-Service, AKS         | skill-docs/azure.md |
 | az-02 | Functions       | Azure-Functions, serverless  | skill-docs/azure.md |
 | az-03 | Storage         | Blob, ADLS, Azure-Storage    | skill-docs/azure.md |
@@ -212,8 +212,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ### AWS
 
-| ID     | Skill          | Triggers                    | File          |
-| ------ | -------------- | --------------------------- | ------------- |
+| ID     | Skill          | Triggers                    | File              |
+| ------ | -------------- | --------------------------- | ----------------- |
 | aws-01 | EC2            | EC2, instance, compute      | skill-docs/aws.md |
 | aws-02 | Lambda         | Lambda, serverless          | skill-docs/aws.md |
 | aws-03 | S3             | S3, bucket, storage         | skill-docs/aws.md |
@@ -229,8 +229,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ### GCP
 
-| ID     | Skill            | Triggers                        | File          |
-| ------ | ---------------- | ------------------------------- | ------------- |
+| ID     | Skill            | Triggers                        | File              |
+| ------ | ---------------- | ------------------------------- | ----------------- |
 | gcp-01 | Compute Engine   | GCE, VM, Google-compute         | skill-docs/gcp.md |
 | gcp-02 | Cloud Functions  | Cloud-Functions, GCP-serverless | skill-docs/gcp.md |
 | gcp-03 | Cloud Storage    | GCS, bucket, Google-Storage     | skill-docs/gcp.md |
@@ -246,8 +246,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Enterprise Governance
 
-| ID    | Skill                 | Triggers                       | File                         |
-| ----- | --------------------- | ------------------------------ | ---------------------------- |
+| ID    | Skill                 | Triggers                       | File                             |
+| ----- | --------------------- | ------------------------------ | -------------------------------- |
 | cr-01 | Automated Code Review | code-review, PR-automation     | skill-docs/code-review.md        |
 | cr-02 | PR Workflows          | PR-workflow, branch-protection | skill-docs/code-review.md        |
 | cr-03 | Quality Gates         | quality-gate, coverage, lint   | skill-docs/code-review.md        |
@@ -263,8 +263,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Product & Design
 
-| ID    | Skill                  | Triggers                    | File                       |
-| ----- | ---------------------- | --------------------------- | -------------------------- |
+| ID    | Skill                  | Triggers                    | File                           |
+| ----- | ---------------------- | --------------------------- | ------------------------------ |
 | pd-01 | Requirements Discovery | requirements, user-stories  | skill-docs/product-designer.md |
 | pd-02 | User Research          | research, interview, survey | skill-docs/product-designer.md |
 | pd-03 | Brainstorming          | ideation, brainstorm        | skill-docs/product-designer.md |
@@ -274,8 +274,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## QA Engineering
 
-| ID    | Skill                 | Triggers                      | File                  |
-| ----- | --------------------- | ----------------------------- | --------------------- |
+| ID    | Skill                 | Triggers                      | File                      |
+| ----- | --------------------- | ----------------------------- | ------------------------- |
 | qa-01 | Test Strategy         | test-strategy, test-plan      | skill-docs/qa-engineer.md |
 | qa-02 | Automation Frameworks | selenium, playwright, cypress | skill-docs/qa-engineer.md |
 | qa-03 | Integration Testing   | integration-test, API-test    | skill-docs/qa-engineer.md |
@@ -286,8 +286,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Technical Writing
 
-| ID    | Skill             | Triggers                           | File                       |
-| ----- | ----------------- | ---------------------------------- | -------------------------- |
+| ID    | Skill             | Triggers                           | File                           |
+| ----- | ----------------- | ---------------------------------- | ------------------------------ |
 | tw-01 | API Documentation | API-docs, OpenAPI, Swagger         | skill-docs/technical-writer.md |
 | tw-02 | User Guides       | guide, tutorial, how-to            | skill-docs/technical-writer.md |
 | tw-03 | ADRs              | ADR, architecture-decision         | skill-docs/technical-writer.md |
@@ -297,8 +297,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## System Design
 
-| ID    | Skill                    | Triggers                             | File                    |
-| ----- | ------------------------ | ------------------------------------ | ----------------------- |
+| ID    | Skill                    | Triggers                             | File                        |
+| ----- | ------------------------ | ------------------------------------ | --------------------------- |
 | sd-01 | Architecture Patterns    | architecture, design-pattern         | skill-docs/system-design.md |
 | sd-02 | Requirements Engineering | requirements, specifications         | skill-docs/system-design.md |
 | sd-03 | Scalability              | scaling, horizontal, vertical        | skill-docs/system-design.md |
@@ -310,8 +310,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Network Engineering
 
-| ID    | Skill            | Triggers                       | File                       |
-| ----- | ---------------- | ------------------------------ | -------------------------- |
+| ID    | Skill            | Triggers                       | File                           |
+| ----- | ---------------- | ------------------------------ | ------------------------------ |
 | ne-01 | Topology Design  | network-topology, architecture | skill-docs/network-engineer.md |
 | ne-02 | VPN/VPC          | VPN, VPC, private-network      | skill-docs/network-engineer.md |
 | ne-03 | Load Balancers   | load-balancer, ALB, NLB        | skill-docs/network-engineer.md |
@@ -322,8 +322,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Project Health & Lifecycle
 
-| ID    | Skill                      | Triggers                          | File                           |
-| ----- | -------------------------- | --------------------------------- | ------------------------------ |
+| ID    | Skill                      | Triggers                          | File                               |
+| ----- | -------------------------- | --------------------------------- | ---------------------------------- |
 | pg-01 | Health Check               | health, assessment, audit         | skill-docs/project-guardian.md     |
 | pg-02 | Dependency Management      | dependencies, outdated, npm-audit | skill-docs/project-guardian.md     |
 | pg-03 | Technical Debt             | tech-debt, refactor, cleanup      | skill-docs/project-guardian.md     |
@@ -352,8 +352,8 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Process Management
 
-| ID      | Skill                   | Triggers                   | File                            |
-| ------- | ----------------------- | -------------------------- | ------------------------------- |
+| ID      | Skill                   | Triggers                   | File                                |
+| ------- | ----------------------- | -------------------------- | ----------------------------------- |
 | pm-01   | Epic/Story Creation     | epic, story, user-story    | skill-docs/process-kanban.md        |
 | pm-02   | Task Breakdown          | task, breakdown, subtask   | skill-docs/process-kanban.md        |
 | pm-03   | Board Management        | kanban, board, sprint      | skill-docs/process-kanban.md        |
@@ -365,12 +365,13 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 
 ## Integrated Skills
 
-| ID                    | Skill                      | Triggers                           | File                            |
-| --------------------- | -------------------------- | ---------------------------------- | ------------------------------- |
+| ID                    | Skill                      | Triggers                           | File                                |
+| --------------------- | -------------------------- | ---------------------------------- | ----------------------------------- |
 | compliance-automation | SOC2/GDPR/HIPAA Automation | compliance-check, audit-automation | skill-docs/compliance-automation.md |
 | enterprise-dashboard  | Monitoring & Visibility    | dashboard, metrics, visibility     | skill-docs/enterprise-dashboard.md  |
 | project-starter       | Guided Project Setup       | new-project, init, bootstrap       | skill-docs/project-starter.md       |
 | optimization-advisor  | Process Improvement        | optimize-process, efficiency       | skill-docs/optimization-advisor.md  |
+| meeting-strategy      | Meeting Prep & Strategy    | meeting, speaking-points, sync     | skill-docs/meeting-strategy.md      |
 
 ---
 
@@ -384,6 +385,7 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 | code-hardener         | templates/hardener/    |
 | security-hardener     | templates/security/    |
 | maintenance-engineer  | templates/maintenance/ |
+| meeting-strategy      | templates/meetings/    |
 
 ---
 

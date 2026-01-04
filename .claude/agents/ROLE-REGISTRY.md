@@ -57,13 +57,14 @@
 
 ### Product Domain (Lead: @product-lead)
 
-| Role                   | Expertise                  | When to Invoke     |
-| ---------------------- | -------------------------- | ------------------ |
-| **Product Designer**   | Requirements, UX, Research | Product design     |
-| **Frontend Developer** | React, Vue, TypeScript     | UI development     |
-| **Backend Developer**  | APIs, Microservices, DB    | Server development |
-| **QA Engineer**        | Testing, Automation        | Quality assurance  |
-| **Technical Writer**   | Docs, ADRs, Runbooks       | Documentation      |
+| Role                      | Expertise                     | When to Invoke       |
+| ------------------------- | ----------------------------- | -------------------- |
+| **Product Designer**      | Requirements, UX, Research    | Product design       |
+| **Frontend Developer**    | React, Vue, TypeScript        | UI development       |
+| **Backend Developer**     | APIs, Microservices, DB       | Server development   |
+| **QA Engineer**           | Testing, Automation           | Quality assurance    |
+| **Technical Writer**      | Docs, ADRs, Runbooks          | Documentation        |
+| **Strategic Coordinator** | Meetings, Synthesis, Strategy | Meeting prep, status |
 
 ### Infrastructure (Lead: @orchestrator)
 
@@ -104,6 +105,7 @@ Product_keywords: requirements, UX, design → Product Designer
   API, backend, server → Backend Developer
   test, QA, automation → QA Engineer
   docs, documentation → Technical Writer
+  meeting, strategy, status, sync → Strategic Coordinator
 ```
 
 ---
