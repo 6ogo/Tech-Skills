@@ -1,0 +1,6 @@
+{"timestamp": "2026-01-05T16:22:35.114403", "type": "ASK_USER", "command": "rm -rf /tmp/test", "action": "ask", "message": "\u26a0\ufe0f  This command will DELETE files recursively or forcefully. Are you sure?"}
+{"timestamp": "2026-01-05T16:22:38.199376", "type": "ALLOWED", "command": "ls -la", "action": "allow", "message": ""}
+{"timestamp": "2026-01-05T16:22:41.301792", "type": "ALLOWED", "tool": "Edit", "file": "/home/user/.ssh/id_rsa", "action": "allow", "message": ""}
+{"timestamp": "2026-01-05T16:22:54.157532", "type": "BLOCKED_PATH", "tool": "Edit", "file": "~/.ssh/id_rsa", "action": "block", "message": "\ud83d\udeab BLOCKED: Cannot access '~/.ssh/id_rsa' (credentials/secrets protection)"}
+{"timestamp": "2026-01-05T16:22:57.120237", "type": "ASK_USER", "command": "DROP DATABASE production;", "action": "ask", "message": "\u26a0\ufe0f  This SQL command will DROP a database object. Are you sure?"}
+{"timestamp": "2026-01-05T16:23:00.062915", "type": "BLOCKED_PATTERN", "command": "DELETE FROM users;", "action": "block", "message": "\ud83d\udeab BLOCKED: DELETE without WHERE clause will delete all rows. Add WHERE clause."}

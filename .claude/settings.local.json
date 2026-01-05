@@ -6,5 +6,39 @@
       "Bash(grep:*)",
       "Bash(npm pack:*)"
     ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/bash-safety-hook.py",
+            "statusMessage": "Checking bash command safety..."
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/edit-safety-hook.py",
+            "statusMessage": "Checking file edit safety..."
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/write-safety-hook.py",
+            "statusMessage": "Checking file write safety..."
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1,0 +1,185 @@
+# Safety Patterns for Claude Code Damage Control
+# This file defines protection levels and dangerous command patterns
+
+# ZERO ACCESS PATHS - No operations allowed (read, write, edit, delete)
+zeroAccessPaths:
+  - "~/.ssh/"
+  - "~/.ssh/*"
+  - "~/.aws/"
+  - "~/.aws/*"
+  - "~/.gnupg/"
+  - "~/.gnupg/*"
+  - "~/.config/gcloud/"
+  - "~/.config/gcloud/*"
+  - "/etc/shadow"
+  - "/etc/passwd"
+  - "*.key"
+  - "*.pem"
+  - "*.p12"
+  - "*.pfx"
+  - "**/credentials.json"
+  - "**/service-account*.json"
+
+# READ ONLY PATHS - Allow read but block write, edit, delete
+readOnlyPaths:
+  - "/etc/*"
+  - "~/.bashrc"
+  - "~/.zshrc"
+  - "~/.bash_profile"
+  - "~/.zprofile"
+  - "~/.profile"
+  - "/usr/*"
+  - "/bin/*"
+  - "/sbin/*"
+  - "/lib/*"
+  - "package-lock.json"
+  - "yarn.lock"
+  - "pnpm-lock.yaml"
+  - "Gemfile.lock"
+  - "poetry.lock"
+  - "Cargo.lock"
+
+# NO DELETE PATHS - Allow read and write but block delete
+noDeletePaths:
+  - ".claude/hooks/*"
+  - ".claude/commands/*"
+  - ".claude/settings*.json"
+  - ".git/*"
+  - ".gitignore"
+  - "README.md"
+  - "LICENSE"
+  - "*.sql"
+  - "*.db"
+  - "*.sqlite"
+  - "*.sqlite3"
+  - "**/migrations/*"
+  - "**/database/*"
+  - "docker-compose.yml"
+  - "Dockerfile"
+  - ".env.example"
+
+# DANGEROUS BASH COMMAND PATTERNS
+dangerousBashPatterns:
+  # Destructive file operations
+  - pattern: '\brm\s+-[rRf]'
+    description: "Recursive or force delete"
+    action: "ask"  # ask or block
+    message: "⚠️  This command will DELETE files recursively or forcefully. Are you sure?"
+
+  - pattern: '\brm\s+.*\*'
+    description: "Delete with wildcards"
+    action: "ask"
+    message: "⚠️  This command will DELETE multiple files using wildcards. Are you sure?"
+
+  - pattern: '\brm\s+-rf\s+/'
+    description: "Delete from root"
+    action: "block"
+    message: "🚫 BLOCKED: Cannot delete from root directory"
+
+  - pattern: '\bmv\s+.*\s+/dev/null'
+    description: "Move to dev/null (deletion)"
+    action: "ask"
+    message: "⚠️  This command will permanently delete files by moving to /dev/null. Are you sure?"
+
+  # Database operations
+  - pattern: 'DROP\s+(DATABASE|TABLE|SCHEMA)'
+    description: "Drop database objects"
+    action: "ask"
+    message: "⚠️  This SQL command will DROP a database object. Are you sure?"
+
+  - pattern: 'DELETE\s+FROM\s+\w+\s*;'
+    description: "Unqualified DELETE (deletes all rows)"
+    action: "block"
+    message: "🚫 BLOCKED: DELETE without WHERE clause will delete all rows. Add WHERE clause."
+
+  - pattern: 'TRUNCATE\s+TABLE'
+    description: "Truncate table"
+    action: "ask"
+    message: "⚠️  This SQL command will TRUNCATE a table (delete all rows). Are you sure?"
+
+  # Docker operations
+  - pattern: 'docker\s+system\s+prune\s+-a'
+    description: "Docker system prune all"
+    action: "ask"
+    message: "⚠️  This command will remove ALL unused Docker data. Are you sure?"
+
+  - pattern: 'docker\s+rm\s+.*-f'
+    description: "Force remove Docker containers"
+    action: "ask"
+    message: "⚠️  This command will FORCE remove Docker containers. Are you sure?"
+
+  - pattern: 'docker\s+volume\s+rm'
+    description: "Remove Docker volumes"
+    action: "ask"
+    message: "⚠️  This command will remove Docker volumes (potential data loss). Are you sure?"
+
+  # Git operations
+  - pattern: 'git\s+push\s+.*--force'
+    description: "Force push to git"
+    action: "ask"
+    message: "⚠️  This command will FORCE push to git (can overwrite history). Are you sure?"
+
+  - pattern: 'git\s+reset\s+--hard'
+    description: "Hard reset git"
+    action: "ask"
+    message: "⚠️  This command will HARD RESET git (discards uncommitted changes). Are you sure?"
+
+  - pattern: 'git\s+clean\s+-[fxd]'
+    description: "Git clean force"
+    action: "ask"
+    message: "⚠️  This command will remove untracked files from git. Are you sure?"
+
+  # System operations
+  - pattern: '\bchmod\s+777'
+    description: "Chmod 777 (insecure permissions)"
+    action: "ask"
+    message: "⚠️  This command sets insecure 777 permissions. Are you sure?"
+
+  - pattern: '\bsudo\s+rm'
+    description: "Sudo rm"
+    action: "ask"
+    message: "⚠️  This command will DELETE files with sudo privileges. Are you sure?"
+
+  - pattern: '\bkill\s+-9'
+    description: "Force kill process"
+    action: "ask"
+    message: "⚠️  This command will force kill a process. Are you sure?"
+
+  # Package managers
+  - pattern: 'npm\s+uninstall.*--global'
+    description: "Uninstall global npm package"
+    action: "ask"
+    message: "⚠️  This command will uninstall a global npm package. Are you sure?"
+
+  - pattern: 'pip\s+uninstall'
+    description: "Uninstall pip package"
+    action: "ask"
+    message: "⚠️  This command will uninstall a pip package. Are you sure?"
+
+  # Redirection that could overwrite files
+  - pattern: '>\s*[^>]'
+    description: "Output redirection (can overwrite files)"
+    action: "skip"  # Too common for normal operations
+    message: ""
+
+# DANGEROUS EDIT PATTERNS
+dangerousEditPatterns:
+  - pattern: "(password|secret|api[_-]?key|private[_-]?key|token)\\s*[=:]\\s*[\"']?\\w+"
+    description: "Potential credential in code"
+    action: "ask"
+    message: "⚠️  This edit appears to add credentials to code. Are you sure this is safe?"
+
+# FILE SIZE LIMITS (in bytes)
+fileSizeLimits:
+  maxReadSize: 10485760  # 10 MB
+  maxWriteSize: 5242880   # 5 MB
+  warnOnLargeWrite: 1048576  # 1 MB
+
+# SAFETY SETTINGS
+safetySettings:
+  enableLogging: true
+  logFile: ".claude/hooks/safety.log"
+  requireConfirmationForDelete: true
+  requireConfirmationForDatabaseOps: true
+  backupBeforeDestructive: true
+  backupDirectory: ".claude/backups/"
