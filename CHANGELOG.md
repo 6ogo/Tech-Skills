@@ -5,6 +5,36 @@ All notable changes to Tech Hub Skills will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.0] - 2026-01-06
+
+### Added
+
+- **Safety Guardrails System**: Comprehensive damage control system to prevent accidental file deletions, database drops, and destructive operations.
+  - **File Deletion Protection**: Prevents accidental `rm -rf` and similar destructive commands with three-tier protection (zero-access, read-only, no-delete).
+  - **Database Safety**: Blocks unqualified DELETEs, DROP commands, and TRUNCATE operations.
+  - **Credential Protection**: Prevents reading/modifying SSH keys, AWS credentials, GPG keys, and other secrets.
+  - **System File Protection**: Read-only enforcement for system configurations (`/etc/*`, shell configs, dependency locks).
+  - **Automatic Backups**: Creates backups before destructive operations (configurable).
+  - **Audit Logging**: Comprehensive safety event logging to `.claude/hooks/safety.log`.
+  - **User Confirmation**: Interactive prompts for risky operations like force pushes, database drops, and recursive deletions.
+- **Safety Hooks**: Python-based safety hooks for Bash, Edit, and Write operations.
+  - `bash-safety-hook.py`: Command safety validation
+  - `edit-safety-hook.py`: File edit protection
+  - `write-safety-hook.py`: File write protection
+- **Configuration System**: YAML-based patterns configuration (`.claude/hooks/patterns.yaml`) for customizing protection levels.
+- **Safety Management Skill**: New `.claude/skills/safety-guardrails.md` skill for managing and configuring safety features.
+- **Comprehensive Documentation**: 
+  - `.claude/hooks/README.md`: Complete safety system guide
+  - `.claude/hooks/INSTALL.md`: Installation instructions
+  - `SAFETY-GUARDRAILS.md`: Quick start and overview guide
+
+### Changed
+
+- **Package Description**: Updated to highlight new safety guardrails feature.
+- **Dependencies**: Added PyYAML requirement for safety hooks configuration.
+
+---
+
 ## [2.2.3] - 2026-01-02
 
 ### Changed

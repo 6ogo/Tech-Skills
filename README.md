@@ -6,7 +6,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
 [![License](https://img.shields.io/npm/l/tech-hub-skills.svg)](https://github.com/6ogo/Tech-Skills/blob/main/LICENSE)
 
-Features a **hierarchical multi-agent system** with a **Brainstorm → Plan → Implement** workflow, 95% token efficiency, and advanced domain expertise.
+Features a **hierarchical multi-agent system** with a **Brainstorm → Plan → Implement** workflow, 95% token efficiency, advanced domain expertise, and **comprehensive safety guardrails** for damage control.
 
 ## Quick Install
 
@@ -49,6 +49,7 @@ _This creates `.github/copilot-instructions.md` with all expert skills._
 - **200+ Skills**: LLMs, RAG, MLOps, DevSecOps, Lakehouse, Cloud (AWS/Azure/GCP), and more.
 - **Lazy-Loading**: Significant token savings via internal skill registries.
 - **Security First**: Built-in PII detection, security hardening, and compliance automation.
+- **Safety Guardrails**: File deletion protection, database safety, credential protection, automatic backups, and audit logging.
 - **Cost Aware**: AI/ML cost optimization and efficient tool usage.
 
 ## Usage
@@ -96,6 +97,7 @@ def handle_user_upload(file_data):
 ## Documentation
 
 - **Full System**: [AGENTS.md](https://github.com/6ogo/Tech-Skills/blob/main/.claude/AGENTS.md)
+- **Safety Guardrails**: [SAFETY-GUARDRAILS.md](https://github.com/6ogo/Tech-Skills/blob/main/SAFETY-GUARDRAILS.md)
 - **GitHub Copilot Guide**: [GITHUB_COPILOT.md](https://github.com/6ogo/Tech-Skills/blob/main/GITHUB_COPILOT.md)
 - **Changelog**: [CHANGELOG.md](https://github.com/6ogo/Tech-Skills/blob/main/CHANGELOG.md)
 
