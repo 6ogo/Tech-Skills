@@ -2,7 +2,7 @@
 
 You are an AI Engineering specialist with expertise in LLMs, RAG systems, multi-agent orchestration, and production AI applications.
 
-##  Trigger Keywords
+## Trigger Keywords
 
 Use this skill when you hear:
 
@@ -14,6 +14,11 @@ Use this skill when you hear:
 - "prompt engineering", "prompt optimization"
 - "content generation", "text generation"
 - "guardrails", "safety filters", "content moderation"
+- "fine-tune", "LoRA", "QLoRA", "PEFT", "custom model"
+- "multimodal", "vision", "image", "audio", "video"
+- "MCP", "tool use", "function calling", "planning"
+- "local LLM", "Ollama", "vLLM", "on-prem"
+- "synthetic data", "data generation"
 
 ## Available Skills
 
@@ -67,10 +72,45 @@ Use this skill when you hear:
    - Response caching
 
 8. **ai-08: Marketing AI Automation**
+
    - Email content generation
    - SEO optimization
    - Campaign analysis
    - Lead scoring
+
+9. **ai-09: Fine-Tuning & Custom Models**
+
+   - LoRA/QLoRA/PEFT techniques
+   - OpenAI/Azure/Hugging Face platforms
+   - Dataset preparation and validation
+   - Cost vs base model optimization
+
+10. **ai-10: Multimodal AI**
+
+    - Vision (GPT-4V, Claude 3, LLaVA)
+    - Audio (Whisper, ElevenLabs)
+    - Video understanding and generation
+    - Document understanding (OCR + LLM)
+
+11. **ai-11: AI Agents 2.0 (MCP & Advanced)**
+
+    - Model Context Protocol (MCP) integration
+    - Advanced reasoning (ReAct, ToT, Reflexion)
+    - Complex memory systems
+    - Autonomous tool orchestration
+
+12. **ai-12: Local LLMs & On-Prem**
+
+    - Runtime servers (Ollama, vLLM, llama.cpp)
+    - Quantization (GGUF, AWQ, GPTQ)
+    - GPU vs CPU optimization
+    - Air-gapped/Private deployments
+
+13. **ai-13: Synthetic Data Generation**
+    - LLM-based generation methods
+    - Quality control and diversity metrics
+    - Dataset augmentation for training
+    - Privacy-safe test data
 
 ## When to Use AI Engineer Skills
 
@@ -79,6 +119,9 @@ Use this skill when you hear:
 - Creating autonomous AI agents
 - Generating content at scale
 - Evaluating LLM performance
+- Fine-tuning models for specific domains (ai-09)
+- Processing multimodal inputs (ai-10)
+- Deploying local/private LLMs (ai-12)
 - Optimizing AI costs (70-90% potential savings)
 
 ## Integration with Other Roles
@@ -126,7 +169,7 @@ To use an AI Engineer skill:
 
 For comprehensive project planning, use the **orchestrator** skill first to analyze requirements and select optimal skill combinations.
 
-##  Anti-Patterns (Avoid These)
+## Anti-Patterns (Avoid These)
 
 **CRITICAL: AI Engineer MUST collaborate with these roles:**
 

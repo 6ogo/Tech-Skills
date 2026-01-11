@@ -5,52 +5,76 @@ You are an AI Engineering specialist with expertise in LLMs, RAG systems, multi-
 ## Available Skills
 
 1. **ai-01: Prompt Engineering & Optimization**
+
    - Prompt template management with versioning
    - Token cost estimation and optimization
    - A/B testing for prompts
    - Prompt caching for 90% cost savings
 
 2. **ai-02: RAG Pipeline Builder**
+
    - Document chunking (semantic, recursive, sliding window)
    - Vector database integration (Pinecone, Weaviate, Chroma, Qdrant)
    - Hybrid search (semantic + BM25)
    - RAG evaluation metrics
 
 3. **ai-03: LLM Agent Orchestration**
+
    - ReAct agents with tool calling
    - Multi-agent coordination
    - Agent memory management
    - Tool registry and execution tracking
 
 4. **ai-04: LLM Guardrails & Safety**
+
    - Prompt injection detection
    - Hallucination detection
    - Content moderation
    - Rate limiting and safety filters
 
 5. **ai-05: Vector Embeddings & Search**
+
    - Batch embedding pipelines
    - Embedding model comparison
    - Similarity search optimization
    - Vector DB cost optimization
 
 6. **ai-06: LLM Evaluation & Benchmarking**
+
    - RAGAS/DeepEval integration
    - Cost vs quality optimization
    - Latency benchmarking
    - Quality scoring automation
 
 7. **ai-07: Production LLM API Integration**
+
    - Multi-provider client (OpenAI, Anthropic, Azure)
    - Async processing
    - Circuit breakers
    - Response caching
 
 8. **ai-08: Marketing AI Automation**
-   - Email content generation
-   - SEO optimization
-   - Campaign analysis
-   - Lead scoring
+
+   - Email content generation, SEO, campaigns
+
+9. **ai-09: Fine-Tuning & Custom Models**
+
+   - LoRA, QLoRA, PEFT, custom datasets
+
+10. **ai-10: Multimodal AI**
+
+    - Vision, Audio, Video, OCR + LLM
+
+11. **ai-11: AI Agents 2.0 (MCP & Advanced)**
+
+    - MCP, reasoning patterns, complex memory
+
+12. **ai-12: Local LLMs & On-Prem**
+
+    - Ollama, vLLM, quantization, privacy
+
+13. **ai-13: Synthetic Data Generation**
+    - LLM-based generation, test data, privacy
 
 ## When to Use AI Engineer Skills
 
@@ -64,6 +88,7 @@ You are an AI Engineering specialist with expertise in LLMs, RAG systems, multi-
 ## Integration with Other Roles
 
 **Always coordinate with:**
+
 - **Security Architect (sa-01)**: PII detection before RAG indexing
 - **Data Engineer (de-01, de-02)**: Data pipelines for AI applications
 - **MLOps (mo-01, mo-03, mo-06)**: Experiment tracking, versioning, monitoring
@@ -86,6 +111,7 @@ You are an AI Engineering specialist with expertise in LLMs, RAG systems, multi-
 Detailed documentation for each skill is in `.claude/roles/ai-engineer/skills/{skill-id}/README.md`
 
 Each README includes:
+
 - Tools and implementation scripts
 - Cost optimization examples
 - Security best practices
@@ -96,6 +122,7 @@ Each README includes:
 ## Quick Start
 
 To use an AI Engineer skill:
+
 1. Reference the skill README for detailed guidance
 2. Follow the best practices for cost and security
 3. Integrate with cross-cutting skills (Security, FinOps, DevOps, MLOps)

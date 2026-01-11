@@ -3,7 +3,7 @@
 **200+ production-ready AI agent skills** for **Claude Code** and **GitHub Copilot**.
 
 [![npm version](https://img.shields.io/npm/v/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
-[![npm downloads](https://img.shields.io/npm/dm/tech-hub-skills.svg)](https://www.npmjs.com/package/tech-hub-skills)
+[![npm downloads](https://img.shields.io/npm/dm/tech-hub-skills.svg)](https://img.shields.io/npm/dm/tech-hub-skills.svg)
 [![License](https://img.shields.io/npm/l/tech-hub-skills.svg)](https://github.com/6ogo/Tech-Skills/blob/main/LICENSE)
 
 Features a **hierarchical multi-agent system** with a **Brainstorm → Plan → Implement** workflow, 95% token efficiency, advanced domain expertise, and **comprehensive safety guardrails** for damage control.
@@ -26,7 +26,7 @@ _This creates `.github/copilot-instructions.md` with all expert skills._
 
 ---
 
-## v2.2: Hierarchical Agent Architecture
+## v2.3: Hierarchical Agent Architecture & Unified Skills
 
 **95% token reduction** with on-demand skill loading and intelligent coordination.
 

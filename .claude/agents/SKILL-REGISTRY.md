@@ -18,30 +18,30 @@
 
 ### By Domain
 
-| Domain       | Lead           | Skill Files                                     | Skill IDs              |
-| ------------ | -------------- | ----------------------------------------------- | ---------------------- |
-| AI/ML        | @ai-ml-lead    | `ai-engineer.md`, `ai-engineer-advanced.md`     | ai-01 to ai-13         |
-| ML           | @ai-ml-lead    | `ml-engineer.md`                                | ml-01 to ml-09         |
-| Data Science | @ai-ml-lead    | `data-scientist.md`                             | ds-01 to ds-08         |
-| MLOps        | @ai-ml-lead    | `mlops.md`                                      | mo-01 to mo-09         |
-| DevOps       | @platform-lead | `devops.md`                                     | do-01 to do-09         |
-| SRE          | @platform-lead | `sre.md`                                        | sr-01 to sr-07         |
-| Docker       | @platform-lead | `docker.md`                                     | docker-01 to docker-05 |
-| AWS          | @platform-lead | `aws.md`                                        | aws-01 to aws-12       |
-| Azure        | @platform-lead | `azure.md`                                      | az-01 to az-12         |
-| GCP          | @platform-lead | `gcp.md`                                        | gcp-01 to gcp-12       |
-| Security     | @security-lead | `security-architect.md`, `security-advanced.md` | sa-01 to sa-11         |
-| Compliance   | @security-lead | `compliance-officer.md`                         | co-01 to co-07         |
-| Data Eng     | @data-lead     | `data-engineer.md`, `data-engineer-advanced.md` | de-01 to de-13         |
-| Data Gov     | @data-lead     | `data-governance.md`                            | dg-01 to dg-06         |
-| Database     | @data-lead     | `database-admin.md`                             | db-01 to db-07         |
-| Product      | @product-lead  | `product-designer.md`                           | pd-01 to pd-06         |
-| Frontend     | @product-lead  | `frontend-developer.md`                         | fe-01 to fe-07         |
-| Backend      | @product-lead  | `backend-developer.md`                          | be-01 to be-07         |
-| QA           | @product-lead  | `qa-engineer.md`                                | qa-01 to qa-07         |
-| Tech Writer  | @product-lead  | `technical-writer.md`                           | tw-01 to tw-06         |
-| FinOps       | @platform-lead | `finops.md`                                     | fo-01 to fo-08         |
-| Meeting Prep | @product-lead  | `meeting-strategy.md`                           | pm-meet-01 to 05       |
+| Domain       | Lead           | Skill Files             | Skill IDs              |
+| ------------ | -------------- | ----------------------- | ---------------------- |
+| AI/ML        | @ai-ml-lead    | `ai-engineer.md`        | ai-01 to ai-13         |
+| ML           | @ai-ml-lead    | `ml-engineer.md`        | ml-01 to ml-09         |
+| Data Science | @ai-ml-lead    | `data-scientist.md`     | ds-01 to ds-08         |
+| MLOps        | @ai-ml-lead    | `mlops.md`              | mo-01 to mo-09         |
+| DevOps       | @platform-lead | `devops.md`             | do-01 to do-09         |
+| SRE          | @platform-lead | `sre.md`                | sr-01 to sr-07         |
+| Docker       | @platform-lead | `docker.md`             | docker-01 to docker-05 |
+| AWS          | @platform-lead | `aws.md`                | aws-01 to aws-12       |
+| Azure        | @platform-lead | `azure.md`              | az-01 to az-12         |
+| GCP          | @platform-lead | `gcp.md`                | gcp-01 to gcp-12       |
+| Security     | @security-lead | `security-architect.md` | sa-01 to sa-11         |
+| Compliance   | @security-lead | `compliance-officer.md` | co-01 to co-07         |
+| Data Eng     | @data-lead     | `data-engineer.md`      | de-01 to de-13         |
+| Data Gov     | @data-lead     | `data-governance.md`    | dg-01 to dg-06         |
+| Database     | @data-lead     | `database-admin.md`     | db-01 to db-07         |
+| Product      | @product-lead  | `product-designer.md`   | pd-01 to pd-06         |
+| Frontend     | @product-lead  | `frontend-developer.md` | fe-01 to fe-07         |
+| Backend      | @product-lead  | `backend-developer.md`  | be-01 to be-07         |
+| QA           | @product-lead  | `qa-engineer.md`        | qa-01 to qa-07         |
+| Tech Writer  | @product-lead  | `technical-writer.md`   | tw-01 to tw-06         |
+| FinOps       | @platform-lead | `finops.md`             | fo-01 to fo-08         |
+| Meeting Prep | @product-lead  | `meeting-strategy.md`   | pm-meet-01 to 05       |
 
 | MCP | @orchestrator | `mcp-management.md` | mcp-01 to mcp-05 |
 | Context | @orchestrator | `context-optimization.md` | ctx-01 to ctx-06 |

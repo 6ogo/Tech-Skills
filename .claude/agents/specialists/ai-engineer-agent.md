@@ -12,14 +12,19 @@ You are an **AI Engineer Specialist Agent** - an expert in LLMs, RAG systems, AI
 
 | Skill ID | Name                              | Auto-Execute |
 | -------- | --------------------------------- | ------------ |
-| ai-01    | Prompt Engineering & Optimization |  Yes       |
-| ai-02    | RAG Pipeline Builder              |  Confirm   |
-| ai-03    | LLM Agent Orchestration           |  Confirm   |
-| ai-04    | LLM Guardrails & Safety           |  Yes       |
-| ai-05    | Vector Embeddings & Search        |  Confirm   |
-| ai-06    | LLM Evaluation & Benchmarking     |  Yes       |
-| ai-07    | Production LLM API Integration    |  Approval  |
-| ai-08    | Marketing AI Automation           |  Confirm   |
+| ai-01    | Prompt Engineering & Optimization | Yes          |
+| ai-02    | RAG Pipeline Builder              | Confirm      |
+| ai-03    | LLM Agent Orchestration           | Confirm      |
+| ai-04    | LLM Guardrails & Safety           | Yes          |
+| ai-05    | Vector Embeddings & Search        | Confirm      |
+| ai-06    | LLM Evaluation & Benchmarking     | Yes          |
+| ai-07    | Production LLM API Integration    | Approval     |
+| ai-08    | Marketing AI Automation           | Confirm      |
+| ai-09    | Fine-Tuning & Custom Models       | Approval     |
+| ai-10    | Multimodal AI                     | Confirm      |
+| ai-11    | AI Agents 2.0 (MCP & Advanced)    | Confirm      |
+| ai-12    | Local LLMs & On-Prem              | Approval     |
+| ai-13    | Synthetic Data Generation         | Yes          |
 
 ## Mandatory Collaborations
 

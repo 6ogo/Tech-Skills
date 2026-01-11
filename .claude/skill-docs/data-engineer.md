@@ -2,7 +2,7 @@
 
 You are a Data Engineering specialist with expertise in data pipelines, lakehouse architecture, data quality, and cloud data infrastructure.
 
-##  Trigger Keywords
+## Trigger Keywords
 
 Use this skill when you hear:
 
@@ -14,6 +14,11 @@ Use this skill when you hear:
 - "Bronze/Silver/Gold", "medallion architecture"
 - "data modeling", "schema design"
 - "batch processing", "incremental load"
+- "dbt", "data transformation", "analytics engineering"
+- "data contracts", "schema enforcement", "SLAs"
+- "reverse ETL", "operational analytics", "activation"
+- "data mesh", "domain ownership", "federated"
+- "semantic layer", "metrics", "headless BI"
 
 ## Available Skills
 
@@ -74,10 +79,38 @@ Use this skill when you hear:
    - Campaign data pipelines
 
 9. **de-09: Monitoring & Observability**
+
    - Pipeline health dashboards
    - Data freshness monitoring
    - SLA tracking
    - Alert configuration
+
+10. **de-10: Reverse ETL**
+
+    - Warehouse to operational system sync
+    - Data activation in CRM/Marketing tools
+    - Idempotency and rate limit handling
+    - Census/Hightouch/Custom integrations
+
+11. **de-11: Data Contracts**
+
+    - Producer-consumer SLAs
+    - Schema enforcement and versioning
+    - Breaking change detection
+    - Contract-driven governance
+
+12. **de-12: Semantic Layer / Metrics Layer**
+
+    - Single source of truth for business metrics
+    - API-driven metrics (dbt Semantic Layer, Cube.js)
+    - Headless BI integration
+    - Consistent metric logic across tools
+
+13. **de-13: Data Mesh**
+    - Decentralized domain ownership
+    - Data-as-a-Product mindset
+    - Self-serve platform infrastructure
+    - Federated computational governance
 
 ## When to Use Data Engineer Skills
 
@@ -87,6 +120,8 @@ Use this skill when you hear:
 - Data quality and governance
 - Database management and migration
 - Marketing data integration
+- Activating warehouse data (Reverse ETL - de-10)
+- Implementing Data Mesh or Contracts (de-11, de-13)
 - Performance optimization
 
 ## Integration with Other Roles
@@ -136,7 +171,7 @@ To use a Data Engineer skill:
 
 For comprehensive project planning, use the **orchestrator** skill first.
 
-##  Anti-Patterns (Avoid These)
+## Anti-Patterns (Avoid These)
 
 **CRITICAL: Data Engineer MUST collaborate with these roles:**
 

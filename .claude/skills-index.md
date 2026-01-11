@@ -16,6 +16,11 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 | ai-06 | LLM Evaluation     | eval, benchmark, metrics, quality                  | skill-docs/ai-engineer.md |
 | ai-07 | Production LLM API | API, serving, latency, scaling                     | skill-docs/ai-engineer.md |
 | ai-08 | Marketing AI       | content-generation, personalization                | skill-docs/ai-engineer.md |
+| ai-09 | Fine-Tuning        | fine-tune, LoRA, PEFT                              | skill-docs/ai-engineer.md |
+| ai-10 | Multimodal AI      | multimodal, vision, audio                          | skill-docs/ai-engineer.md |
+| ai-11 | Agents 2.0         | MCP, tool-use, reasoning                           | skill-docs/ai-engineer.md |
+| ai-12 | Local LLMs         | Ollama, vLLM, local                                | skill-docs/ai-engineer.md |
+| ai-13 | Synthetic Data     | synthetic-data, generation                         | skill-docs/ai-engineer.md |
 
 ## Data Engineering
 
@@ -30,6 +35,10 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 | de-07 | Database Migration        | migration, alembic, schema-versioning         | skill-docs/data-engineer.md |
 | de-08 | Marketing Data            | salesforce, analytics, campaign-data          | skill-docs/data-engineer.md |
 | de-09 | Pipeline Monitoring       | freshness, SLA, observability                 | skill-docs/data-engineer.md |
+| de-10 | Reverse ETL               | reverse-etl, operational-analytics            | skill-docs/data-engineer.md |
+| de-11 | Data Contracts            | data-contract, schema-enforcement             | skill-docs/data-engineer.md |
+| de-12 | Semantic Layer            | semantic-layer, metrics-layer                 | skill-docs/data-engineer.md |
+| de-13 | Data Mesh                 | data-mesh, decentralized                      | skill-docs/data-engineer.md |
 
 ## ML Engineering
 
@@ -93,6 +102,10 @@ Quick reference for all 200+ skills. Load full skill files on-demand when execut
 | sa-05 | Application Security    | OWASP, injection, XSS, CSRF            | skill-docs/security-architect.md |
 | sa-06 | Secrets Management      | secrets, vault, key-management         | skill-docs/security-architect.md |
 | sa-07 | Security Monitoring     | SIEM, alerts, intrusion-detection      | skill-docs/security-architect.md |
+| sa-08 | API Security            | OAuth, JWT, API-gateway                | skill-docs/security-architect.md |
+| sa-09 | Supply Chain Security   | SBOM, sigstore, SLSA                   | skill-docs/security-architect.md |
+| sa-10 | Zero Trust              | zero-trust, continuous-verification    | skill-docs/security-architect.md |
+| sa-11 | CSPM                    | cloud-security, misconfiguration       | skill-docs/security-architect.md |
 
 ## DevOps
 

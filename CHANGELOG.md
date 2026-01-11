@@ -5,6 +5,21 @@ All notable changes to Tech Hub Skills will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.1] - 2026-01-11
+
+### Changed
+
+- **Unified Expert Documentation**: Consolidated "advanced" skill files into a single source of truth in `skill-docs/` for AI Engineer, Data Engineer, and Security Architect.
+- **Optimized Skill Triggers**: Updated `skills/` files to be more concise while maintaining a complete list of all 200+ skill IDs for efficient lazy loading.
+- **Specialist Agent Updates**: Expanded specialist agent definitions (AI, Data, Security) to include newly consolidated advanced skills.
+- **Registry Cleanup**: Updated `SKILL-REGISTRY.md` and `skills-index.md` to point to the unified documentation, reducing file sprawl.
+
+### Removed
+
+- Redundant `-advanced.md` files: `ai-engineer-advanced.md`, `data-engineer-advanced.md`, and `security-advanced.md`.
+
+---
+
 ## [2.3.0] - 2026-01-06
 
 ### Added
@@ -23,7 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `write-safety-hook.py`: File write protection
 - **Configuration System**: YAML-based patterns configuration (`.claude/hooks/patterns.yaml`) for customizing protection levels.
 - **Safety Management Skill**: New `.claude/skills/safety-guardrails.md` skill for managing and configuring safety features.
-- **Comprehensive Documentation**: 
+- **Comprehensive Documentation**:
   - `.claude/hooks/README.md`: Complete safety system guide
   - `.claude/hooks/INSTALL.md`: Installation instructions
   - `SAFETY-GUARDRAILS.md`: Quick start and overview guide
